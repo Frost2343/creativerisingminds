@@ -129,13 +129,13 @@ h2 {
 
 /* Unique gradients */
 .card.trend-analyser {
- background: linear-gradient(135deg, #7f6a00, #f5af19);
-}
-.card.demand-supply {
  background: linear-gradient(135deg, #043927, #56ab2f);
 }
+.card.demand-supply {
+ background: linear-gradient(135deg, #7f6a00, #f5af19);
+}
 .card.stock-screener {
-   background: linear-gradient(135deg, #b31217, #000000);
+   background: linear-gradient(135deg, #b31217, #430606);
 }
 
 /* Hover animation */
@@ -320,6 +320,36 @@ footer {
 }
 .group-discount .green {
       color: #00ff99;
+}
+
+.content-box {
+  background-color: #4ccc53;
+  color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+.content-box p {
+  margin-top: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content-box .card-link {
+  display: inline-block;
+  margin-top: 15px;
+  background: #1976d2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-box .card-link:hover {
+  background: #145ea8;
 }
 
 
