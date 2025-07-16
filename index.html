@@ -6,11 +6,44 @@
   <title>Creative Rising Minds</title>  
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="images/CRM-LOGO.jpeg">
+  <style>
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .carousel iframe {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 300px;
+      height: 180px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-left .brand-name {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-left">
-      <img src="images/CRM-LOGO.jpeg" alt="Logo" class="logo">
+      <a href="#home">
+        <img src="images/CRM-LOGO.jpeg" alt="Logo" class="logo">
+      </a>
       <span class="brand-name">Creative Rising Minds</span>
     </div>
     <div class="nav-right">
@@ -47,6 +80,14 @@
             Suitable for all traders. Works on Free Plan.</p>
         <a href="indicator3.html" class="card-link">Learn More</a>
       </div>
+    </div>
+
+    <!-- YouTube Video Carousel -->
+    <h3 style="margin-top: 2rem;">Watch Our Indicators in Action</h3>
+    <div class="carousel">
+      <iframe src="https://www.youtube.com/embed/p7HKvqRI_Bo" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ZCFkWDdmXG8" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/oZAiHH9nrhk" allowfullscreen></iframe>
     </div>
   </section>
 
