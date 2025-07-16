@@ -6,37 +6,6 @@
   <title>Creative Rising Minds</title>  
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="images/CRM-LOGO.jpeg">
-  <style>
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .carousel iframe {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      width: 300px;
-      height: 180px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .nav-left .brand-name {
-      text-decoration: none;
-      color: inherit;
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -55,41 +24,42 @@
   </nav>
 
   <section class="banner" id="home">
-    <h1>Master the Markets with Precision</h1>
+    <h1>"Built for Traders Who Follow Logic, Not Luck."</h1>
+    <h3>"Spot the Signal. Skip the Noise. Dominate the Trend."</h3>
     <a href="#pricing" class="cta">Explore Plans</a>
   </section>
 
   <section id="indicators">
-    <h2>Our Indicators</h2>
-    <div class="indicator-cards">
-      <div class="card">
-        <h3>CRM Light</h3>
-        <p>Simple and effective signal system.Provides buy/sell signals using moving average crossovers.
-            Ideal for fast-paced trades. Works on TradingView Free Plan.</p>
-        <a href="indicator1.html" class="card-link">Learn More</a>
-      </div>
-      <div class="card">
-        <h3>CRM Trend</h3>
-        <p>Catch the trend before the crowd.Detects market direction using trend-based moving averages.
-            Helps stay in trend. Fully compatible with TradingView Free Plan.</p>
-        <a href="indicator2.html" class="card-link">Learn More</a>
-      </div>
-      <div class="card">
-        <h3>CRM Demand Supply</h3>
-        <p>Identify key zones like a pro.Uses trend moving averages and pivot zones to highlight key trade levels.
-            Suitable for all traders. Works on Free Plan.</p>
-        <a href="indicator3.html" class="card-link">Learn More</a>
-      </div>
+  <h2>Our Creative Indicators</h2>
+  <div class="indicator-cards">
+    <div class="card trend-analyser">
+      <h3>CRM Trend Analyser</h3>
+      <p>CRM Trend Analyser is a precision-crafted trading indicator that combines dynamic moving averages,
+         trend-based oscillators, volatility-powered targets, and built-in supply-demand zones to help you 
+         confidently time entries and exits. Whether you're a scalper or swing trader.</p>
+      <a href="indicator1.html" class="card-link">Learn More</a>
     </div>
 
-    <!-- YouTube Video Carousel -->
-    <h3 style="margin-top: 2rem;">Watch Our Indicators in Action</h3>
-    <div class="carousel">
-      <iframe src="https://www.youtube.com/embed/p7HKvqRI_Bo" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ZCFkWDdmXG8" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/oZAiHH9nrhk" allowfullscreen></iframe>
+    <div class="card demand-supply">
+      <h3>CRM Demand Supply</h3>
+      <img src="images/comingsoon.jpeg" alt="CRM Demand Supply Placeholder">
     </div>
-  </section>
+
+    <div class="card stock-screener">
+      <h3>CRM Stock Screener</h3>
+      <img src="images/comingsoon.jpeg" alt="CRM Stock Screener Placeholder">
+    </div>
+  </div>
+
+  <!-- YouTube Video Carousel -->
+  <h3 style="margin-top: 2rem;">Watch Our Indicators in Action</h3>
+  <div class="carousel">
+    <iframe src="https://www.youtube.com/embed/p7HKvqRI_Bo" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/ZCFkWDdmXG8" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/oZAiHH9nrhk" allowfullscreen></iframe>
+  </div>
+</section>
+
 
   <section id="pricing">
     <h2>Pricing Plans</h2>
@@ -99,36 +69,47 @@
           <th>Indicator</th>
           <th>Monthly</th>
           <th>Quarterly</th>
+          <th>Half-Yearly</th>
           <th>Yearly</th>
+          <th>Lifetime</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>CRM Light</td>
-          <td>₹299</td>
-          <td>₹749</td>
-          <td>₹2499</td>
+          <td>CRM Trend Analyser</td>
+          <td>₹1500</td>
+          <td>₹3500</td>
+          <td>₹6500</td>
+          <td>₹11000</td>
+          <td>₹18000</td>
         </tr>
         <tr>
-          <td>CRM Trend</td>
-          <td>₹499</td>
-          <td>₹1299</td>
-          <td>₹3999</td>
+          <td>CRM Stock Screener</td>
+          <td colspan="5" style="text-align: center;">To Be Announced</td>
+          
         </tr>
         <tr>
-          <td>CRM Demand Supply</td>
-          <td>₹699</td>
-          <td>₹1799</td>
-          <td>₹5999</td>
+          <td>CRM MTF Demand Supply</td>
+          <td colspan="5" style="text-align: center;">To Be Announced</td>
+        </tr>
+          <td>CRM Option Chain Decoder</td>
+          <td colspan="5" style="text-align: center;">To Be Announced</td>
         </tr>
         <tr>
-          <td>CRM Demand Supply+CRM Trend+CRM Light</td>
-          <td>₹999</td>
-          <td>₹2499</td>
-          <td>₹9999</td>
+          <td>CRM Trend Analyser+CRM Stock Screener+CRM MTF Demand Supply+CRM Option Chain Decoder</td>
+          <td colspan="5" style="text-align: center;">To Be Announced</td>
         </tr>
       </tbody>
     </table>
+   
+  
+
+    <div class="group-discount">
+      <h3>✨ Group Discount Offers ✨</h3>
+      <p>Min 5 Clients – <span class="green">15% OFF</span></p>
+      <p>Min 10 Clients – <span class="green">20% OFF</span></p>
+      <p>₹500/1 week - One Time per User(All above available indicators)</p>
+    </div>
   </section>
 
   <section id="contact">

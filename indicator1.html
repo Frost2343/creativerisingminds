@@ -1,15 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRM Light - Indicator Details</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Trend Analyser</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="icon" type="image/jpeg" href="images/CRM-LOGO.jpeg">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121829;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4081;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #f9c74f;
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-size: 0.95rem;
+      color: #cfcfcf;
+      margin-bottom: 25px;
+    }
+
+    .section {
+      background: #1c2235;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .section ul li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #f9c74f;
+      font-weight: 600;
+    }
+
+    .image-preview {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0 30px 0;
+    }
+
+    p {
+      line-height: 1.7;
+      margin: 12px 0;
+    }
+
+    em {
+      color: #ffab40;
+    }
+
+    strong {
+      color: #90caf9;
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #ffa726;
+    }
+
+    .quote {
+      background: #1e1e2f;
+      padding: 12px 18px;
+      border-left: 5px solid #00bcd4;
+      border-radius: 6px;
+      font-style: italic;
+      color: #c0c0c0;
+      margin-top: 20px;
+    }
+
+    .section ul li::marker {
+      color: #00e676;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+      color: white;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .nav-right a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .nav-right a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-left">
-      <img src="images/CRM-LOGO.jpeg" alt="Logo" class="logo">
+      <a href="#home">
+        <img src="images/CRM-LOGO.jpeg" alt="Logo" class="logo">
+      </a>
       <span class="brand-name">Creative Rising Minds</span>
     </div>
     <div class="nav-right">
@@ -19,35 +167,121 @@
       <a href="index.html#contact">Contact</a>
     </div>
   </nav>
+  <div class="container">
+    <!-- <a href="#" class="btn">📈 View on TradingView</a> -->
+    <h1>💡 CRM Trend Analyser – <span class="highlight">Smart Entry Level Alert Tool</span> 💡</h1>
+    <p class="subheading">Entry-Level | Multi-Timeframe | All Segment Support</p>
 
-  <section class="banner">
-    <img src="images/abcd.png" alt="Indicator Banner" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px;">
-  </section>
+    <!-- Image Below Title -->
+    <img src="images/trendanalyser.png" alt="Indicator Preview" class="image-preview" />
 
-  <section style="padding: 40px 20px; max-width: 1000px; margin: auto;">
-    <h2>CRM Light Indicator</h2>
-    <p>This is a placeholder description for the CRM Light indicator. Explain what this indicator does, its purpose, and how it helps traders make better decisions.</p>
+    
 
-    <h3>How to Use:</h3>
-    <ul>
-      <li>Step 1: Add the indicator to your TradingView chart</li>
-      <li>Step 2: Wait for buy or sell signals</li>
-      <li>Step 3: Confirm with volume or other confluences</li>
-      <li>Step 4: Execute your trade and manage risk</li>
-    </ul>
+    <!-- Breakout-Based Trading System -->
+    <div class="section">
+      <h2>✅ <em>Breakout-Based Trading System</em></h2>
+      <ul>
+        <li>Detects breakout zones using <strong>custom price structure</strong> and <strong>moving average logic</strong></li>
+        <li>Shows <strong>early pre-entry cues</strong> based on key highs/lows</li>
+        <li>Automatically calculates <strong>ATR-based Entry, Stop Loss, TP1, TP2, and TP3</strong></li>
+      </ul>
+    </div>
 
-    <h3>Recommended Timeframes:</h3>
-    <p>Works best on the following timeframes:</p>
-    <ul>
-      <li>5-minute</li>
-      <li>15-minute</li>
-      <li>1-hour</li>
-      <li>Daily</li>
-    </ul>
-  </section>
+    <!-- Dynamic Trend Engine -->
+    <div class="section">
+      <h2>✅ <em>Dynamic Trend Engine</em></h2>
+      <ul>
+        <li>Adaptive trend lines using momentum acceleration logic</li>
+        <li>Candle coloring based on <strong>trend speed</strong> for visual clarity</li>
+        <li>Gradient intensity reflects <strong>trend strength and stability</strong></li>
+      </ul>
+    </div>
 
-  <footer>
-    <p style="text-align: center; padding: 20px; background: #1e1e1e; color: #fff;">&copy; 2025 Creative Rising Minds. All rights reserved.</p>
-  </footer>
+    <!-- Multi-Timeframe Support -->
+    <div class="section">
+      <h2>✅ <em>Multi-Timeframe Support</em></h2>
+      <ul>
+        <li>Plots <strong>Daily/Weekly High, Low, and Close levels</strong></li>
+        <li>Make decisions using <strong>top-down market context</strong></li>
+        <li>Toggle historical levels + resize labels for visual comfort</li>
+      </ul>
+    </div>
+
+    <!-- Risk & Target Management -->
+    <div class="section">
+      <h2>✅ <em>Risk & Target Management</em></h2>
+      <ul>
+        <li><strong>Auto-calculated Entry, SL, TP1, TP2, TP3</strong> based on ATR</li>
+        <li>Clearly plotted <strong>lines and levels</strong> for real-time decision-making</li>
+        <li>Choose between <strong>"Only Last Signal"</strong> or <strong>"All Signals"</strong> mode:
+          <ul>
+            <li>✅ Clean charts with most recent trade only</li>
+            <li>✅ Backtest easily with full signal history</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Technical Tools -->
+    <div class="section">
+      <h2>✅ <em>Built-in Technical Tools</em></h2>
+      <ul>
+        <li>Custom-styled <strong>VWAP Overlay</strong></li>
+        <li><strong>Demand & Supply zones</strong> for support/resistance</li>
+        <li>Multiple <strong>adaptive MAs</strong> with momentum tracking</li>
+        <li><strong>HMA gradient</strong> for strength confirmation</li>
+      </ul>
+    </div>
+
+    <!-- Smart Signal Display -->
+    <div class="section">
+      <h2>✅ <em>Smart Signal Display</em></h2>
+      <ul>
+        <li>Dynamic <strong>Buy/Sell markers</strong> with entry labels</li>
+        <li>Color-coded <strong>SL/TP lines</strong> for fast visual understanding</li>
+        <li>Optional:
+          <ul>
+            <li>Use <strong>standard candle colors</strong></li>
+            <li>Customize theme for your visual comfort</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Timeframes -->
+    <div class="section">
+      <h2>🕒 <em>Recommended Timeframes</em></h2>
+      <ul>
+        <li><strong>3min / 5min</strong> → Intraday & Scalping</li>
+        <li><strong>Daily Chart</strong> → Swing / Positional setups</li>
+      </ul>
+    </div>
+
+    <!-- Learning Note -->
+    <div class="section">
+      <h2>⚠️ <em>Important Learning Note</em></h2>
+      <p>This tool is meant to <strong>aid your learning and strategy development</strong>. Use it with:</p>
+      <ul>
+        <li>A clear <strong>trading plan</strong></li>
+        <li><strong>Disciplined risk management</strong></li>
+        <li>Strict <strong>Stop Loss rules</strong></li>
+      </ul>
+      <p class="quote">
+        🔰 <strong>Beginner Path</strong>:<br>
+        1. Start with paper trading for 2 months.<br>
+        2. Then try equity trades with small capital (₹5,000 or less).<br>
+        3. Limit loss to ₹50–₹100/day. Learn without pressure.<br>
+        4. Avoid option/futures trading initially — options are high-risk instruments and require advanced understanding.
+      </p>
+      <p style="margin-top: 15px;"><strong>💡 “Learn first, earn later.”</strong> Your capital’s growth — or loss — is <em>entirely in your control.</em></p>
+    </div>
+    <!-- Disclaimer -->
+    <div class="section">
+      <h2>⚠️ <em>Disclaimer</em></h2>
+      <p>This indicator and content are intended <strong>purely for educational and informational purposes</strong>. They do <strong>not constitute financial, investment, or legal advice</strong>. All opinions are personal interpretations based on research and are <strong>not recommendations</strong> to buy, sell, or hold any security.</p>
+      <p>Always <strong>consult a SEBI-registered advisor or certified financial planner</strong> before making investment decisions. The creator is <strong>not responsible</strong> for any financial loss or decision taken by viewers.</p>
+      <p>Use this tool as <strong>support to your own strategy</strong> — not as a standalone trading system.</p>
+    </div>
+  </div>
 </body>
 </html>
