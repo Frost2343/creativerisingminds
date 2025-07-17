@@ -68,13 +68,13 @@ body {
 }
 .color-changing {
     animation: colorCycle 3s infinite alternate;
-}
+  }
 
-@keyframes colorCycle {
-  0%   { color: ghostwhite; }
-  50%  { color: white; }
-  100% { color: gray; }
-}
+  @keyframes colorCycle {
+    0%   { color: ghostwhite; }
+    50%  { color: white; }
+    100% { color: gray; }
+  }
 .cta {
   display: inline-block;
   margin-top: 20px;
@@ -167,7 +167,14 @@ h2 {
 }
 
 /* Pricing section */
-
+.pricing-img,
+.qr-img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
 .pricing-table {
   width: 100%;
@@ -182,8 +189,7 @@ h2 {
 
 .pricing-table th,
 .pricing-table td {
-  /* border: 1px solid #333; */
-  border: 1px solid #ffffff;
+  border: 1px solid #333;
   padding: 12px 26px;
   text-align: center;
 }
@@ -193,8 +199,6 @@ h2 {
   font-weight: bold;
   color: #ff9800;
 }
-
-
 
 /* Contact section */
 #contact {
@@ -353,43 +357,3 @@ footer {
 /* =====================================
 
 */
-
-/* Hide hamburger on desktop */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .nav-right {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #1e1e1e;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .nav-right a {
-    display: block;
-    margin: 15px 0;
-    font-size: 18px;
-  }
-
-  /* Show menu when active */
-  .nav-right.active {
-    display: flex;
-  }
-
-  /* Show hamburger on mobile */
-  .hamburger {
-    display: block;
-  }
-}
-
