@@ -357,33 +357,39 @@ footer {
 /* Hide hamburger on desktop */
 .hamburger {
   display: none;
-  font-size: 2rem;
+  font-size: 24px;
   cursor: pointer;
   color: white;
 }
 
-/* Mobile Menu Styles */
+/* Mobile styles */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
   .nav-right {
     display: none;
     flex-direction: column;
-    background-color: #1e1e1e;
     width: 100%;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 60px;
+    left: 0;
     text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #333;
+    padding: 20px 0;
   }
 
   .nav-right a {
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
+    font-size: 18px;
   }
 
+  /* Show menu when active */
   .nav-right.active {
     display: flex;
   }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
 }
+
