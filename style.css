@@ -454,17 +454,6 @@ html, body {
   text-align: center;
   justify-items: center;
 }
-/* #pricing {
-  padding: 30px 170px;
-}
-#ytvideos {
-  padding: 30px 170px;
-  text-align: center;
-  justify-items: center;
-}
-#contact {
-  padding : 30px 170px;
-} */
 
 
 
@@ -524,16 +513,7 @@ html, body {
     padding: 0px;           /* vertical padding between items */
     border-top: 1px solid rgba(255,255,255,0.2); /* horizontal lines between items */
   }
-
-  /* .nav-right a:first-child {
-    border-top: none;          no line above first item
-  } */
-}
-
-@media (max-width: 768px) {
   .hero-content {
     margin-top: -100px; /* Moves content 50px upwards */
-    /* Alternatively, use transform for smoother effect: */
-    /* transform: translateY(-50px); */
   }
 }
