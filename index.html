@@ -5,34 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Rising Minds</title>  
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpeg" href="images/CRM-LOGO.jpeg">
+  <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body> 
+<body>
   <nav class="navbar">
-    <div class="nav-left">
-      <a href="#home">
-        <img src="images/CRM-LOGO.jpeg" alt="Logo" class="logo" style="border-radius: 10px">
-      </a>
-      <span class="brand-name" style="font-size: 26px; font-family: 'Times New Roman', serif;">
+  <div class="nav-left">
+    <a href="#home">
+      <img src="images/logo/CRM-LOGO.jpeg" alt="Logo" class="logo" style="border-radius: 10px;">
+    </a>
+    <span class="brand-name" style="font-size: 26px; font-family: 'Times New Roman', serif;">
   <b>Creative Rising Minds</b>
 </span>
+  </div>
+  <div class="nav-right">
+    <a href="#home">Home</a>
+    <a href="#indicators">Indicators</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
+<section class="hero" id="home">
+  <!-- Background Video -->
+  <video autoplay muted loop class="hero-video">
+    <source src="videos/herovideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1>Built for Traders Who<br>Follow Logic,<br>Not Luck.</h1>
+    <p>Spot the Signal. Skip the Noise. Dominate the Trend.</p>
+    <div class="hero-buttons">
+      <a href="#pricing" class="cta primary">Explore Plans</a>
+      <a href="#contact" class="cta secondary">Contact Us</a>
     </div>
-    <div class="nav-right">
-      <a href="#home">Home</a>
-      <a href="#indicators">Indicators</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <section class="banner" id="home">
-    <h1>"Built for Traders Who Follow Logic, Not Luck."</h1>
-    <h3>"Spot the Signal. Skip the Noise. Dominate the Trend."</h3>
-    <a href="#pricing" class="cta">Explore Plans</a>
-  </section>
+  </div>
+</section>
 
   <section id="indicators">
   <h2>Our Creative Indicators</h2>
@@ -59,8 +69,9 @@
       <img src="images/comingsoon.jpeg" alt="CRM Stock Screener Placeholder">
     </div>
   </div>
-
-  <!-- YouTube Video Carousel -->
+</section>
+<!-- YouTube Video Carousel -->
+<section id = "ytvideos">
   <h3 style="margin-top: 2rem;">Watch Our Indicators in Action</h3>
   <div class="carousel">
     <iframe src="https://www.youtube.com/embed/p7HKvqRI_Bo" allowfullscreen></iframe>
@@ -81,15 +92,17 @@
           <th>Quarterly</th>
           <th>Half-Yearly</th>
           <th>Yearly</th>
+          <th>Lifetime</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <!-- <tr>
           <td>CRM Trend Analyser</td>
           <td>₹1500</td>
           <td>₹3500</td>
           <td>₹6500</td>
           <td>₹11000</td>
+          <td>₹18000</td>
         </tr>
         <tr>
           <td>CRM MTF/Demand Supply</td>
@@ -97,6 +110,7 @@
           <td>₹3500</td>
           <td>₹6500</td>
           <td>₹11000</td>
+          <td>₹18000</td>
         </tr>
         <tr>
           <td>CRM Trend Analyser + CRM MTF/Demand Supply</td>
@@ -104,14 +118,24 @@
           <td>₹6000</td>
           <td>₹9500</td>
           <td>₹14500</td>
+          <td>₹20000</td>
+        </tr> -->
+        <tr>
+          <td>CRM Trend Analyser</td>
+          <td colspan="5" style="text-align: center;">Free to use for a limited time – don’t miss out!</td>
+          
+        </tr>
+        <tr>
+          <td>CRM MTF/Demand Supply</td>
+          <td colspan="5" style="text-align: center;">Free to use for a limited time – don’t miss out!</td>
+          
         </tr>
         <tr>
           <td>CRM Stock Screener</td>
-          <td colspan="4" style="text-align: center;">Coming soon! Our team is crafting something powerful just for you.</td>
-          
+          <td colspan="5" style="text-align: center;">Coming soon! Our team is crafting something powerful just for you.</td> 
         </tr>
           <td>CRM Option Chain Decoder</td>
-          <td colspan="4" style="text-align: center;">Coming soon! Our team is crafting something powerful just for you.</td>
+          <td colspan="5" style="text-align: center;">Coming soon! Our team is crafting something powerful just for you.</td>
         </tr>
         
       </tbody>
@@ -120,12 +144,13 @@
   
 
     <div class="group-discount">
-      <h3>✨ Group Discount Offers ✨</h3>
-      <p>Min 3 Clients – <span class="green">15% OFF</span></p>
+      <!-- <h3>✨ Group Discount Offers ✨</h3> -->
+      <!-- <p>Min 3 Clients – <span class="green">15% OFF</span></p>
       <p>Min 5 Clients – <span class="green">20% OFF</span></p>
-      <p>₹500/1 week - One Time per User(All above available indicators)</p>
+      <p>₹300/1 week - One Time per User(All above available indicators)</p>
       <p>Free 1-Day trial available, place a request for the same on email/telegram.</p>
-      <p><em>Share confirmation via WhatsApp or Telegram.</em></p>
+      <p><em>Share confirmation via WhatsApp or Telegram.</em></p> -->
+      <p><em><span class="green">We’d love to hear your valuable feedback on our indicators! Feel free to share your thoughts with us via WhatsApp, email, or Telegram."</span></em></p>
     </div>
   </section>
 
@@ -145,7 +170,8 @@
       <img src="images/qrcode.jpeg" alt="UPI QR Code" class="qr-img">
     </div>
   </section>
-<!-- Footer -->
+
+ <!-- Footer -->
 <footer style="text-align: center; padding: 20px; background-color: #000000;">
   <div style="margin-bottom: 10px;">
     <a href="https://t.me/+u_Nx2Uhk_QQ0MDk9" target="_blank" style="margin: 0 15px; color: #0088cc; font-size: 30px;">
@@ -169,14 +195,14 @@
     
     <!-- TradingView Icon -->
     <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts" target="_blank" style="margin: 0 15px;">
-  <img src="images/TVicon.png" alt="TradingView" 
+  <img src="images/logo/TVicon.png" alt="TradingView" 
        style="width: 50px; height: 60px; vertical-align: middle; margin-bottom: 15px; border-radius: 6px;">
 </a>
   </div>
   <span style="color: white;">&copy; <u>2025 Creative Rising Minds. All rights reserved.</u></span>
 </footer>
-<div id="custom-bot-container" style="width: 200px; height: 550px; max-width: 50%;">
+
   <script src="https://www.noupe.com/embed/0198230823b77722b7c427825d4bbf4ffc43.js"></script>
-</div>
+
 </body>
 </html>
