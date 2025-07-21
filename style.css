@@ -529,3 +529,11 @@ html, body {
     border-top: none;          no line above first item
   } */
 }
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: -100px; /* Moves content 50px upwards */
+    /* Alternatively, use transform for smoother effect: */
+    /* transform: translateY(-50px); */
+  }
+}
