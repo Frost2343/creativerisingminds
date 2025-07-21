@@ -15,16 +15,26 @@
       <img src="images/logo/CRM-LOGO.jpeg" alt="Logo" class="logo" style="border-radius: 10px;">
     </a>
     <span class="brand-name" style="font-size: 26px; font-family: 'Times New Roman', serif;">
-  <b>Creative Rising Minds</b>
-</span>
+      <b>Creative Rising Minds</b>
+    </span>
   </div>
-  <div class="nav-right">
+
+  <!-- Navigation Links -->
+  <div class="nav-right" id="nav-right">
     <a href="#home">Home</a>
     <a href="#indicators">Indicators</a>
     <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
+
 
 <section class="hero" id="home">
   <!-- Background Video -->
@@ -203,6 +213,17 @@
 </footer>
 
   <script src="https://www.noupe.com/embed/0198230823b77722b7c427825d4bbf4ffc43.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navRight = document.getElementById('nav-right');
 
+    // Menu starts hidden because CSS uses display:none
+    hamburger.addEventListener('click', () => {
+      navRight.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  });
+</script>
 </body>
 </html>
