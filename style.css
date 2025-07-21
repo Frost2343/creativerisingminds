@@ -419,7 +419,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 25px;
+  padding: 5px 10px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   color: #fff;

@@ -23,7 +23,7 @@ body {
       padding: 0;
     }
 
-    .navbar {
+    /* .navbar {
   position: sticky;
   top: 0;
   width: 100%;
@@ -74,7 +74,7 @@ body {
 .brand-name {
       font-size: 1.2rem;
       font-weight: bold;
-    }
+    } */
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -209,7 +209,7 @@ body {
     } */
      /* Navbar - modern look */
 /* Navbar - modern look */
-.navbar {
+/* .navbar {
   position: sticky;
   top: 0;
   width: 100%;
@@ -247,7 +247,7 @@ body {
   height: 50px;
   object-fit: contain;
   margin-right: 5px;
-}
+} */
 
 /* #pricing {
   padding: 30px 170px;
