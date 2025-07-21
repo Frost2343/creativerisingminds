@@ -448,8 +448,11 @@ html, body {
   object-fit: contain;
   margin-right: 5px;
 }
-
-#pricing {
+#ytvideos{
+  text-align: center;
+  justify-items: center;
+}
+/* #pricing {
   padding: 30px 170px;
 }
 #ytvideos {
@@ -459,4 +462,4 @@ html, body {
 }
 #contact {
   padding : 30px 170px;
-}
+} */
