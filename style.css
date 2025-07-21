@@ -380,7 +380,7 @@ html, body {
   display: flex;
   gap: 15px;
   justify-content: flex-end;
-  margin-bottom: 150px; /* Align buttons to right */
+  margin-bottom: 130px; /* Align buttons to right */
 }
 
 
