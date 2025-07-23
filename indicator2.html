@@ -1,53 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRM Light - Indicator Details</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Trend Analyser</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="indicator1.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="indicator2.css">
+  <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <nav class="navbar">
-    <div class="nav-left">
-      <img src="images/CRM-LOGO.jpeg" alt="Logo" class="logo">
-      <span class="brand-name">Creative Rising Minds</span>
-    </div>
-    <div class="nav-right">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#indicators">Indicators</a>
-      <a href="index.html#pricing">Pricing</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </nav>
+  <div class="nav-left">
+    <a href="index.html#home">
+      <img src="images/logo/CRM-LOGO.jpeg" alt="Logo" class="logo" style="border-radius: 10px;">
+    </a>
+    <span class="brand-name" style="font-size: 26px; font-family: 'Times New Roman', serif;">
+  <b>Creative Rising Minds</b>
+</span>
+  </div>
+  <div class="nav-right">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#indicators">Indicators</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+  <div class="container">
+    <a href="https://in.tradingview.com/script/dhEiLEQS-CRM-Trend-Analyser/" class="btn">📈 View on TradingView</a>
+    <h1>💡 CRM Trend Analyser – <span class="highlight">Smart Entry Level Alert Tool</span> 💡</h1>
+    <p class="subheading">Entry-Level | Multi-Timeframe | All Segment Support</p>
 
-  <section class="banner">
-    <img src="images/indicator1.png" alt="Indicator Banner" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px;">
-  </section>
+    <!-- Image Below Title -->
+    <img src="images/trendanalyser.png" alt="Indicator Preview" class="image-preview" />
 
-  <section style="padding: 40px 20px; max-width: 1000px; margin: auto;">
-    <h2>CRM Light Indicator</h2>
-    <p>This is a placeholder description for the CRM Light indicator. Explain what this indicator does, its purpose, and how it helps traders make better decisions.</p>
+    
 
-    <h3>How to Use:</h3>
-    <ol>
-      <li>Step 1: Add the indicator to your TradingView chart</li>
-      <li>Step 2: Wait for buy or sell signals</li>
-      <li>Step 3: Confirm with volume or other confluences</li>
-      <li>Step 4: Execute your trade and manage risk</li>
-    </ol>
+    <section class="features-section">
 
-    <h3>Recommended Timeframes:</h3>
-    <p>Works best on the following timeframes:</p>
+  <!-- Breakout-Based Trading System -->
+  <div class="feature-card">
+    <h3>✅ Breakout-Based Trading System</h3>
     <ul>
-      <li>5-minute</li>
-      <li>15-minute</li>
-      <li>1-hour</li>
-      <li>Daily</li>
+      <li>Detects breakout zones using <span class="highlight">custom price structure</span> and <span class="highlight">moving average logic</span></li>
+      <li>Shows <span class="highlight">early pre-entry cues</span> based on key highs/lows</li>
+      <li>Automatically calculates <span class="highlight">ATR-based Entry, Stop Loss, TP1, TP2, and TP3</span></li>
     </ul>
-  </section>
+  </div>
 
-  <footer>
-    <p style="text-align: center; padding: 20px; background: #1e1e1e; color: #fff;">&copy; 2025 Creative Rising Minds. All rights reserved.</p>
-  </footer>
+  <!-- Dynamic Trend Engine -->
+  <div class="feature-card">
+    <h3>✅ Dynamic Trend Engine</h3>
+    <ul>
+      <li>Adaptive trend lines using momentum acceleration logic</li>
+      <li>Candle coloring based on trend speed for visual clarity</li>
+      <li>Gradient intensity reflects trend strength and stability</li>
+    </ul>
+  </div>
+
+  <!-- Multi-Timeframe Support -->
+  <div class="feature-card">
+    <h3>✅ Multi-Timeframe Support</h3>
+    <ul>
+      <li>Plots Daily/Weekly High, Low, and Close levels</li>
+      <li>Make decisions using top-down market context</li>
+      <li>Toggle historical levels + resize labels for visual comfort</li>
+    </ul>
+  </div>
+
+  <!-- Risk & Target Management -->
+  <div class="feature-card">
+    <h3>✅ Risk & Target Management</h3>
+    <ul>
+      <li>Auto-calculated Entry, SL, TP1, TP2, TP3 based on multiple confluences</li>
+      <li>Clearly plotted lines and levels for real-time decision-making</li>
+      <li>Choose between <span class="highlight">"Only Last Signal"</span> or <span class="highlight">"All Signals"</span> mode:</li>
+      <li>✅ Clean charts with most recent trade only</li>
+      <li>✅ Back test easily with full signal history</li>
+    </ul>
+  </div>
+
+  <!-- Built-in Technical Tools -->
+  <div class="feature-card">
+    <h3>✅ Built-in Technical Tools</h3>
+    <ul>
+      <li>Custom-styled <span class="highlight">VWAP Overlay</span></li>
+      <li>Demand & Supply zones for support/resistance</li>
+      <li>Multiple adaptive MAs with momentum tracking</li>
+      <li>MA gradient for strength confirmation</li>
+    </ul>
+  </div>
+
+  <!-- Smart Signal Display -->
+  <div class="feature-card">
+    <h3>✅ Smart Signal Display</h3>
+    <ul>
+      <li>Dynamic Buy/Sell markers with entry labels</li>
+      <li>Color-coded SL/TP lines for fast visual understanding</li>
+      <li>Optional: Use standard candle colors</li>
+      <li>Customize theme for your visual comfort</li>
+    </ul>
+  </div>
+
+  <!-- Recommended Timeframes -->
+  <div class="feature-card">
+    <h3>🕒 Recommended Timeframes</h3>
+    <ul>
+      <li><span class="highlight">3min / 5min → Intraday & Scalping</span></li>
+      <li><span class="highlight">Daily Chart → Swing / Positional setups</span></li>
+    </ul>
+  </div>
+
+  <!-- Important Learning Note -->
+  <div class="feature-card">
+    <h3>⚠️ Important Learning Note</h3>
+    <p>This tool is meant to aid your learning and strategy development. Use it with:</p>
+    <ul>
+      <li>A clear trading plan</li>
+      <li>Disciplined risk management</li>
+      <li>Correct position sizing (start with single quantity)</li>
+      <li>Strict Stop Loss rules</li>
+      <li>Trade only when the risk-to-reward ratio is favorable</li>
+      <li>In a sideways or opposing market, no trade can be the best trade</li>
+      <li>True wealth creation happens only through long-term investing</li>
+      <li>For disciplined risk management, limit intraday exposure to 10% of your capital</li>
+    </ul>
+  </div>
+
+  <!-- Beginner Path -->
+  <div class="feature-card">
+    <h3>🔰 Beginner Path:</h3>
+    <ol>
+      <li>Start with paper trading for 2 months.</li>
+      <li>Then try equity trades with small capital (₹3,000 or less).</li>
+      <li>Limit loss to ₹50 – ₹100/day. Learn without pressure.</li>
+      <li>Avoid option/futures trading initially — options are high-risk instruments and require advanced understanding.</li>
+    </ol>
+    <p><span class="highlight">💡 “Learn first, earn later.” Your capital’s growth or loss is entirely in your control.</span></p>
+  </div>
+
+  <!-- Dark Mode & New Features -->
+  <div class="feature-card">
+    <h3>🎨 Dark Mode Optimized → Now Fully Customizable</h3>
+    <p>Previously tailored for dark mode, now enhanced with user-selectable color options for a personalized and clear visual experience.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📈 Dynamic Trend Confluence Visual</h3>
+    <p>Introducing a trend-following visual layer to help you ride trends with confidence and clarity.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>🔔 Real-Time Alerts Integrated</h3>
+    <p>Never miss a trade. Stay updated with built-in alerts for all key trade signals and conditions.</p>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="feature-card disclaimer">
+    <h3>⚠️ Disclaimer</h3>
+    <p>This indicator and content are intended purely for educational and informational purposes. They do not constitute financial, investment, or legal advice. All opinions are personal interpretations based on research and are not recommendations to buy, sell, or hold any security.</p>
+    <p>Always consult a SEBI-registered advisor or certified financial planner before making investment decisions. The creator is not responsible for any financial loss or decision taken by viewers.</p>
+    <p>Use this tool as support to your own strategy — not as a standalone trading system.</p>
+    <p><strong>Happy Trading, CHEERS!</strong></p>
+  </div>
+
+</section>
+
+  </div>
+  <!-- Footer -->
+<footer style="text-align: center; padding: 20px; background-color: #000000;">
+  <div style="margin-bottom: 10px;">
+    <a href="https://t.me/+u_Nx2Uhk_QQ0MDk9" target="_blank" style="margin: 0 15px; color: #0088cc; font-size: 30px;">
+      <i class="fab fa-telegram"></i>
+    </a>
+    <a href="https://www.instagram.com/creativerisingmindsofficial" target="_blank" style="margin: 0 15px; color: #e4405f; font-size: 30px;">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/yourusername" target="_blank" style="margin: 0 15px; color: #3b5998; font-size: 30px;">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://x.com/crmofficial005" target="_blank" style="margin: 0 15px; color: #1da1f2; font-size: 30px;">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.youtube.com/@creativerisingminds" target="_blank" style="margin: 0 15px; color: #ff0000; font-size: 30px;">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?" target="_blank" style="margin: 0 15px; color: #25d366; font-size: 30px;">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- TradingView Icon -->
+    <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts" target="_blank" style="margin: 0 15px;">
+  <img src="images/logo/TVicon.png" alt="TradingView" 
+       style="width: 50px; height: 60px; vertical-align: middle; margin-bottom: 15px; border-radius: 6px;">
+</a>
+  </div>
+  <span style="color: white;">&copy; <u>2025 Creative Rising Minds. All rights reserved.</u></span>
+</footer>
+
+  <script src="https://www.noupe.com/embed/0198230823b77722b7c427825d4bbf4ffc43.js"></script>
+
 </body>
 </html>
