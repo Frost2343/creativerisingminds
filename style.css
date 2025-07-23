@@ -394,22 +394,29 @@ html, body {
 }
 
 .cta.primary {
-  background: #ff6a00;
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
+  border: 1px solid #fff;
+  transition: color 0.1s, font-weight 0.1s;
 }
 
 .cta.primary:hover {
-  background: #e65c00;
+  background: rgba(255, 255, 255, 0.3);
+  color: #00ff22;
+  font-weight: bold;
 }
 
 .cta.secondary {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
   border: 1px solid #fff;
+  transition: color 0.1s, font-weight 0.1s;
 }
 
 .cta.secondary:hover {
   background: rgba(255, 255, 255, 0.3);
+  color: #00ff22;
+  font-weight: bold;
 }
 
 /* Navbar - modern look */
