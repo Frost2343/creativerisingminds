@@ -394,7 +394,7 @@ html, body {
 }
 
 .cta.primary {
-  background: rgba(0, 38, 188, 0.8);
+  background: #00000000;
   color: #fff;
   border: 1px solid #fff;
   transition: color 0.1s, font-weight 0.1s;
@@ -407,7 +407,7 @@ html, body {
 }
 
 .cta.secondary {
-  background: rgba(0, 38, 188, 0.8);
+  background: #00000000;
   color: #fff;
   border: 1px solid #fff;
   transition: color 0.1s, font-weight 0.1s;
