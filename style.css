@@ -394,7 +394,7 @@ html, body {
 }
 
 .cta.primary {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(255, 85, 0, 0.8);
   color: #fff;
   border: 1px solid #fff;
   transition: color 0.1s, font-weight 0.1s;
@@ -402,12 +402,12 @@ html, body {
 
 .cta.primary:hover {
   background: rgba(255, 255, 255, 0.3);
-  color: #00ff22;
+  /* color: #00ff22; */
   font-weight: bold;
 }
 
 .cta.secondary {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(255, 85, 0, 0.8);
   color: #fff;
   border: 1px solid #fff;
   transition: color 0.1s, font-weight 0.1s;
@@ -415,7 +415,7 @@ html, body {
 
 .cta.secondary:hover {
   background: rgba(255, 255, 255, 0.3);
-  color: #00ff22;
+  /* color: #00ff22; */
   font-weight: bold;
 }
 
