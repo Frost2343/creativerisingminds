@@ -570,6 +570,6 @@ a.indicator-link:hover {
     border-top: 1px solid rgba(255,255,255,0.2); /* horizontal lines between items */
   }
   .hero-content {
-    margin-top: -100px; /* Moves content 50px upwards */
+    margin-top: -150px; /* Moves content 50px upwards */
   }
 }
