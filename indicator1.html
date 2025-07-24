@@ -33,10 +33,14 @@
     <p class="subheading">Entry-Level | Multi-Timeframe | All Segment Support</p>
 
     <!-- Image Below Title -->
-<img src="images/CRM Trend Analyser PRO Tutorial 1.png" alt="Indicator Preview" class="image-preview" />
-
-<!-- New Image Below the Above Image -->
-<img src="images/CRM Trend Analyser PRO Tutorial 2.png" alt="Second Indicator Preview" class="image-preview" />
+    <div class="carousel-wrapper">
+    <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;">&#x276E;</button>
+    <div class="carousel-track" id="carousel">
+      <img src="images/CRM Trend Analyser PRO Tutorial 2.png" alt="Slide 1" class="carousel-image" />
+      <img src="images/CRM Trend Analyser PRO Tutorial 1.png" alt="Slide 2" class="carousel-image" />
+    </div>
+    <button class="nav-button nav-btn-right" id="nextBtn">&#x276F;</button>
+  </div>
 
     
 
@@ -203,6 +207,75 @@
 </footer>
 
   <script src="https://www.noupe.com/embed/0198230823b77722b7c427825d4bbf4ffc43.js"></script>
+  <script>
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const images = document.querySelectorAll('.carousel-image');
+  let currentIndex = 0;
+  let overlay = null;
 
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < images.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      overlay = document.createElement('div');
+      overlay.className = 'fullscreen-overlay';
+
+      const fullscreenImg = img.cloneNode();
+      fullscreenImg.className = 'fullscreen-img';
+
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'close-btn';
+      closeBtn.innerHTML = '&times;';
+      closeBtn.onclick = () => {
+        overlay.remove();
+        overlay = null;
+      };
+
+      overlay.appendChild(closeBtn);
+      overlay.appendChild(fullscreenImg);
+      document.body.appendChild(overlay);
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (overlay) {
+      if (e.key === 'Escape') {
+        overlay.remove();
+        overlay = null;
+      }
+      return;
+    }
+
+    if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+</script>
 </body>
 </html>
