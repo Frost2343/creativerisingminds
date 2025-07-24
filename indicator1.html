@@ -36,8 +36,8 @@
     <div class="carousel-wrapper">
     <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;">&#x276E;</button>
     <div class="carousel-track" id="carousel">
-      <img src="images/CRM Trend Analyser PRO Tutorial 2.png" alt="Slide 1" class="carousel-image" />
-      <img src="images/CRM Trend Analyser PRO Tutorial 1.png" alt="Slide 2" class="carousel-image" />
+      <img src="images/CRM Trend Analyser PRO Tutorial-1.png" alt="Slide 1" class="carousel-image" />
+      <img src="images/CRM Trend Analyser PRO Tutorial-2.png" alt="Slide 2" class="carousel-image" />
     </div>
     <button class="nav-button nav-btn-right" id="nextBtn">&#x276F;</button>
   </div>
@@ -208,74 +208,117 @@
 
   <script src="https://www.noupe.com/embed/0198230823b77722b7c427825d4bbf4ffc43.js"></script>
   <script>
-  const carousel = document.getElementById('carousel');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const images = document.querySelectorAll('.carousel-image');
-  let currentIndex = 0;
-  let overlay = null;
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const images = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+    let overlay = null;
+    let fullscreenLeft, fullscreenRight;
 
-  function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
-    nextBtn.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
-  }
-
-  nextBtn.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-      currentIndex++;
-      updateCarousel();
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextBtn.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
     }
-  });
 
-  prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
+    function updateFullscreenNav() {
+      if (!fullscreenLeft || !fullscreenRight) return;
+      fullscreenLeft.style.display = currentIndex === 0 ? 'none' : 'block';
+      fullscreenRight.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
     }
-  });
 
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      overlay = document.createElement('div');
-      overlay.className = 'fullscreen-overlay';
-
-      const fullscreenImg = img.cloneNode();
-      fullscreenImg.className = 'fullscreen-img';
-
-      const closeBtn = document.createElement('button');
-      closeBtn.className = 'close-btn';
-      closeBtn.innerHTML = '&times;';
-      closeBtn.onclick = () => {
-        overlay.remove();
-        overlay = null;
-      };
-
-      overlay.appendChild(closeBtn);
-      overlay.appendChild(fullscreenImg);
-      document.body.appendChild(overlay);
-    });
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (overlay) {
-      if (e.key === 'Escape') {
-        overlay.remove();
-        overlay = null;
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateCarousel();
       }
-      return;
-    }
+    });
 
-    if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
 
-  updateCarousel();
-</script>
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+
+        overlay = document.createElement('div');
+        overlay.className = 'fullscreen-overlay';
+
+        const fullscreenImg = img.cloneNode();
+        fullscreenImg.className = 'fullscreen-img';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'close-btn';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.onclick = () => {
+          overlay.remove();
+          overlay = null;
+        };
+
+        fullscreenLeft = document.createElement('button');
+        fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
+        fullscreenLeft.innerHTML = '&#x276E;';
+        fullscreenLeft.onclick = () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            fullscreenImg.src = images[currentIndex].src;
+            updateFullscreenNav();
+          }
+        };
+
+        fullscreenRight = document.createElement('button');
+        fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
+        fullscreenRight.innerHTML = '&#x276F;';
+        fullscreenRight.onclick = () => {
+          if (currentIndex < images.length - 1) {
+            currentIndex++;
+            fullscreenImg.src = images[currentIndex].src;
+            updateFullscreenNav();
+          }
+        };
+
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(fullscreenLeft);
+        overlay.appendChild(fullscreenRight);
+        overlay.appendChild(fullscreenImg);
+        document.body.appendChild(overlay);
+
+        updateFullscreenNav();
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (overlay) {
+        if (e.key === 'Escape') {
+          overlay.remove();
+          overlay = null;
+        } else if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
+          currentIndex++;
+          document.querySelector('.fullscreen-img').src = images[currentIndex].src;
+          updateFullscreenNav();
+        } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+          currentIndex--;
+          document.querySelector('.fullscreen-img').src = images[currentIndex].src;
+          updateFullscreenNav();
+        }
+        return;
+      }
+
+      if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    updateCarousel();
+  </script>
 </body>
 </html>
