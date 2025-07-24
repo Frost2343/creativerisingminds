@@ -94,7 +94,7 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Unique gradients */
+/* Unique gradients
 .card.trend-analyser {
  background: linear-gradient(135deg, #043927, #56ab2f);
 }
@@ -103,7 +103,7 @@ h2 {
 }
 .card.stock-screener {
    background: linear-gradient(135deg, #b31217, #430606);
-}
+} */
 
 /* Hover animation */
 .card:hover {
@@ -615,15 +615,15 @@ a.indicator-link:hover {
 }
 
 .card-bg-1 {
-  background-image: url('images/coming1.jpg');
+  background-image: url('images/comingsoon.png');
 }
 
 .card-bg-2 {
-  background-image: url('images/comingsoon.jpg');
+  background-image: url('images/comingsoon.png');
 }
 
 .card-bg-3 {
-  background-image: url('images/comingsoon.jpg');
+  background-image: url('images/comingsoon.png');
 }
 
 
@@ -663,6 +663,7 @@ a.indicator-link:hover {
   backdrop-filter: blur(3px);
   z-index: 1;
 }
+
 
 .fancy-card .card-content {
   position: relative;
