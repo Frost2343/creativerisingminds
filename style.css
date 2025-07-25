@@ -402,7 +402,7 @@ html, body {
   display: flex;
   gap: 15px;
   justify-content: flex-end;
-  margin-bottom: 130px;
+  margin-bottom: 85px;
 }
 
 .cta {
@@ -560,7 +560,7 @@ a.indicator-link:hover {
     width: auto;
   }
 
-  .hero-content {
+  /* .hero-content {
     margin-top: -50px;
-  }
+  } */
 }
