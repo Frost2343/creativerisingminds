@@ -301,3 +301,9 @@ strong {
 .fullscreen-right {
   right: 30px;
 }
+
+@media (max-width: 768px){
+  .container {
+  margin-top: -100px;
+}
+}
