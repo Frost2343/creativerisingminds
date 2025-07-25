@@ -560,7 +560,7 @@ a.indicator-link:hover {
     width: auto;
   }
 
-  /* .hero-content {
-    margin-top: -50px;
-  } */
+  .hero-content {
+    margin-top: -20px;
+  }
 }
