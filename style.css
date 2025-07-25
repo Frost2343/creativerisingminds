@@ -440,7 +440,7 @@ html, body {
 
 /* Navbar - modern look */
 .navbar {
-  position: sticky;
+  position: absolute;
   top: 0;
   width: 100%;
   display: flex;
@@ -561,6 +561,6 @@ a.indicator-link:hover {
   }
 
   .hero-content {
-    margin-top: -150px;
+    margin-top: -50px;
   }
 }
