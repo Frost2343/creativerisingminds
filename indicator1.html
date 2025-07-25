@@ -252,7 +252,7 @@
 
         const closeBtn = document.createElement('button');
         closeBtn.className = 'close-btn';
-        closeBtn.innerHTML = '×';
+        closeBtn.innerHTML = '&times;';
         closeBtn.onclick = () => {
           overlay.remove();
           overlay = null;
@@ -260,7 +260,7 @@
 
         fullscreenLeft = document.createElement('button');
         fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
-        fullscreenLeft.innerHTML = '❮';
+        fullscreenLeft.innerHTML = '&#x276E;';
         fullscreenLeft.onclick = () => {
           if (currentIndex > 0) {
             currentIndex--;
@@ -269,9 +269,9 @@
           }
         };
 
- Fuller = document.createElement('button');
+        fullscreenRight = document.createElement('button');
         fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
-        fullscreenRight.innerHTML = '❯';
+        fullscreenRight.innerHTML = '&#x276F;';
         fullscreenRight.onclick = () => {
           if (currentIndex < images.length - 1) {
             currentIndex++;
