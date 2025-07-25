@@ -390,7 +390,7 @@ html, body {
 .hero-content h1 {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .hero-content p {
@@ -561,6 +561,6 @@ a.indicator-link:hover {
   }
 
   .hero-content {
-    margin-top: -250px;
+    margin-top: -150px;
   }
 }
