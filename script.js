@@ -277,7 +277,7 @@ const translations = {
     feature_disclaimer_4: "<strong>आनंदी ट्रेडिंग, चीअर्स!</strong>",
     // Existing translations...
     video_fallback: "तुमचा ब्राउझर व्हिडिओ टॅगला सपोर्ट करत नाही.",
-    hero_title: "ट्रेडर्ससाठी तयार केलेले जे<br>तर्काचे अनुसरण करतात,<br>नशीबाचे नाही.",
+    hero_title: "ट्रेडर्ससाठी तयार केलेले जे तर्काचे अनुसरण करतात, नशीबाचे नाही.",
     hero_subtitle: "सिग्नल शोधा. गोंगाट टाळा. ट्रेंडवर वर्चस्व मिळवा.",
     hero_btn_explore: "योजना शोधा",
     hero_btn_contact: "आमच्याशी संपर्क साधा",
