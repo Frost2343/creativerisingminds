@@ -564,3 +564,13 @@ a.indicator-link:hover {
     margin-top: -30px;
   }
 }
+
+.card-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.card-link {
+    cursor: pointer;
+    /* Add any existing styles for the "Learn More" button */
+}
