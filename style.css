@@ -97,64 +97,125 @@ h2 {
 /* Indicator cards */
 #indicators {
   text-align: center;
+  background: linear-gradient(180deg, rgba(15, 15, 25, 0.9), rgba(5, 5, 15, 0.95)); /* Dark, sharp background */
+  padding: 50px 20px;
+  min-height: 100vh; /* Full viewport for impact */
 }
 
 .indicator-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 28px; /* Clean spacing */
 }
 
-/* Base card style */
+/* Base card style with sharp glass effect */
 .card {
-  padding: 20px;
-  width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  padding: 26px;
+  width: 270px; /* Balanced size */
+  border-radius: 14px; /* Crisp corners */
+  background: rgba(255, 255, 255, 0.1); /* Clear glass */
+  backdrop-filter: blur(8px); /* Reduced blur for sharpness */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Sharper border */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), /* Clean shadow */
+              0 0 10px rgba(30, 136, 229, 0.5); /* Consistent blue glow */
   color: #f5f5f5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Unique gradients */
+/* Sharp pseudo-element for subtle shine */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+/* Unique gradients with high contrast */
 .card.trend-analyser {
-  background: linear-gradient(135deg, #043927, #56ab2f);
+  background: linear-gradient(135deg, rgba(5, 66, 44, 0.9), rgba(100, 200, 60, 0.9));
 }
 .card.demand-supply {
-  background: linear-gradient(135deg, #7f6a00, #f5af19);
+  background: linear-gradient(135deg, rgba(150, 120, 0, 0.9), rgba(255, 190, 40, 0.9));
 }
 .card.stock-screener {
-  background: linear-gradient(135deg, #b31217, #430606);
+  background: linear-gradient(135deg, rgba(200, 20, 25, 0.9), rgba(80, 10, 10, 0.9));
 }
 
-/* Hover animation */
+/* Hover animation with sharp blue glow */
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px) scale(1.01); /* Subtle lift and scale */
+  background: rgba(255, 255, 255, 0.15); /* Slightly brighter glass */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), /* Stronger shadow */
+              0 0 15px rgba(30, 136, 229, 0.7); /* Brighter blue glow */
+}
+.card:hover::before {
+  left: 100%; /* Shine moves across */
 }
 
 /* Card headings */
 .card h3 {
-  margin-top: 0;
+  margin: 0 0 12px;
+  font-size: 1.3rem; /* Sharp and bold */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* Card button */
+/* Card description */
+.card p {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Card button with blue glow */
 .card-link {
   display: inline-block;
-  margin-top: 10px;
-  background: #1976d2;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #1e88e5, #42a5f5); /* Vibrant blue gradient */
   color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 10px 22px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 12px rgba(30, 136, 229, 0.5); /* Sharp blue glow */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-link:hover {
-  background: #145ea8;
+  background: linear-gradient(90deg, #1976d2, #1e88e5); /* Darker blue */
+  transform: scale(1.06);
+  box-shadow: 0 5px 15px rgba(30, 136, 229, 0.7); /* Stronger blue glow */
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Keyframe for sharp pulsing blue glow */
+@keyframes pulse-glow {
+  0% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 10px rgba(30, 136, 229, 0.5); }
+  50% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 15px rgba(30, 136, 229, 0.7); }
+  100% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 10px rgba(30, 136, 229, 0.5); }
+}
+
+.card:hover {
+  animation: pulse-glow 1.2s infinite ease-in-out; /* Sharp, pulsing blue glow */
+}
 /* Pricing section */
 .table-wrapper {
   overflow-x: auto;
@@ -294,6 +355,7 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  margin-top: 4rem;
 }
 
 .group-discount {
