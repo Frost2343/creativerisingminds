@@ -475,6 +475,7 @@ html, body {
   height: 50px;
   object-fit: contain;
   margin-right: 5px;
+  border: 1px solid white;
 }
 
 #ytvideos {
@@ -510,6 +511,7 @@ a.indicator-link:hover {
 .logo {
   height: 50px;
   border-radius: 10px;
+  border-color: white;
 }
 
 .brand-name {
