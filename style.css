@@ -297,6 +297,10 @@ h2 {
   transform: scale(1.2);
 }
 
+.contact-info{
+  margin-top: 10px;
+}
+
 .contact-info p {
   margin: 8px 0;
   font-size: 15px;
@@ -738,8 +742,8 @@ a.indicator-link:hover {
 /* .phone-container {
   display: flex;
   align-items: center;
-  gap: 10px; */
-}
+  gap: 10px;
+} */
 
 .phone-icon {
   color: #000000;
@@ -774,4 +778,10 @@ a.indicator-link:hover {
 
 .email-container:hover .email-icon {
   color: #C82333;
+}
+
+.footer-section h3 {
+  color: #f39c12;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
 }
