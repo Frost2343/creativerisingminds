@@ -234,6 +234,79 @@ h2 {
   justify-content: center;
 }
 
+.custom-footer {
+  /* background: linear-gradient(135deg, #1f0036, #3a0ca3, #5f0f40);
+   */
+  background: linear-gradient(135deg, #0f172a, #000000);
+
+
+
+
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #ffffff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FF5733;
+  transform: scale(1.2);
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+
 .pricing-table th,
 .pricing-table td {
   border: 1px solid #c2b5b5;
@@ -309,6 +382,18 @@ h2 {
 }
 
 /* Footer */
+
+.footer-section ul li a {
+  font-size: 18px; /* Adjust as needed */
+  text-decoration: none;
+  color: #ffffff; /* Or any color that fits your theme */
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #FF5733; /* Optional: hover color */
+}
+
 footer {
   background-color: #1e1e1e;
   color: white;
@@ -637,4 +722,56 @@ a.indicator-link:hover {
 .card-link {
     cursor: pointer;
     /* Add any existing styles for the "Learn More" button */
+}
+
+.phone-link {
+  color: #ffffff; /* Initial color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+  font-weight: bold;
+}
+
+.phone-link:hover {
+  color: #00ff40; /* Hover color */
+}
+
+/* .phone-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; */
+}
+
+.phone-icon {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.phone-container:hover .phone-icon {
+  color: #FF5733;
+}
+
+.email-link {
+  color: #ffffff; /* Initial color (green) */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.email-link:hover {
+  color: #FF5733; /* Hover color (red-ish) */
+}
+
+/* .email-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} */
+
+.email-icon {
+  color: #f9f9f9;
+  transition: color 0.3s ease;
+}
+
+.email-container:hover .email-icon {
+  color: #C82333;
 }
