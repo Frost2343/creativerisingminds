@@ -790,3 +790,30 @@ a.indicator-link:hover {
   font-size: 1.3rem;
   margin-bottom: 12px;
 }
+
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.tv-icon img {
+  width: 30px;
+  height: 30px;
+  transform: scale(1.7); /* makes it 15% larger */
+  transform-origin: center;
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
+
+
