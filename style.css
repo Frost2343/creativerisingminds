@@ -100,6 +100,7 @@ h2 {
   background: linear-gradient(135deg, #0f172a, #000000);
   padding: 50px 20px;
   min-height: 100vh; /* Full viewport for impact */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .indicator-cards {
@@ -330,10 +331,11 @@ h2 {
 /* Contact section */
 #contact {
   text-align: center;
-  background: linear-gradient(135deg, #1f0036, #3a0ca3, #5f0f40);
+  background: linear-gradient(135deg, #0f172a, #000000);
   padding: 60px 20px;
   color: #e0e0e0;
-  border-top: 2px solid #444;
+  /* border-top: 2px solid #444; */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 #contact h2 {
