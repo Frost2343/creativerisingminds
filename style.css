@@ -97,7 +97,7 @@ h2 {
 /* Indicator cards */
 #indicators {
   text-align: center;
-  background: linear-gradient(180deg, rgba(15, 15, 25, 0.9), rgba(5, 5, 15, 0.95)); /* Dark, sharp background */
+  background: linear-gradient(135deg, #0f172a, #000000);
   padding: 50px 20px;
   min-height: 100vh; /* Full viewport for impact */
 }
@@ -140,13 +140,16 @@ h2 {
 
 /* Unique gradients with high contrast */
 .card.trend-analyser {
-  background: linear-gradient(135deg, rgba(5, 66, 44, 0.9), rgba(100, 200, 60, 0.9));
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
 }
 .card.demand-supply {
-  background: linear-gradient(135deg, rgba(150, 120, 0, 0.9), rgba(255, 190, 40, 0.9));
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
 }
 .card.stock-screener {
-  background: linear-gradient(135deg, rgba(200, 20, 25, 0.9), rgba(80, 10, 10, 0.9));
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
 }
 
 /* Hover animation with sharp blue glow */
@@ -226,7 +229,7 @@ h2 {
   min-width: 600px;
   border-collapse: collapse;
   margin-top: 30px;
-  background-color: #1e1e1e00;
+  background: linear-gradient(135deg, #0f172a, #000000);
   color: #e0e0e0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   border-radius: 0px;
@@ -467,8 +470,8 @@ footer {
 }
 
 .content-box {
-  background-color: #4ccc53;
-  color: #222;
+  background: linear-gradient(135deg, #1cb5e0, #000851);
+  color: #ffffff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -506,7 +509,7 @@ footer {
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background: linear-gradient(135deg, #0f172a, #000000);
   overflow-x: hidden;
 }
 
