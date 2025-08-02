@@ -606,9 +606,9 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  color: #fff;
+  background: linear-gradient(135deg, #0f172a, #000000);
+  /* backdrop-filter: blur(10px); */
+  /* color: #fff; */
   z-index: 3;
 }
 
