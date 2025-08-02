@@ -11,7 +11,7 @@ const translations = {
     // indicator1.html Translations
     indicator_title: "CRM Trend Analyser",
     view_tradingview: "📈 View on TradingView",
-    main_heading: "💡 CRM Trend Analyser PRO– <span class='highlight'>Smart Entry Level Alert Tool</span> 💡",
+    main_heading_trend: "💡 CRM Trend Analyser PRO– <span class='highlight'>Smart Entry Level Alert Tool</span> 💡",
     subheading: "Entry-Level | Multi-Timeframe | All Segment Support",
     feature_breakout_title: "✅ Breakout-Based Trading System",
     feature_breakout_1: "Detects breakout zones using <span class='highlight'>custom price structure</span> and <span class='highlight'>moving average logic</span>",
@@ -78,12 +78,17 @@ const translations = {
     hero_btn_explore: "Explore Plans",
     hero_btn_contact: "Contact Us",
     indicators_title: "Our Creative Indicators",
-    indicator_trend_title: "CRM Trend Analyser PRO (Free Trial)",
-    indicator_trend_desc: "<strong>CRM Trend Analyser PRO is a precision-crafted trading indicator that combines dynamic moving averages, trend-based oscillators, volatility-powered targets, and built-in supply-demand zones to help you confidently time entries and exits. Whether you're a scalper or swing trader.</strong>",
+    indicator_trend_title: 'CRM Trend Analyser PRO',
+    indicator_trend_desc: "<strong>CRM Trend Analyser PRO blends moving averages, trend oscillators, volatility targets, and supply-demand zones to help traders time entries and exits with precision.</strong>",
     indicator_learn_more: "Learn More",
+    indicator_scalp_title: "CRM<br>Scalp / Swing",
+    indicator_scalp_desc: "",
     indicator_demand_title: "CRM MTF/Demand Supply",
+    indicator_demand_desc: "<strong>CRM MTF/Demand Supply is a smart trend-tracking tool that shows a multi-timeframe trend table and auto-plots demand/supply zones—so you can spot market direction and key levels without switching charts.</strong>",
     indicator_screener_title: "CRM Stock Screener",
+    indicator_screener_desc: "CRM Stock Screener",
     indicator_option_title: "CRM Option Chain Decoder",
+    indicator_option_desc: "CRM Option Chain Decoder",
     pricing_title: "Pricing Plans",
     pricing_table_indicator: "Indicator",
     pricing_table_monthly: "Monthly",
@@ -176,7 +181,16 @@ const translations = {
     section_governing_law_title: "Governing Law",
     section_governing_law: "These terms are governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Mumbai.",
     footer_note_contact: "If you have any questions about these Terms and Conditions, feel free to contact us at <a href='mailto:creativerisingminds@gmail.com'>creativerisingminds@gmail.com</a>.",
-    footer_note_updated: "Last updated: July 28, 2025"
+    footer_note_updated: "Last updated: July 28, 2025",
+    free_indicators_title: "Our Free Indicators",
+    indicator_momentum_title: "CRM Momentum Finder",
+    indicator_volatility_title : "CRM Volatility Tracker",
+    indicator_scalp_desc : "<strong>CRM Scalp/Swing is a versatile indicator designed for both scalping and swing trading, offering precise signals for quick trades and longer-term strategies.</strong>",
+    indicator_scalp_price_title : "CRM Scalp / Swing Indicator",
+    //demand supply translations
+    main_heading_demand : "💡 CRM MTF / Demand Supply– <span class='highlight'>Seamless Scalps. Strategic Swings</span> 💡",
+    //scalp swing translations
+    main_heading_scalp : "💡 CRM Scalp/ Swing– <span class=highlight'>Seamless Scalps. Strategic Swings</span> 💡"
   },
   gu: {
     // Shared Translations
@@ -190,7 +204,7 @@ const translations = {
     // indicator1.html Translations
     indicator_title: "CRM ટ્રેન્ડ એનાલાઇઝર",
     view_tradingview: "📈 ટ્રેડિંગવ્યૂ પર જુઓ",
-    main_heading: "💡 CRM ટ્રેન્ડ એનાલાઇઝર પ્રો– <span class='highlight'>સ્માર્ટ એન્ટ્રી લેવલ એલર્ટ ટૂલ</span> 💡",
+    main_heading_trend: "💡 CRM ટ્રેન્ડ એનાલાઇઝર પ્રો– <span class='highlight'>સ્માર્ટ એન્ટ્રી લેવલ એલર્ટ ટૂલ</span> 💡",
     subheading: "એન્ટ્રી-લેવલ | મલ્ટી-ટાઇમફ્રેમ | બધા સેગમેન્ટ સપોર્ટ",
     feature_breakout_title: "✅ બ્રેકઆઉટ-આધારિત ટ્રેડિંગ સિસ્ટમ",
     feature_breakout_1: "<span class='highlight'>કસ્ટમ પ્રાઇસ સ્ટ્રક્ચર</span> અને <span class='highlight'>મૂવિંગ એવરેજ લોજિક</span> નો ઉપયોગ કરીને બ્રેકઆઉટ ઝોન શોધે છે",
@@ -257,12 +271,17 @@ const translations = {
     hero_btn_explore: "યોજનાઓ શોધો",
     hero_btn_contact: "અમારો સંપર્ક કરો",
     indicators_title: "અમારા ક્રિએટિવ સૂચકો",
-    indicator_trend_title: "CRM ટ્રેન્ડ એનાલાઇઝર પ્રો",
-    indicator_trend_desc: "<strong>CRM ટ્રેન્ડ એનાલાઇઝર પ્રો એ એક ચોકસાઈથી બનાવેલ ટ્રેડિંગ સૂચક છે જે ડાયનામિક મૂવિંગ એવરેજ, ટ્રેન્ડ-આધારિત ઓસિલેટર્સ, વોલેટિલિટી-આધારિત લક્ષ્યો અને બિલ્ટ-ઇન સપ્લાય-ડિમાન્ડ ઝોનને જોડીને તમને નિશ્ચિતપણે પ્રવેશ અને બહાર નીકળવાનો સમય નક્કી કરવામાં મદદ કરે છે. પછી ભલે તમે સ્કેલ્પર હો કે સ્વિંગ ટ્રેડર.</strong>",
+    indicator_trend_title: 'CRM ટ્રેન્ડ વિશ્લેષક PRO',
+    indicator_trend_desc: "<strong>CRM ટ્રેન્ડ એનાલાઇઝર પ્રો એ મૂવિંગ એવરેજ, ટ્રેન્ડ ઓસિલેટર્સ, વોલેટિલિટી લક્ષ્યો અને સપ્લાઇ-ડિમાન્ડ ઝોન્સને મિલાવીને ટ્રેડરોને એન્ટ્રીઝ અને એક્ઝિટ્સનો સમય ચોકસાઈથી નક્કી કરવામાં મદદ કરે છે.</strong>",
     indicator_learn_more: "વધુ જાણો",
+    indicator_scalp_title: "CRM<br>સ્કેલ્પ / સ્વિંગ",
+    indicator_scalp_desc: "",
     indicator_demand_title: "CRM MTF/ડિમાન્ડ સપ્લાય",
+    indicator_demand_desc: "<strong>CRM MTF/ડિમાન્ડ સપ્લાઇ એ એક સ્માર્ટ ટ્રેન્ડ-ટ્રેકિંગ ટૂલ છે જે મલ્ટી-ટાઇમફ્રેમ ટ્રેન્ડ ટેબલ દર્શાવે છે અને ડિમાન્ડ/સપ્લાઇ ઝોન્સને આપોઆપ દર્શાવે છે—જેથી તમે ચાર્ટ બદલ્યા વિના બજારની દિશા અને મુખ્ય સ્તરો શોધી શકો.</strong>",
     indicator_screener_title: "CRM સ્ટોક સ્ક્રીનર",
+    indicator_screener_desc: "",
     indicator_option_title: "CRM ઓપ્શન ચેઇન ડીકોડર",
+    indicator_option_desc: "",
     pricing_title: "કિંમત યોજનાઓ",
     pricing_table_indicator: "સૂચક",
     pricing_table_monthly: "માસિક",
@@ -354,7 +373,14 @@ const translations = {
     section_governing_law_title: "શાસન કાયદો",
     section_governing_law: "આ શરતો ભારતના કાયદાઓ અનુસાર શાસિત અને અર્થઘટન કરવામાં આવે છે. કોઈપણ વિવાદ મુંબઈની અદાલતોના વિશિષ્ટ અધિકારક્ષેત્રને આધીન રહેશે.",
     footer_note_contact: "જો તમને આ નિયમો અને શરતો વિશે કોઈ પ્રશ્નો હોય, તો કૃપા કરીને અમારો સંપર્ક કરો <a href='mailto:creativerisingminds@gmail.com'>creativerisingminds@gmail.com</a> પર.",
-    footer_note_updated: "છેલ્લું અદ્યતન: જુલાઈ 28, 2025"
+    footer_note_updated: "છેલ્લું અદ્યતન: જુલાઈ 28, 2025",
+    free_indicators_title: "અમારા મફત સૂચકો",
+    indicator_momentum_title: "CRM મોમેન્ટમ ફાઇન્ડર",
+    indicator_volatility_title: "CRM વોલેટિલિટી ટ્રેકર",
+    indicator_scalp_desc: "<strong>CRM સ્કેલ્પ/સ્વિંગ એ એક વર્સેટાઇલ સૂચક છે જે સ્કેલ્પિંગ અને સ્વિંગ ટ્રેડિંગ માટે બનાવેલ છે, જે ઝડપી ટ્રેડ્સ અને લાંબા-કાળની વ્યૂહરચનાઓ માટે સચોટ સિગ્નલો પૂરા પાડે છે.</strong>",
+    indicator_scalp_price_title: "CRM સ્કેલ્પ / સ્વિંગ સૂચક",
+    main_heading_demand: "💡 CRM MTF / ડિમાન્ડ સપ્લાઇ– <span class='highlight'>સરળ સ્કેલ્પ્સ. રણનીતિગત સ્વિંગ્સ</span> 💡",
+    main_heading_scalp: "💡 CRM સ્કેલ્પ/ સ્વિંગ– <span class='highlight'>સરળ સ્કેલ્પ્સ. રણનીતિગત સ્વિંગ્સ</span> 💡"
   },
   mr: {
     // Shared Translations
@@ -368,7 +394,7 @@ const translations = {
     // indicator1.html Translations
     indicator_title: "CRM ट्रेंड अ‍ॅनालायझर",
     view_tradingview: "📈 ट्रेडिंगव्ह्यूवर बघा",
-    main_heading: "💡 CRM ट्रेंड अ‍ॅनालायझर प्रो– <span class='highlight'>स्मार्ट एंट्री लेव्हल अलर्ट टूल</span> 💡",
+    main_heading_trend: "💡 CRM ट्रेंड अ‍ॅनालायझर प्रो– <span class='highlight'>स्मार्ट एंट्री लेव्हल अलर्ट टूल</span> 💡",
     subheading: "एंट्री-लेव्हल | मल्टी-टाइमफ्रेम | सर्व सेगमेंट सपोर्ट",
     feature_breakout_title: "✅ ब्रेकआउट-आधारित ट्रेडिंग सिस्टम",
     feature_breakout_1: "<span class='highlight'>कस्टम प्राइस स्ट्रक्चर</span> आणि <span class='highlight'>मूव्हिंग एव्हरेज लॉजिक</span> वापरून ब्रेकआउट झोन शोधते",
@@ -435,12 +461,17 @@ const translations = {
     hero_btn_explore: "योजना शोधा",
     hero_btn_contact: "आमच्याशी संपर्क साधा",
     indicators_title: "आमचे क्रिएटिव्ह इंडिकेटर",
-    indicator_trend_title: "CRM ट्रेंड अ‍ॅनालायझर प्रो",
-    indicator_trend_desc: "<strong>CRM ट्रेंड अ‍ॅनालायझर प्रो हा एक अचूकपणे तयार केलेला ट्रेडिंग इंडिकेटर आहे जो डायनॅमिक मूव्हिंग एव्हरेज, ट्रेंड-आधारित ऑसिलेटर्स, व्होलॅटिलिटी-आधारित लक्ष्ये आणि बिल्ट-इन सप्लाय-डिमांड झोन एकत्रित करून तुम्हाला आत्मविश्वासाने प्रवेश आणि बाहेर पडण्याचा वेळ ठरवण्यास मदत करतो. मग तुम्ही स्काल्पर असो किंवा स्विंग ट्रेडर.</strong>",
+    indicator_trend_title: 'CRM ट्रेंड ॲनालायझर PRO',
+    indicator_trend_desc: "<strong>CRM ट्रेंड अ‍ॅनालायझर प्रो मूव्हिंग एव्हरेज, ट्रेंड ऑसिलेटर्स, व्होलॅटिलिटी टार्गेट्स आणि सप्लाय-डिमांड झोन एकत्रित करून ट्रेडर्सना एंट्रीज आणि एक्झिट्सचा वेळ अचूकपणे ठरवण्यास मदत करते.</strong>",
     indicator_learn_more: "अधिक जाणून घ्या",
+    indicator_scalp_title: "CRM<br>स्कॅल्प / स्विंग",
+    indicator_scalp_desc: "",
     indicator_demand_title: "CRM MTF/डिमांड सप्लाय",
+    indicator_demand_desc: "<strong>CRM MTF/डिमांड सप्लाय हे एक स्मार्ट ट्रेंड-ट्रॅकिंग टूल आहे जे मल्टी-टाइमफ्रेम ट्रेंड टेबल दाखवते आणि डिमांड/सप्लाय झोन ऑटो-प्रॉट्स करते—जेणेकरून तुम्ही चार्ट बदलता येणार नाही तोपर्यंत बाजाराची दिशा आणि महत्त्वाचे स्तर शोधू शकता.</strong>",
     indicator_screener_title: "CRM स्टॉक स्क्रीनर",
+    indicator_screener_desc: "",
     indicator_option_title: "CRM ऑप्शन चेन डीकोडर",
+    indicator_option_desc: "",
     pricing_title: "किंमत योजना",
     pricing_table_indicator: "इंडिकेटर",
     pricing_table_monthly: "मासिक",
@@ -533,7 +564,14 @@ const translations = {
     section_governing_law_title: "शासकीय कायदा",
     section_governing_law: "या अटी भारताच्या कायद्यांनुसार शासित आणि त्यांचे अर्थ लावले जातात. कोणत्याही वादविवादावर मुंबईतील न्यायालयांचे विशेष अधिकारक्षेत्र असेल.",
     footer_note_contact: "जर तुम्हाला या नियम आणि अटींबद्दल कोणतेही प्रश्न असतील, तर कृपया आमच्याशी संपर्क साधा <a href='mailto:creativerisingminds@gmail.com'>creativerisingminds@gmail.com</a> वर.",
-    footer_note_updated: "शेवटचे अद्ययावत: जुलै 28, 2025"
+    footer_note_updated: "शेवटचे अद्ययावत: जुलै 28, 2025",
+    free_indicators_title: "आमचे मोफत इंडिकेटर",
+    indicator_momentum_title: "CRM मॉमेंटम शोधक",
+    indicator_volatility_title: "CRM व्होलॅटिलिटी ट्रॅकर",
+    indicator_scalp_desc: "<strong>CRM स्कॅल्प/स्विंग हे एक बहुमुखी इंडिकेटर आहे जो स्कॅल्पिंग आणि स्विंग ट्रेडिंगसाठी डिझाइन केलेला आहे, जे जलद ट्रेड्स आणि दीर्घकालीन रणनीतींसाठी अचूक सिग्नल्स देते.</strong>",
+    indicator_scalp_price_title: "CRM स्कॅल्प / स्विंग इंडिकेटर",
+    main_heading_demand: "💡 CRM MTF / डिमांड सप्लाय– <span class='highlight'>सुकर स्कॅल्प्स. रणनीतीपूर्ण स्विंग्स</span> 💡",
+    main_heading_scalp: "💡 CRM स्कॅल्प/ स्विंग– <span class='highlight'>सुकर स्कॅल्प्स. रणनीतीपूर्ण स्विंग्स</span> 💡"
   }
 };
 

@@ -108,6 +108,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 28px; /* Clean spacing */
+  margin-bottom: 40px; /* Space between free and paid sections */
 }
 
 /* Base card style with sharp glass effect */
@@ -142,15 +143,21 @@ h2 {
 /* Unique gradients with high contrast */
 .card.trend-analyser {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-
+}
+.card.option-decoder {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.card.volatility-tracker {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.card.scalp-swing {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 .card.demand-supply {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-
 }
 .card.stock-screener {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-
 }
 
 /* Hover animation with sharp blue glow */
@@ -159,7 +166,9 @@ h2 {
   background: rgba(255, 255, 255, 0.15); /* Slightly brighter glass */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), /* Stronger shadow */
               0 0 15px rgba(30, 136, 229, 0.7); /* Brighter blue glow */
+  animation: pulse-glow 1.2s infinite ease-in-out; /* Sharp, pulsing blue glow */
 }
+
 .card:hover::before {
   left: 100%; /* Shine moves across */
 }
@@ -202,12 +211,9 @@ h2 {
   box-shadow: 0 5px 15px rgba(30, 136, 229, 0.7); /* Stronger blue glow */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-    max-width: 320px;
-  }
+.card-link-wrapper {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Keyframe for sharp pulsing blue glow */
@@ -217,9 +223,6 @@ h2 {
   100% { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 10px rgba(30, 136, 229, 0.5); }
 }
 
-.card:hover {
-  animation: pulse-glow 1.2s infinite ease-in-out; /* Sharp, pulsing blue glow */
-}
 /* Pricing section */
 .table-wrapper {
   overflow-x: auto;
