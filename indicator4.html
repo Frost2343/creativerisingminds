@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="title">CRM Trend Analyser</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="indicator1.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html#home" class="brand-container" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+        <img src="images/logo/CRM-LOGO.png" alt="Logo" class="logo" style="height: 50px; border-radius: 10px;">
+        <span class="brand-name" data-translate="brand_name">Creative Rising Minds</span>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html#home" data-translate="nav_home">Home</a>
+      <a href="index.html#indicators" data-translate="nav_indicators">Indicators</a>
+      <a href="index.html#pricing" data-translate="nav_pricing">Pricing</a>
+      <a href="index.html#contact" data-translate="nav_contact">Contact</a>
+      <div class="language-switcher">
+        <select id="language-select" onchange="changeLanguage()" class="brand-container">
+          <option value="en">English</option>
+          <option value="mr">मराठी</option>
+          <option value="gu">ગુજરાતી</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <a href="https://in.tradingview.com/script/WXCgass9-CRM-Trend-Analyser-PRO/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
+    <h1 data-translate="main_heading">💡 CRM Scalp/ Swing– <span class="highlight">Seamless Scalps. Strategic Swings</span> 💡</h1>
+    <p class="subheading" data-translate="subheading">Entry-Level | Multi-Timeframe | All Segment Support</p>
+
+    <!-- Image Below Title -->
+    <div class="carousel-wrapper">
+      <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;">❮</button>
+      <div class="carousel-track" id="carousel">
+        <img src="images/CRM PRO Tutorial-1.png" alt="Slide 1" class="carousel-image" />
+        <img src="images/CRM PRO Tutorial-2.png" alt="Slide 2" class="carousel-image" />
+      </div>
+      <button class="nav-button nav-btn-right" id="nextBtn">❯</button>
+    </div>
+
+    <section class="features-section">
+      <!-- Breakout-Based Trading System -->
+      <div class="feature-card">
+        <h3 data-translate="feature_breakout_title">✅ Breakout-Based Trading System</h3>
+        <ul>
+          <li data-translate="feature_breakout_1">Detects breakout zones using <span class="highlight">custom price structure</span> and <span class="highlight">moving average logic</span></li>
+          <li data-translate="feature_breakout_2">Shows <span class="highlight">early pre-entry cues</span> based on key highs/lows</li>
+          <li data-translate="feature_breakout_3">Automatically calculates <span class="highlight">Entry, Stop Loss, TP1, TP2, and TP3</span></li>
+        </ul>
+      </div>
+
+      <!-- Dynamic Trend Engine -->
+      <div class="feature-card">
+        <h3 data-translate="feature_trend_engine_title">✅ Dynamic Trend Engine</h3>
+        <ul>
+          <li data-translate="feature_trend_engine_1">Adaptive trend lines using momentum acceleration logic</li>
+          <li data-translate="feature_trend_engine_2">Candle coloring based on trend speed for visual clarity</li>
+          <li data-translate="feature_trend_engine_3">Gradient intensity reflects trend strength and stability</li>
+        </ul>
+      </div>
+
+      <!-- Multi-Timeframe Support -->
+      <div class="feature-card">
+        <h3 data-translate="feature_timeframe_title">✅ Multi-Timeframe Support</h3>
+        <ul>
+          <li data-translate="feature_timeframe_1">Plots Daily/Weekly High, Low, and Close levels</li>
+          <li data-translate="feature_timeframe_2">Make decisions using top-down market context</li>
+          <li data-translate="feature_timeframe_3">Toggle historical levels + resize labels for visual comfort</li>
+        </ul>
+      </div>
+
+      <!-- Risk & Target Management -->
+      <div class="feature-card">
+        <h3 data-translate="feature_risk_management_title">✅ Risk & Target Management</h3>
+        <ul>
+          <li data-translate="feature_risk_management_1">Auto-calculated Entry, SL, TP1, TP2, TP3 based on multiple confluences</li>
+          <li data-translate="feature_risk_management_2">Clearly plotted lines and levels for real-time decision-making</li>
+          <li data-translate="feature_risk_management_3">Choose between <span class="highlight">"Only Last Signal"</span> or <span class="highlight">"All Signals"</span> mode:</li>
+          <li data-translate="feature_risk_management_4">✅ Clean charts with most recent trade only</li>
+          <li data-translate="feature_risk_management_5">✅ Back test easily with full signal history</li>
+        </ul>
+      </div>
+
+      <!-- Built-in Technical Tools -->
+      <div class="feature-card">
+        <h3 data-translate="feature_technical_tools_title">✅ Built-in Technical Tools</h3>
+        <ul>
+          <li data-translate="feature_technical_tools_1">Custom-styled <span class="highlight">VWAP Overlay</span></li>
+          <li data-translate="feature_technical_tools_2">Demand & Supply zones for support/resistance</li>
+          <li data-translate="feature_technical_tools_3">Multiple adaptive MAs with momentum tracking</li>
+          <li data-translate="feature_technical_tools_4">MA gradient for strength confirmation</li>
+        </ul>
+      </div>
+
+      <!-- Smart Signal Display -->
+      <div class="feature-card">
+        <h3 data-translate="feature_signal_display_title">✅ Smart Signal Display</h3>
+        <ul>
+          <li data-translate="feature_signal_display_1">Dynamic Buy/Sell markers with entry labels</li>
+          <li data-translate="feature_signal_display_2">Color-coded SL/TP lines for fast visual understanding</li>
+          <li data-translate="feature_signal_display_3">Optional: Use standard candle colors</li>
+          <li data-translate="feature_signal_display_4">Customize theme for your visual comfort</li>
+        </ul>
+      </div>
+
+      <!-- Recommended Timeframes -->
+      <div class="feature-card">
+        <h3 data-translate="feature_timeframes_title">🕒 Recommended Timeframes</h3>
+        <ul>
+          <li data-translate="feature_timeframes_1"><span class="highlight">3min / 5min → Intraday & Scalping</span></li>
+          <li data-translate="feature_timeframes_2"><span class="highlight">Daily Chart → Swing / Positional setups</span></li>
+        </ul>
+      </div>
+
+      <!-- Important Learning Note -->
+      <div class="feature-card">
+        <h3 data-translate="feature_learning_note_title">⚠️ Important Learning Note</h3>
+        <p data-translate="feature_learning_note_intro">This tool is meant to aid your learning and strategy development. Use it with:</p>
+        <ul>
+          <li data-translate="feature_learning_note_1">A clear trading plan</li>
+          <li data-translate="feature_learning_note_2">Disciplined risk management</li>
+          <li data-translate="feature_learning_note_3">Correct position sizing (start with single quantity)</li>
+          <li data-translate="feature_learning_note_4">Strict Stop Loss rules</li>
+          <li data-translate="feature_learning_note_5">Trade only when the risk-to-reward ratio is favorable</li>
+          <li data-translate="feature_learning_note_6">In a sideways or opposing market, no trade can be the best trade</li>
+          <li data-translate="feature_learning_note_7">True wealth creation happens only through long-term investing</li>
+          <li data-translate="feature_learning_note_8">For disciplined risk management, limit intraday exposure to 10% of your capital</li>
+        </ul>
+      </div>
+
+      <!-- Beginner Path -->
+      <div class="feature-card">
+        <h3 data-translate="feature_beginner_path_title">🔰 Beginner Path:</h3>
+        <ol>
+          <li data-translate="feature_beginner_path_1">Start with paper trading for 2 months.</li>
+          <li data-translate="feature_beginner_path_2">Then try equity trades with small capital (₹3,000 or less).</li>
+          <li data-translate="feature_beginner_path_3">Limit loss to ₹50 – ₹100/day. Learn without pressure.</li>
+          <li data-translate="feature_beginner_path_4">Avoid option/futures trading initially — options are high-risk instruments and require advanced understanding.</li>
+        </ol>
+        <p data-translate="feature_beginner_path_quote"><span class="highlight">💡 “Learn first, earn later.” Your capital’s growth or loss is entirely in your control.</span></p>
+      </div>
+
+      <!-- Dark Mode & New Features -->
+      <div class="feature-card">
+        <h3 data-translate="feature_dark_mode_title">🎨 Dark Mode Optimized → Now Fully Customizable</h3>
+        <p data-translate="feature_dark_mode_desc">Previously tailored for dark mode, now enhanced with user-selectable color options for a personalized and clear visual experience.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3 data-translate="feature_trend_confluence_title">📈 Dynamic Trend Confluence Visual</h3>
+        <p data-translate="feature_trend_confluence_desc">Introducing a trend-following visual layer to help you ride trends with confidence and clarity.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3 data-translate="feature_alerts_title">🔔 Real-Time Alerts Integrated</h3>
+        <p data-translate="feature_alerts_desc">Never miss a trade. Stay updated with built-in alerts for all key trade signals and conditions.</p>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="feature-card disclaimer">
+        <h3 data-translate="feature_disclaimer_title">⚠️ Disclaimer</h3>
+        <p data-translate="feature_disclaimer_1">This indicator and content are intended purely for educational and informational purposes. They do not constitute financial, investment, or legal advice. All opinions are personal interpretations based on research and are not recommendations to buy, sell, or hold any security.</p>
+        <p data-translate="feature_disclaimer_2">Always consult a SEBI-registered advisor or certified financial planner before making investment decisions. The creator is not responsible for any financial loss or decision taken by viewers.</p>
+        <p data-translate="feature_disclaimer_3">Use this tool as support to your own strategy — not as a standalone trading system.</p>
+        <p data-translate="feature_disclaimer_4"><strong>Happy Trading, CHEERS!</strong></p>
+      </div>
+    </section>
+  </div>
+  <!-- Footer -->
+<footer class="custom-footer">
+  <div class="footer-container">
+    <!-- Social Media -->
+    <div class="footer-section social-media">
+      <h3 data-translate="footer_social_media">Follow us on social media</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@creativerisingminds005"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
+        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+          <span class="tv-icon">
+            <img src="images/logo/TVicon.png" alt="TradingView">
+          </span>
+        </a>
+        <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <div class="contact-info">
+        <h3 data-translate="footer_contact_us">Contact Us</h3>
+        <p class="email-container">
+          <i class="fas fa-envelope"></i> 
+          <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
+        </p>
+        <p class="phone-container">
+          <i class="fas fa-phone-alt"></i> 
+          <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3 data-translate="footer_quick_links">Quick Links</h3>
+      <ul>
+        <li><a href="#home" data-translate="footer_home">Home</a></li>
+        <li><a href="disclamer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
+        <li><a href="#contact" data-translate="footer_contact_us">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section">
+      <h3 data-translate="footer_policies">Policies and Compliance</h3>
+      <ul>
+        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
+        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
+    © 2025 Creative Rising Minds. All rights reserved.
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
+  <script>
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const images = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+    let overlay = null;
+    let fullscreenLeft, fullscreenRight;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextBtn.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
+    }
+
+    function updateFullscreenNav() {
+      if (!fullscreenLeft || !fullscreenRight) return;
+      fullscreenLeft.style.display = currentIndex === 0 ? 'none' : 'block';
+      fullscreenRight.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+
+        overlay = document.createElement('div');
+        overlay.className = 'fullscreen-overlay';
+
+        const fullscreenImg = img.cloneNode();
+        fullscreenImg.className = 'fullscreen-img';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'close-btn';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.onclick = () => {
+          overlay.remove();
+          overlay = null;
+        };
+
+        fullscreenLeft = document.createElement('button');
+        fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
+        fullscreenLeft.innerHTML = '&#x276E;';
+        fullscreenLeft.onclick = () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            fullscreenImg.src = images[currentIndex].src;
+            updateFullscreenNav();
+          }
+        };
+
+        fullscreenRight = document.createElement('button');
+        fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
+        fullscreenRight.innerHTML = '&#x276F;';
+        fullscreenRight.onclick = () => {
+          if (currentIndex < images.length - 1) {
+            currentIndex++;
+            fullscreenImg.src = images[currentIndex].src;
+            updateFullscreenNav();
+          }
+        };
+
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(fullscreenLeft);
+        overlay.appendChild(fullscreenRight);
+        overlay.appendChild(fullscreenImg);
+        document.body.appendChild(overlay);
+
+        updateFullscreenNav();
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (overlay) {
+        if (e.key === 'Escape') {
+          overlay.remove();
+          overlay = null;
+        } else if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
+          currentIndex++;
+          document.querySelector('.fullscreen-img').src = images[currentIndex].src;
+          updateFullscreenNav();
+        } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+          currentIndex--;
+          document.querySelector('.fullscreen-img').src = images[currentIndex].src;
+          updateFullscreenNav();
+        }
+        return;
+      }
+
+      if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    updateCarousel();
+  </script>
+</body>
+</html>

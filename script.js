@@ -78,7 +78,7 @@ const translations = {
     hero_btn_explore: "Explore Plans",
     hero_btn_contact: "Contact Us",
     indicators_title: "Our Creative Indicators",
-    indicator_trend_title: "CRM Trend Analyser PRO",
+    indicator_trend_title: "CRM Trend Analyser PRO (Free Trial)",
     indicator_trend_desc: "<strong>CRM Trend Analyser PRO is a precision-crafted trading indicator that combines dynamic moving averages, trend-based oscillators, volatility-powered targets, and built-in supply-demand zones to help you confidently time entries and exits. Whether you're a scalper or swing trader.</strong>",
     indicator_learn_more: "Learn More",
     indicator_demand_title: "CRM MTF/Demand Supply",
