@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-translate="page_title_demandsupply">CRM Multi-Timeframe Demand & Supply Indicator</title>
+  <title data-translate="title">CRM EMA Crossover with RSI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="indicator1.css">
   <link rel="stylesheet" href="style.css">
@@ -33,58 +33,48 @@
     </div>
   </nav>
   <div class="container">
-    <a href="https://in.tradingview.com/script/WXCgass9-CRM-MTF-Demand-Supply/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
-    <h1 data-translate="main_heading_demandsupply">💡 CRM Multi-Timeframe Demand & Supply Indicator – <span class="highlight">Your Smart Confluence Trading Assistant</span> 💡</h1>
-    <p class="subheading" data-translate="subheading_mtf">Gain an instant edge with multi-timeframe trend analysis for high-probability trade setups</p>
+    <a href="https://in.tradingview.com/script/WXCgass9-CRM-EMA-RSI/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
+    <h1 data-translate="main_heading_ema_rsi">💡 CRM EMA Crossover with RSI – <span class="highlight">Precision Trend Trading Made Easy</span> 💡</h1>
+    <p class="subheading" data-translate="subheading_ema_rsi">Master short-term momentum with EMA alignments, RSI confirmation, and VWAP filters</p>
 
     <!-- Image Carousel -->
     <div class="carousel-wrapper">
       <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;">❮</button>
       <div class="carousel-track" id="carousel">
-        <img src="images/CRM MTF DEMAND SUPPLY.png" alt="Slide 1" class="carousel-image" />
-        <!-- <img src="images/CRM-MTF-Tutorial-2.png" alt="Slide 2" class="carousel-image" /> -->
+        <img src="images/CRM EMA Crossover with RSI.png" alt="Slide 1" class="carousel-image" />
+        <!-- <img src="images/CRM-EMA-RSI-Tutorial-2.png" alt="Slide 2" class="carousel-image" /> -->
       </div>
       <button class="nav-button nav-btn-right" id="nextBtn">❯</button>
     </div>
 
     <section class="features-section">
-      <!-- Multi-Timeframe Trend Confluence -->
+      <!-- Key Features -->
       <div class="feature-card">
-        <h3 data-translate="feature_mtf_trend_title">📊 Multi-Timeframe Trend Confluence</h3>
+        <h3 data-translate="feature_key_title">🔍 Key Features</h3>
         <ul>
-          <li data-translate="feature_mtf_trend_1">Analyze <span class="highlight">9 customizable timeframes</span> (3min to 1M)</li>
-          <li data-translate="feature_mtf_trend_2"><span class="highlight">Smart MA-based trend detection</span> (SMA, EMA, WMA, AMA)</li>
-          <li data-translate="feature_mtf_trend_3">Weighted average trend score for precise confluence</li>
+          <li data-translate="feature_key_1">📈 <span class="highlight">EMA-Based Buy/Sell Logic</span>: Buy when EMA 15 > EMA 9, price above VWAP, and RSI > 60</li>
+          <li data-translate="feature_key_2">Sell when EMA 9 > EMA 15, price below VWAP, and RSI < 40</li>
+          <li data-translate="feature_key_3">Works best on 3/5 min timeframes for intraday scalping</li>
         </ul>
       </div>
 
-      <!-- Intuitive Visual Dashboard -->
+      <!-- Visual Signal Overlay -->
       <div class="feature-card">
-        <h3 data-translate="feature_dashboard_title">🎨 Intuitive Visual Dashboard</h3>
+        <h3 data-translate="feature_visual_title">💡 Visual Signal Overlay</h3>
         <ul>
-          <li data-translate="feature_dashboard_1"><span class="highlight">Real-time Buy/Sell signals</span> per timeframe</li>
-          <li data-translate="feature_dashboard_2">Choose <span class="highlight">horizontal or vertical display</span> to fit your chart</li>
-          <li data-translate="feature_dashboard_3">Color-coded alerts: Strong Buy, Buy, Flat, Sell, Strong Sell</li>
+          <li data-translate="feature_visual_1">Clear green/red dynamic trend zones</li>
+          <li data-translate="feature_visual_2">Instant arrow signals for entry points</li>
+          <li data-translate="feature_visual_3">RSI crossover with zone marking (above 60 = bullish, below 40 = bearish)</li>
         </ul>
       </div>
 
-      <!-- Advanced Customization -->
+      <!-- Smart Strategy Filters -->
       <div class="feature-card">
-        <h3 data-translate="feature_customization_title">⚡ Advanced Customization</h3>
+        <h3 data-translate="feature_filters_title">⚙️ Smart Strategy Filters</h3>
         <ul>
-          <li data-translate="feature_customization_1">Toggle timeframes on/off for focused analysis</li>
-          <li data-translate="feature_customization_2">Adjust MA types and lengths to match your strategy</li>
-          <li data-translate="feature_customization_3">Custom colors and table positioning for seamless integration</li>
-        </ul>
-      </div>
-
-      <!-- Smart Alerts & Candle Coloring -->
-      <div class="feature-card">
-        <h3 data-translate="feature_alerts_candle_title">🔔 Smart Alerts & Candle Coloring</h3>
-        <ul>
-          <li data-translate="feature_alerts_candle_1">Auto-alerts for trend reversals and strength shifts</li>
-          <li data-translate="feature_alerts_candle_2">Optional candle coloring for instant trend recognition</li>
-          <li data-translate="feature_alerts_candle_3">Stay updated with real-time signal notifications</li>
+          <li data-translate="feature_filters_1">Aligns with VWAP for institutional confluence</li>
+          <li data-translate="feature_filters_2">Built-in trend-following confirmation</li>
+          <li data-translate="feature_filters_3">Avoids sideways noise with strict signal logic</li>
         </ul>
       </div>
 
@@ -92,10 +82,10 @@
       <div class="feature-card">
         <h3 data-translate="feature_how_it_works_title">🚀 How It Works</h3>
         <ol>
-          <li data-translate="feature_how_it_works_1">Scans each timeframe for trend direction using MA cross</li>
-          <li data-translate="feature_how_it_works_2">Calculates a weighted average trend score</li>
-          <li data-translate="feature_how_it_works_3">Displays a clean, professional dashboard with real-time signals</li>
-          <li data-translate="feature_how_it_works_4">Alerts you when high-confluence setups emerge</li>
+          <li data-translate="feature_how_it_works_1">Monitors EMA crossover + RSI confirmation</li>
+          <li data-translate="feature_how_it_works_2">Checks confluence with VWAP for higher accuracy</li>
+          <li data-translate="feature_how_it_works_3">Displays trend zones, entry arrows & RSI momentum</li>
+          <li data-translate="feature_how_it_works_4">Helps you stay in trend and avoid false entries</li>
         </ol>
       </div>
 
@@ -103,24 +93,24 @@
       <div class="feature-card">
         <h3 data-translate="feature_why_love_title">💡 Why Traders Love It</h3>
         <ul>
-          <li data-translate="feature_why_love_1">Eliminates guesswork with a clear market overview</li>
-          <li data-translate="feature_why_love_2">Saves time by avoiding manual timeframe switching</li>
-          <li data-translate="feature_why_love_3">Enhances consistency with multi-timeframe confirmation</li>
-          <li data-translate="feature_why_love_4">Perfect for scalpers, swing traders, and investors</li>
+          <li data-translate="feature_why_love_1">✅ Avoids noise – Filters low-quality setups</li>
+          <li data-translate="feature_why_love_2">✅ Boosts confidence – All key confirmations in one place</li>
+          <li data-translate="feature_why_love_3">✅ Fits any strategy – Options, scalping, and intraday setups</li>
+          <li data-translate="feature_why_love_4">Perfect for Nifty/Bank Nifty Option Traders!</li>
         </ul>
       </div>
 
       <!-- Try It Now -->
       <div class="feature-card">
-        <h3 data-translate="feature_try_now_title">📥 Try It Now & Trade Smarter!</h3>
+        <h3 data-translate="feature_try_now_title">📥 Add It to Your Toolkit Today!</h3>
         <ul>
-          <li data-translate="feature_try_now_1">Works on all assets (Stocks, Forex, Crypto)</li>
-          <li data-translate="feature_try_now_2">Fully customizable to fit your trading strategy</li>
-          <li data-translate="feature_try_now_3">Easy setup – just apply and start trading</li>
+          <li data-translate="feature_try_now_1">🔹 Built for fast-paced trades</li>
+          <li data-translate="feature_try_now_2">🔹 Minimal lag, maximum clarity</li>
+          <li data-translate="feature_try_now_3">🔹 Free during launch period – Try it now!</li>
         </ul>
-        <p data-translate="feature_try_now_quote"><span class="highlight">“The best traders don’t predict the market – they align with it.”</span></p>
+        <p data-translate="feature_try_now_quote"><span class="highlight">“Your edge isn't just timing – it's alignment with real momentum.”</span></p>
       </div>
-      <!-- Important Learning Note -->
+    <!-- Important Learning Note -->
       <div class="feature-card">
         <h3 data-translate="feature_learning_note_title">⚠️ Important Learning Note</h3>
         <p data-translate="feature_learning_note_intro">This tool is meant to aid your learning and strategy development. Use it with:</p>
@@ -147,6 +137,7 @@
         </ol>
         <p data-translate="feature_beginner_path_quote"><span class="highlight">💡 “Learn first, earn later.” Your capital’s growth or loss is entirely in your control.</span></p>
       </div>
+
       <!-- Disclaimer -->
       <div class="feature-card disclaimer">
         <h3 data-translate="feature_disclaimer_title">⚠️ Disclaimer</h3>

@@ -144,10 +144,10 @@ h2 {
 .card.trend-analyser {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
-.card.option-decoder {
+.card.ema-st {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
-.card.volatility-tracker {
+.card.ema-rsi {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 .card.scalp-swing {
