@@ -252,7 +252,7 @@ const translations = {
     //ema+rsi
     indicator_ema_rsi_desc : "<strong>CRM EMA Cross-over with RSI is a momentum-based trading tool that combines EMA crossovers, RSI strength, and VWAP confluence to deliver precise intraday entry signals, ideal for scalpers and options traders.</strong>",
     page_title_emarsi: "CRM EMA Cross/ RSI",
-    main_heading_ema_rsi: "💡 CRM EMA Crossover with RSI – <span class='highlight'>Precision Trend Trading Made Easy</span> 💡",
+    main_heading_ema_rsi: "💡 CRM EMA Cross/ RSI – <span class='highlight'>Precision Trend Trading Made Easy</span> 💡",
     subheading_ema_rsi: "Master short-term momentum with EMA alignments, RSI confirmation, and VWAP filters",
     feature_key_title: "🔍 Key Features",
     feature_key_1: "📈 <span class='highlight'>EMA-Based Buy/Sell Logic</span>: Buy when current price > EMA9 > EMA15, price above VWAP, and RSI > 60",
@@ -540,7 +540,7 @@ const translations = {
     //ema+rsi
     indicator_ema_rsi_desc: "<strong>CRM EMA ક્રોસઓવર સાથે RSI એક મોમેન્ટમ-આધારિત ટ્રેડિંગ ટૂલ છે જે EMA ક્રોસઓવર્સ, RSI શક્તિ અને VWAP કન્ફલ્યુએન્સને જોડે છે જેથી સચોટ ઇન્ટ્રાડે એન્ટ્રી સિગ્નલ્સ આપે, જે સ્કેલ્પર્સ અને ઓપ્શન્સ ટ્રેડર્સ માટે યોગ્ય છે.</strong>",
     page_title_emarsi: "CRM EMA ક્રોસ/ RSI",
-    main_heading_ema_rsi: "💡 CRM EMA ક્રોસઓવર સાથે RSI – <span class='highlight'>પ્રિસિઝન ટ્રેન્ડ ટ્રેડિંગ સરળ બનાવે છે</span> 💡",
+    main_heading_ema_rsi: "💡 CRM EMA ક્રોસ/ RSI – <span class='highlight'>પ્રિસિઝન ટ્રેન્ડ ટ્રેડિંગ સરળ બનાવે છે</span> 💡",
     subheading_ema_rsi: "EMA ગોઠવણીઓ, RSI પુષ્ટિ અને VWAP ફિલ્ટર્સ સાથે શોર્ટ-ટર્મ મોમેન્ટમ માસ્ટર કરો",
     feature_key_title: "🔍 કી ફીચર્સ",
     feature_key_1: "📈 <span class='highlight'>EMA-આધારિત ખરીદો/વેચો લોજિક</span>: વર્તમાન કિંમત > EMA9 > EMA15 હોય, કિંમત VWAPથી ઉપર હોય, અને RSI > 60 હોય ત્યારે ખરીદો",
@@ -828,7 +828,7 @@ const translations = {
     //ema+rsi
     indicator_ema_rsi_desc: "<strong>CRM EMA क्रॉसओव्हर स्म RSI हे एक गती-आधारित ट्रेडिंग टूल आहे जे EMA क्रॉसओव्हर्स, RSI ताकद आणि VWAP कॉन्फ्लुएन्स एकत्र करते ज्यामुळे अचूक इंट्राडे एंट्री सिग्नल्स मिळतात, जे स्कॅल्पर्स आणि ऑप्शन्स ट्रेडर्ससाठी आदर्श आहे.</strong>",
     page_title_emarsi: "CRM EMA क्रॉस/ RSI",
-    main_heading_ema_rsi: "💡 CRM EMA क्रॉसओव्हर स्म RSI – <span class='highlight'>प्रिसिजन ट्रेंड ट्रेडिंग सुलभ</span> 💡",
+    main_heading_ema_rsi: "💡 CRM EMA क्रॉस/ RSI – <span class='highlight'>प्रिसिजन ट्रेंड ट्रेडिंग सुलभ</span> 💡",
     subheading_ema_rsi: "EMA संरेषण, RSI पुष्टी आणि VWAP फिल्टर्ससह अल्पकालीन गती मास्टर करा",
     feature_key_title: "🔍 मुख्य वैशिष्ट्ये",
     feature_key_1: "📈 <span class='highlight'>EMA-आधारित खरेदी/विक्री लॉजिक</span>: वर्तमान किंमत > EMA9 > EMA15, किंमत VWAP वर, आणि RSI > 60 असताना खरेदी करा",
