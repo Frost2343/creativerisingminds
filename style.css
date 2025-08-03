@@ -724,10 +724,19 @@ a.indicator-link:hover {
   .hero-content {
     margin-top: -30px;
   }
-  .card-ema-st{
-    margin-left: 100px;
+
+}
+@media (max-width: 768px) {
+  .card.ema-st {
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
+
 
 .card-link-wrapper {
     text-decoration: none;
