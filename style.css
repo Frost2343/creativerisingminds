@@ -734,6 +734,7 @@ a.indicator-link:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-left: 25px;
   }
 }
 
