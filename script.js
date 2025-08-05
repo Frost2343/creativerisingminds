@@ -224,7 +224,7 @@ const translations = {
     feature_try_now_quote: "<span class='highlight'>“The best traders don’t predict the market – they align with it.”</span>",
     //ema+st
     indicator_ema_st_desc : "<strong>CRM EMA Supertrend combines EMAs (9,20) with institutional-grade Supertrend logic to generate high-probability signals, offering a clean, customizable interface for all trading styles.</strong>",
-    page_title_emasupertrend: "CRM<br>EMA ST<br>(FREE)",
+    page_title_emasupertrend: "CRM<br>EMA Supertrend<br>(FREE)",
     main_heading_ema: "💡 CRM EMA Supertrend – <span class='highlight'>Institutional-Grade Trend Analysis</span> 💡",
     subheading_ema: "Harmonizing key EMAs with Supertrend for high-probability trade signals",
     feature_professional_title: "📊 Professional-Grade Features",
