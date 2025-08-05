@@ -115,6 +115,7 @@ h2 {
 .card {
   padding: 26px;
   width: 270px; /* Balanced size */
+  max-width: 100%; /* Ensure it fits on mobile */
   border-radius: 14px; /* Crisp corners */
   background: rgba(255, 255, 255, 0.1); /* Clear glass */
   backdrop-filter: blur(8px); /* Reduced blur for sharpness */
@@ -723,6 +724,22 @@ a.indicator-link:hover {
 
   .hero-content {
     margin-top: -30px;
+  }
+  .indicator-cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Reduced gap for mobile */
+    padding: 0 10px; /* Add padding to prevent edge clipping */
+  }
+
+  .card {
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Cap maximum width for readability */
+    margin: 0 auto; /* Center the card */
+  }
+
+  /* Ensure content box adjusts */
+  .content-box {
+    padding: 15px; /* Slightly reduce padding for mobile */
   }
 
 }
