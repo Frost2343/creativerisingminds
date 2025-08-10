@@ -292,6 +292,7 @@
 
         fullscreenLeft = document.createElement('button');
         fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
+        fullscreenLeft.style.backgroundColor = 'black';
         fullscreenLeft.innerHTML = '&#x276E;';
         fullscreenLeft.onclick = () => {
           if (currentIndex > 0) {
@@ -303,6 +304,7 @@
 
         fullscreenRight = document.createElement('button');
         fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
+        fullscreenRight.style.backgroundColor = 'black';
         fullscreenRight.innerHTML = '&#x276F;';
         fullscreenRight.onclick = () => {
           if (currentIndex < images.length - 1) {
