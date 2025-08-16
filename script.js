@@ -81,10 +81,10 @@ const translations = {
     indicator_trend_title: 'CRM<br>Trend Analyser<br>(FREE)',
     indicator_trend_desc: "<strong>CRM Trend Analyser combines moving averages, oscillators, volatility-based targets, and supply-demand zones to deliver precise entry and exit signals, enhancing decision-making for scalpers, swing traders, and investors.</strong>",
     indicator_learn_more: "Learn More",
-    indicator_scalp_title: "Scalp Swing<br>Indicator",
-    indicator_demand_title: "Demand Supply<br>MTF Indicator",
+    indicator_scalp_title: "Scalp Swing<br>Indicator [ CRM ]",
+    indicator_demand_title: "MTF Pivot Matrix<br>[ CRM ]",
     indicator_demand_desc: "<strong>Demand Supply MTF Indicator is a smart trend-tracking tool that shows a multi-timeframe trend table and auto-plots demand/supply zones—so you can spot market direction and key levels without switching charts.</strong>",
-    indicator_screener_title: "CRM Stock Screener",
+    indicator_screener_title: "CRM Stock Screener<br>[ CRM ]",
     indicator_screener_desc: "CRM Stock Screener",
     indicator_option_title: "CRM Option Chain Decoder",
     indicator_option_desc: "CRM Option Chain Decoder",
@@ -96,8 +96,8 @@ const translations = {
     pricing_table_yearly: "Yearly",
     pricing_trend_status: "<strong><span style='color: #ff9800'>Free to use for a limited time – don’t miss out!</span></strong>",
     pricing_coming_soon: "Coming soon! Our team is crafting something powerful just for you.",
-    feedback_text: "<span style='color: #ff9800'>We’d love to hear your valuable feedback on our indicators! Feel free to share your thoughts with us via WhatsApp, email, or Telegram.</span>",
-    feedback_offer: "Share your feedback and stand a chance to win a free 1-month access to our premium indicator!",
+    feedback_text: "<span style='color: #ff9800'>We’d love to hear your valuable feedback on our indicators! Feel free to share your thoughts with us via WhatsApp, Email, or Telegram.</span>",
+    feedback_offer: "Share your feedback and stand a chance to win a free 1-month access to our premium indicators!",
     contact_title: "Contact & Payment",
     contact_subtitle: "Reach out for subscriptions, support, or payment queries.",
     telegram_handle: "@CREATIVE RISING MINDS",
@@ -224,7 +224,7 @@ const translations = {
     feature_try_now_quote: "<span class='highlight'>“The best traders don’t predict the market – they align with it.”</span>",
     //ema+st
     indicator_ema_st_desc : "<strong>CRM EMA Supertrend combines EMAs (9,20) with institutional-grade Supertrend logic to generate high-probability signals, offering a clean, customizable interface for all trading styles.</strong>",
-    page_title_emasupertrend: "CRM<br>EMA Supertrend<br>(FREE)",
+    page_title_emasupertrend: "EMA Supertrend<br>[ CRM ]",
     main_heading_ema: "💡 CRM EMA Supertrend – <span class='highlight'>Institutional-Grade Trend Analysis</span> 💡",
     subheading_ema: "Harmonizing key EMAs with Supertrend for high-probability trade signals",
     feature_professional_title: "📊 Professional-Grade Features",
@@ -252,7 +252,7 @@ const translations = {
     feature_usage_note_quote: "<span class='highlight'>“Institutional-grade trend analysis, simplified for every trader.”</span>",
     //ema+rsi
     indicator_ema_rsi_desc : "<strong>CRM EMA Cross RSI is a momentum-based trading tool that combines EMA crossovers, RSI strength, and VWAP confluence to deliver precise intraday entry signals, ideal for scalpers and options traders.</strong>",
-    page_title_emarsi: "CRM<br>EMA Cross RSI<br>(FREE)",
+    page_title_emarsi: "EMA Cross RSI<br>[ CRM ]",
     main_heading_ema_rsi: "💡 CRM EMA Cross RSI – <span class='highlight'>Precision Trend Trading Made Easy</span> 💡",
     subheading_ema_rsi: "Master short-term momentum with EMA alignments, RSI confirmation, and VWAP filters",
     feature_key_title: "🔍 Key Features",
@@ -287,7 +287,14 @@ const translations = {
     //scalp swing translations
     main_heading_scalp : "💡 Scalp Swing Indicator– <span class=highlight'>Seamless Scalps. Strategic Swings</span> 💡",
     feature_breakout_4: "Plots a <span class='highlight'>momentum oscillator</span> for additional confluence and trade confidence",
-    indicator_mix_title: "CRM Combo (Scalp Swing + MTF Demand Supply)"
+    indicator_mix_title: "CRM Combo (Scalp Swing + MTF Pivot Matrix)",
+    indicator_ema_cross_rsi: "EMA Cross RSI [ CRM ]",
+    indicator_ema_supertrend: "EMA Supertrend [ CRM ]",
+    free_indicator_message: "Free indicator available for our genuine followers!",
+    indicator_scalp_swing: "Scalp Swing Indicator [ CRM ]",
+    indicator_mtf_pivot_matrix: "MTF Pivot Matrix [ CRM ]",
+    indicator_stock_screener: "Stock Screener [ CRM ]",
+    indicator_option_chain: "Option Chain [ CRM ]"
   },
   gu: {
     // Shared Translations
@@ -375,7 +382,7 @@ const translations = {
     indicator_scalp_title: "સ્કેલ્પ સ્વિંગ<br>સૂચકો",
     indicator_demand_title: "ડિમાન્ડ સપ્લાય<br>MTF સૂચકો",
     indicator_demand_desc: "<strong>ડિમાન્ડ સપ્લાઇ MTF સૂચકો એ એક સ્માર્ટ ટ્રેન્ડ-ટ્રેકિંગ ટૂલ છે જે મલ્ટી-ટાઇમફ્રેમ ટ્રેન્ડ ટેબલ દર્શાવે છે અને ડિમાન્ડ/સપ્લાઇ ઝોન્સને આપોઆપ દર્શાવે છે—જેથી તમે ચાર્ટ બદલ્યા વિના બજારની દિશા અને મુખ્ય સ્તરો શોધી શકો.</strong>",
-    indicator_screener_title: "CRM સ્ટોક સ્ક્રીનર",
+    indicator_screener_title: "CRM સ્ટોક સ્ક્રીનર<br>[ CRM ]",
     indicator_screener_desc: "",
     indicator_option_title: "CRM ઓપ્શન ચેઇન ડીકોડર",
     indicator_option_desc: "",
@@ -514,7 +521,7 @@ const translations = {
     feature_try_now_quote: "<span class='highlight'>“સર્વશ્રેષ્ઠ ટ્રેડર્સ બજારની આગાહી નથી કરતા – તેઓ તેની સાથે સંરેખિત થાય છે.”</span>",
     //ema+st
     indicator_ema_st_desc: "<strong>CRM મલ્ટી EMA PRO સાથે સુપરટ્રેન્ડ EMAs (20, 50, 200)ને ઇન્સ્ટિટ્યૂશનલ-ગ્રેડ સુપરટ્રેન્ડ લોજિક સાથે જોડે છે જેથી હાઇ-પ્રોબેબિલિટી સિગ્નલ્સ ઉત્પન્ન થાય, જે બધા ટ્રેડિંગ શૈલીઓ માટે સાફ અને કસ્ટમાઇઝેબલ ઇન્ટરફેસ પૂરું પાડે છે.</strong>",
-    page_title_emasupertrend: "CRM<br>EMA સુપરટ્રેન્ડ<br>(મફત)",
+    page_title_emasupertrend: "EMA સુપરટ્રેન્ડ<br>[ CRM ]",
     main_heading_ema: "💡 CRM EMA સુપરટ્રેન્ડ – <span class='highlight'>ઇન્સ્ટિટ્યૂશનલ-ગ્રેડ ટ્રેન્ડ ઍનાલિસિસ</span> 💡",
     subheading_ema: "હાઇ-પ્રોબેબિલિટી ટ્રેડ સિગ્નલ્સ માટે કી EMAsને સુપરટ્રેન્ડ સાથે સુસંગત કરે છે",
     feature_professional_title: "📊 પ્રોફેશનલ-ગ્રેડ ફીચર્સ",
@@ -542,7 +549,7 @@ const translations = {
     feature_usage_note_quote: "<span class='highlight'>“ઇન્સ્ટિટ્યૂશનલ-ગ્રેડ ટ્રેન્ડ ઍનાલિસિસ, દરેક ટ્રેડર માટે સરળ કરેલ.”</span>",
     //ema+rsi
     indicator_ema_rsi_desc: "<strong>CRM EMA ક્રોસ RSI એક મોમેન્ટમ-આધારિત ટ્રેડિંગ ટૂલ છે જે EMA ક્રોસઓવર્સ, RSI શક્તિ અને VWAP કન્ફલ્યુએન્સને જોડે છે જેથી સચોટ ઇન્ટ્રાડે એન્ટ્રી સિગ્નલ્સ આપે, જે સ્કેલ્પર્સ અને ઓપ્શન્સ ટ્રેડર્સ માટે યોગ્ય છે.</strong>",
-    page_title_emarsi: "CRM<br>EMA ક્રોસ RSI<br>(મફત)",
+    page_title_emarsi: "EMA ક્રોસ RSI<br>[ CRM ]",
     main_heading_ema_rsi: "💡 CRM EMA ક્રોસ RSI – <span class='highlight'>પ્રિસિઝન ટ્રેન્ડ ટ્રેડિંગ સરળ બનાવે છે</span> 💡",
     subheading_ema_rsi: "EMA ગોઠવણીઓ, RSI પુષ્ટિ અને VWAP ફિલ્ટર્સ સાથે શોર્ટ-ટર્મ મોમેન્ટમ માસ્ટર કરો",
     feature_key_title: "🔍 કી ફીચર્સ",
@@ -577,7 +584,14 @@ const translations = {
     feature_breakout_4: "એક <span class='highlight'>મોમેન્ટમ ઓસિલેટર</span> પ્લોટ કરે છે જે ઉમેરાની કન્ફલ્યુએન્સ અને ટ્રેડ આત્મવિશ્વાસ માટે છે",
     //screener
     indicator_stock_screener_desc: "<strong>CRM સ્ટોક સ્ક્રીનર એક મોમેન્ટમ-ફોકસ્ડ ટૂલ છે જે સ્ટોક્સને સ્કેન કરે છે અને મજબૂત કિંમતી કાર્યવાહી, વોલ્યુમ સર્જ અને ટ્રેન્ડ સંરેખણ દર્શાવે છે—જે ટ્રેડર્સને ઝડપથી ઉચ્ચ-સંભાવના બ્રેકઆઉટ તકો શોધવામાં મદદ કરે છે.</strong>",
-    indicator_mix_title: "CRM કોમ્બો (સ્કેલ્પ સ્વિંગ + MTF ડિમાન્ડ સપ્લાઇ)"
+    indicator_mix_title: "CRM કોમ્બો (સ્કેલ્પ સ્વિંગ + MTF પિવોટ મેટ્રિક્સ)",
+    indicator_ema_cross_rsi: "EMA ક્રોસ RSI [ CRM ]",
+    indicator_ema_supertrend: "EMA સુપરટ્રેન્ડ [ CRM ]",
+    free_indicator_message: "અમારા નિષ્ઠાવાન અનુયાયીઓ માટે ફ્રી ઇન્ડિકેટર ઉપલબ્ધ!",
+    indicator_scalp_swing: "સ્કેલ્પ સ્વિંગ ઇન્ડિકેટર [ CRM ]",
+    indicator_mtf_pivot_matrix: "MTF પિવોટ મેટ્રિક્સ [ CRM ]",
+    indicator_stock_screener: "સ્ટોક સ્ક્રીનર [ CRM ]",
+    indicator_option_chain: "ઓપ્શન ચેઇન [ CRM ]"
   },
   mr: {
     // Shared Translations
@@ -665,7 +679,7 @@ const translations = {
     indicator_scalp_title: "स्कॅल्प स्विंग<br>इंडिकेटर",
     indicator_demand_title: "डिमांड सप्लाय<br>MTF इंडिकेटर",
     indicator_demand_desc: "<strong>डिमांड सप्लाय MTF इंडिकेटर हे एक स्मार्ट ट्रेंड-ट्रॅकिंग टूल आहे जे मल्टी-टाइमफ्रेम ट्रेंड टेबल दाखवते आणि डिमांड/सप्लाय झोन ऑटो-प्रॉट्स करते—जेणेकरून तुम्ही चार्ट बदलता येणार नाही तोपर्यंत बाजाराची दिशा आणि महत्त्वाचे स्तर शोधू शकता.</strong>",
-    indicator_screener_title: "CRM स्टॉक स्क्रीनर",
+    indicator_screener_title: "CRM स्टॉक स्क्रीनर<br>[ CRM ]",
     indicator_screener_desc: "",
     indicator_option_title: "CRM ऑप्शन चेन डीकोडर",
     indicator_option_desc: "",
@@ -805,7 +819,7 @@ const translations = {
     feature_try_now_quote: "<span class='highlight'>“सर्वोत्तम ट्रेडर्स बाजाराची भविष्यवाणी करत नाहीत – ते त्याच्यासोबत जुळवून घेतात.”</span>",
     //ema+st
     indicator_ema_st_desc: "<strong>CRM EMA सुपरट्रेंडसह EMAs (9,20) ला संस्थागत-ग्रेड सुपरट्रेंड लॉजिकसह एकत्र करते ज्यामुळे उच्च-प्रमाण सिग्नल्स निर्माण होतात, जे सर्व ट्रेडिंग शैलींसाठी स्वच्छ आणि सानुकूलित इंटरफेस देते.</strong>",
-    page_title_emasupertrend: "CRM<br>EMA सुपरट्रेंडसह<br>(मोफत)",
+    page_title_emasupertrend: "EMA सुपरट्रेंडसह<br>[ CRM ]",
     main_heading_ema: "💡 CRM EMA प्सुपरट्रेंडसह – <span class='highlight'>संस्थागत-ग्रेड ट्रेंड विश्लेषण</span> 💡",
     subheading_ema: "उच्च-प्रमाणात ट्रेड सिग्नल्ससाठी की EMAs ला सुपरट्रेंडसह सुसंगत करते",
     feature_professional_title: "📊 प्रोफेशनल-ग्रेड वैशिष्ट्ये",
@@ -833,7 +847,7 @@ const translations = {
     feature_usage_note_quote: "<span class='highlight'>“संस्थागत-ग्रेड ट्रेंड विश्लेषण, प्रत्येक ट्रेडरसाठी सुलभ केले.”</span>",
     //ema+rsi
     indicator_ema_rsi_desc: "<strong>CRM EMA क्रॉस RSI हे एक गती-आधारित ट्रेडिंग टूल आहे जे EMA क्रॉसओव्हर्स, RSI ताकद आणि VWAP कॉन्फ्लुएन्स एकत्र करते ज्यामुळे अचूक इंट्राडे एंट्री सिग्नल्स मिळतात, जे स्कॅल्पर्स आणि ऑप्शन्स ट्रेडर्ससाठी आदर्श आहे.</strong>",
-    page_title_emarsi: "CRM<br>EMA क्रॉस RSI<br>(मोफत)",
+    page_title_emarsi: "EMA क्रॉस RSI<br>[ CRM ]",
     main_heading_ema_rsi: "💡 CRM EMA क्रॉस RSI – <span class='highlight'>प्रिसिजन ट्रेंड ट्रेडिंग सुलभ</span> 💡",
     subheading_ema_rsi: "EMA संरेषण, RSI पुष्टी आणि VWAP फिल्टर्ससह अल्पकालीन गती मास्टर करा",
     feature_key_title: "🔍 मुख्य वैशिष्ट्ये",
@@ -868,7 +882,14 @@ const translations = {
     feature_breakout_4: "एक <span class='highlight'>मोमेंटम ऑसिलेटर</span> प्लॉट करतो जो अतिरिक्त कॉन्फ्लुएन्स आणि ट्रेड आत्मविश्वासासाठी आहे",
     //screener
     indicator_stock_screener_desc: "<strong>CRM स्टॉक स्क्रीनर हे गती-केंद्रित टूल आहे जे स्टॉक्स स्कॅन करून आणि मजबूत किंमत हालचाल, व्हॉल्यूम वाढ आणि ट्रेंड संरेखन दर्शवून ट्रेडर्सना उच्च-संभाव्य ब्रेकआउट संधी लवकर ओळखण्यास मदत करते.</strong>",
-    indicator_mix_title: "CRM कॉम्बो (स्कॅल्प स्विंग + MTF डिमांड सप्लाय)"
+    indicator_mix_title: "CRM कॉम्बो (स्कॅल्प स्विंग + MTF पिव्होट मॅट्रिक्स)",
+    indicator_ema_cross_rsi: "EMA क्रॉस RSI [ CRM ]",
+    indicator_ema_supertrend: "EMA सुपरट्रेंड [ CRM ]",
+    free_indicator_message: "आमच्या प्रामाणिक अनुयायांसाठी विनामूल्य इंडिकेटर उपलब्ध!",
+    indicator_scalp_swing: "स्कॅल्प स्विंग इंडिकेटर [ CRM ]",
+    indicator_mtf_pivot_matrix: "MTF पिव्होट मॅट्रिक्स [ CRM ]",
+    indicator_stock_screener: "स्टॉक स्क्रीनर [ CRM ]",
+    indicator_option_chain: "ऑप्शन चेन [ CRM ]"
   }
 };
 
