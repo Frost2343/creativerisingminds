@@ -1103,7 +1103,7 @@ const translations = {
     feature_disclaimer_4: "<strong>खुश ट्रेडिंग, चीयर्स!</strong>",
     // Existing translations from index.html
     video_fallback: "आपके ब्राउज़र में वीडियो टैग समर्थित नहीं है।",
-    hero_title: "उन ट्रेडर्स के लिए बनाया गया है जो<br>तर्क का पालन करते हैं,<br>भाग्य का नहीं।",
+    hero_title: "उन ट्रेडर्स के लिए जो तर्क का पालन करते हैं, न कि भाग्य का।",
     hero_subtitle: "संकेत को पहचानें। शोर को छोड़ें। ट्रेंड पर हावी हों।",
     hero_btn_explore: "योजनाएं देखें",
     hero_btn_contact: "संपर्क करें",
