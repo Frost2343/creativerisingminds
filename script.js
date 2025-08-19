@@ -48,7 +48,7 @@ const translations = {
     feature_learning_note_intro: "This tool is meant to aid your learning and strategy development. Use it with:",
     feature_learning_note_1: "A clear trading plan",
     feature_learning_note_2: "Disciplined risk management",
-    feature_learning_note_3: "Correct position sizing (start with single quantity)",
+    feature_learning_note_3: "Correct position sizing (start with single quantity in cash/ equity market)",
     feature_learning_note_4: "Strict Stop Loss rules",
     feature_learning_note_5: "Trade only when the risk-to-reward ratio is favorable",
     feature_learning_note_6: "In a sideways or opposing market, no trade can be the best trade",

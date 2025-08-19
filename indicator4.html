@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-translate="title">CRM Multi-Timeframe Demand & Supply Indicator</title>
+  <title>MTF Pivot Matrix [CRM]</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="indicator1.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/logo/CRM-LOGO.png">
 </head>
 <body>
   <nav class="navbar">
@@ -33,93 +32,65 @@
     </div>
   </nav>
   <div class="container">
-    <a href="https://in.tradingview.com/script/MFEBMnba-Scalp-Swing-indicator-CRM/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
-    <h1 data-translate="main_heading_demandsupply">💡 CRM Multi-Timeframe Demand & Supply Indicator – <span class="highlight">Your Smart Confluence Trading Assistant</span> 💡</h1>
-    <p class="subheading" data-translate="subheading_mtf">Gain an instant edge with multi-timeframe trend analysis for high-probability trade setups</p>
+    <a href="https://in.tradingview.com/" class="btn">📈 View on TradingView</a>
+    <h1>💡 MTF Pivot Matrix [CRM] – <span class="highlight">Multi-Timeframe Confluence & Pivot Scanner</span> 💡</h1>
+    <p class="subheading">Scalp Mode | Swing Mode | Automated Confluence Suite</p>
 
-    <!-- Image Carousel -->
+    <!-- Image Below Title -->
     <div class="carousel-wrapper">
-      <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;">❮</button>
+      <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;background-color: black;">❮</button>
       <div class="carousel-track" id="carousel">
-        <img src="images/CRM MTF DEMAND SUPPLY.png" alt="Slide 1" class="carousel-image" />
-        <!-- <img src="images/CRM-MTF-Tutorial-2.png" alt="Slide 2" class="carousel-image" /> -->
+        <img src="images/mtf1.png" alt="Slide 1" class="carousel-image" />
+        <img src="images/mtf2.png" alt="Slide 2" class="carousel-image" />
       </div>
-      <button class="nav-button nav-btn-right" id="nextBtn">❯</button>
+      <button class="nav-button nav-btn-right" id="nextBtn"style="display: none;background-color: black;">❯</button>
     </div>
 
-    <section class="features-section">
-      <!-- Multi-Timeframe Trend Confluence -->
-      <div class="feature-card">
-        <h3 data-translate="feature_mtf_trend_title">📊 Multi-Timeframe Trend Confluence</h3>
+    <!-- Description -->
+    <section class="feature-card">
+      <h3>📌 Description</h3>
+      <p>
+        A professional all-in-one trading suite that integrates 
+        <span class="highlight">multi-timeframe trend analysis</span>, 
+        <span class="highlight">dynamic pivot points</span>, and 
+        <span class="highlight">automated trendlines</span> for high-probability confluence trading.
+      </p>
+    </section>
+
+    <!-- Key Features -->
+    <section class="feature-card">
+      <h3>✅ Key Features</h3>
+      <ul>
+        <li><strong>Multi-Timeframe Dashboard:</strong> Instant color-coded trend signals across 10 timeframes (1 minute → 1 Month) in two modes:</li>
         <ul>
-          <li data-translate="feature_mtf_trend_1">Analyze <span class="highlight">9 customizable timeframes</span> (3min to 1M)</li>
-          <li data-translate="feature_mtf_trend_2"><span class="highlight">Smart MA-based trend detection</span> (SMA, EMA, WMA, AMA)</li>
-          <li data-translate="feature_mtf_trend_3">Weighted average trend score for precise confluence</li>
+          <li><span class="highlight">Scalp Mode:</span> Ultra-responsive (1 minute – 1 Hour) for momentum entries</li>
+          <li><span class="highlight">Swing Mode:</span> Higher timeframes (5 minute – 1 Month) for positional bias</li>
+        </ul>
+        <li><strong>6 Pivot Methods:</strong> Traditional, Fibonacci, Woodie, Classic, Demark & Camarilla with smart timeframe anchoring</li>
+        <li><strong>Auto Trendlines:</strong> Objective swing point detection with dynamic extensions and cleanup</li>
+        <li><strong>Dynamic EMA Filter:</strong> Visual trend confirmation (green/red)</li>
+        <li><strong>Fully Customizable:</strong> Professional build for easy visualization</li>
+      </ul>
+    </section>
+
+    <!-- Ideal For -->
+    <section class="feature-card">
+      <h3>🎯 Ideal For</h3>
+      <ul>
+        <li><span class="highlight">Scalp Traders:</span> Quick trend checks & precise level targeting</li>
+        <li><span class="highlight">Swing Traders:</span> Higher-timeframe bias & robust pivot zones</li>
+      </ul>
+    </section>
+
+    <!-- Recommended Timeframes -->
+      <div class="feature-card">
+        <h3 data-translate="feature_timeframes_title">🕒 Recommended Timeframes</h3>
+        <ul>
+          <li data-translate="feature_timeframes_1"><span class="highlight">3min / 5min → Intraday & Scalping</span></li>
+          <li data-translate="feature_timeframes_2"><span class="highlight">Daily Chart → Swing / Positional setups</span></li>
         </ul>
       </div>
 
-      <!-- Intuitive Visual Dashboard -->
-      <div class="feature-card">
-        <h3 data-translate="feature_dashboard_title">🎨 Intuitive Visual Dashboard</h3>
-        <ul>
-          <li data-translate="feature_dashboard_1"><span class="highlight">Real-time Buy/Sell signals</span> per timeframe</li>
-          <li data-translate="feature_dashboard_2">Choose <span class="highlight">horizontal or vertical display</span> to fit your chart</li>
-          <li data-translate="feature_dashboard_3">Color-coded alerts: Strong Buy, Buy, Flat, Sell, Strong Sell</li>
-        </ul>
-      </div>
-
-      <!-- Advanced Customization -->
-      <div class="feature-card">
-        <h3 data-translate="feature_customization_title">⚡ Advanced Customization</h3>
-        <ul>
-          <li data-translate="feature_customization_1">Toggle timeframes on/off for focused analysis</li>
-          <li data-translate="feature_customization_2">Adjust MA types and lengths to match your strategy</li>
-          <li data-translate="feature_customization_3">Custom colors and table positioning for seamless integration</li>
-        </ul>
-      </div>
-
-      <!-- Smart Alerts & Candle Coloring -->
-      <div class="feature-card">
-        <h3 data-translate="feature_alerts_candle_title">🔔 Smart Alerts & Candle Coloring</h3>
-        <ul>
-          <li data-translate="feature_alerts_candle_1">Auto-alerts for trend reversals and strength shifts</li>
-          <li data-translate="feature_alerts_candle_2">Optional candle coloring for instant trend recognition</li>
-          <li data-translate="feature_alerts_candle_3">Stay updated with real-time signal notifications</li>
-        </ul>
-      </div>
-
-      <!-- How It Works -->
-      <div class="feature-card">
-        <h3 data-translate="feature_how_it_works_title">🚀 How It Works</h3>
-        <ol>
-          <li data-translate="feature_how_it_works_1">Scans each timeframe for trend direction using MA cross</li>
-          <li data-translate="feature_how_it_works_2">Calculates a weighted average trend score</li>
-          <li data-translate="feature_how_it_works_3">Displays a clean, professional dashboard with real-time signals</li>
-          <li data-translate="feature_how_it_works_4">Alerts you when high-confluence setups emerge</li>
-        </ol>
-      </div>
-
-      <!-- Why Traders Love It -->
-      <div class="feature-card">
-        <h3 data-translate="feature_why_love_title">💡 Why Traders Love It</h3>
-        <ul>
-          <li data-translate="feature_why_love_1">Eliminates guesswork with a clear market overview</li>
-          <li data-translate="feature_why_love_2">Saves time by avoiding manual timeframe switching</li>
-          <li data-translate="feature_why_love_3">Enhances consistency with multi-timeframe confirmation</li>
-          <li data-translate="feature_why_love_4">Perfect for scalpers, swing traders, and investors</li>
-        </ul>
-      </div>
-
-      <!-- Try It Now -->
-      <div class="feature-card">
-        <h3 data-translate="feature_try_now_title">📥 Try It Now & Trade Smarter!</h3>
-        <ul>
-          <li data-translate="feature_try_now_1">Works on all assets (Stocks, Forex, Crypto)</li>
-          <li data-translate="feature_try_now_2">Fully customizable to fit your trading strategy</li>
-          <li data-translate="feature_try_now_3">Easy setup – just apply and start trading</li>
-        </ul>
-        <p data-translate="feature_try_now_quote"><span class="highlight">“The best traders don’t predict the market – they align with it.”</span></p>
-      </div>
       <!-- Important Learning Note -->
       <div class="feature-card">
         <h3 data-translate="feature_learning_note_title">⚠️ Important Learning Note</h3>
@@ -127,7 +98,7 @@
         <ul>
           <li data-translate="feature_learning_note_1">A clear trading plan</li>
           <li data-translate="feature_learning_note_2">Disciplined risk management</li>
-          <li data-translate="feature_learning_note_3">Correct position sizing (start with single quantity)</li>
+          <li data-translate="feature_learning_note_3">Correct position sizing (start with single quantity in cash/ equity market)</li>
           <li data-translate="feature_learning_note_4">Strict Stop Loss rules</li>
           <li data-translate="feature_learning_note_5">Trade only when the risk-to-reward ratio is favorable</li>
           <li data-translate="feature_learning_note_6">In a sideways or opposing market, no trade can be the best trade</li>
@@ -147,6 +118,23 @@
         </ol>
         <p data-translate="feature_beginner_path_quote"><span class="highlight">💡 “Learn first, earn later.” Your capital’s growth or loss is entirely in your control.</span></p>
       </div>
+
+      <!-- Dark Mode & New Features -->
+      <div class="feature-card">
+        <h3 data-translate="feature_dark_mode_title">🎨 Dark Mode Optimized → Now Fully Customizable</h3>
+        <p data-translate="feature_dark_mode_desc">Previously tailored for dark mode, now enhanced with user-selectable color options for a personalized and clear visual experience.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3 data-translate="feature_trend_confluence_title">📈 Dynamic Trend Confluence Visual</h3>
+        <p data-translate="feature_trend_confluence_desc">Introducing a trend-following visual layer to help you ride trends with confidence and clarity.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3 data-translate="feature_alerts_title">🔔 Real-Time Alerts Integrated</h3>
+        <p data-translate="feature_alerts_desc">Never miss a trade. Stay updated with built-in alerts for all key trade signals and conditions.</p>
+      </div>
+
       <!-- Disclaimer -->
       <div class="feature-card disclaimer">
         <h3 data-translate="feature_disclaimer_title">⚠️ Disclaimer</h3>
@@ -156,67 +144,68 @@
         <p data-translate="feature_disclaimer_4"><strong>Happy Trading, CHEERS!</strong></p>
       </div>
     </section>
+
   </div>
 
   <!-- Footer -->
-  <footer class="custom-footer">
-    <div class="footer-container">
-      <!-- Social Media -->
-      <div class="footer-section social-media">
-        <h3 data-translate="footer_social_media">Follow us on social media</h3>
-        <div class="social-icons">
-          <a href="https://www.youtube.com/@creativerisingminds005"><i class="fab fa-youtube"></i></a>
-          <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
-          <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
-            <span class="tv-icon">
-              <img src="images/logo/TVicon.png" alt="TradingView">
-            </span>
-          </a>
-          <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
-        </div>
-
-        <div class="contact-info">
-          <h3 data-translate="footer_contact_us">Contact Us</h3>
-          <p class="email-container">
-            <i class="fas fa-envelope"></i> 
-            <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
-          </p>
-          <p class="phone-container">
-            <i class="fas fa-phone-alt"></i> 
-            <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
-          </p>
-        </div>
+<footer class="custom-footer">
+  <div class="footer-container">
+    <!-- Social Media -->
+    <div class="footer-section social-media">
+      <h3 data-translate="footer_social_media">Follow us on social media</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@creativerisingminds005"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
+        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+          <span class="tv-icon">
+            <img src="images/logo/TVicon.png" alt="TradingView">
+          </span>
+        </a>
+        <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
       </div>
 
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h3 data-translate="footer_quick_links">Quick Links</h3>
-        <ul>
-          <li><a href="#home" data-translate="footer_home">Home</a></li>
-          <li><a href="disclamer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
-          <li><a href="#contact" data-translate="footer_contact_us">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Policies -->
-      <div class="footer-section">
-        <h3 data-translate="footer_policies">Policies and Compliance</h3>
-        <ul>
-          <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
-          <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
-        </ul>
+      <div class="contact-info">
+        <h3 data-translate="footer_contact_us">Contact Us</h3>
+        <p class="email-container">
+          <i class="fas fa-envelope"></i> 
+          <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
+        </p>
+        <p class="phone-container">
+          <i class="fas fa-phone-alt"></i> 
+          <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
+        </p>
       </div>
     </div>
 
-    <!-- Footer Bottom -->
-    <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
-      © 2025 Creative Rising Minds. All rights reserved.
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3 data-translate="footer_quick_links">Quick Links</h3>
+      <ul>
+        <li><a href="#home" data-translate="footer_home">Home</a></li>
+        <li><a href="disclamer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
+        <li><a href="#contact" data-translate="footer_contact_us">Contact Us</a></li>
+      </ul>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <!-- Policies -->
+    <div class="footer-section">
+      <h3 data-translate="footer_policies">Policies and Compliance</h3>
+      <ul>
+        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
+        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
+    © 2025 Creative Rising Minds. All rights reserved.
+  </div>
+</footer>
+<script src="script.js"></script>
+  <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
   <script>
     const carousel = document.getElementById('carousel');
     const prevBtn = document.getElementById('prevBtn');
@@ -272,6 +261,7 @@
 
         fullscreenLeft = document.createElement('button');
         fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
+        fullscreenLeft.style.backgroundColor = 'black';
         fullscreenLeft.innerHTML = '&#x276E;';
         fullscreenLeft.onclick = () => {
           if (currentIndex > 0) {
@@ -283,6 +273,7 @@
 
         fullscreenRight = document.createElement('button');
         fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
+        fullscreenRight.style.backgroundColor = 'black';
         fullscreenRight.innerHTML = '&#x276F;';
         fullscreenRight.onclick = () => {
           if (currentIndex < images.length - 1) {
