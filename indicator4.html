@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MTF Pivot Matrix [CRM]</title>
+  <title data-translate="page_title_mtf_pivot">MTF Pivot Matrix [CRM]</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="indicator1.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="images/logo/CRM-LOGO.png">
 </head>
 <body>
@@ -33,8 +34,8 @@
   </nav>
   <div class="container">
     <a href="https://in.tradingview.com/script/MFEBMnba-Scalp-Swing-indicator-CRM/" class="btn">📈 View on TradingView</a>
-    <h1>💡 MTF Pivot Matrix [CRM] – <span class="highlight">Multi-Timeframe Confluence & Pivot Scanner</span> 💡</h1>
-    <p class="subheading">Scalp Mode | Swing Mode | Automated Confluence Suite</p>
+    <h1 data-translate="main_heading_mtf_pivot">💡 MTF Pivot Matrix [CRM] – <span class="highlight">Multi-Timeframe Confluence & Pivot Scanner</span> 💡</h1>
+    <p class="subheading" data-translate="subheading_mtf_pivot">Scalp Mode | Swing Mode | Automated Confluence Suite</p>
 
     <!-- Image Below Title -->
     <div class="carousel-wrapper">
@@ -43,13 +44,13 @@
         <img src="images/mtf1.png" alt="Slide 1" class="carousel-image" />
         <img src="images/mtf2.png" alt="Slide 2" class="carousel-image" />
       </div>
-      <button class="nav-button nav-btn-right" id="nextBtn"style="display: none;background-color: black;">❯</button>
+      <button class="nav-button nav-btn-right" id="nextBtn" style="display: none;background-color: black;">❯</button>
     </div>
 
     <!-- Description -->
     <section class="feature-card">
-      <h3>📌 Description</h3>
-      <p>
+      <h3 data-translate="feature_description_title">📌 Description</h3>
+      <p data-translate="feature_description_1">
         A professional all-in-one trading suite that integrates 
         <span class="highlight">multi-timeframe trend analysis</span>, 
         <span class="highlight">dynamic pivot points</span>, and 
@@ -59,26 +60,26 @@
 
     <!-- Key Features -->
     <section class="feature-card">
-      <h3>✅ Key Features</h3>
+      <h3 data-translate="feature_key_title_mtf">✅ Key Features</h3>
       <ul>
-        <li><strong>Multi-Timeframe Dashboard:</strong> Instant color-coded trend signals across 10 timeframes (1 minute → 1 Month) in two modes:</li>
+        <li data-translate="feature_multi_timeframe_dashboard"><strong>Multi-Timeframe Dashboard:</strong> Instant color-coded trend signals across 10 timeframes (1 minute → 1 Month) in two modes:</li>
         <ul>
-          <li><span class="highlight">Scalp Mode:</span> Ultra-responsive (1 minute – 1 Hour) for momentum entries</li>
-          <li><span class="highlight">Swing Mode:</span> Higher timeframes (5 minute – 1 Month) for positional bias</li>
+          <li data-translate="feature_scalp_mode"><span class="highlight">Scalp Mode:</span> Ultra-responsive (1 minute – 1 Hour) for momentum entries</li>
+          <li data-translate="feature_swing_mode"><span class="highlight">Swing Mode:</span> Higher timeframes (5 minute – 1 Month) for positional bias</li>
         </ul>
-        <li><strong>6 Pivot Methods:</strong> Traditional, Fibonacci, Woodie, Classic, Demark & Camarilla with smart timeframe anchoring</li>
-        <li><strong>Auto Trendlines:</strong> Objective swing point detection with dynamic extensions and cleanup</li>
-        <li><strong>Dynamic EMA Filter:</strong> Visual trend confirmation (green/red)</li>
-        <li><strong>Fully Customizable:</strong> Professional build for easy visualization</li>
+        <li data-translate="feature_pivot_methods"><strong>6 Pivot Methods:</strong> Traditional, Fibonacci, Woodie, Classic, Demark & Camarilla with smart timeframe anchoring</li>
+        <li data-translate="feature_auto_trendlines"><strong>Auto Trendlines:</strong> Objective swing point detection with dynamic extensions and cleanup</li>
+        <li data-translate="feature_dynamic_ema_filter"><strong>Dynamic EMA Filter:</strong> Visual trend confirmation (green/red)</li>
+        <li data-translate="feature_fully_customizable"><strong>Fully Customizable:</strong> Professional build for easy visualization</li>
       </ul>
     </section>
 
     <!-- Ideal For -->
     <section class="feature-card">
-      <h3>🎯 Ideal For</h3>
+      <h3 data-translate="feature_ideal_for_title">🎯 Ideal For</h3>
       <ul>
-        <li><span class="highlight">Scalp Traders:</span> Quick trend checks & precise level targeting</li>
-        <li><span class="highlight">Swing Traders:</span> Higher-timeframe bias & robust pivot zones</li>
+        <li data-translate="feature_scalp_traders"><span class="highlight">Scalp Traders:</span> Quick trend checks & precise level targeting</li>
+        <li data-translate="feature_swing_traders"><span class="highlight">Swing Traders:</span> Higher-timeframe bias & robust pivot zones</li>
       </ul>
     </section>
 
@@ -261,7 +262,6 @@
 
         fullscreenLeft = document.createElement('button');
         fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
-        fullscreenLeft.style.backgroundColor = 'black';
         fullscreenLeft.innerHTML = '&#x276E;';
         fullscreenLeft.onclick = () => {
           if (currentIndex > 0) {
@@ -273,7 +273,6 @@
 
         fullscreenRight = document.createElement('button');
         fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
-        fullscreenRight.style.backgroundColor = 'black';
         fullscreenRight.innerHTML = '&#x276F;';
         fullscreenRight.onclick = () => {
           if (currentIndex < images.length - 1) {
