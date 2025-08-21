@@ -844,3 +844,13 @@ a.indicator-link:hover {
 }
 
 
+.crm-tag {
+    display: inline; /* Default for desktop */
+}
+
+@media (max-width: 768px) {
+    .crm-tag {
+        display: block; /* Moves to new line on mobile */
+        margin-top: 4px; /* Optional: Adds space above [ CRM ] */
+    }
+}
