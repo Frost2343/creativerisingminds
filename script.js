@@ -368,7 +368,9 @@ const translations = {
     emast_feature_try_now_1: "Optimized for real-time trading",
     emast_feature_try_now_2: "Enhances decision-making speed",
     emast_feature_try_now_quote: "<span class='highlight'>“Trade with momentum, not just hope.”</span>",
-    google_form_revert: "Once you’ve completed the payment for your selected package, kindly fill out the Google Form to receive access at the earliest."
+    google_form_revert: "Once you’ve completed the payment for your selected package, kindly fill out the Google Form to receive access at the earliest.",
+    referralMessage: "Refer our indicator to fellow traders and win 1 month of premium access — just share your TradingView ID so they can enter it in the Google form!",
+    google_form_free_revert: "Sign up for your 7-day free trial by completing this Google Form."
     
   },
   gu: {
@@ -739,7 +741,9 @@ const translations = {
     emast_feature_try_now_1: "રિયલ-ટાઇમ ટ્રેડિંગ માટે ઑપ્ટિમાઇઝ કરેલ",
     emast_feature_try_now_2: "નિર્ણય લેવાની ઝડપ વધારે છે",
     emast_feature_try_now_quote: "<span class='highlight'>“મોમેન્ટમ સાથે ટ્રેડ કરો, ફક્ત આશા પર નહીં.”</span>",
-    google_form_revert: "પસંદ કરેલ પેકેજ માટે ચૂકવણી પૂર્ણ થયા પછી, શક્ય તેટલી વહેલી પ્રવેશ માટે કૃપા કરીને Google ફોર્મ ભરો."
+    google_form_revert: "પસંદ કરેલ પેકેજ માટે ચૂકવણી પૂર્ણ થયા પછી, શક્ય તેટલી વહેલી પ્રવેશ માટે કૃપા કરીને Google ફોર્મ ભરો.",
+    referralMessage: "અમારા ઇન્ડિકેટરને સાથી ટ્રેડરોને રેફર કરો અને 1 મહિનાનો પ્રીમિયમ ઍક્સેસ જીતો — ફક્ત તમારો TradingView ID શેર કરો જેથી તેઓ તેને Google ફોર્મમાં દાખલ કરી શકે!",
+    google_form_free_revert: "આ Google ફોર્મ ભરીને તમારા 7-દિવસના ફ્રી ટ્રાયલ માટે સાઇન અપ કરો."
   },
   mr: {
     // Shared Translations
@@ -1111,7 +1115,9 @@ const translations = {
     emast_feature_try_now_1: "रियल-टाइम ट्रेडिंगसाठी ऑप्टिमाइझ केलेले",
     emast_feature_try_now_2: "निर्णय घेण्याची गती वाढवते",
     emast_feature_try_now_quote: "<span class='highlight'>“मोमेंटमसह ट्रेड करा, फक्त आशेवर नाही.”</span>",
-    google_form_revert: "निवडलेल्या पॅकेजसाठी पेमेंट पूर्ण झाल्यावर, लवकरात लवकर प्रवेश मिळण्यासाठी कृपया Google फॉर्म भरा."
+    google_form_revert: "निवडलेल्या पॅकेजसाठी पेमेंट पूर्ण झाल्यावर, लवकरात लवकर प्रवेश मिळण्यासाठी कृपया Google फॉर्म भरा.",
+    referralMessage: "आमचे इंडिकेटर सहकाऱ्यांना रेफर करा आणि 1 महिन्याचा प्रीमियम प्रवेश जिंका — फक्त तुमचा TradingView ID शेअर करा जेणेकरून ते Google फॉर्ममध्ये एंटर करू शकतील!",
+    google_form_free_revert: "हा Google फॉर्म भरून तुमच्या 7-दिवसांच्या फ्री ट्रायलसाठी साइन अप करा."
   },
   hi: {
     // Shared Translations (from index.html)
@@ -1482,7 +1488,9 @@ const translations = {
     emast_feature_try_now_1: "रियल-टाइम ट्रेडिंग के लिए अनुकूलित",
     emast_feature_try_now_2: "निर्णय लेने की गति बढ़ाता है",
     emast_feature_try_now_quote: "<span class='highlight'>“मोमेंटम के साथ ट्रेड करें, केवल आशा पर नहीं।”</span>",
-    google_form_revert: "चुने गए पैकेज के लिए भुगतान पूर्ण करने के बाद, कृपया जल्द से जल्द पहुँच प्राप्त करने के लिए Google फॉर्म भरें।"
+    google_form_revert: "चुने गए पैकेज के लिए भुगतान पूर्ण करने के बाद, कृपया जल्द से जल्द पहुँच प्राप्त करने के लिए Google फॉर्म भरें।",
+    referralMessage: "हमारे इंडिकेटर को साथी ट्रेडर्स को रेफर करें और 1 महीने का प्रीमियम एक्सेस जीतें — बस अपना TradingView ID शेयर करें ताकि वे इसे Google फॉर्म में दर्ज कर सकें!",
+    google_form_free_revert: "इस Google फॉर्म को भरकर अपनी 7-दिवसीय फ्री ट्रायल के लिए साइन अप करें।"
   }
 };
 
