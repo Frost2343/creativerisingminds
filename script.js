@@ -369,7 +369,7 @@ const translations = {
     emast_feature_try_now_2: "Enhances decision-making speed",
     emast_feature_try_now_quote: "<span class='highlight'>“Trade with momentum, not just hope.”</span>",
     google_form_revert: "Once you’ve completed the payment for your selected package, kindly fill up the Google Form to unlock access at the earliest.",
-    referralMessage: "Refer our indicator to fellow traders, and once they take the subscription, you’ll earn 1 month of premium access — simply share your TradingView ID so they can enter it in the Google form!",
+    referralMessage: "Refer our indicator to fellow traders, and once they take the subscription, you’ll earn 1 month of premium access — simply share your TradingView ID with the person you're referring so that they can enter it in their Google form!",
     google_form_free_revert: "Sign up for your 7-day free trial by completing this Google Form."
     
   },
