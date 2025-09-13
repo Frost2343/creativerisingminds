@@ -372,7 +372,7 @@ const translations = {
     referralMessage: "Refer our indicator to fellow traders, and once they subscribe, you’ll earn free premium access — 1 month if they<br>take a yearly plan, or 15 days if they take a half-yearly plan. Just share your TradingView ID<br>with the person you’re referring so they can enter it in their Google form!",
     google_form_free_revert: "<br>Sign up for your 2-day free trial by completing the Google form below — valid only once per user!",
     subscription_form: "Google form to be filled after taking subscription<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> LINK</a>",
-    trial_form: "Google form to be filled to avail Free Trial<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> LINK</a>",
+    trial_form: "Google form to be filled to avail Free Trial<a href=\"https://forms.gle/vkGYegENq9Lb9nD4A\"> LINK</a>",
     sevenday: "<br>Get 7-day access to all our premium indicators for just ₹500 — valid only once per user!"
     
   },
@@ -748,7 +748,7 @@ const translations = {
     referralMessage: "અમારા ઇન્ડિકેટરને સાથી ટ્રેડરોને રેફર કરો, અને જ્યારે તેઓ સબ્સ્ક્રિપ્શન લેશે, ત્યારે તમને ફ્રી પ્રીમિયમ ઍક્સેસ મળશે — જો તેઓ વાર્ષિક પ્લાન લે તો 1 મહિનો,<br>અથવા અર્ધ-વાર્ષિક પ્લાન લે તો 15 દિવસ. ફક્ત જે વ્યક્તિને રેફર કરો છો તેને તમારો TradingView ID<br>શેર કરો જેથી તેઓ તેને તેમના Google ફોર્મમાં દાખલ કરી શકે!",
     google_form_free_revert: "<br>નીચેના Google ફોર્મને ભરીને તમારા 2-દિવસના ફ્રી ટ્રાયલ માટે સાઇન અપ કરો। — વપરાશકર્તા દીઠ માત્ર એક વખત માન્ય!",
     subscription_form: "સદસ્યતા લીધા પછી ભરવા માટે Google ફોર્મ<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> લિંક</a>",
-    trial_form: "ફ્રી ટ્રાયલ મેળવવા માટે Google ફોર્મ ભરો<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> લિંક</a>",
+    trial_form: "ફ્રી ટ્રાયલ મેળવવા માટે Google ફોર્મ ભરો<a href=\"https://forms.gle/vkGYegENq9Lb9nD4A\"> લિંક</a>",
     sevenday: "<br>અમારા તમામ પ્રીમિયમ સૂચકોને માત્ર ₹500 માં 7-દિવસની ઍક્સેસ મેળવો — વપરાશકર્તા દીઠ માત્ર એક વખત માન્ય!"
 
   },
@@ -1126,7 +1126,7 @@ const translations = {
     referralMessage: "आमचे इंडिकेटर सहकाऱ्यांना रेफर करा, आणि जेव्हा ते सब्स्क्रिप्शन घेतील, तेव्हा तुम्हाला फ्री प्रीमियम प्रवेश मिळेल — जर ते वार्षिक प्लॅन घेतील तर 1 महिना,<br>किंवा अर्ध-वार्षिक प्लॅन घेतील तर 15 दिवस. फक्त ज्या व्यक्तीला रेफर करत आहात त्यांना तुमचा TradingView ID<br>शेअर करा जेणेकरून ते त्यांच्या Google फॉर्ममध्ये एंटर करू शकतील!",
     google_form_free_revert: "<br>खालील Google फॉर्म भरून तुमच्या 2-दिवसांच्या फ्री ट्रायलसाठी साइन अप करा। — वापरकर्ता प्रति फक्त एकदाच वैध!",
     subscription_form: "सदस्यता घेतल्यानंतर भरण्यासाठी Google फॉर्म<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
-    trial_form: "फ्री ट्रायल मिळवण्यासाठी Google फॉर्म भरा<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
+    trial_form: "फ्री ट्रायल मिळवण्यासाठी Google फॉर्म भरा<a href=\"https://forms.gle/vkGYegENq9Lb9nD4A\"> लिंक</a>",
     sevenday: "<br>आमच्या सर्व प्रीमियम इंडिकेटर्सना फक्त ₹500 साठी 7-दिवसाचा प्रवेश मिळवा — वापरकर्ता प्रति फक्त एकदाच वैध!"
   },
   hi: {
@@ -1502,7 +1502,7 @@ const translations = {
     referralMessage: "हमारे इंडिकेटर को साथी ट्रेडर्स को रेफर करें, और जब वे सब्सक्रिप्शन लें, तो आपको फ्री प्रीमियम एक्सेस मिलेगा — यदि वे वार्षिक प्लान लें तो 1 महीना,<br>या अर्ध-वार्षिक प्लान लें तो 15 दिन। बस जिसे रेफर कर रहे हैं उसे अपना TradingView ID<br>शेयर करें ताकि वे इसे अपने Google फॉर्म में दर्ज कर सकें!",
     google_form_free_revert: "<br>नीचे दिए गए Google फॉर्म को भरकर अपनी 2-दिवसीय फ्री ट्रायल के लिए साइन अप करें। — प्रति उपयोगकर्ता केवल एक बार वैध!",
     subscription_form: "सदस्यता लेने के बाद भरने के लिए Google फॉर्म<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
-    trial_form: "फ्री ट्रायल प्राप्त करने के लिए Google फॉर्म भरें<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
+    trial_form: "फ्री ट्रायल प्राप्त करने के लिए Google फॉर्म भरें<a href=\"https://forms.gle/vkGYegENq9Lb9nD4A\"> लिंक</a>",
     sevenday: "<br>हमारे सभी प्रीमियम इंडिकेटर्स को केवल ₹500 में 7-दिवसीय एक्सेस प्राप्त करें — प्रति उपयोगकर्ता केवल एक बार वैध!"
   }
 };
