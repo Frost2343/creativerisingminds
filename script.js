@@ -369,11 +369,11 @@ const translations = {
     emast_feature_try_now_2: "Enhances decision-making speed",
     emast_feature_try_now_quote: "<span class='highlight'>“Trade with momentum, not just hope.”</span>",
     google_form_revert: "Once the payment for the selected package is completed, please fill up the Google form below to unlock your access at the earliest.",
-    referralMessage: "Refer our indicator to fellow traders, and once they subscribe, you’ll earn free premium access — 1 month if they take a yearly plan, or 15 days if they take a half-yearly plan. Just share your TradingView ID with the person you’re referring so they can enter it in their Google form!",
-    google_form_free_revert: "Sign up for your 2-day free trial by completing the Google form below — valid only once per user!",
+    referralMessage: "Refer our indicator to fellow traders, and once they subscribe, you’ll earn free premium access — 1 month if they<br>take a yearly plan, or 15 days if they take a half-yearly plan. Just share your TradingView ID<br>with the person you’re referring so they can enter it in their Google form!",
+    google_form_free_revert: "<br>Sign up for your 2-day free trial by completing the Google form below — valid only once per user!",
     subscription_form: "Google form to be filled after taking subscription<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> LINK</a>",
     trial_form: "Google form to be filled to avail Free Trial<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> LINK</a>",
-    sevenday: "Get 7-day access to all our premium indicators for just ₹500 — valid only once per user!"
+    sevenday: "<br>Get 7-day access to all our premium indicators for just ₹500 — valid only once per user!"
     
   },
   gu: {
@@ -745,11 +745,11 @@ const translations = {
     emast_feature_try_now_2: "નિર્ણય લેવાની ઝડપ વધારે છે",
     emast_feature_try_now_quote: "<span class='highlight'>“મોમેન્ટમ સાથે ટ્રેડ કરો, ફક્ત આશા પર નહીં.”</span>",
     google_form_revert: "પસંદ કરેલ પેકેજ માટે ચૂકવણી પૂર્ણ થયા પછી, કૃપા કરીને નીચેના Google ફોર્મને ભરો જેથી તમારો ઍક્સેસ શક્ય તેટલી વહેલી મળે.",
-    referralMessage: "અમારા ઇન્ડિકેટરને સાથી ટ્રેડરોને રેફર કરો, અને જ્યારે તેઓ સબ્સ્ક્રિપ્શન લેશે, ત્યારે તમને ફ્રી પ્રીમિયમ ઍક્સેસ મળશે — જો તેઓ વાર્ષિક પ્લાન લે તો 1 મહિનો, અથવા અર્ધ-વાર્ષિક પ્લાન લે તો 15 દિવસ. ફક્ત જે વ્યક્તિને રેફર કરો છો તેને તમારો TradingView ID શેર કરો જેથી તેઓ તેને તેમના Google ફોર્મમાં દાખલ કરી શકે!",
-    google_form_free_revert: "નીચેના Google ફોર્મને ભરીને તમારા 2-દિવસના ફ્રી ટ્રાયલ માટે સાઇન અપ કરો। — વપરાશકર્તા દીઠ માત્ર એક વખત માન્ય!",
+    referralMessage: "અમારા ઇન્ડિકેટરને સાથી ટ્રેડરોને રેફર કરો, અને જ્યારે તેઓ સબ્સ્ક્રિપ્શન લેશે, ત્યારે તમને ફ્રી પ્રીમિયમ ઍક્સેસ મળશે — જો તેઓ વાર્ષિક પ્લાન લે તો 1 મહિનો,<br>અથવા અર્ધ-વાર્ષિક પ્લાન લે તો 15 દિવસ. ફક્ત જે વ્યક્તિને રેફર કરો છો તેને તમારો TradingView ID<br>શેર કરો જેથી તેઓ તેને તેમના Google ફોર્મમાં દાખલ કરી શકે!",
+    google_form_free_revert: "<br>નીચેના Google ફોર્મને ભરીને તમારા 2-દિવસના ફ્રી ટ્રાયલ માટે સાઇન અપ કરો। — વપરાશકર્તા દીઠ માત્ર એક વખત માન્ય!",
     subscription_form: "સદસ્યતા લીધા પછી ભરવા માટે Google ફોર્મ<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> લિંક</a>",
     trial_form: "ફ્રી ટ્રાયલ મેળવવા માટે Google ફોર્મ ભરો<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> લિંક</a>",
-    sevenday: "અમારા તમામ પ્રીમિયમ સૂચકોને માત્ર ₹500 માં 7-દિવસની ઍક્સેસ મેળવો — વપરાશકર્તા દીઠ માત્ર એક વખત માન્ય!"
+    sevenday: "<br>અમારા તમામ પ્રીમિયમ સૂચકોને માત્ર ₹500 માં 7-દિવસની ઍક્સેસ મેળવો — વપરાશકર્તા દીઠ માત્ર એક વખત માન્ય!"
 
   },
   mr: {
@@ -837,7 +837,7 @@ const translations = {
     indicator_learn_more: "अधिक जाणून घ्या",
     indicator_scalp_title: "अल्टीमेट स्कॅल्प<br>प्रो [<span class='crm-tag'>CRM</span>]",
     indicator_demand_title: "MTF डिमांड सप्लाय<br>[<span class='crm-tag'>CRM</span>]",
-    indicator_demand_desc: "<strong>MTF डिमांड सप्लाय हे एक स्मार्ट ट्रेंड-ट्रॅकिंग टूल आहे जे मल्टी-टाइमफ्रेम ट्रेंड टेबल दाखवते आणि डिमांड/सप्लाय झोन ऑटो-प्रॉट्स करते—जेणेकरून तुम्ही चार्ट बदलता येणार नाही तोपर्यंत बाजाराची दिशा आणि महत्त्वाचे स्तर शोधू शकता.</strong>",
+    indicator_demand_desc: "<strong>MTF डिमांड सप्लाय हे एक स्मार्ट ट्रेंड-ट्रॅकिंग टूल आहे जे मल्टी-टाइमफ्रेम ट्रेंड टेबल दाखवते आणि डिमांड/सप्लाय झोन ऑटो-प्लॉट्स करते—जेणेकरून तुम्ही चार्ट बदलता येणार नाही तोपर्यंत बाजाराची दिशा आणि महत्त्वाचे स्तर शोधू शकता.</strong>",
     indicator_screener_title: "स्टॉक स्क्रीनर<br>[<span class='crm-tag'>CRM</span>]",
     indicator_screener_desc: "",
     indicator_option_title: "CRM ऑप्शन चेन डीकोडर",
@@ -1123,11 +1123,11 @@ const translations = {
     emast_feature_try_now_2: "निर्णय घेण्याची गती वाढवते",
     emast_feature_try_now_quote: "<span class='highlight'>“मोमेंटमसह ट्रेड करा, फक्त आशेवर नाही.”</span>",
     google_form_revert: "निवडलेल्या पॅकेजसाठी पेमेंट पूर्ण झाल्यावर, कृपया खालील Google फॉर्म भरा जेणेकरून तुमचा प्रवेश लवकरात लवकर अनलॉक होईल।",
-    referralMessage: "आमचे इंडिकेटर सहकाऱ्यांना रेफर करा, आणि जेव्हा ते सब्स्क्रिप्शन घेतील, तेव्हा तुम्हाला फ्री प्रीमियम प्रवेश मिळेल — जर ते वार्षिक प्लॅन घेतील तर 1 महिना, किंवा अर्ध-वार्षिक प्लॅन घेतील तर 15 दिवस. फक्त ज्या व्यक्तीला रेफर करत आहात त्यांना तुमचा TradingView ID शेअर करा जेणेकरून ते त्यांच्या Google फॉर्ममध्ये एंटर करू शकतील!",
-    google_form_free_revert: "खालील Google फॉर्म भरून तुमच्या 2-दिवसांच्या फ्री ट्रायलसाठी साइन अप करा। — वापरकर्ता प्रति फक्त एकदाच वैध!",
+    referralMessage: "आमचे इंडिकेटर सहकाऱ्यांना रेफर करा, आणि जेव्हा ते सब्स्क्रिप्शन घेतील, तेव्हा तुम्हाला फ्री प्रीमियम प्रवेश मिळेल — जर ते वार्षिक प्लॅन घेतील तर 1 महिना,<br>किंवा अर्ध-वार्षिक प्लॅन घेतील तर 15 दिवस. फक्त ज्या व्यक्तीला रेफर करत आहात त्यांना तुमचा TradingView ID<br>शेअर करा जेणेकरून ते त्यांच्या Google फॉर्ममध्ये एंटर करू शकतील!",
+    google_form_free_revert: "<br>खालील Google फॉर्म भरून तुमच्या 2-दिवसांच्या फ्री ट्रायलसाठी साइन अप करा। — वापरकर्ता प्रति फक्त एकदाच वैध!",
     subscription_form: "सदस्यता घेतल्यानंतर भरण्यासाठी Google फॉर्म<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
     trial_form: "फ्री ट्रायल मिळवण्यासाठी Google फॉर्म भरा<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
-    sevenday: "आमच्या सर्व प्रीमियम इंडिकेटर्सना फक्त ₹500 साठी 7-दिवसाचा प्रवेश मिळवा — वापरकर्ता प्रति फक्त एकदाच वैध!"
+    sevenday: "<br>आमच्या सर्व प्रीमियम इंडिकेटर्सना फक्त ₹500 साठी 7-दिवसाचा प्रवेश मिळवा — वापरकर्ता प्रति फक्त एकदाच वैध!"
   },
   hi: {
     // Shared Translations (from index.html)
@@ -1499,11 +1499,11 @@ const translations = {
     emast_feature_try_now_2: "निर्णय लेने की गति बढ़ाता है",
     emast_feature_try_now_quote: "<span class='highlight'>“मोमेंटम के साथ ट्रेड करें, केवल आशा पर नहीं।”</span>",
     google_form_revert: "चुने गए पैकेज के लिए भुगतान पूर्ण होने के बाद, कृपया नीचे दिए गए Google फॉर्म को भरें ताकि आपका एक्सेस जल्द से जल्द अनलॉक हो सके।",
-    referralMessage: "हमारे इंडिकेटर को साथी ट्रेडर्स को रेफर करें, और जब वे सब्सक्रिप्शन लें, तो आपको फ्री प्रीमियम एक्सेस मिलेगा — यदि वे वार्षिक प्लान लें तो 1 महीना, या अर्ध-वार्षिक प्लान लें तो 15 दिन। बस जिसे रेफर कर रहे हैं उसे अपना TradingView ID शेयर करें ताकि वे इसे अपने Google फॉर्म में दर्ज कर सकें!",
-    google_form_free_revert: "नीचे दिए गए Google फॉर्म को भरकर अपनी 2-दिवसीय फ्री ट्रायल के लिए साइन अप करें। — प्रति उपयोगकर्ता केवल एक बार वैध!",
+    referralMessage: "हमारे इंडिकेटर को साथी ट्रेडर्स को रेफर करें, और जब वे सब्सक्रिप्शन लें, तो आपको फ्री प्रीमियम एक्सेस मिलेगा — यदि वे वार्षिक प्लान लें तो 1 महीना,<br>या अर्ध-वार्षिक प्लान लें तो 15 दिन। बस जिसे रेफर कर रहे हैं उसे अपना TradingView ID<br>शेयर करें ताकि वे इसे अपने Google फॉर्म में दर्ज कर सकें!",
+    google_form_free_revert: "<br>नीचे दिए गए Google फॉर्म को भरकर अपनी 2-दिवसीय फ्री ट्रायल के लिए साइन अप करें। — प्रति उपयोगकर्ता केवल एक बार वैध!",
     subscription_form: "सदस्यता लेने के बाद भरने के लिए Google फॉर्म<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
     trial_form: "फ्री ट्रायल प्राप्त करने के लिए Google फॉर्म भरें<a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> लिंक</a>",
-    sevenday: "हमारे सभी प्रीमियम इंडिकेटर्स को केवल ₹500 में 7-दिवसीय एक्सेस प्राप्त करें — प्रति उपयोगकर्ता केवल एक बार वैध!"
+    sevenday: "<br>हमारे सभी प्रीमियम इंडिकेटर्स को केवल ₹500 में 7-दिवसीय एक्सेस प्राप्त करें — प्रति उपयोगकर्ता केवल एक बार वैध!"
   }
 };
 
