@@ -837,7 +837,7 @@ const translations = {
     indicator_learn_more: "अधिक जाणून घ्या",
     indicator_scalp_title: "अल्टीमेट स्कॅल्प<br>प्रो [<span class='crm-tag'>CRM</span>]",
     indicator_demand_title: "MTF डिमांड सप्लाय<br>[<span class='crm-tag'>CRM</span>]",
-    indicator_demand_desc: "<strong>MTF डिमांड सप्लाय हे एक स्मार्ट ट्रेंड-ट्रॅकिंग टूल आहे जे मल्टी-टाइमफ्रेम ट्रेंड टेबल दाखवते आणि डिमांड/सप्लाय झोन ऑटो-प्लॉट्स करते—जेणेकरून तुम्ही चार्ट बदलता येणार नाही तोपर्यंत बाजाराची दिशा आणि महत्त्वाचे स्तर शोधू शकता.</strong>",
+    indicator_demand_desc: "<strong>MTF डिमांड सप्लाय हे एक स्मार्ट ट्रेंड-ट्रॅकिंग टूल आहे जे मल्टी-टाइमफ्रेम ट्रेंड टेबल दाखवते आणि डिमांड/सप्लाय झोन ऑटो-प्लॉट करते—जेणेकरून तुम्ही चार्ट बदलता येणार नाही तोपर्यंत बाजाराची दिशा आणि महत्त्वाचे स्तर शोधू शकता.</strong>",
     indicator_screener_title: "स्टॉक स्क्रीनर<br>[<span class='crm-tag'>CRM</span>]",
     indicator_screener_desc: "",
     indicator_option_title: "CRM ऑप्शन चेन डीकोडर",
