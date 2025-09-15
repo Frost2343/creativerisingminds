@@ -479,6 +479,10 @@ footer {
   color: #ffffff;
 }
 
+.group-discount a{
+  color: #00ffcc;
+}
+
 .content-box {
   background: linear-gradient(135deg, #1cb5e0, #000851);
   color: #ffffff;
@@ -615,6 +619,7 @@ html, body {
   /* backdrop-filter: blur(10px); */
   /* color: #fff; */
   z-index: 3;
+  flex-wrap: wrap; /* ensures content can wrap to next line */
 }
 
 .nav-left,
@@ -841,4 +846,42 @@ a.indicator-link:hover {
   transform-origin: center;
   margin-bottom: 7px;
   margin-left: 5px;
+}
+
+
+/* Force scroller on next line */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #0f172a, #000000);
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 0;
+  display: block; /* ensures it's below navbar items */
+  order: 2; /* pushes it below nav-left and nav-right */
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+
+.scroll-text:hover {
+  animation-play-state: paused;
+}
+
+.scroll-text a {
+  color: #00ffcc; /* link highlight color */
+  text-decoration: underline;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
