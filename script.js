@@ -121,7 +121,7 @@ const translations = {
     risk_warning: "Investments in securities market are subject to market risks, read all the related documents carefully before investing.",
     section_intro: "Welcome to <strong>Creative Rising Minds (CRM)</strong>. All content and services provided through this website are for <strong>educational and informational purposes only</strong>.",
     section_not_financial_advice_title: "Not Financial Advice",
-    section_not_financial_advice: "We are not SEBI registered advisors. Any information shared on this platform, including our tools, indicators, tutorials, or opinions, should not be considered as financial advice or recommendations to buy, sell, or hold any securities.",
+    section_not_financial_advice: "We are not SEBI registered advisors. Any information shared on this platform, including our tools, indicators, tutorials or opinions, should not be considered as financial advice or recommendations to buy, sell or hold any securities.",
     section_use_at_own_risk_title: "Use at Your Own Risk",
     section_use_at_own_risk: "Trading in the stock market involves risk. Past performance does not guarantee future returns. You are solely responsible for your investment decisions, and CRM or its team will not be liable for any losses incurred.",
     section_accuracy_content_title: "Accuracy & Content",
