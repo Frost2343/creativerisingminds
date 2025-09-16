@@ -926,7 +926,7 @@ a.indicator-link:hover {
   }
 
   .disclaimer-text {
-    animation-duration: 25s; /* slower scroll for readability */
+    animation-duration: 15s; /* slower scroll for readability */
   }
 }
 
