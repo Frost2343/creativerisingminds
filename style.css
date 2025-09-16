@@ -915,11 +915,18 @@ a.indicator-link:hover {
 /* ✅ Mobile adjustments */
 @media (max-width: 768px) {
   .disclaimer-container {
-    font-size: 12px;  /* slightly smaller text for mobile */
+    position: fixed;      /* take it out of the section */
+    bottom: 0;            /* stick it at the bottom of the viewport */
+    left: 0;
+    right: 0;
+    width: 100%;          /* full width */
+    z-index: 9999;        /* stay above other content */
+    font-size: 12px;
     padding: 5px 0;
   }
 
   .disclaimer-text {
-    animation-duration: 35s; /* slower scroll on smaller screens */
+    animation-duration: 35s; /* slower scroll for readability */
   }
 }
+
