@@ -908,7 +908,7 @@ a.indicator-link:hover {
 
 /* ✅ Right → Left scrolling, visible instantly */
 @keyframes disclaimer-scroll {
-  0% { transform: translateX(40%); }
+  0% { transform: translateX(35%); }
   100% { transform: translateX(-100%); }
 }
 
