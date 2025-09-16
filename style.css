@@ -888,29 +888,38 @@ a.indicator-link:hover {
 .disclaimer-container {
   width: 100%;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.85); /* dark for readability */
+  background: rgba(0, 0, 0, 0.85); /* dark background for readability */
   color: #ffcc00;   /* yellowish warning text */
   font-size: 13px;
   padding: 6px 0;
   margin-top: 20px;
   position: relative;
-
-  display: flex;         /* ✅ contain scrolling line */
-  align-items: center;   /* vertically center text */
 }
 
 .disclaimer-text {
   display: inline-block;
-  min-width: 100%;       /* ✅ ensures full-width single line */
-  white-space: nowrap;   /* keep text in one line */
+  white-space: nowrap;    /* keep it on one line */
   animation: disclaimer-scroll 25s linear infinite;
 }
 
 .disclaimer-text:hover {
-  animation-play-state: paused;
+  animation-play-state: paused; /* pause when hovered */
 }
 
+/* ✅ Right → Left scrolling, visible instantly */
 @keyframes disclaimer-scroll {
-  0% { transform: translateX(100%); }   /* ✅ enter smoothly */
-  100% { transform: translateX(-100%); } /* ✅ exit left */
+  0% { transform: translateX(40%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 768px) {
+  .disclaimer-container {
+    font-size: 12px;  /* slightly smaller text for mobile */
+    padding: 5px 0;
+  }
+
+  .disclaimer-text {
+    animation-duration: 35s; /* slower scroll on smaller screens */
+  }
 }
