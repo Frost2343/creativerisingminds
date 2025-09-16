@@ -378,7 +378,14 @@ const translations = {
     google_form_text: "Google Form",
     try_indicators_text: "Try our free indicators",
     ema_supertrend_text: "EMA Supertrend [CRM]",
-    ema_cross_rsi_text: "EMA Cross RSI [CRM]"
+    ema_cross_rsi_text: "EMA Cross RSI [CRM]",
+    monthly: "Monthly",
+    quarterly: "Quarterly",
+    saveUpTo30Percent: "Save up to 30%",
+    halfYearly: "Half-Yearly",
+    saveUpTo50Percent: "Save up to 50%",
+    yearly: "Yearly",
+    bestValueSaveUpTo60Percent: "Best Value – Save up to 60%"
     
   },
   gu: {
@@ -759,7 +766,14 @@ const translations = {
     google_form_text: "ગૂગલ ફોર્મ",
     try_indicators_text: "અમારા મફત સૂચકો અજમાવો",
     ema_supertrend_text: "EMA સુપરટ્રેન્ડ [CRM]",
-    ema_cross_rsi_text: "EMA ક્રોસ RSI [CRM]"
+    ema_cross_rsi_text: "EMA ક્રોસ RSI [CRM]",
+    monthly: "માસિક",
+    quarterly: "ત્રિમાસિક",
+    saveUpTo30Percent: "30% સુધી બચાવો",
+    halfYearly: "અર્ધ-વાર્ષિક",
+    saveUpTo50Percent: "50% સુધી બચાવો",
+    yearly: "વાર્ષિક",
+    bestValueSaveUpTo60Percent: "શ્રેષ્ઠ મૂલ્ય – 60% સુધી બચાવો"
 
   },
   mr: {
@@ -1142,7 +1156,14 @@ const translations = {
     google_form_text: "गूगल फॉर्म",
     try_indicators_text: "आमचे मोफत इंडिकेटर वापरून पहा",
     ema_supertrend_text: "EMA सुपरट्रेंड [CRM]",
-    ema_cross_rsi_text: "EMA क्रॉस RSI [CRM]"
+    ema_cross_rsi_text: "EMA क्रॉस RSI [CRM]",
+    monthly: "मासिक",
+    quarterly: "त्रैमासिक",
+    saveUpTo30Percent: "30% पर्यंत वाचवा",
+    halfYearly: "अर्ध-वार्षिक",
+    saveUpTo50Percent: "50% पर्यंत वाचवा",
+    yearly: "वार्षिक",
+    bestValueSaveUpTo60Percent: "सर्वोत्तम मूल्य – 60% पर्यंत वाचवा"
   },
   hi: {
     // Shared Translations (from index.html)
@@ -1523,7 +1544,14 @@ const translations = {
     google_form_text: "गूगल फॉर्म",
     try_indicators_text: "हमारे मुफ्त इंडिकेटर आजमाएं",
     ema_supertrend_text: "EMA सुपरट्रेंड [CRM]",
-    ema_cross_rsi_text: "EMA क्रॉस RSI [CRM]"
+    ema_cross_rsi_text: "EMA क्रॉस RSI [CRM]",
+    monthly: "मासिक",
+    quarterly: "त्रैमासिक",
+    saveUpTo30Percent: "30% तक बचाएं",
+    halfYearly: "अर्ध-वार्षिक",
+    saveUpTo50Percent: "50% तक बचाएं",
+    yearly: "वार्षिक",
+    bestValueSaveUpTo60Percent: "सर्वोत्तम मूल्य – 60% तक बचाएं"
   }
 };
 
