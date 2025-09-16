@@ -916,7 +916,7 @@ a.indicator-link:hover {
 @media (max-width: 768px) {
   .disclaimer-container {
     white-space: normal; /* allow text wrapping */
-    overflow: visible;   /* no hidden overflow */
+    /* overflow: visible;   no hidden overflow */
   }
 
   .disclaimer-text {
