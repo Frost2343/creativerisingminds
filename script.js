@@ -91,7 +91,7 @@ const translations = {
     pricing_title: "Pricing Plans",
     pricing_table_indicator: "Indicator",
     pricing_table_monthly: "Monthly",
-    pricing_table_quarterly: "Quarterly",
+    pricing_table_quarterly: "Quarterly ",
     pricing_table_half_yearly: "Half-Yearly",
     pricing_table_yearly: "Yearly",
     pricing_trend_status: "<strong><span style='color: #ff9800'>Free to use for a limited time – don’t miss out!</span></strong>",
