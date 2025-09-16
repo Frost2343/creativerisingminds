@@ -911,3 +911,19 @@ a.indicator-link:hover {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+
+/* ✅ Mobile Fix */
+@media (max-width: 768px) {
+  .disclaimer-container {
+    white-space: normal; /* allow text wrapping */
+    overflow: visible;   /* no hidden overflow */
+  }
+
+  .disclaimer-text {
+    display: block;
+    padding-left: 0;
+    animation: none;     /* stop scrolling on mobile */
+    text-align: center;  /* center align for better look */
+    white-space: normal; /* wrap lines naturally */
+  }
+}
