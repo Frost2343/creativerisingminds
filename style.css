@@ -929,7 +929,7 @@ a.indicator-link:hover {
     animation-duration: 25s; /* slower scroll for readability */
   }
   @keyframes disclaimer-scroll {
-  0% { transform: translateX(20%); }
+  0% { transform: translateX(2%); }
   100% { transform: translateX(-100%); }
 }
 }
