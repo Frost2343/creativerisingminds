@@ -853,7 +853,7 @@ a.indicator-link:hover {
   overflow: hidden;
   background: linear-gradient(135deg, #0f172a, #000000);
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   padding: 5px 0;
   display: block; /* ensures it's below navbar items */
   order: 2; /* pushes it below nav-left and nav-right */
@@ -890,7 +890,7 @@ a.indicator-link:hover {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.85); /* dark background for readability */
   color: #ffcc00;   /* yellowish warning text */
-  font-size: 16px;
+  font-size: 15px;
   padding: 6px 0;
   margin-top: 20px;
   position: relative;
@@ -921,7 +921,7 @@ a.indicator-link:hover {
     right: 0;
     width: 100%;          /* full width */
     z-index: 9999;        /* stay above other content */
-    font-size: 16px;
+    font-size: 15px;
     padding: 5px 0;
   }
 
