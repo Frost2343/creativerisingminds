@@ -888,18 +888,21 @@ a.indicator-link:hover {
 .disclaimer-container {
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
-  background: rgba(0, 0, 0, 0.85); /* solid dark for readability */
+  background: rgba(0, 0, 0, 0.85); /* dark for readability */
   color: #ffcc00;   /* yellowish warning text */
   font-size: 13px;
   padding: 6px 0;
   margin-top: 20px;
   position: relative;
+
+  display: flex;         /* ✅ contain scrolling line */
+  align-items: center;   /* vertically center text */
 }
 
 .disclaimer-text {
   display: inline-block;
-  padding-left: 100%;
+  min-width: 100%;       /* ✅ ensures full-width single line */
+  white-space: nowrap;   /* keep text in one line */
   animation: disclaimer-scroll 25s linear infinite;
 }
 
@@ -908,22 +911,6 @@ a.indicator-link:hover {
 }
 
 @keyframes disclaimer-scroll {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-}
-
-/* ✅ Mobile Fix */
-@media (max-width: 768px) {
-  .disclaimer-container {
-    white-space: normal; /* allow text wrapping */
-    /* overflow: visible;   no hidden overflow */
-  }
-
-  .disclaimer-text {
-    display: block;
-    padding-left: 0;
-    /* animation: none;     stop scrolling on mobile */
-    /* text-align: center;  center align for better look */
-    white-space: normal; /* wrap lines naturally */
-  }
+  0% { transform: translateX(100%); }   /* ✅ enter smoothly */
+  100% { transform: translateX(-100%); } /* ✅ exit left */
 }
