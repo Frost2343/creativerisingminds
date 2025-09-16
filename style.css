@@ -922,8 +922,8 @@ a.indicator-link:hover {
   .disclaimer-text {
     display: block;
     padding-left: 0;
-    animation: none;     /* stop scrolling on mobile */
-    text-align: center;  /* center align for better look */
+    /* animation: none;     stop scrolling on mobile */
+    /* text-align: center;  center align for better look */
     white-space: normal; /* wrap lines naturally */
   }
 }
