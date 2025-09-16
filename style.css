@@ -848,15 +848,12 @@ a.indicator-link:hover {
   margin-left: 5px;
 }
 
-
-/* Force scroller on next line */
 .scroll-container {
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
   background: linear-gradient(135deg, #0f172a, #000000);
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   padding: 5px 0;
   display: block; /* ensures it's below navbar items */
   order: 2; /* pushes it below nav-left and nav-right */
@@ -864,8 +861,14 @@ a.indicator-link:hover {
 
 .scroll-text {
   display: inline-block;
+  white-space: nowrap; /* ✅ ensures all text stays on one line */
   padding-left: 100%;
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-left 25s linear infinite;
+}
+
+.scroll-text * {
+  display: inline;         /* ✅ forces spans/links to stay inline */
+  white-space: nowrap;     /* ✅ prevents line breaks inside elements */
 }
 
 .scroll-text:hover {
@@ -878,10 +881,33 @@ a.indicator-link:hover {
 }
 
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.disclaimer-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.85); /* solid dark for readability */
+  color: #ffcc00;   /* yellowish warning text */
+  font-size: 13px;
+  padding: 6px 0;
+  margin-top: 20px;
+  position: relative;
+}
+
+.disclaimer-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: disclaimer-scroll 25s linear infinite;
+}
+
+.disclaimer-text:hover {
+  animation-play-state: paused;
+}
+
+@keyframes disclaimer-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
