@@ -935,7 +935,7 @@ a.indicator-link:hover {
     opacity: 0.2; /* adjust between 0.3–0.6 for readability */
   }
   .hero {
-    max-height: 70vh; /* reduce section height */
+    max-height: 120vh; /* reduce section height */
   }
 }
 
