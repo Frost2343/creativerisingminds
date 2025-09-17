@@ -688,72 +688,6 @@ a.indicator-link:hover {
   font-family: 'Times New Roman', serif;
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .nav-left {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-  }
-
-  .nav-right {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-    background: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-right a {
-    display: block;
-    width: auto;
-    text-align: center;
-    padding: 5px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .language-switcher {
-    margin: 5px 0;
-    width: auto;
-  }
-
-  .hero-content {
-    margin-top: -30px;
-  }
-  .indicator-cards {
-    flex-direction: column; /* Stack cards vertically */
-    gap: 20px; /* Reduced gap for mobile */
-    padding: 0 10px; /* Add padding to prevent edge clipping */
-  }
-
-  .card {
-    width: 100%; /* Full width on mobile */
-    max-width: 300px; /* Cap maximum width for readability */
-    margin: 0 auto; /* Center the card */
-  }
-
-  /* Ensure content box adjusts */
-  .content-box {
-    padding: 15px; /* Slightly reduce padding for mobile */
-  }
-
-}
-
-
 
 .card-link-wrapper {
     text-decoration: none;
@@ -912,8 +846,68 @@ a.indicator-link:hover {
   100% { transform: translateX(-100%); }
 }
 
-/* ✅ Mobile adjustments */
+/* Mobile layout */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-right a {
+    display: block;
+    width: auto;
+    text-align: center;
+    padding: 5px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .language-switcher {
+    margin: 5px 0;
+    width: auto;
+  }
+
+  .hero-content {
+    margin-top: -50px;
+  }
+  .indicator-cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Reduced gap for mobile */
+    padding: 0 10px; /* Add padding to prevent edge clipping */
+  }
+
+  .card {
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Cap maximum width for readability */
+    margin: 0 auto; /* Center the card */
+  }
+
+  /* Ensure content box adjusts */
+  .content-box {
+    padding: 15px; /* Slightly reduce padding for mobile */
+  }
   .disclaimer-container {
     position: fixed;      /* take it out of the section */
     bottom: 0;            /* stick it at the bottom of the viewport */
@@ -938,4 +932,3 @@ a.indicator-link:hover {
     max-height: 100vh; /* reduce section height */
   }
 }
-
