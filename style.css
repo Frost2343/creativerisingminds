@@ -924,13 +924,15 @@ a.indicator-link:hover {
     font-size: 15px;
     padding: 5px 0;
   }
-
   .disclaimer-text {
     animation-duration: 25s; /* slower scroll for readability */
   }
   @keyframes disclaimer-scroll {
-  0% { transform: translateX(25%); }
-  100% { transform: translateX(-100%); }
-}
+    0% { transform: translateX(25%); }
+    100% { transform: translateX(-100%); }
+  }
+  .hero-video {
+    opacity: 0.4; /* adjust between 0.3–0.6 for readability */
+  }
 }
 
