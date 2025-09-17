@@ -1171,7 +1171,7 @@ const translations = {
     brand_name: "क्रिएटिव राइजिंग माइंड्स",
     nav_home: "होम",
     nav_indicators: "इंडिकेटर",
-    nav_pricing: "मूल्य निर्धारण",
+    nav_pricing: "किंमत",
     nav_contact: "संपर्क",
     footer_copyright: "© 2025 क्रिएटिव राइजिंग माइंड्स। सर्व अधिकार सुरक्षित।",
     // indicator1.html Translations
