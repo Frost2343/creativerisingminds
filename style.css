@@ -991,7 +991,7 @@ a.indicator-link:hover {
 }
 
 .faq-item input:checked ~ .faq-answer {
-  max-height: 300px;
+  max-height: 380px;
   margin-top: 10px;
 }
 
