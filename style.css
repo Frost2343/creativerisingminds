@@ -482,6 +482,9 @@ footer {
 .group-discount a{
   color: #00ffcc;
 }
+.special-offer a{
+  color: #00ffcc;
+}
 
 .content-box {
   background: linear-gradient(135deg, #1cb5e0, #000851);
@@ -782,6 +785,10 @@ a.indicator-link:hover {
   margin-left: 5px;
 }
 
+.tv-icon img:hover {
+  filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(0.6); /* Approximates #ff9800 (orange tint) */
+}
+
 .scroll-container {
   width: 100%;
   overflow: hidden;
@@ -1025,10 +1032,12 @@ a.indicator-link:hover {
   margin: 10px;
   padding: 10px 20px;
   background-color: #0a2b4d;
-  color: white;
+  color: #00ffcc;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .special-offer a:hover {
   background-color: #0056b3;
