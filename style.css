@@ -786,7 +786,7 @@ a.indicator-link:hover {
 }
 
 .tv-icon img:hover {
-  filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(0.6); /* Approximates #ff9800 (orange tint) */
+  filter: sepia(1) hue-rotate(10deg) saturate(20) brightness(0.9); /* Approximates #ff9800 (orange tint) */
 }
 
 .scroll-container {
