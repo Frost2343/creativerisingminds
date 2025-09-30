@@ -840,7 +840,7 @@ a.indicator-link:hover {
 .disclaimer-text {
   display: inline-block;
   white-space: nowrap;    /* keep it on one line */
-  animation: disclaimer-scroll 25s linear infinite;
+  animation: disclaimer-scroll 35s linear infinite;
 }
 
 .disclaimer-text:hover {
