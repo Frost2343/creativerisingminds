@@ -926,7 +926,7 @@ a.indicator-link:hover {
     padding: 5px 0;
   }
   .disclaimer-text {
-    animation-duration: 25s; /* slower scroll for readability */
+    animation-duration: 42s; /* slower scroll for readability */
   }
   @keyframes disclaimer-scroll {
     0% { transform: translateX(25%); }
