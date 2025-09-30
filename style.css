@@ -840,7 +840,7 @@ a.indicator-link:hover {
 .disclaimer-text {
   display: inline-block;
   white-space: nowrap;    /* keep it on one line */
-  animation: disclaimer-scroll 60s linear infinite;
+  animation: disclaimer-scroll 25s linear infinite;
 }
 
 .disclaimer-text:hover {
@@ -849,7 +849,7 @@ a.indicator-link:hover {
 
 /* ✅ Right → Left scrolling, visible instantly */
 @keyframes disclaimer-scroll {
-  0% { transform: translateX(15%); }
+  0% { transform: translateX(35%); }
   100% { transform: translateX(-100%); }
 }
 
@@ -916,30 +916,22 @@ a.indicator-link:hover {
     padding: 15px; /* Slightly reduce padding for mobile */
   }
   .disclaimer-container {
-    position: fixed;      /* Stays at the bottom of the viewport */
-    bottom: 0;           /* Stick to the bottom */
+    position: fixed;      /* take it out of the section */
+    bottom: 0;            /* stick it at the bottom of the viewport */
     left: 0;
     right: 0;
-    width: 100%;         /* Full width of the viewport */
-    z-index: 9999;       /* Stay above other content */
-    font-size: 15px;     /* Font size for readability */
-    padding: 5px 0;      /* Vertical padding */
-    overflow: hidden;    /* Hide text outside the container during scroll */
-    background-color: transparent; /* Remove white background to avoid patch */
-}
-
-.disclaimer-text {
-    display: inline-block; /* Keep text on one line */
-    white-space: nowrap;   /* Prevent text wrapping */
-    animation: disclaimer-scroll 30s linear infinite; /* 30s duration for readability */
-    color: #000;          /* Ensure text is visible; adjust color as needed */
-    padding-left: 100%;   /* Ensure text starts fully off-screen to the right */
-}
-
-@keyframes disclaimer-scroll {
-    0% { transform: translateX(0); } /* Start at the right edge of the container */
-    100% { transform: translateX(-100%); } /* Move left to show all content */
-}
+    width: 100%;          /* full width */
+    z-index: 9999;        /* stay above other content */
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .disclaimer-text {
+    animation-duration: 25s; /* slower scroll for readability */
+  }
+  @keyframes disclaimer-scroll {
+    0% { transform: translateX(25%); }
+    100% { transform: translateX(-100%); }
+  }
   .hero-video {
     opacity: 0.3; /* adjust between 0.3–0.6 for readability */
   }
