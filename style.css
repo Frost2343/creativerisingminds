@@ -804,7 +804,7 @@ a.indicator-link:hover {
   display: inline-block;
   white-space: nowrap; /* ✅ ensures all text stays on one line */
   padding-left: 100%;
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
 
 .scroll-text * {
