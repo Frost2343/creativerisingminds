@@ -840,7 +840,7 @@ a.indicator-link:hover {
 .disclaimer-text {
   display: inline-block;
   white-space: nowrap;    /* keep it on one line */
-  animation: disclaimer-scroll 42s linear infinite;
+  animation: disclaimer-scroll 60s linear infinite;
 }
 
 .disclaimer-text:hover {
@@ -849,7 +849,7 @@ a.indicator-link:hover {
 
 /* ✅ Right → Left scrolling, visible instantly */
 @keyframes disclaimer-scroll {
-  0% { transform: translateX(35%); }
+  0% { transform: translateX(15%); }
   100% { transform: translateX(-100%); }
 }
 
