@@ -925,18 +925,20 @@ a.indicator-link:hover {
     font-size: 15px;     /* Font size for readability */
     padding: 5px 0;      /* Vertical padding */
     overflow: hidden;    /* Hide text outside the container during scroll */
-    background-color: #f8f8f8; /* Optional: Add a background for visibility */
+    background-color: transparent; /* Remove white background to avoid patch */
 }
 
 .disclaimer-text {
-    display: inline-block; /* Allow text to stay on one line */
+    display: inline-block; /* Keep text on one line */
     white-space: nowrap;   /* Prevent text wrapping */
-    animation: disclaimer-scroll 30s linear infinite; /* Increased duration for readability */
+    animation: disclaimer-scroll 30s linear infinite; /* 30s duration for readability */
+    color: #000;          /* Ensure text is visible; adjust color as needed */
+    padding-left: 100%;   /* Ensure text starts fully off-screen to the right */
 }
 
 @keyframes disclaimer-scroll {
-    0% { transform: translateX(100%); } /* Start fully off-screen to the right */
-    100% { transform: translateX(-200%); } /* Move left enough to show all content */
+    0% { transform: translateX(0); } /* Start at the right edge of the container */
+    100% { transform: translateX(-100%); } /* Move left to show all content */
 }
   .hero-video {
     opacity: 0.3; /* adjust between 0.3–0.6 for readability */
