@@ -916,22 +916,28 @@ a.indicator-link:hover {
     padding: 15px; /* Slightly reduce padding for mobile */
   }
   .disclaimer-container {
-    position: fixed;      /* take it out of the section */
-    bottom: 0;            /* stick it at the bottom of the viewport */
+    position: fixed;      /* Stays at the bottom of the viewport */
+    bottom: 0;           /* Stick to the bottom */
     left: 0;
     right: 0;
-    width: 100%;          /* full width */
-    z-index: 9999;        /* stay above other content */
-    font-size: 15px;
-    padding: 5px 0;
-  }
-  .disclaimer-text {
-    animation-duration: 25s; /* slower scroll for readability */
-  }
-  @keyframes disclaimer-scroll {
-    0% { transform: translateX(25%); }
-    100% { transform: translateX(-100%); }
-  }
+    width: 100%;         /* Full width of the viewport */
+    z-index: 9999;       /* Stay above other content */
+    font-size: 15px;     /* Font size for readability */
+    padding: 5px 0;      /* Vertical padding */
+    overflow: hidden;    /* Hide text outside the container during scroll */
+    background-color: #f8f8f8; /* Optional: Add a background for visibility */
+}
+
+.disclaimer-text {
+    display: inline-block; /* Allow text to stay on one line */
+    white-space: nowrap;   /* Prevent text wrapping */
+    animation: disclaimer-scroll 30s linear infinite; /* Increased duration for readability */
+}
+
+@keyframes disclaimer-scroll {
+    0% { transform: translateX(100%); } /* Start fully off-screen to the right */
+    100% { transform: translateX(-200%); } /* Move left enough to show all content */
+}
   .hero-video {
     opacity: 0.3; /* adjust between 0.3–0.6 for readability */
   }
