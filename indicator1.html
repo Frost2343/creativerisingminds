@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-translate="title">CRM Trend Analyser</title>
+  <title data-translate="title">CRM Twin Chart</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="indicator1.css">
   <link rel="stylesheet" href="style.css">
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
       <a href="index.html#home" class="brand-container" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
@@ -33,83 +34,56 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <a href="https://in.tradingview.com/script/MFEBMnba-Scalp-Swing-indicator-CRM/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
-    <h1 data-translate="main_heading_trend">💡 CRM Trend Analyser PRO– <span class="highlight">Smart Entry Level Alert Tool</span> 💡</h1>
-    <p class="subheading" data-translate="subheading">Entry-Level | Multi-Timeframe | All Segment Support</p>
 
-    <!-- Image Below Title -->
+  <!-- Main Section -->
+  <div class="container">
+    <a href="https://in.tradingview.com/script/your-script-link-here" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
+    <h1 data-translate="main_heading_twin_chart">💡 CRM Twin Chart – <span class="highlight">See Two Symbols, Trade Smarter</span> 💡</h1>
+    <p class="subheading" data-translate="subheading_twin_chart">Dual-Symbol Analysis | VWAP + Dynamic Trend | Entry–SL–TP Levels</p>
+
+    <!-- Carousel -->
     <div class="carousel-wrapper">
-      <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;">❮</button>
+      <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;background-color: black;">❮</button>
       <div class="carousel-track" id="carousel">
-        <!-- <img src="images/CRM PRO Tutorial-1.png" alt="Slide 1" class="carousel-image" /> -->
-        <img src="images/CRM TREND ANALYSER.png" alt="Slide 2" class="carousel-image" />
+        <img src="images/twin_chart.png" alt="Twin Chart Example 1" class="carousel-image" />
+        <!-- <img src="images/twinchart2.png" alt="Twin Chart Example 2" class="carousel-image" /> -->
       </div>
-      <button class="nav-button nav-btn-right" id="nextBtn">❯</button>
+      <button class="nav-button nav-btn-right" id="nextBtn" style="display: none;background-color: black;">❯</button>
     </div>
 
+    <!-- Features -->
     <section class="features-section">
-      <!-- Breakout-Based Trading System -->
       <div class="feature-card">
-        <h3 data-translate="feature_breakout_title">✅ Breakout-Based Trading System</h3>
+        <h3 data-translate="twin_chart_dual_symbol_plotting_title">✅ Dual Symbol Plotting</h3>
         <ul>
-          <li data-translate="feature_breakout_1">Detects breakout zones using <span class="highlight">custom price structure</span> and <span class="highlight">moving average logic</span></li>
-          <li data-translate="feature_breakout_2">Shows <span class="highlight">early pre-entry cues</span> based on key highs/lows</li>
-          <li data-translate="feature_breakout_3">Automatically calculates <span class="highlight">Entry, Stop Loss, TP1, TP2, and TP3</span></li>
+          <li data-translate="twin_chart_dual_symbol_desc1">Plot a <span class="highlight">secondary symbol</span> in the lower pane alongside your main chart.</li>
+          <li data-translate="twin_chart_dual_symbol_desc2">Helps compare Index vs Options, Stock vs Future, or any pair instantly.</li>
+          <li data-translate="twin_chart_dual_symbol_desc3">User can <span class="highlight">change symbol input</span> as per requirement.</li>
         </ul>
       </div>
 
-      <!-- Dynamic Trend Engine -->
       <div class="feature-card">
-        <h3 data-translate="feature_trend_engine_title">✅ Dynamic Trend Engine</h3>
+        <h3 data-translate="twin_chart_entry_sl_tp_title">✅ Entry, Stoploss & Take Profit Levels</h3>
         <ul>
-          <li data-translate="feature_trend_engine_1">Adaptive trend lines using momentum acceleration logic</li>
-          <li data-translate="feature_trend_engine_2">Candle coloring based on trend speed for visual clarity</li>
-          <li data-translate="feature_trend_engine_3">Gradient intensity reflects trend strength and stability</li>
+          <li data-translate="twin_chart_entry_sl_tp_desc1">Auto-calculated <span class="highlight">Entry, SL, TP1–TP4</span> plotted on chart.</li>
+          <li data-translate="twin_chart_entry_sl_tp_desc2">Dynamic levels adjust with price movement.</li>
+          <li data-translate="twin_chart_entry_sl_tp_desc3">Color-coded lines for fast decision making.</li>
         </ul>
       </div>
 
-      <!-- Multi-Timeframe Support -->
       <div class="feature-card">
-        <h3 data-translate="feature_timeframe_title">✅ Multi-Timeframe Support</h3>
+        <h3 data-translate="twin_chart_vwap_overlay_title">✅ VWAP Overlay</h3>
         <ul>
-          <li data-translate="feature_timeframe_1">Plots Daily/Weekly High, Low, and Close levels</li>
-          <li data-translate="feature_timeframe_2">Make decisions using top-down market context</li>
-          <li data-translate="feature_timeframe_3">Toggle historical levels + resize labels for visual comfort</li>
+          <li data-translate="twin_chart_vwap_overlay_desc1">Plots <span class="highlight">VWAP</span> on chart for institutional bias.</li>
+          <li data-translate="twin_chart_vwap_overlay_desc2">Clear trend confirmation when price respects VWAP.</li>
         </ul>
       </div>
 
-      <!-- Risk & Target Management -->
       <div class="feature-card">
-        <h3 data-translate="feature_risk_management_title">✅ Risk & Target Management</h3>
+        <h3 data-translate="twin_chart_risk_signal_title">✅ Risk & Signal Display</h3>
         <ul>
-          <li data-translate="feature_risk_management_1">Auto-calculated Entry, SL, TP1, TP2, TP3 based on multiple confluences</li>
-          <li data-translate="feature_risk_management_2">Clearly plotted lines and levels for real-time decision-making</li>
-          <li data-translate="feature_risk_management_3">Choose between <span class="highlight">"Only Last Signal"</span> or <span class="highlight">"All Signals"</span> mode:</li>
-          <li data-translate="feature_risk_management_4">✅ Clean charts with most recent trade only</li>
-          <li data-translate="feature_risk_management_5">✅ Back test easily with full signal history</li>
-        </ul>
-      </div>
-
-      <!-- Built-in Technical Tools -->
-      <div class="feature-card">
-        <h3 data-translate="feature_technical_tools_title">✅ Built-in Technical Tools</h3>
-        <ul>
-          <li data-translate="feature_technical_tools_1">Custom-styled <span class="highlight">VWAP Overlay</span></li>
-          <li data-translate="feature_technical_tools_2">Demand & Supply zones for support/resistance</li>
-          <li data-translate="feature_technical_tools_3">Multiple adaptive MAs with momentum tracking</li>
-          <li data-translate="feature_technical_tools_4">MA gradient for strength confirmation</li>
-        </ul>
-      </div>
-
-      <!-- Smart Signal Display -->
-      <div class="feature-card">
-        <h3 data-translate="feature_signal_display_title">✅ Smart Signal Display</h3>
-        <ul>
-          <li data-translate="feature_signal_display_1">Dynamic Buy/Sell markers with entry labels</li>
-          <li data-translate="feature_signal_display_2">Color-coded SL/TP lines for fast visual understanding</li>
-          <li data-translate="feature_signal_display_3">Optional: Use standard candle colors</li>
-          <li data-translate="feature_signal_display_4">Customize theme for your visual comfort</li>
+          <li data-translate="twin_chart_risk_signal_desc1">Buy/Sell signals with proper SL & TP levels.</li>
+          <li data-translate="twin_chart_risk_signal_desc2">Clean or full-signal modes for backtesting or live trading.</li>
         </ul>
       </div>
 
@@ -118,7 +92,7 @@
         <h3 data-translate="feature_timeframes_title">🕒 Recommended Timeframes</h3>
         <ul>
           <li data-translate="feature_timeframes_1"><span class="highlight">3min / 5min → Intraday & Scalping</span></li>
-          <li data-translate="feature_timeframes_2"><span class="highlight">Daily Chart → Swing / Positional setups</span></li>
+          <!-- <li data-translate="feature_timeframes_2"><span class="highlight">Daily Chart → Swing / Positional setups</span></li> -->
         </ul>
       </div>
 
@@ -176,67 +150,48 @@
       </div>
     </section>
   </div>
-  <!-- Footer -->
-<footer class="custom-footer">
-  <div class="footer-container">
-    <!-- Social Media -->
-    <div class="footer-section social-media">
-      <h3 data-translate="footer_social_media">Follow us on social media</h3>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@creativerisingminds005"><i class="fab fa-youtube"></i></a>
-        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
-        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
-          <span class="tv-icon">
-            <img src="images/logo/TVicon.png" alt="TradingView">
-          </span>
-        </a>
-        <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- Footer (reuse same structure as old one) -->
+  <footer class="custom-footer">
+    <div class="footer-container">
+      <!-- Social Media -->
+      <div class="footer-section social-media">
+        <h3>Follow us on social media</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@creativerisingminds005"><i class="fab fa-youtube"></i></a>
+          <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
+          <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+            <span class="tv-icon"><img src="images/logo/TVicon.png" alt="TradingView"></span>
+          </a>
+          <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
-
-      <div class="contact-info">
-        <h3 data-translate="footer_contact_us">Contact Us</h3>
-        <p class="email-container">
-          <i class="fas fa-envelope"></i> 
-          <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
-        </p>
-        <p class="phone-container">
-          <i class="fas fa-phone-alt"></i> 
-          <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
-        </p>
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="disclamer.html">Disclaimer</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Policies -->
+      <div class="footer-section">
+        <h3>Policies</h3>
+        <ul>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="T&C.html">Terms & Conditions</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h3 data-translate="footer_quick_links">Quick Links</h3>
-      <ul>
-        <li><a href="#home" data-translate="footer_home">Home</a></li>
-        <li><a href="disclamer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
-        <li><a href="#contact" data-translate="footer_contact_us">Contact Us</a></li>
-      </ul>
+    <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;">
+      © 2025 Creative Rising Minds. All rights reserved.
     </div>
-
-    <!-- Policies -->
-    <div class="footer-section">
-      <h3 data-translate="footer_policies">Policies and Compliance</h3>
-      <ul>
-        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
-        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
-    © 2025 Creative Rising Minds. All rights reserved.
-  </div>
-</footer>
-
+  </footer>
 
   <script src="script.js"></script>
-  <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
   <script>
     const carousel = document.getElementById('carousel');
     const prevBtn = document.getElementById('prevBtn');
@@ -292,6 +247,7 @@
 
         fullscreenLeft = document.createElement('button');
         fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
+        fullscreenLeft.style.backgroundColor = 'black';
         fullscreenLeft.innerHTML = '&#x276E;';
         fullscreenLeft.onclick = () => {
           if (currentIndex > 0) {
@@ -303,6 +259,7 @@
 
         fullscreenRight = document.createElement('button');
         fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
+        fullscreenRight.style.backgroundColor = 'black';
         fullscreenRight.innerHTML = '&#x276F;';
         fullscreenRight.onclick = () => {
           if (currentIndex < images.length - 1) {
