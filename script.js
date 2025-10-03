@@ -855,8 +855,8 @@ const translations = {
     twin_chart_risk_signal_title: "✅ જોખમ અને સિગ્નલ ડિસ્પ્લે",
     twin_chart_risk_signal_desc1: "યોગ્ય એસએલ અને ટીપી સ્તરો સાથે ખરીદી/વેચાણ સિગ્નલ.",
     twin_chart_risk_signal_desc2: "બેકટેસ્ટિંગ અથવા લાઇવ ટ્રેડિંગ માટે સ્વચ્છ અથવા સંપૂર્ણ-સિગ્નલ મોડ્સ.",
-    indicator_twin_chart_title: "ટ્વિન ચાર્ટ<br>[<span class='crm-tag'>સીઆરએમ</span>]",
-    indicator_twin_chart: "ટ્વિન ચાર્ટ [<span class='crm-tag'>સીઆરએમ</span>]",
+    indicator_twin_chart_title: "ટ્વિન ચાર્ટ<br>[<span class='crm-tag'>CRM</span>]",
+    indicator_twin_chart: "ટ્વિન ચાર્ટ [<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart_desc: "<strong>ટ્વિન ચાર્ટ એક શક્તિશાળી ટ્રેડિંગ ઇન્ડિકેટર છે જે તમને બે ઇન્સ્ટ્રુમેન્ટ્સના એકસાથે દેખાવ માટે બીજું પ્રતીક પ્લોટ કરવા દે છે, તેમજ સ્વયંચાલિત રીતે પ્રવેશ, એસએલ, ટીપીની ગણતરી કરે છે, VWAP ઓવરલે કરે છે, અને ગતિશીલ વલણ સિગ્નલ બતાવે છે.</strong>"
   },
   mr: {
@@ -1287,8 +1287,8 @@ const translations = {
     twin_chart_risk_signal_title: "✅ जोखीम आणि सिग्नल डिस्प्ले",
     twin_chart_risk_signal_desc1: "योग्य एसएल आणि टीपी लेव्हल्ससह खरेदी/विक्री सिग्नल्स.",
     twin_chart_risk_signal_desc2: "बॅकटेस्टिंग किंवा लाइव्ह ट्रेडिंगसाठी स्वच्छ किंवा पूर्ण-सिग्नल मोड्स.",
-    indicator_twin_chart_title: "ट्विन चार्ट<br>[<span class='crm-tag'>सीआरएम</span>]",
-    indicator_twin_chart : "ट्विन चार्ट [<span class='crm-tag'>सीआरएम</span>]",
+    indicator_twin_chart_title: "ट्विन चार्ट<br>[<span class='crm-tag'>CRM</span>]",
+    indicator_twin_chart : "ट्विन चार्ट [<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट हे एक शक्तिशाली ट्रेडिंग इंडिकेटर आहे जे तुम्हाला दोन इन्स्ट्रुमेंट्सच्या एकाचवेळी दृश्यासाठी दुसरे सिम्बॉल प्लॉट करण्यास देते, तसेच एंट्री, एसएल, टीपी, VWAP ओव्हरलेइंग आणि डायनॅमिक ट्रेंड सिग्नल्स दाखवते.</strong>"
   },
   hi: {
@@ -1718,8 +1718,8 @@ const translations = {
     twin_chart_risk_signal_title: "✅ जोखिम और सिग्नल प्रदर्शन",
     twin_chart_risk_signal_desc1: "उचित एसएल और टीपी स्तरों के साथ खरीद/बिक्री सिग्नल।",
     twin_chart_risk_signal_desc2: "बैकटेस्टिंग या लाइव ट्रेडिंग के लिए स्वच्छ या पूर्ण-सिग्नल मोड।",
-    indicator_twin_chart_title: "ट्विन चार्ट<br>[<span class='crm-tag'>सीआरएम</span>]",
-    indicator_twin_chart: "ट्विन चार्ट [<span class='crm-tag'>सीआरएम</span>]",
+    indicator_twin_chart_title: "ट्विन चार्ट<br>[<span class='crm-tag'>CRM</span>]",
+    indicator_twin_chart: "ट्विन चार्ट [<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट एक शक्तिशाली ट्रेडिंग इंडिकेटर है जो आपको दो प्रतीकों के एक साथ दृश्य के लिए दूसरा प्रतीक प्लॉट करने देता है, साथ ही स्वचालित रूप से प्रवेश, एसएल, टीपी की गणना करता है, VWAP को ओवरले करता है, और गतिशील प्रवृत्ति सिग्नल दिखाता है।</strong>"
   }
 };
