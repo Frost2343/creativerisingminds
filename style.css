@@ -253,10 +253,6 @@ h4 {
   /* background: linear-gradient(135deg, #1f0036, #3a0ca3, #5f0f40);
    */
   background: linear-gradient(135deg, #0f172a, #000000);
-
-
-
-
   color: #ffffff;
   padding: 40px 20px;
   font-family: 'Segoe UI', sans-serif;
@@ -556,6 +552,7 @@ html, body {
 }
 
 .hero-content {
+  margin-top: 100px;
   position: relative;
   z-index: 2;
   max-width: 500px;
@@ -900,7 +897,7 @@ a.indicator-link:hover {
   }
 
   .hero-content {
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .indicator-cards {
     flex-direction: column; /* Stack cards vertically */
