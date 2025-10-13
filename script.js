@@ -429,7 +429,7 @@ const translations = {
     indicator_twin_chart_title: "Twin Chart<br>[<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart: "Twin Chart [<span class='crm-tag'>CRM</span>]",
     indicator_mix2_title: "CRM Combo 1 (Ultimate Scalp PRO + Twin Chart) <span style='color:#00ffcc'>[Best-Seller]</span>",
-    indicator_mix3_title: "CRM All-in-One (Ultimate Scalp PRO + Twin Chart + MTF Demand Supply)",
+    indicator_mix3_title: "CRM All-in-One (Includes all Premium Indicators) <span style='color:#00ffcc'>[Best-Seller]</span>",
     indicator_twin_chart_desc: "<strong>Twin Chart is a powerful trading indicator that lets you plot a secondary symbol for a simultaneous view of two instruments, while auto-calculating entry, SL, TP, overlaying VWAP, and showing dynamic trend signals.</strong>"
   },
   gu: {
