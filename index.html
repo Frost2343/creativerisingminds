@@ -26,45 +26,44 @@
       <a href="#pricing" data-translate="nav_pricing">Pricing</a>
       <a href="#contact" data-translate="nav_contact">Contact</a>
       <!-- usermenu -->
-       <div class="user-menu">
+      <div class="user-menu">
     <!-- When NOT logged in -->
-    <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
-        <!-- <span class="user-icon-avatar" style="color: white;">👤</span> -->
-         <i class="fa fa-user" style="color: #fff;"></i>
-        
-        <div class="dropdown-menu">
-            <a href="signup.html" class="dropdown-item">
-                <span class="dropdown-icon">📝</span>
-                <span>Sign Up</span>
-            </a>
-            <a href="login.html" class="dropdown-item">
-                <span class="dropdown-icon">🔐</span>
-                <span>Login</span>
-            </a>
+      <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
+          <span class="user-icon-avatar">👤</span>
+          
+          <div class="dropdown-menu">
+              <a href="signup.html" class="dropdown-item">
+                  <span class="dropdown-icon">📝</span>
+                  <span>Sign Up</span>
+              </a>
+                <a href="login.html" class="dropdown-item">
+                    <span class="dropdown-icon">🔐</span>
+                    <span>Login</span>
+                </a>
+            </div>
         </div>
-    </div>
 
-    <!-- When logged in (hidden by default) -->
-    <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
-        <span class="user-icon-avatar">👤</span>
-        <span class="user-icon-name" id="userNameNav">User</span>
-        
-        <div class="dropdown-menu">
-            <a href="dashboard.html" class="dropdown-item">
-                <span class="dropdown-icon">📊</span>
-                <span>Dashboard</span>
-            </a>
-            <a href="dashboard.html#subscriptions" class="dropdown-item">
-                <span class="dropdown-icon">🎯</span>
-                <span>My Subscriptions</span>
-            </a>
-            <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
-                <span class="dropdown-icon">🚪</span>
-                <span>Logout</span>
-            </a>
-        </div>
-    </div>
-</div>
+          <!-- When logged in (hidden by default) -->
+          <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
+              <span class="user-icon-avatar">👤</span>
+              <span class="user-icon-name" id="userNameNav">User</span>
+              
+              <div class="dropdown-menu">
+                  <a href="dashboard.html" class="dropdown-item">
+                      <span class="dropdown-icon">📊</span>
+                      <span>Dashboard</span>
+                  </a>
+                  <a href="dashboard.html#subscriptions" class="dropdown-item">
+                      <span class="dropdown-icon">🎯</span>
+                      <span>My Subscriptions</span>
+                  </a>
+                  <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
+                      <span class="dropdown-icon">🚪</span>
+                      <span>Logout</span>
+                  </a>
+              </div>
+          </div>
+      </div>
       <div class="language-switcher">
         <select id="language-select" onchange="changeLanguage()" class="brand-container">
           <option value="en">English</option>
@@ -501,53 +500,13 @@
 
     document.addEventListener('DOMContentLoaded', updateUserMenu);
 
-    // Mobile dropdown toggle functionality
-    function setupMobileDropdown() {
-        const userIcons = document.querySelectorAll('.user-icon');
-        
-        userIcons.forEach(icon => {
-            // Click/tap to toggle dropdown on mobile
-            icon.addEventListener('click', function(e) {
-                // Only for mobile devices
-                if (window.innerWidth <= 768) {
-                    e.stopPropagation();
-                    
-                    // Close other dropdowns
-                    document.querySelectorAll('.user-icon').forEach(i => {
-                        if (i !== icon) i.classList.remove('active');
-                    });
-                    
-                    // Toggle current dropdown
-                    this.classList.toggle('active');
-                }
-            });
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            if (window.innerWidth <= 768) {
-                const userMenu = document.querySelector('.user-menu');
-                if (userMenu && !userMenu.contains(event.target)) {
-                    document.querySelectorAll('.user-icon').forEach(icon => {
-                        icon.classList.remove('active');
-                    });
-                }
-            }
-        });
-
-        // Prevent dropdown from closing when clicking inside it
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.addEventListener('click', function(e) {
-                // Allow links to work, but don't close dropdown on menu click
-                if (e.target.classList.contains('dropdown-menu')) {
-                    e.stopPropagation();
-                }
-            });
-        });
-    }
-
-    // Initialize mobile dropdown
-    document.addEventListener('DOMContentLoaded', setupMobileDropdown);
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        const userMenu = document.querySelector('.user-menu');
+        if (userMenu && !userMenu.contains(event.target)) {
+            // Dropdown auto-hides via CSS
+        }
+    });
   </script>
   <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
 </body>
