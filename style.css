@@ -1046,35 +1046,20 @@ a.indicator-link:hover {
   background-color: #0056b3;
 }
 /* User Icon Dropdown */
-
 .user-menu {
         position: relative;
         display: inline-block;
-    }
+}
+     .user-icon {
+        background: linear-gradient(135deg, 
+          #173148 0%, #1f6f73 100%);
+        border: 1px solid 
+          rgba(79, 172, 254, 0.5);
+        color: white;
+        box-shadow: 0 4px 15px 
+          rgba(79, 172, 254, 0.3);
 
-    /* .user-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        width: 45px;
-        height: 45px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: white;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 20px;
-        transition: all 0.3s ease;
-        position: relative;
-    } */
-    .user-icon {
-        background: linear-gradient(135deg,  #3f82bd 0%, #3ec0c7 100%);
-        border: 1px solid  rgba(79, 172, 254, 0.5);
-        color: white;
-        box-shadow: 0 4px 15px   rgba(79, 172, 254, 0.3);
-        display: flex;
+     display: flex;
         align-items: center;
         justify-content: center;
         gap: 6px;
@@ -1088,12 +1073,6 @@ a.indicator-link:hover {
         position: relative;
         margin-left: 10px;
 }
-
-    .user-icon:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        transform: scale(1.05);
-    }
 
     .user-icon-avatar {
         font-size: 20px;
@@ -1214,12 +1193,11 @@ a.indicator-link:hover {
         right: 2px;
         width: 10px;
         height: 10px;
-        background: #4ade80;
+        background: #0fa747;
         border: 2px solid rgba(20, 25, 35, 1);
         border-radius: 50%;
-        box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+        box-shadow: 0 0 8px rgba(77, 249, 140, 0.6);
     }
-
     /* Mobile responsive */
     @media (max-width: 768px) {
         .dropdown-menu {
@@ -1236,6 +1214,24 @@ a.indicator-link:hover {
 
         #userIconLoggedIn .user-icon-name {
             display: none;
+        }
+
+        /* Make dropdown work on click for mobile */
+        .user-menu {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Keep dropdown open on touch */
+        .user-icon.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Larger touch targets */
+        .dropdown-item {
+            padding: 16px 20px;
+            font-size: 15px;
         }
     }
 

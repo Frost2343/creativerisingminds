@@ -25,10 +25,12 @@
       <a href="#indicators" data-translate="nav_indicators">Indicators</a>
       <a href="#pricing" data-translate="nav_pricing">Pricing</a>
       <a href="#contact" data-translate="nav_contact">Contact</a>
-      <div class="user-menu">
+      <!-- usermenu -->
+       <div class="user-menu">
     <!-- When NOT logged in -->
     <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
-        <span class="user-icon-avatar">👤</span>
+        <!-- <span class="user-icon-avatar" style="color: white;">👤</span> -->
+         <i class="fa fa-user" style="color: #fff;"></i>
         
         <div class="dropdown-menu">
             <a href="signup.html" class="dropdown-item">
@@ -476,8 +478,7 @@
  <script src="script.js"></script>
  <script src="auth-helper.js"></script>
   <script>
-     // Check if user is logged in and update navbar
-      function updateUserMenu() {
+     function updateUserMenu() {
         const user = getCurrentUser();
         const loggedOutMenu = document.getElementById('userIconLoggedOut');
         const loggedInMenu = document.getElementById('userIconLoggedIn');
@@ -500,13 +501,53 @@
 
     document.addEventListener('DOMContentLoaded', updateUserMenu);
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-        const userMenu = document.querySelector('.user-menu');
-        if (userMenu && !userMenu.contains(event.target)) {
-            // Dropdown auto-hides via CSS
-        }
-    });
+    // Mobile dropdown toggle functionality
+    function setupMobileDropdown() {
+        const userIcons = document.querySelectorAll('.user-icon');
+        
+        userIcons.forEach(icon => {
+            // Click/tap to toggle dropdown on mobile
+            icon.addEventListener('click', function(e) {
+                // Only for mobile devices
+                if (window.innerWidth <= 768) {
+                    e.stopPropagation();
+                    
+                    // Close other dropdowns
+                    document.querySelectorAll('.user-icon').forEach(i => {
+                        if (i !== icon) i.classList.remove('active');
+                    });
+                    
+                    // Toggle current dropdown
+                    this.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 768) {
+                const userMenu = document.querySelector('.user-menu');
+                if (userMenu && !userMenu.contains(event.target)) {
+                    document.querySelectorAll('.user-icon').forEach(icon => {
+                        icon.classList.remove('active');
+                    });
+                }
+            }
+        });
+
+        // Prevent dropdown from closing when clicking inside it
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.addEventListener('click', function(e) {
+                // Allow links to work, but don't close dropdown on menu click
+                if (e.target.classList.contains('dropdown-menu')) {
+                    e.stopPropagation();
+                }
+            });
+        });
+    }
+
+    // Initialize mobile dropdown
+    document.addEventListener('DOMContentLoaded', setupMobileDropdown);
   </script>
   <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
 </body>
