@@ -1047,9 +1047,12 @@ a.indicator-link:hover {
 }
 /* User Icon Dropdown */
 
+    
+/* ======================= */
 .user-menu {
         position: relative;
         display: inline-block;
+        z-index: 10000;
     }
 
     .user-icon {
@@ -1114,18 +1117,19 @@ a.indicator-link:hover {
         position: absolute;
         top: calc(100% + 15px);
         right: 0;
-        background: rgba(20, 25, 35, 0.98);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: #1a1f2e;
+        background: linear-gradient(180deg, #1e2332 0%, #1a1f2e 100%);
+        border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
         min-width: 200px;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
-        overflow: hidden;
+        z-index: 9999;
+        overflow: visible;
+        pointer-events: none;
     }
 
     /* Desktop: Show on hover */
@@ -1134,6 +1138,7 @@ a.indicator-link:hover {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            pointer-events: auto;
         }
     }
 
@@ -1142,20 +1147,22 @@ a.indicator-link:hover {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+        pointer-events: auto;
     }
 
     /* Triangle pointer */
     .dropdown-menu::before {
         content: '';
         position: absolute;
-        top: -6px;
+        top: -8px;
         right: 15px;
-        width: 12px;
-        height: 12px;
-        background: rgba(20, 25, 35, 0.98);
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 14px;
+        height: 14px;
+        background: #1e2332;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
         transform: rotate(45deg);
+        z-index: -1;
     }
 
     .dropdown-item {
@@ -1163,14 +1170,16 @@ a.indicator-link:hover {
         align-items: center;
         gap: 12px;
         padding: 14px 20px;
-        color: rgba(255, 255, 255, 0.85);
+        color: #ffffff;
+        background: transparent;
         text-decoration: none;
         font-size: 14px;
         font-weight: 400;
         transition: all 0.2s ease;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         position: relative;
-        z-index: 1;
+        z-index: 10;
+        cursor: pointer;
     }
 
     .dropdown-item:last-child {
@@ -1179,18 +1188,19 @@ a.indicator-link:hover {
 
     .dropdown-item:hover,
     .dropdown-item:active {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.1);
         color: white;
         padding-left: 25px;
     }
 
     .dropdown-item.logout-item {
         color: #ff6b6b;
+        background: transparent;
     }
 
     .dropdown-item.logout-item:hover,
     .dropdown-item.logout-item:active {
-        background: rgba(255, 107, 107, 0.1);
+        background: rgba(255, 107, 107, 0.15);
         color: #ff8787;
     }
 
@@ -1260,5 +1270,3 @@ a.indicator-link:hover {
             animation: pulse 1.5s infinite;
         }
     }
-
-
