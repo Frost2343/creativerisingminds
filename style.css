@@ -1070,7 +1070,7 @@ a.indicator-link:hover {
         position: relative;
     } */
     .user-icon {
-        background: linear-gradient(135deg,  #4395de 0%, #41ced6 100%);
+        background: linear-gradient(135deg,  #3f82bd 0%, #3ec0c7 100%);
         border: 1px solid  rgba(79, 172, 254, 0.5);
         color: white;
         box-shadow: 0 4px 15px   rgba(79, 172, 254, 0.3);
