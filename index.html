@@ -27,45 +27,42 @@
       <a href="#contact" data-translate="nav_contact">Contact</a>
       <div class="user-menu">
     <!-- When NOT logged in -->
-      <div id="userIconLoggedOut" class="user-icon">
-          <span class="user-icon-avatar">👤</span>
-          <span>Account</span>
-          <span class="dropdown-arrow">▼</span>
-          
-          <div class="dropdown-menu">
-              <a href="signup.html" class="dropdown-item">
-                  <span class="dropdown-icon">📝</span>
-                  <span>Sign Up</span>
-              </a>
-              <a href="login.html" class="dropdown-item">
-                  <span class="dropdown-icon">🔐</span>
-                  <span>Login</span>
-              </a>
-          </div>
+    <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
+        <span class="user-icon-avatar">👤</span>
+        
+        <div class="dropdown-menu">
+            <a href="signup.html" class="dropdown-item">
+                <span class="dropdown-icon">📝</span>
+                <span>Sign Up</span>
+            </a>
+            <a href="login.html" class="dropdown-item">
+                <span class="dropdown-icon">🔐</span>
+                <span>Login</span>
+            </a>
         </div>
+    </div>
 
-        <!-- When logged in (hidden by default) -->
-        <div id="userIconLoggedIn" class="user-icon" style="display: none;">
-            <span class="user-icon-avatar">👤</span>
-            <span class="user-icon-name" id="userNameNav">User</span>
-            <span class="dropdown-arrow">▼</span>
-            
-            <div class="dropdown-menu">
-                <a href="dashboard.html" class="dropdown-item">
-                    <span class="dropdown-icon">📊</span>
-                    <span>Dashboard</span>
-                </a>
-                <a href="dashboard.html#subscriptions" class="dropdown-item">
-                    <span class="dropdown-icon">🎯</span>
-                    <span>My Subscriptions</span>
-                </a>
-                <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
-                    <span class="dropdown-icon">🚪</span>
-                    <span>Logout</span>
-                </a>
-            </div>
-          </div>
+    <!-- When logged in (hidden by default) -->
+    <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
+        <span class="user-icon-avatar">👤</span>
+        <span class="user-icon-name" id="userNameNav">User</span>
+        
+        <div class="dropdown-menu">
+            <a href="dashboard.html" class="dropdown-item">
+                <span class="dropdown-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="dashboard.html#subscriptions" class="dropdown-item">
+                <span class="dropdown-icon">🎯</span>
+                <span>My Subscriptions</span>
+            </a>
+            <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
+                <span class="dropdown-icon">🚪</span>
+                <span>Logout</span>
+            </a>
         </div>
+    </div>
+</div>
       <div class="language-switcher">
         <select id="language-select" onchange="changeLanguage()" class="brand-container">
           <option value="en">English</option>
@@ -481,39 +478,35 @@
   <script>
      // Check if user is logged in and update navbar
       function updateUserMenu() {
-          const user = getCurrentUser();
-          const loggedOutMenu = document.getElementById('userIconLoggedOut');
-          const loggedInMenu = document.getElementById('userIconLoggedIn');
-          const userNameNav = document.getElementById('userNameNav');
+        const user = getCurrentUser();
+        const loggedOutMenu = document.getElementById('userIconLoggedOut');
+        const loggedInMenu = document.getElementById('userIconLoggedIn');
+        const userNameNav = document.getElementById('userNameNav');
 
-          if (user) {
-              // User is logged in
-              loggedOutMenu.style.display = 'none';
-              loggedInMenu.style.display = 'flex';
-              
-              // Set user name (show full name or first name or email)
-              const displayName = user.user_metadata?.full_name 
-                  ? (user.user_metadata.full_name.split(' ')[0]) // First name only
-                  : user.email.split('@')[0]; // Email username
-              
-              userNameNav.textContent = displayName;
-          } else {
-              // User is not logged in
-              loggedOutMenu.style.display = 'flex';
-              loggedInMenu.style.display = 'none';
-          }
-      }
+        if (user) {
+            loggedOutMenu.style.display = 'none';
+            loggedInMenu.style.display = 'flex';
+            
+            const displayName = user.user_metadata?.full_name 
+                ? (user.user_metadata.full_name.split(' ')[0])
+                : user.email.split('@')[0];
+            
+            userNameNav.textContent = displayName;
+        } else {
+            loggedOutMenu.style.display = 'flex';
+            loggedInMenu.style.display = 'none';
+        }
+    }
 
-      // Run on page load
-      document.addEventListener('DOMContentLoaded', updateUserMenu);
+    document.addEventListener('DOMContentLoaded', updateUserMenu);
 
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(event) {
-          const userMenu = document.querySelector('.user-menu');
-          if (userMenu && !userMenu.contains(event.target)) {
-              // Click was outside, dropdown will auto-hide via CSS
-          }
-      });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        const userMenu = document.querySelector('.user-menu');
+        if (userMenu && !userMenu.contains(event.target)) {
+            // Dropdown auto-hides via CSS
+        }
+    });
   </script>
   <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
 </body>

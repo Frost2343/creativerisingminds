@@ -1045,30 +1045,54 @@ a.indicator-link:hover {
 .special-offer a:hover {
   background-color: #0056b3;
 }
+/* User Icon Dropdown */
 
 .user-menu {
         position: relative;
         display: inline-block;
     }
 
-    .user-icon {
+    /* .user-icon {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 8px 15px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        justify-content: center;
+        gap: 6px;
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         color: white;
-        border-radius: 25px;
+        border-radius: 50%;
         cursor: pointer;
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 20px;
         transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-    }
+        position: relative;
+    } */
+    .user-icon {
+        background: linear-gradient(135deg,  #4395de 0%, #41ced6 100%);
+        border: 1px solid  rgba(79, 172, 254, 0.5);
+        color: white;
+        box-shadow: 0 4px 15px   rgba(79, 172, 254, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 45px;
+        height: 45px;
+        backdrop-filter: blur(10px);
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        margin-left: 10px;
+}
 
     .user-icon:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
     }
 
     .user-icon-avatar {
@@ -1079,33 +1103,44 @@ a.indicator-link:hover {
     }
 
     .user-icon-name {
+        display: none;
+    }
+
+    .dropdown-arrow {
+        display: none;
+    }
+
+    /* Show name when logged in - on larger screens only */
+    #userIconLoggedIn {
+        width: auto;
+        padding: 0 15px;
+        border-radius: 25px;
+    }
+
+    #userIconLoggedIn .user-icon-name {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
         max-width: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-    .dropdown-arrow {
-        font-size: 12px;
-        transition: transform 0.3s ease;
-    }
-
-    .user-icon:hover .dropdown-arrow {
-        transform: rotate(180deg);
-    }
-
     .dropdown-menu {
         position: absolute;
-        top: calc(100% + 10px);
+        top: calc(100% + 15px);
         right: 0;
-        background: white;
+        background: rgba(20, 25, 35, 0.98);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         min-width: 200px;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
         overflow: hidden;
     }
@@ -1116,31 +1151,33 @@ a.indicator-link:hover {
         transform: translateY(0);
     }
 
+    /* Triangle pointer */
     .dropdown-menu::before {
         content: '';
         position: absolute;
-        top: -8px;
-        right: 20px;
-        width: 16px;
-        height: 16px;
-        background: white;
+        top: -6px;
+        right: 15px;
+        width: 12px;
+        height: 12px;
+        background: rgba(20, 25, 35, 0.98);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         transform: rotate(45deg);
-        box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.05);
     }
 
     .dropdown-item {
         display: flex;
         align-items: center;
         gap: 12px;
-        padding: 12px 20px;
-        color: #333;
+        padding: 14px 20px;
+        color: rgba(255, 255, 255, 0.85);
         text-decoration: none;
         font-size: 14px;
+        font-weight: 400;
         transition: all 0.2s ease;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         position: relative;
         z-index: 1;
-        background: white;
     }
 
     .dropdown-item:last-child {
@@ -1148,22 +1185,39 @@ a.indicator-link:hover {
     }
 
     .dropdown-item:hover {
-        background: #f8f9fa;
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
         padding-left: 25px;
     }
 
     .dropdown-item.logout-item {
-        color: #dc3545;
+        color: #ff6b6b;
     }
 
     .dropdown-item.logout-item:hover {
-        background: #fff5f5;
+        background: rgba(255, 107, 107, 0.1);
+        color: #ff8787;
     }
 
     .dropdown-icon {
         font-size: 18px;
         width: 20px;
         text-align: center;
+        opacity: 0.9;
+    }
+
+    /* Active indicator when logged in */
+    #userIconLoggedIn::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        width: 10px;
+        height: 10px;
+        background: #4ade80;
+        border: 2px solid rgba(20, 25, 35, 1);
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
     }
 
     /* Mobile responsive */
@@ -1173,7 +1227,28 @@ a.indicator-link:hover {
             min-width: 180px;
         }
 
-        .user-icon-name {
-            max-width: 80px;
+        #userIconLoggedIn {
+            width: 45px;
+            height: 45px;
+            padding: 0;
+            border-radius: 50%;
         }
+
+        #userIconLoggedIn .user-icon-name {
+            display: none;
+        }
+    }
+
+    /* Smooth animation for icon */
+    @keyframes pulse {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+        }
+        50% {
+            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+        }
+    }
+
+    .user-icon:hover {
+        animation: pulse 1.5s infinite;
     }
