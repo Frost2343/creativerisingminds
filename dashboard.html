@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Creative Rising Minds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar-user {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-info {
+            text-align: right;
+        }
+
+        .user-email {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn-logout {
+            padding: 8px 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .btn-logout:hover {
+            background: #c82333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .welcome-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .welcome-card h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-card p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .stat-card h3 {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .icon-subscriptions {
+            background: #e3f2fd;
+            color: #2196f3;
+        }
+
+        .icon-purchases {
+            background: #f3e5f5;
+            color: #9c27b0;
+        }
+
+        .icon-active {
+            background: #e8f5e9;
+            color: #4caf50;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .subscriptions-list {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .subscription-item {
+            padding: 20px 25px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .subscription-item:hover {
+            background: #f9f9f9;
+        }
+
+        .subscription-item:last-child {
+            border-bottom: none;
+        }
+
+        .subscription-info h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .subscription-details {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .subscription-details span {
+            margin-right: 15px;
+        }
+
+        .status-badge {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-active {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .status-expired {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .empty-state h3 {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .btn-browse {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-browse:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Creative Rising Minds</div>
+        <div class="navbar-user">
+            <div class="user-info">
+                <div id="userName" style="font-weight: 600; color: #333;"></div>
+                <div class="user-email" id="userEmail"></div>
+            </div>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-card">
+            <h1 id="welcomeMessage">Welcome!</h1>
+            <p>Manage your subscriptions and view your purchase history</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <h3>Total Subscriptions</h3>
+                    <div class="stat-icon icon-subscriptions">📊</div>
+                </div>
+                <div class="stat-value" id="totalSubscriptions">0</div>
+                <div class="stat-label">All time</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <h3>Active Plans</h3>
+                    <div class="stat-icon icon-active">✓</div>
+                </div>
+                <div class="stat-value" id="activeSubscriptions">0</div>
+                <div class="stat-label">Currently active</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-card-header">
+                    <h3>Total Purchases</h3>
+                    <div class="stat-icon icon-purchases">💰</div>
+                </div>
+                <div class="stat-value" id="totalPurchases">0</div>
+                <div class="stat-label">Completed orders</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">My Subscriptions</h2>
+        <div class="subscriptions-list" id="subscriptionsList">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading your subscriptions...</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">Purchase History</h2>
+        <div class="subscriptions-list" id="purchaseHistoryList">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading your purchase history...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth-helper.js"></script>
+    <script>
+        // Require authentication - redirect if not logged in
+        requireAuth();
+
+        // Get current user
+        const user = getCurrentUser();
+
+        // Display user info
+        document.getElementById('userName').textContent = user.user_metadata?.full_name || 'User';
+        document.getElementById('userEmail').textContent = user.email;
+        document.getElementById('welcomeMessage').textContent = `Welcome back, ${user.user_metadata?.full_name || 'User'}!`;
+
+        // Load dashboard data
+        loadDashboardData();
+
+        async function loadDashboardData() {
+            try {
+                // Fetch subscriptions
+                const subscriptions = await fetchUserData(`/rest/v1/subscriptions?user_id=eq.${user.id}&select=*,products(*)`);
+                
+                // Fetch purchase history
+                const purchases = await fetchUserData(`/rest/v1/purchase_history?user_id=eq.${user.id}&select=*,products(*)`);
+
+                // Update stats
+                document.getElementById('totalSubscriptions').textContent = subscriptions.length;
+                document.getElementById('activeSubscriptions').textContent = subscriptions.filter(s => s.status === 'active').length;
+                document.getElementById('totalPurchases').textContent = purchases.length;
+
+                // Display subscriptions
+                displaySubscriptions(subscriptions);
+                
+                // Display purchase history
+                displayPurchaseHistory(purchases);
+
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                
+                // Show empty state on error
+                document.getElementById('subscriptionsList').innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⚠️</div>
+                        <h3>Unable to load data</h3>
+                        <p>Please refresh the page or contact support</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displaySubscriptions(subscriptions) {
+            const container = document.getElementById('subscriptionsList');
+
+            if (subscriptions.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📦</div>
+                        <h3>No Active Subscriptions</h3>
+                        <p>You haven't subscribed to any indicators yet</p>
+                        <a href="pricing.html" class="btn-browse">Browse Indicators</a>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = subscriptions.map(sub => {
+                const endDate = new Date(sub.end_date);
+                const isActive = sub.status === 'active';
+                const daysLeft = Math.ceil((endDate - new Date()) / (1000 * 60 * 60 * 24));
+
+                return `
+                    <div class="subscription-item">
+                        <div class="subscription-info">
+                            <h4>${sub.products?.name || 'Product'}</h4>
+                            <div class="subscription-details">
+                                <span>📅 Plan: ${formatPlanType(sub.plan_type)}</span>
+                                <span>💰 ₹${sub.amount_paid}</span>
+                                <span>⏰ ${isActive ? `${daysLeft} days left` : 'Expired'}</span>
+                            </div>
+                        </div>
+                        <span class="status-badge status-${sub.status}">${sub.status}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function displayPurchaseHistory(purchases) {
+            const container = document.getElementById('purchaseHistoryList');
+
+            if (purchases.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🛒</div>
+                        <h3>No Purchase History</h3>
+                        <p>Your completed orders will appear here</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = purchases.map(purchase => {
+                const purchaseDate = new Date(purchase.purchase_date).toLocaleDateString('en-IN', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+
+                return `
+                    <div class="subscription-item">
+                        <div class="subscription-info">
+                            <h4>${purchase.product_name}</h4>
+                            <div class="subscription-details">
+                                <span>📅 ${purchaseDate}</span>
+                                <span>💰 ₹${purchase.amount}</span>
+                                <span>📦 ${formatPlanType(purchase.plan_type)}</span>
+                            </div>
+                        </div>
+                        <span class="status-badge status-${purchase.payment_status === 'success' ? 'active' : 'expired'}">
+                            ${purchase.payment_status}
+                        </span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function formatPlanType(planType) {
+            const map = {
+                'monthly': 'Monthly',
+                'quarterly': 'Quarterly',
+                'half_yearly': 'Half-Yearly',
+                'yearly': 'Yearly'
+            };
+            return map[planType] || planType;
+        }
+    </script>
+</body>
+</html>
