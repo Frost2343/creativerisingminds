@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Creative Rising Minds</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         * {
             margin: 0;
@@ -18,16 +17,16 @@
             min-height: 100vh;
         }
 
-        /* .navbar {
+        .navbar {
             background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        } */
+        }
 
-        /* .navbar-brand {
+        .navbar-brand {
             font-size: 24px;
             font-weight: 700;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -40,7 +39,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
-        } */
+        }
 
         .user-info {
             text-align: right;
@@ -288,7 +287,7 @@
     </style>
 </head>
 <body>
-    <!-- <nav class="navbar">
+    <nav class="navbar">
         <div class="navbar-brand">Creative Rising Minds</div>
         <div class="navbar-user">
             <div class="user-info">
@@ -297,94 +296,7 @@
             </div>
             <button class="btn-logout" onclick="logout()">Logout</button>
         </div>
-    </nav> -->
-     <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html#home" class="brand-container">
-        <img src="images/logo/CRM-LOGO.png" alt="Logo" class="logo">
-        <span class="brand-name" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
-          Creative Rising Minds
-        </span>
-      </a>
-    </div>
-
-    <!-- Navigation Links and Language Switcher -->
-    <div class="nav-right" id="nav-right">
-      <!-- <a href="#home" data-translate="nav_home">Home</a> -->
-      <a href="index.html#indicators" data-translate="nav_indicators">Indicators</a>
-      <a href="index.html#pricing" data-translate="nav_pricing">Pricing</a>
-      <a href="index.html#contact" data-translate="nav_contact">Contact</a>
-      <!-- usermenu -->
-     <div class="user-menu">
-    <!-- When NOT logged in -->
-    <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
-        <!-- <span class="user-icon-avatar">👤</span> -->
-        <i class="fa fa-user" style="color: #fff;"></i>
-
-        <div class="dropdown-menu" id="dropdownLoggedOut">
-            <a href="signup.html" class="dropdown-item">
-                <span class="dropdown-icon">📝</span>
-                <span>Sign Up</span>
-            </a>
-            <a href="login.html" class="dropdown-item">
-                <span class="dropdown-icon">🔐</span>
-                <span>Login</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- When logged in (hidden by default) -->
-    <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
-        <!-- <span class="user-icon-avatar">👤</span> -->
-         <i class="fa fa-user" style="color: #fff;"></i>
-        <span class="user-icon-name" id="userNameNav">User</span>
-        
-        <div class="dropdown-menu" id="dropdownLoggedIn">
-            <a href="dashboard.html" class="dropdown-item">
-                <span class="dropdown-icon">📊</span>
-                <span>Dashboard</span>
-            </a>
-            <a href="dashboard.html#subscriptions" class="dropdown-item">
-                <span class="dropdown-icon">🎯</span>
-                <span>My Subscriptions</span>
-            </a>
-            <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
-                <span class="dropdown-icon">🚪</span>
-                <span>Logout</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-
-      <!-- ===================== -->
-      <div class="language-switcher">
-        <select id="language-select" onchange="changeLanguage()" class="brand-container">
-          <option value="en">English</option>
-          <option value="mr">मराठी</option>
-          <option value="gu">ગુજરાતી</option>
-          <option value="hi">हिन्दी</option>
-        </select>
-      </div>
-    </div>
-    <!-- Scrolling Message -->
-  <div class="scroll-container">
-  <div class="scroll-text">
-    🚀 <span data-translate="free_trial_text">If you want to avail <b>FREE Trial</b>, fill this</span> 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaFvg8PUavKxtlCPnVYeJYdOfoD-UcUzNs4Zrh5L1QuFTyLg/viewform" target="_blank" data-translate="google_form_text">Google Form</a> ✅ 
-    &nbsp; | &nbsp; 
-    🎯 <span data-translate="try_indicators_text">Try our free indicators</span> → 
-    <a href="https://in.tradingview.com/script/rudH9vEq-EMA-Supertrend-CRM/" target="_blank" data-translate="ema_supertrend_text">EMA Supertrend [CRM]</a>, 
-    <a href="https://in.tradingview.com/script/wW98ES3s-EMA-Cross-RSI-CRM/" target="_blank" data-translate="ema_cross_rsi_text">EMA Cross RSI [CRM]</a>
-    &nbsp; | &nbsp;
-    🎯 <span data-translate="indicators_title">Try our premium indicators</span> → 
-    <a href="https://in.tradingview.com/script/liWlYTbi-Ultimate-Scalp-PRO-CRM/" target="_blank" data-translate="indicator_scalp_swing">EMA Supertrend [CRM]</a>, 
-    <a href="https://in.tradingview.com/script/odeb66KT-Twin-Chart-CRM/" target="_blank" data-translate="indicator_twin_chart">EMA Cross RSI [CRM]</a>,
-    <a href="https://in.tradingview.com/script/jQhpPd4o-MTF-Demand-Supply-CRM/" target="_blank" data-translate="indicator_mtf_pivot_matrix">EMA Cross RSI [CRM]</a>
-  </div>
-</div>
-  </nav>
-
+    </nav>
 
     <div class="container">
         <div class="welcome-card">
@@ -572,100 +484,5 @@
             return map[planType] || planType;
         }
     </script>
-    <script src="script.js"></script>
- <script src="auth-helper.js"></script>
-  <script>
-   function updateUserMenu() {
-    const user = getCurrentUser();
-    const loggedOutMenu = document.getElementById('userIconLoggedOut');
-    const loggedInMenu = document.getElementById('userIconLoggedIn');
-    const userNameNav = document.getElementById('userNameNav');
-
-    if (user) {
-        loggedOutMenu.style.display = 'none';
-        loggedInMenu.style.display = 'flex';
-        
-        const displayName = user.user_metadata?.full_name 
-            ? user.user_metadata.full_name.split(' ')[0]
-            : user.email.split('@')[0];
-        
-        userNameNav.textContent = displayName;
-    } else {
-        loggedOutMenu.style.display = 'flex';
-        loggedInMenu.style.display = 'none';
-    }
-}
-
-// Toggle dropdown on click for mobile
-function toggleDropdown(event) {
-    event.stopPropagation(); // Prevent click from bubbling to document
-    const userIcon = event.currentTarget;
-    const dropdown = userIcon.querySelector('.dropdown-menu');
-    const isActive = dropdown.classList.contains('active');
-    
-    // Close all dropdowns and remove overlay
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.classList.remove('active');
-    });
-    document.querySelectorAll('.dropdown-overlay').forEach(overlay => {
-        overlay.remove();
-    });
-    document.body.classList.remove('dropdown-open');
-    
-    // Toggle current dropdown
-    if (!isActive) {
-        dropdown.classList.add('active');
-        // Add overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'dropdown-overlay';
-        userIcon.appendChild(overlay);
-        document.body.classList.add('dropdown-open');
-    }
-}
-
-// Close dropdown when clicking outside
-function closeDropdown(event) {
-    const userMenu = document.querySelector('.user-menu');
-    if (userMenu && !userMenu.contains(event.target)) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.classList.remove('active');
-        });
-        document.querySelectorAll('.dropdown-overlay').forEach(overlay => {
-            overlay.remove();
-        });
-        document.body.classList.remove('dropdown-open');
-    }
-}
-
-// Close dropdown when clicking a dropdown item
-function handleDropdownItemClick(event) {
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.classList.remove('active');
-    });
-    document.querySelectorAll('.dropdown-overlay').forEach(overlay => {
-        overlay.remove();
-    });
-    document.body.classList.remove('dropdown-open');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateUserMenu();
-    
-    // Add click event listeners for user icons
-    const userIcons = document.querySelectorAll('.user-icon');
-    userIcons.forEach(icon => {
-        icon.addEventListener('click', toggleDropdown);
-    });
-    
-    // Add click event listeners for dropdown items
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', handleDropdownItemClick);
-    });
-    
-    // Close dropdown on outside click
-    document.addEventListener('click', closeDropdown);
-});
-  </script>
 </body>
 </html>
