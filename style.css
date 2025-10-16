@@ -1047,288 +1047,189 @@ a.indicator-link:hover {
 }
 /* User Icon Dropdown */
 .user-menu {
-    position: relative;
-    display: inline-block;
+        position: relative;
+        display: inline-block;
 }
-
-.user-icon {
-    background: linear-gradient(135deg, #173148 0%, #1f6f73 100%);
-    border: 1px solid rgba(79, 172, 254, 0.5);
-    color: white;
-    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    width: 45px;
-    height: 45px;
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    position: relative;
-    margin-left: 10px;
-}
-
-.user-icon:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-}
-
-.user-icon-avatar {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.user-icon-name {
-    display: none;
-}
-
-.dropdown-arrow {
-    display: none;
-}
-
-/* Show name when logged in - on larger screens only */
-#userIconLoggedIn {
-    width: auto;
-    padding: 0 15px;
-    border-radius: 25px;
-}
-
-#userIconLoggedIn .user-icon-name {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    max-width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    background: rgba(20, 25, 35, 0.98);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1002; /* Higher than scroller */
-    overflow: hidden;
-}
-
-.dropdown-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* Overlay for mobile when dropdown is open */
-.dropdown-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1001; /* Below dropdown, above scroller */
-    display: none;
-}
-
-.dropdown-menu.active + .dropdown-overlay {
-    display: block;
-}
-
-/* Triangle pointer */
-.dropdown-menu::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    right: 15px;
-    width: 12px;
-    height: 12px;
-    background: rgba(20, 25, 35, 0.98);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    transform: rotate(45deg);
-    z-index: 1003;
-}
-
-.dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 20px;
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    transition: all 0.2s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-    z-index: 1003;
-    background: rgba(255, 255, 255, 0.05); /* Solid background for clickability */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.dropdown-item:last-child {
-    border-bottom: none;
-}
-
-.dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding-left: 25px;
-}
-
-.dropdown-item.logout-item {
-    color: #ff6b6b;
-}
-
-.dropdown-item.logout-item:hover {
-    background: rgba(255, 107, 107, 0.1);
-    color: #ff8787;
-}
-
-.dropdown-icon {
-    font-size: 18px;
-    width: 20px;
-    text-align: center;
-    opacity: 0.9;
-}
-
-/* Active indicator when logged in */
-#userIconLoggedIn::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
-    width: 10px;
-    height: 10px;
-    background: #4ade80;
-    border: 2px solid rgba(20, 25, 35, 1);
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .user-menu {
-        margin-right: 10px;
-    }
-
-    .dropdown-menu {
-        right: 0;
-        min-width: 180px;
-        width: calc(100vw - 30px);
-        max-width: 250px;
-        top: calc(100% + 5px);
-    }
-
-    .dropdown-menu::before {
-        right: 10px;
-    }
-
-    #userIconLoggedIn {
-        width: 40px;
-        height: 40px;
-        padding: 0;
+    .user-icon {
+        background: linear-gradient(135deg,   #173148 0%, #1f6f73 100%);
+        border: 1px solid   rgba(79, 172, 254, 0.5);
+        color: white;
+        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 45px;
+        height: 45px;
+        backdrop-filter: blur(10px);
         border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        margin-left: 10px;
+    }
+ .user-icon:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
     }
 
-    #userIconLoggedIn .user-icon-name {
+    .user-icon-avatar {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-icon-name {
         display: none;
     }
 
-    .user-icon {
-        margin-left: 5px;
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+    .dropdown-arrow {
+        display: none;
+    }
+
+    /* Show name when logged in - on larger screens only */
+    #userIconLoggedIn {
+        width: auto;
+        padding: 0 15px;
+        border-radius: 25px;
+    }
+
+    #userIconLoggedIn .user-icon-name {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 0;
+        background: rgba(20, 25, 35, 0.98);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    .user-menu:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Triangle pointer */
+    .dropdown-menu::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        right: 15px;
+        width: 12px;
+        height: 12px;
+        background: rgba(20, 25, 35, 0.98);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
     }
 
     .dropdown-item {
-        padding: 16px 20px; /* Increased padding for larger tap area */
-        font-size: 15px; /* Slightly larger text for readability */
-    }
-}
-
-/* Updated mobile navbar styles */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 10px;
-        position: relative;
-        z-index: 1000; /* Ensure navbar is below dropdown but above scroller */
-    }
-
-    .nav-left {
-        width: 100%;
         display: flex;
         align-items: center;
-        gap: 10px;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-    .nav-right {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        background: rgba(0, 0, 0, 0.3);
-        color: #fff;
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        padding: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-right a {
-        flex: 1;
-        text-align: center;
-        padding: 8px;
-        border: none;
+        gap: 12px;
+        padding: 14px 20px;
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
         font-size: 14px;
-        transition: background 0.2s ease;
+        font-weight: 400;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        position: relative;
+        z-index: 1;
     }
 
-    .nav-right a:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
+    .dropdown-item:last-child {
+        border-bottom: none;
     }
-}
 
-/* Disable background scrolling when dropdown is open */
-body.dropdown-open {
-    overflow: hidden;
-}
-
-/* Smooth animation for icon */
-@keyframes pulse {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+        padding-left: 25px;
     }
-    50% {
-        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
-    }
-}
 
-.user-icon:hover {
-    animation: pulse 1.5s infinite;
-}
+    .dropdown-item.logout-item {
+        color: #ff6b6b;
+    }
+
+    .dropdown-item.logout-item:hover {
+        background: rgba(255, 107, 107, 0.1);
+        color: #ff8787;
+    }
+
+    .dropdown-icon {
+        font-size: 18px;
+        width: 20px;
+        text-align: center;
+        opacity: 0.9;
+    }
+
+    /* Active indicator when logged in */
+    #userIconLoggedIn::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        width: 10px;
+        height: 10px;
+        background: #4ade80;
+        border: 2px solid rgba(20, 25, 35, 1);
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .dropdown-menu {
+            right: -10px;
+            min-width: 180px;
+        }
+
+        #userIconLoggedIn {
+            width: 45px;
+            height: 45px;
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        #userIconLoggedIn .user-icon-name {
+            display: none;
+        }
+    }
+
+    /* Smooth animation for icon */
+    @keyframes pulse {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+        }
+        50% {
+            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+        }
+    }
+
+    .user-icon:hover {
+        animation: pulse 1.5s infinite;
+    }
 /* ======================= */
