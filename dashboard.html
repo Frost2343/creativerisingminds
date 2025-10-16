@@ -361,137 +361,138 @@
 
     <script src="auth-helper.js"></script>
     <script>
-        // Require authentication - redirect if not logged in
-        requireAuth();
+  document.addEventListener('DOMContentLoaded', async () => {
+    // Step 1: Handle OAuth callback if present
+    const handled = handleOAuthCallback();
 
-        // Get current user
-        const user = getCurrentUser();
+    // Wait briefly to ensure session gets stored
+    if (handled) {
+      await new Promise(r => setTimeout(r, 800));
+    }
 
-        // Display user info
-        document.getElementById('userName').textContent = user.user_metadata?.full_name || 'User';
-        document.getElementById('userEmail').textContent = user.email;
-        document.getElementById('welcomeMessage').textContent = `Welcome back, ${user.user_metadata?.full_name || 'User'}!`;
+    // Step 2: Require authentication (redirect if not logged in)
+    if (!requireAuth()) return;
 
-        // Load dashboard data
-        loadDashboardData();
+    // Step 3: Get current user
+    const user = getCurrentUser();
 
-        async function loadDashboardData() {
-            try {
-                // Fetch subscriptions
-                const subscriptions = await fetchUserData(`/rest/v1/subscriptions?user_id=eq.${user.id}&select=*,products(*)`);
-                
-                // Fetch purchase history
-                const purchases = await fetchUserData(`/rest/v1/purchase_history?user_id=eq.${user.id}&select=*,products(*)`);
+    // Step 4: Display user info
+    document.getElementById('userName').textContent =
+      user.user_metadata?.full_name || 'User';
+    document.getElementById('userEmail').textContent = user.email;
+    document.getElementById('welcomeMessage').textContent =
+      `Welcome back, ${user.user_metadata?.full_name || 'User'}!`;
 
-                // Update stats
-                document.getElementById('totalSubscriptions').textContent = subscriptions.length;
-                document.getElementById('activeSubscriptions').textContent = subscriptions.filter(s => s.status === 'active').length;
-                document.getElementById('totalPurchases').textContent = purchases.length;
+    // Step 5: Load dashboard data
+    loadDashboardData();
 
-                // Display subscriptions
-                displaySubscriptions(subscriptions);
-                
-                // Display purchase history
-                displayPurchaseHistory(purchases);
+    async function loadDashboardData() {
+      try {
+        // Fetch subscriptions
+        const subscriptions = await fetchUserData(
+          `/rest/v1/subscriptions?user_id=eq.${user.id}&select=*,products(*)`
+        );
 
-            } catch (error) {
-                console.error('Error loading dashboard:', error);
-                
-                // Show empty state on error
-                document.getElementById('subscriptionsList').innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">⚠️</div>
-                        <h3>Unable to load data</h3>
-                        <p>Please refresh the page or contact support</p>
-                    </div>
-                `;
-            }
-        }
+        // Fetch purchase history
+        const purchases = await fetchUserData(
+          `/rest/v1/purchase_history?user_id=eq.${user.id}&select=*,products(*)`
+        );
 
-        function displaySubscriptions(subscriptions) {
-            const container = document.getElementById('subscriptionsList');
+        // Update stats
+        document.getElementById('totalSubscriptions').textContent = subscriptions.length;
+        document.getElementById('activeSubscriptions').textContent =
+          subscriptions.filter(s => s.status === 'active').length;
+        document.getElementById('totalPurchases').textContent = purchases.length;
 
-            if (subscriptions.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">📦</div>
-                        <h3>No Active Subscriptions</h3>
-                        <p>You haven't subscribed to any indicators yet</p>
-                        <a href="pricing.html" class="btn-browse">Browse Indicators</a>
-                    </div>
-                `;
-                return;
-            }
+        // Display subscriptions & purchases
+        displaySubscriptions(subscriptions);
+        displayPurchaseHistory(purchases);
 
-            container.innerHTML = subscriptions.map(sub => {
-                const endDate = new Date(sub.end_date);
-                const isActive = sub.status === 'active';
-                const daysLeft = Math.ceil((endDate - new Date()) / (1000 * 60 * 60 * 24));
+      } catch (error) {
+        console.error('Error loading dashboard:', error);
+        document.getElementById('subscriptionsList').innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">⚠️</div>
+            <h3>Unable to load data</h3>
+            <p>Please refresh the page or contact support</p>
+          </div>
+        `;
+      }
+    }
 
-                return `
-                    <div class="subscription-item">
-                        <div class="subscription-info">
-                            <h4>${sub.products?.name || 'Product'}</h4>
-                            <div class="subscription-details">
-                                <span>📅 Plan: ${formatPlanType(sub.plan_type)}</span>
-                                <span>💰 ₹${sub.amount_paid}</span>
-                                <span>⏰ ${isActive ? `${daysLeft} days left` : 'Expired'}</span>
-                            </div>
-                        </div>
-                        <span class="status-badge status-${sub.status}">${sub.status}</span>
-                    </div>
-                `;
-            }).join('');
-        }
+    function displaySubscriptions(subscriptions) {
+      const container = document.getElementById('subscriptionsList');
+      if (subscriptions.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📦</div>
+            <h3>No Active Subscriptions</h3>
+            <p>You haven't subscribed to any indicators yet</p>
+            <a href="pricing.html" class="btn-browse">Browse Indicators</a>
+          </div>`;
+        return;
+      }
+      container.innerHTML = subscriptions.map(sub => {
+        const endDate = new Date(sub.end_date);
+        const isActive = sub.status === 'active';
+        const daysLeft = Math.ceil((endDate - new Date()) / (1000 * 60 * 60 * 24));
+        return `
+          <div class="subscription-item">
+            <div class="subscription-info">
+              <h4>${sub.products?.name || 'Product'}</h4>
+              <div class="subscription-details">
+                <span>📅 Plan: ${formatPlanType(sub.plan_type)}</span>
+                <span>💰 ₹${sub.amount_paid}</span>
+                <span>⏰ ${isActive ? `${daysLeft} days left` : 'Expired'}</span>
+              </div>
+            </div>
+            <span class="status-badge status-${sub.status}">${sub.status}</span>
+          </div>`;
+      }).join('');
+    }
 
-        function displayPurchaseHistory(purchases) {
-            const container = document.getElementById('purchaseHistoryList');
+    function displayPurchaseHistory(purchases) {
+      const container = document.getElementById('purchaseHistoryList');
+      if (purchases.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">🛒</div>
+            <h3>No Purchase History</h3>
+            <p>Your completed orders will appear here</p>
+          </div>`;
+        return;
+      }
+      container.innerHTML = purchases.map(purchase => {
+        const purchaseDate = new Date(purchase.purchase_date).toLocaleDateString('en-IN', {
+          day: 'numeric', month: 'short', year: 'numeric'
+        });
+        return `
+          <div class="subscription-item">
+            <div class="subscription-info">
+              <h4>${purchase.product_name}</h4>
+              <div class="subscription-details">
+                <span>📅 ${purchaseDate}</span>
+                <span>💰 ₹${purchase.amount}</span>
+                <span>📦 ${formatPlanType(purchase.plan_type)}</span>
+              </div>
+            </div>
+            <span class="status-badge status-${purchase.payment_status === 'success' ? 'active' : 'expired'}">
+              ${purchase.payment_status}
+            </span>
+          </div>`;
+      }).join('');
+    }
 
-            if (purchases.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">🛒</div>
-                        <h3>No Purchase History</h3>
-                        <p>Your completed orders will appear here</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = purchases.map(purchase => {
-                const purchaseDate = new Date(purchase.purchase_date).toLocaleDateString('en-IN', {
-                    day: 'numeric',
-                    month: 'short',
-                    year: 'numeric'
-                });
-
-                return `
-                    <div class="subscription-item">
-                        <div class="subscription-info">
-                            <h4>${purchase.product_name}</h4>
-                            <div class="subscription-details">
-                                <span>📅 ${purchaseDate}</span>
-                                <span>💰 ₹${purchase.amount}</span>
-                                <span>📦 ${formatPlanType(purchase.plan_type)}</span>
-                            </div>
-                        </div>
-                        <span class="status-badge status-${purchase.payment_status === 'success' ? 'active' : 'expired'}">
-                            ${purchase.payment_status}
-                        </span>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function formatPlanType(planType) {
-            const map = {
-                'monthly': 'Monthly',
-                'quarterly': 'Quarterly',
-                'half_yearly': 'Half-Yearly',
-                'yearly': 'Yearly'
-            };
-            return map[planType] || planType;
-        }
-    </script>
+    function formatPlanType(planType) {
+      const map = {
+        'monthly': 'Monthly',
+        'quarterly': 'Quarterly',
+        'half_yearly': 'Half-Yearly',
+        'yearly': 'Yearly'
+      };
+      return map[planType] || planType;
+    }
+  });
+</script>
 </body>
 </html>
