@@ -26,12 +26,11 @@
       <a href="#pricing" data-translate="nav_pricing">Pricing</a>
       <a href="#contact" data-translate="nav_contact">Contact</a>
       <!-- usermenu -->
-     <div class="user-menu">
+      <div class="user-menu" id="userMenu">
     <!-- When NOT logged in -->
-    <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
+    <div id="userIconLoggedOut" class="user-icon">
         <!-- <span class="user-icon-avatar">👤</span> -->
-         <i class="fa fa-user" style="color: #fff;"></i>
-        
+        <i class="fa fa-user" style="color: #fff;"></i>
         <div class="dropdown-menu">
             <a href="signup.html" class="dropdown-item">
                 <span class="dropdown-icon">📝</span>
@@ -45,7 +44,7 @@
     </div>
 
     <!-- When logged in (hidden by default) -->
-    <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
+    <div id="userIconLoggedIn" class="user-icon" style="display: none;">
         <!-- <span class="user-icon-avatar">👤</span> -->
          <i class="fa fa-user" style="color: #fff;"></i>
         <span class="user-icon-name" id="userNameNav">User</span>
@@ -59,13 +58,15 @@
                 <span class="dropdown-icon">🎯</span>
                 <span>My Subscriptions</span>
             </a>
-            <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
+            <a href="#" class="dropdown-item logout-item" id="logoutBtn">
                 <span class="dropdown-icon">🚪</span>
                 <span>Logout</span>
             </a>
         </div>
     </div>
 </div>
+<!-- Overlay for mobile -->
+<div class="dropdown-overlay" id="dropdownOverlay"></div>
       <div class="language-switcher">
         <select id="language-select" onchange="changeLanguage()" class="brand-container">
           <option value="en">English</option>
@@ -479,81 +480,118 @@
  <script src="script.js"></script>
  <script src="auth-helper.js"></script>
   <script>
-    function updateUserMenu() {
-        const user = getCurrentUser();
+    (function() {
+        'use strict';
+
+        const userMenu = document.getElementById('userMenu');
         const loggedOutMenu = document.getElementById('userIconLoggedOut');
         const loggedInMenu = document.getElementById('userIconLoggedIn');
         const userNameNav = document.getElementById('userNameNav');
+        const overlay = document.getElementById('dropdownOverlay');
+        const logoutBtn = document.getElementById('logoutBtn');
 
-        if (user) {
-            loggedOutMenu.style.display = 'none';
-            loggedInMenu.style.display = 'flex';
-            
-            const displayName = user.user_metadata?.full_name 
-                ? (user.user_metadata.full_name.split(' ')[0])
-                : user.email.split('@')[0];
-            
-            userNameNav.textContent = displayName;
-        } else {
-            loggedOutMenu.style.display = 'flex';
-            loggedInMenu.style.display = 'none';
+        // Update user menu based on login status
+        function updateUserMenu() {
+            const user = getCurrentUser();
+
+            if (user) {
+                loggedOutMenu.style.display = 'none';
+                loggedInMenu.style.display = 'flex';
+                
+                const displayName = user.user_metadata?.full_name 
+                    ? user.user_metadata.full_name.split(' ')[0]
+                    : user.email.split('@')[0];
+                
+                userNameNav.textContent = displayName;
+            } else {
+                loggedOutMenu.style.display = 'flex';
+                loggedInMenu.style.display = 'none';
+            }
         }
 
-        // Setup mobile toggle after user menu is updated
-        setTimeout(setupMobileToggle, 100);
-    }
-
-    function setupMobileToggle() {
-        // Remove old listeners to prevent duplicates
-        const userIcons = document.querySelectorAll('.user-icon');
-        
-        userIcons.forEach(icon => {
-            // Clone and replace to remove all old event listeners
-            const newIcon = icon.cloneNode(true);
-            icon.parentNode.replaceChild(newIcon, icon);
-        });
-
-        // Add new listeners
-        document.querySelectorAll('.user-icon').forEach(icon => {
-            icon.addEventListener('click', function(e) {
+        // Toggle dropdown
+        function toggleDropdown(e) {
+            if (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                
-                console.log('Icon clicked!'); // Debug log
-                
-                // Toggle mobile-active class
-                if (this.classList.contains('mobile-active')) {
-                    this.classList.remove('mobile-active');
-                    console.log('Dropdown closed'); // Debug log
-                } else {
-                    // Close all other dropdowns
-                    document.querySelectorAll('.user-icon').forEach(i => {
-                        i.classList.remove('mobile-active');
-                    });
-                    
-                    // Open this dropdown
-                    this.classList.add('mobile-active');
-                    console.log('Dropdown opened'); // Debug log
+            }
+            
+            const isOpen = userMenu.classList.contains('open');
+            
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        }
+
+        function openDropdown() {
+            userMenu.classList.add('open');
+            overlay.classList.add('active');
+            console.log('Dropdown opened');
+        }
+
+        function closeDropdown() {
+            userMenu.classList.remove('open');
+            overlay.classList.remove('active');
+            console.log('Dropdown closed');
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Click on user icon to toggle
+            const userIcons = document.querySelectorAll('.user-icon');
+            userIcons.forEach(icon => {
+                icon.addEventListener('click', toggleDropdown);
+            });
+
+            // Click on overlay to close (mobile)
+            overlay.addEventListener('click', closeDropdown);
+
+            // Click outside to close (desktop)
+            document.addEventListener('click', function(e) {
+                if (!userMenu.contains(e.target)) {
+                    closeDropdown();
                 }
             });
-        });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            const userMenu = document.querySelector('.user-menu');
-            if (userMenu && !userMenu.contains(e.target)) {
-                document.querySelectorAll('.user-icon').forEach(icon => {
-                    icon.classList.remove('mobile-active');
+            // Prevent dropdown from closing when clicking inside it
+            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.addEventListener('click', function(e) {
+                    e.stopPropagation();
                 });
-                console.log('Clicked outside - dropdown closed'); // Debug log
-            }
-        });
-    }
+            });
 
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        updateUserMenu();
-    });
+            // Logout button
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    logout();
+                });
+            }
+
+            // Close on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeDropdown();
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            updateUserMenu();
+            setupEventListeners();
+        }
+
+        // Run on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })(); 
   </script>
   <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
 </body>

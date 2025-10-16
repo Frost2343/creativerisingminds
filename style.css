@@ -1052,7 +1052,8 @@ a.indicator-link:hover {
 .user-menu {
         position: relative;
         display: inline-block;
-        z-index: 10000;
+        z-index: 99999;
+
     }
 
     .user-icon {
@@ -1074,76 +1075,72 @@ a.indicator-link:hover {
         position: relative;
         margin-left: 10px;
     }
-
-    .user-icon:hover {
+.user-icon:hover {
         background: rgba(255, 255, 255, 0.15);
         border-color: rgba(255, 255, 255, 0.3);
         transform: scale(1.05);
     }
 
+    .user-icon:active {
+        transform: scale(0.98);
+    }
+
     .user-icon-avatar {
         font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .user-icon-name {
-        display: none;
-    }
-
-    .dropdown-arrow {
-        display: none;
-    }
-
-    /* Show name when logged in - on larger screens only */
-    #userIconLoggedIn {
-        width: auto;
-        padding: 0 15px;
-        border-radius: 25px;
-    }
-
-    #userIconLoggedIn .user-icon-name {
-        display: block;
         font-size: 14px;
         font-weight: 500;
-        max-width: 100px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        display: none;
     }
 
+    /* Show name on desktop when logged in */
+    @media (min-width: 769px) {
+        #userIconLoggedIn .user-icon-name {
+            display: block;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    /* Green online indicator when logged in */
+    #userIconLoggedIn::after {
+        content: '';
+        position: absolute;
+        bottom: 3px;
+        right: 3px;
+        width: 10px;
+        height: 10px;
+        background: #4ade80;
+        border: 2px solid #1a1f2e;
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+    }
+
+    /* Dropdown Menu */
     .dropdown-menu {
         position: absolute;
         top: calc(100% + 15px);
         right: 0;
         background: #1a1f2e;
-        background: linear-gradient(180deg, #1e2332 0%, #1a1f2e 100%);
         border: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
         min-width: 200px;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 9999;
-        overflow: visible;
+        transition: all 0.3s ease;
+        z-index: 99999;
+        overflow: hidden;
         pointer-events: none;
     }
 
-    /* Desktop: Show on hover */
-    @media (min-width: 769px) {
-        .user-menu:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-    }
-
-    /* Mobile: Show when active class is added */
-    .user-icon.mobile-active .dropdown-menu {
+    /* Show dropdown when active */
+    .user-menu.open .dropdown-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -1158,28 +1155,47 @@ a.indicator-link:hover {
         right: 15px;
         width: 14px;
         height: 14px;
-        background: #1e2332;
+        background: #1a1f2e;
         border-left: 2px solid rgba(255, 255, 255, 0.2);
         border-top: 2px solid rgba(255, 255, 255, 0.2);
         transform: rotate(45deg);
-        z-index: -1;
     }
 
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .dropdown-menu {
+            right: -10px;
+            min-width: 220px;
+            top: calc(100% + 10px);
+        }
+
+        .dropdown-menu::before {
+            right: 20px;
+        }
+
+        .user-icon {
+            min-width: 45px;
+            padding: 0;
+            border-radius: 50%;
+        }
+    }
+
+    /* Dropdown Items */
     .dropdown-item {
         display: flex;
         align-items: center;
         gap: 12px;
-        padding: 14px 20px;
+        padding: 16px 20px;
         color: #ffffff;
         background: transparent;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
         transition: all 0.2s ease;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        position: relative;
-        z-index: 10;
         cursor: pointer;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .dropdown-item:last-child {
@@ -1189,13 +1205,11 @@ a.indicator-link:hover {
     .dropdown-item:hover,
     .dropdown-item:active {
         background: rgba(255, 255, 255, 0.1);
-        color: white;
         padding-left: 25px;
     }
 
     .dropdown-item.logout-item {
         color: #ff6b6b;
-        background: transparent;
     }
 
     .dropdown-item.logout-item:hover,
@@ -1206,67 +1220,29 @@ a.indicator-link:hover {
 
     .dropdown-icon {
         font-size: 18px;
-        width: 20px;
+        width: 22px;
         text-align: center;
-        opacity: 0.9;
     }
 
-    /* Active indicator when logged in */
-    #userIconLoggedIn::after {
-        content: '';
-        position: absolute;
-        bottom: 2px;
-        right: 2px;
-        width: 10px;
-        height: 10px;
-        background: #4ade80;
-        border: 2px solid rgba(20, 25, 35, 1);
-        border-radius: 50%;
-        box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+    /* Overlay for mobile - close dropdown when tapping outside */
+    .dropdown-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99998;
+        backdrop-filter: blur(2px);
     }
 
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-        .dropdown-menu {
-            right: -10px;
-            min-width: 180px;
-            top: calc(100% + 10px);
-        }
-
-        #userIconLoggedIn {
-            width: 45px;
-            height: 45px;
-            padding: 0;
-            border-radius: 50%;
-        }
-
-        #userIconLoggedIn .user-icon-name {
-            display: none;
-        }
-
-        .dropdown-item {
-            padding: 16px 20px;
-            font-size: 15px;
-        }
-
-        /* Remove hover effects on mobile */
-        .user-icon:hover {
-            transform: none;
-        }
-    }
-
-    /* Smooth animation for icon */
-    @keyframes pulse {
-        0%, 100% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
-        }
-        50% {
-            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
-        }
+    .dropdown-overlay.active {
+        display: block;
     }
 
     @media (min-width: 769px) {
-        .user-icon:hover {
-            animation: pulse 1.5s infinite;
+        .dropdown-overlay {
+            display: none !important;
         }
     }
