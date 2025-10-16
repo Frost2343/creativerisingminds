@@ -1123,7 +1123,7 @@ a.indicator-link:hover {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1000;
+    z-index: 1002; /* Higher than scroller */
     overflow: hidden;
 }
 
@@ -1131,6 +1131,22 @@ a.indicator-link:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+/* Overlay for mobile when dropdown is open */
+.dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001; /* Below dropdown, above scroller */
+    display: none;
+}
+
+.dropdown-menu.active + .dropdown-overlay {
+    display: block;
 }
 
 /* Triangle pointer */
@@ -1145,6 +1161,7 @@ a.indicator-link:hover {
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     transform: rotate(45deg);
+    z-index: 1003;
 }
 
 .dropdown-item {
@@ -1159,7 +1176,10 @@ a.indicator-link:hover {
     transition: all 0.2s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
-    z-index: 1;
+    z-index: 1003;
+    background: rgba(255, 255, 255, 0.05); /* Solid background for clickability */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dropdown-item:last-child {
@@ -1167,7 +1187,7 @@ a.indicator-link:hover {
 }
 
 .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     padding-left: 25px;
 }
@@ -1221,8 +1241,8 @@ a.indicator-link:hover {
     }
 
     #userIconLoggedIn {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         padding: 0;
         border-radius: 50%;
     }
@@ -1237,6 +1257,11 @@ a.indicator-link:hover {
         height: 40px;
         font-size: 18px;
     }
+
+    .dropdown-item {
+        padding: 16px 20px; /* Increased padding for larger tap area */
+        font-size: 15px; /* Slightly larger text for readability */
+    }
 }
 
 /* Updated mobile navbar styles */
@@ -1245,6 +1270,8 @@ a.indicator-link:hover {
         flex-direction: column;
         align-items: stretch;
         padding: 10px;
+        position: relative;
+        z-index: 1000; /* Ensure navbar is below dropdown but above scroller */
     }
 
     .nav-left {
@@ -1284,6 +1311,11 @@ a.indicator-link:hover {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 6px;
     }
+}
+
+/* Disable background scrolling when dropdown is open */
+body.dropdown-open {
+    overflow: hidden;
 }
 
 /* Smooth animation for icon */
