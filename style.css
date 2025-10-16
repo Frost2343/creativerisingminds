@@ -858,7 +858,7 @@ a.indicator-link:hover {
 
 /* Mobile layout */
 @media (max-width: 768px) {
-  /* .navbar {
+  .navbar {
     flex-direction: column;
     align-items: stretch;
   }
@@ -881,8 +881,8 @@ a.indicator-link:hover {
     color: #fff;
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    overflow: hidden;
-    flex-wrap: wrap;
+    /* overflow: hidden; */
+    /* flex-wrap: wrap; */
     justify-content: center;
   }
 
@@ -892,8 +892,7 @@ a.indicator-link:hover {
     text-align: center;
     padding: 5px;
     border-top: 1px solid rgba(255,255,255,0.2);
-  } */
-
+  }
   .language-switcher {
     margin: 5px 0;
     width: auto;
