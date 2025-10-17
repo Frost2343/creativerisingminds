@@ -1,0 +1,18 @@
+{
+  "name": "creative-rising-minds",
+  "version": "1.0.0",
+  "description": "Trading Indicators Platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "razorpay": "^2.9.2",
+    "@supabase/supabase-js": "^2.39.0",
+    "crypto": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

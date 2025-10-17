@@ -1233,3 +1233,59 @@ a.indicator-link:hover {
         animation: pulse 1.5s infinite;
     }
 /* ======================= */
+
+.buy-now-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #173148 0%, #1f6f73 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(79, 172, 254, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(79, 172, 254, 0.2);
+  }
+
+  .buy-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+    background: linear-gradient(135deg, #1f6f73 0%, #173148 100%);
+  }
+
+  .buy-now-btn:active {
+    transform: translateY(0);
+  }
+
+  .buy-now-btn.processing {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .price-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .price-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00ffcc;
+  }
+
+  .pricing-table tbody td {
+    vertical-align: middle;
+    padding: 16px 12px;
+  }
+
+  @media (max-width: 768px) {
+    .buy-now-btn {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }

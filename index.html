@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -188,8 +189,268 @@
       </section>
 
   <section id="pricing">
-    <h2 data-translate="pricing_title">Pricing Plans</h2>
-    <!-- <h3 data-translate="individual_indicators">Individual Premium Indicators</h3> -->
+     <h2 data-translate="pricing_title">Pricing Plans</h2>
+  
+  <h2 data-translate="individual_indicators" style="text-align:center; color:#ffcc00; text-decoration: underline;">
+    Individual Premium Indicators
+  </h2>
+  
+  <div class="table-wrapper">
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th data-translate="pricing_table_indicator">Indicator</th>
+          <th data-translate="monthly">Monthly</th>
+          <th>
+            <span data-translate="quarterly">Quarterly</span><br>
+            <span style="color:#00ffcc; font-size:12px;" data-translate-key="saveUpTo30Percent">Save up to 30%</span>
+          </th>
+          <th>
+            <span data-translate="halfYearly">Half-Yearly</span><br>
+            <span style="color:#ffcc00; font-size:12px;" data-translate-key="saveUpTo50Percent">Save up to 50%</span>
+          </th>
+          <th>
+            <span data-translate="yearly">Yearly</span><br>
+            <span style="color:#ff4444; font-size:12px; font-weight:bold;" data-translate-key="bestValueSaveUpTo60Percent">🔥 Best Value – Save up to 60%</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ultimate Scalp PRO -->
+        <tr>
+          <td><a href="indicator2.html" class="indicator-link" data-translate="indicator_scalp_swing">Ultimate Scalp PRO</a></td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹2500</span>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'monthly', 2500, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹5200</span>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'quarterly', 5200, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹7500</span>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'half_yearly', 7500, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹11988</span>
+              <small style="color:#999;">(₹999/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'yearly', 11988, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Twin Chart -->
+        <tr>
+          <td><a href="indicator1.html" class="indicator-link" data-translate="indicator_twin_chart">Twin Chart [CRM]</a></td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹2000</span>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'monthly', 2000, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹4200</span>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'quarterly', 4200, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6000</span>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'half_yearly', 6000, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹9588</span>
+              <small style="color:#999;">(₹799/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'yearly', 9588, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- MTF Demand Supply -->
+        <tr>
+          <td><a href="indicator4.html" class="indicator-link" data-translate="indicator_mtf_pivot_matrix">MTF Demand Supply [CRM]</a></td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹1900</span>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'monthly', 1900, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3900</span>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'quarterly', 3900, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹5600</span>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'half_yearly', 5600, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹8988</span>
+              <small style="color:#999;">(₹749/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'yearly', 8988, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Free Indicators -->
+        <tr>
+          <td><a href="indicator6.html" class="indicator-link" data-translate="indicator_ema_cross_rsi">EMA Cross RSI [CRM]</a></td>
+          <td colspan="4" style="text-align: center; font-weight: bold; color:#00ffcc;" data-translate="free_indicator_message">
+            🎁 Free indicator available for our genuine followers!
+          </td>
+        </tr>
+        <tr>
+          <td><a href="indicator5.html" class="indicator-link" data-translate="indicator_ema_supertrend">EMA Supertrend [CRM]</a></td>
+          <td colspan="4" style="text-align: center; font-weight: bold; color:#00ffcc;" data-translate="free_indicator_message">
+            🎁 Free indicator available for our genuine followers!
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align:center; font-style:italic; font-size:14px; color:#c2c2c2;" data-translate="pricing_note">
+      *Payment terms and prices are subject to change
+    </p>
+
+    <!-- Combo Plans -->
+    <h2 data-translate="combo_indicators" style="text-align:center; color:#ffcc00; font-weight:700; text-decoration: underline; margin-top: 40px;">
+      Combo Plans – Get More, Save More
+    </h2>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th data-translate="pricing_table_indicator">Indicator</th>
+          <th>
+            <span data-translate="monthly">Monthly</span><br>
+            <span style="color:#27b5d8; font-size:12px;">Save up to 45%</span>
+          </th>
+          <th>
+            <span data-translate="quarterly">Quarterly</span><br>
+            <span style="color:#00ffcc; font-size:12px;">Save up to 60%</span>
+          </th>
+          <th>
+            <span data-translate="halfYearly">Half-Yearly</span><br>
+            <span style="color:#ffcc00; font-size:12px;">Save up to 70%</span>
+          </th>
+          <th>
+            <span data-translate="yearly">Yearly</span><br>
+            <span style="color:#ff4444; font-size:12px; font-weight:bold;">🔥 Best Value – Save up to 80%</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Combo 1 -->
+        <tr>
+          <td data-translate="indicator_mix2_title">CRM Combo 1 (Ultimate Scalp PRO + Twin Chart) [Best-Seller]</td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3100</span>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'monthly', 3100, 'CRM Combo 1 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6600</span>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'quarterly', 6600, 'CRM Combo 1 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹9400</span>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'half_yearly', 9400, 'CRM Combo 1 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹14988</span>
+              <small style="color:#999;">(₹1249/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'yearly', 14988, 'CRM Combo 1 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Combo 2 -->
+        <tr>
+          <td data-translate="indicator_mix_title">CRM Combo 2 (Ultimate Scalp PRO + MTF Demand Supply) [Best-Seller]</td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3000</span>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'monthly', 3000, 'CRM Combo 2 (Ultimate Scalp PRO + MTF Demand Supply)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6300</span>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'quarterly', 6300, 'CRM Combo 2 (Ultimate Scalp PRO + MTF Demand Supply)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹9000</span>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'half_yearly', 9000, 'CRM Combo 2 (Ultimate Scalp PRO + MTF Demand Supply)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹14388</span>
+              <small style="color:#999;">(₹1199/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'yearly', 14388, 'CRM Combo 2 (Ultimate Scalp PRO + MTF Demand Supply)')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- All-in-One -->
+        <tr>
+          <td data-translate="indicator_mix3_title">CRM All-in-One (Includes all Premium Indicators) [Best-Seller]</td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3700</span>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'monthly', 3700, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹7900</span>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'quarterly', 7900, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹11200</span>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'half_yearly', 11200, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹17988</span>
+              <small style="color:#999;">(₹1499/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'yearly', 17988, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align:center; font-style:italic; font-size:14px; color:#c2c2c2;" data-translate="pricing_note">
+      *Payment terms and prices are subject to change
+    </p>
+  </div>
+    <!-- <h2 data-translate="pricing_title">Pricing Plans</h2>
      <h2 data-translate="individual_indicators" style="text-align:center; color:#f39c12; text-decoration: underline;">
       Individual Premium Indicators
     </h2>
@@ -245,23 +506,12 @@
               🎁 Free to use for a limited time – Grab it now!
             </td>
           </tr>
-
-          <!-- <tr>
-            <td data-translate="indicator_stock_screener">CRM Stock Screener</td>
-            <td colspan="4" style="text-align: center;" data-translate="pricing_coming_soon">Coming soon! Our team is crafting something powerful just for you.</td>
-          </tr>
-
-          <tr>
-            <td data-translate="indicator_option_chain">CRM Option Chain Decoder</td>
-            <td colspan="4" style="text-align: center;" data-translate="pricing_coming_soon">Coming soon! Our team is crafting something powerful just for you.</td>
-          </tr> -->
       </tbody>
     </table>
       <p style="text-align:center; font-style:italic; font-size:14px; color:#c2c2c2;" 
           data-translate="pricing_note">
           *Payment terms and prices are subject to change
       </p>
-    <!-- <h3 data-translate="combo_indicators">Combo Plans – Get More, Save More</h3> -->
     <br> 
     <h2 data-translate="combo_indicators" style="text-align:center; color:#f39c12; font-weight:700; text-decoration: underline;">
         <br>Combo Plans – Get More, Save More
@@ -314,7 +564,7 @@
         data-translate="pricing_note">
         *Payment terms and prices are subject to change
       </p>
-    </div>
+    </div> -->
 
     <div class="group-discount">
       <span style="color: rgb(32, 190, 32); font-weight: bold;" data-translate="referralMessage">Refer our indicator to fellow traders and win 1 month of premium access — just share your TradingView ID so they can enter it in the Google form!</span>
@@ -575,6 +825,145 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', closeDropdown);
 });
   </script>
+  <script>
+  // Razorpay Configuration
+  const RAZORPAY_KEY_ID = 'rzp_test_RUZ4LHGo6vIUuR'; // Replace with your key
+
+  // Initialize payment
+  async function initPayment(productId, planType, amount, productName) {
+    // Check if user is logged in
+    const user = getCurrentUser();
+    
+    if (!user) {
+      alert('Please login or signup to purchase');
+      window.location.href = 'login.html';
+      return;
+    }
+
+    // Disable button during processing
+    event.target.classList.add('processing');
+    event.target.textContent = 'Processing...';
+
+    try {
+      // Create order on your backend
+      const orderData = await createRazorpayOrder(productId, planType, amount, productName);
+      
+      if (!orderData.success) {
+        throw new Error(orderData.message || 'Failed to create order');
+      }
+
+      // Open Razorpay checkout
+      const options = {
+        key: RAZORPAY_KEY_ID,
+        amount: amount * 100, // Razorpay expects amount in paise
+        currency: 'INR',
+        name: 'Creative Rising Minds',
+        description: `${productName} - ${formatPlanType(planType)}`,
+        order_id: orderData.order_id,
+        handler: function(response) {
+          verifyPayment(response, productId, planType, amount, productName);
+        },
+        prefill: {
+          name: user.user_metadata?.full_name || '',
+          email: user.email,
+          contact: user.user_metadata?.phone || ''
+        },
+        theme: {
+          color: '#1f6f73'
+        },
+        modal: {
+          ondismiss: function() {
+            event.target.classList.remove('processing');
+            event.target.textContent = 'Buy Now';
+          }
+        }
+      };
+
+      const razorpay = new Razorpay(options);
+      razorpay.open();
+
+    } catch (error) {
+      console.error('Payment error:', error);
+      alert('Payment failed: ' + error.message);
+      event.target.classList.remove('processing');
+      event.target.textContent = 'Buy Now';
+    }
+  }
+
+  // Create Razorpay order (call your serverless function)
+  async function createRazorpayOrder(productId, planType, amount, productName) {
+    const user = getCurrentUser();
+    const token = getAccessToken();
+
+    const response = await fetch('/api/create-order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        product_id: productId,
+        plan_type: planType,
+        amount: amount,
+        product_name: productName,
+        user_id: user.id,
+        user_email: user.email
+      })
+    });
+
+    return await response.json();
+  }
+
+  // Verify payment (call your serverless function)
+  async function verifyPayment(response, productId, planType, amount, productName) {
+    const user = getCurrentUser();
+    const token = getAccessToken();
+
+    try {
+      const verifyResponse = await fetch('/api/verify-payment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          razorpay_order_id: response.razorpay_order_id,
+          razorpay_payment_id: response.razorpay_payment_id,
+          razorpay_signature: response.razorpay_signature,
+          product_id: productId,
+          plan_type: planType,
+          amount: amount,
+          product_name: productName,
+          user_id: user.id
+        })
+      });
+
+      const result = await verifyResponse.json();
+
+      if (result.success) {
+        alert('🎉 Payment successful! Your subscription is now active.');
+        window.location.href = 'dashboard.html';
+      } else {
+        throw new Error(result.message || 'Payment verification failed');
+      }
+
+    } catch (error) {
+      console.error('Verification error:', error);
+      alert('Payment verification failed: ' + error.message);
+    }
+  }
+
+  // Format plan type for display
+  function formatPlanType(planType) {
+    const map = {
+      'monthly': 'Monthly',
+      'quarterly': 'Quarterly',
+      'half_yearly': 'Half-Yearly',
+      'yearly': 'Yearly'
+    };
+    return map[planType] || planType;
+  }
+</script>
   <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
 </body>
 </html>
