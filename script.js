@@ -430,7 +430,9 @@ const translations = {
     indicator_twin_chart: "Twin Chart [<span class='crm-tag'>CRM</span>]",
     indicator_mix2_title: "CRM Combo 1 (Ultimate Scalp PRO + Twin Chart) <span style='color:#00ffcc'>[Best-Seller]</span>",
     indicator_mix3_title: "CRM All-in-One (Includes all Premium Indicators) <span style='color:#00ffcc'>[Best-Seller]</span>",
-    indicator_twin_chart_desc: "<strong>Twin Chart is a powerful trading indicator that lets you plot a secondary symbol for a simultaneous view of two instruments, while auto-calculating entry, SL, TP, overlaying VWAP, and showing dynamic trend signals.</strong>"
+    indicator_twin_chart_desc: "<strong>Twin Chart is a powerful trading indicator that lets you plot a secondary symbol for a simultaneous view of two instruments, while auto-calculating entry, SL, TP, overlaying VWAP, and showing dynamic trend signals.</strong>",
+    individual_indicators: "Individual Premium Indicators",
+    combo_indicators: "Combo Plans – Get More, Save More"
   },
   gu: {
     // Shared Translations
@@ -861,7 +863,9 @@ const translations = {
     indicator_twin_chart: "ટ્વિન ચાર્ટ [<span class='crm-tag'>CRM</span>]",
     indicator_mix2_title: "સીઆરએમ કોમ્બો 1 (અલ્ટિમેટ સ્કેલ્પ પ્રો + ટ્વિન ચાર્ટ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span>",
     indicator_mix3_title: "સીઆરએમ ઓલ-ઇન-વન (અલ્ટિમેટ સ્કેલ્પ પ્રો + ટ્વિન ચાર્ટ + એમટીએફ ડિમાન્ડ સપ્લાય)",
-    indicator_twin_chart_desc: "<strong>ટ્વિન ચાર્ટ એક શક્તિશાળી ટ્રેડિંગ ઇન્ડિકેટર છે જે તમને બે ઇન્સ્ટ્રુમેન્ટ્સના એકસાથે દેખાવ માટે બીજું પ્રતીક પ્લોટ કરવા દે છે, તેમજ સ્વયંચાલિત રીતે પ્રવેશ, એસએલ, ટીપીની ગણતરી કરે છે, VWAP ઓવરલે કરે છે, અને ગતિશીલ વલણ સિગ્નલ બતાવે છે.</strong>"
+    indicator_twin_chart_desc: "<strong>ટ્વિન ચાર્ટ એક શક્તિશાળી ટ્રેડિંગ ઇન્ડિકેટર છે જે તમને બે ઇન્સ્ટ્રુમેન્ટ્સના એકસાથે દેખાવ માટે બીજું પ્રતીક પ્લોટ કરવા દે છે, તેમજ સ્વયંચાલિત રીતે પ્રવેશ, એસએલ, ટીપીની ગણતરી કરે છે, VWAP ઓવરલે કરે છે, અને ગતિશીલ વલણ સિગ્નલ બતાવે છે.</strong>",
+    individual_indicators: "વ્યક્તિગત પ્રીમિયમ સૂચકો",
+    combo_indicators: "કોમ્બો પ્લાન્સ – વધુ મેળવો, વધુ બચાવો"
   },
   mr: {
     // Shared Translations
@@ -1295,7 +1299,9 @@ const translations = {
     indicator_twin_chart : "ट्विन चार्ट [<span class='crm-tag'>CRM</span>]",
     indicator_mix2_title: "सीआरएम कॉम्बो 1 (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_mix3_title: "सीआरएम ऑल-इन-वन (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट + एमटीएफ डिमांड सप्लाय)",
-    indicator_twin_chart_desc: "<strong>ट्विन चार्ट हे एक शक्तिशाली ट्रेडिंग इंडिकेटर आहे जे तुम्हाला दोन इन्स्ट्रुमेंट्सच्या एकाचवेळी दृश्यासाठी दुसरे सिम्बॉल प्लॉट करण्यास देते, तसेच एंट्री, एसएल, टीपी, VWAP ओव्हरलेइंग आणि डायनॅमिक ट्रेंड सिग्नल्स दाखवते.</strong>"
+    indicator_twin_chart_desc: "<strong>ट्विन चार्ट हे एक शक्तिशाली ट्रेडिंग इंडिकेटर आहे जे तुम्हाला दोन इन्स्ट्रुमेंट्सच्या एकाचवेळी दृश्यासाठी दुसरे सिम्बॉल प्लॉट करण्यास देते, तसेच एंट्री, एसएल, टीपी, VWAP ओव्हरलेइंग आणि डायनॅमिक ट्रेंड सिग्नल्स दाखवते.</strong>",
+    individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
+    combo_indicators: "कॉम्बो प्लॅन्स – अधिक मिळवा, अधिक वाचवा"
   },
   hi: {
     // Shared Translations (from index.html)
@@ -1728,7 +1734,9 @@ const translations = {
     indicator_twin_chart: "ट्विन चार्ट [<span class='crm-tag'>CRM</span>]",
     indicator_mix2_title: "सीआरएम कॉम्बो 1 (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_mix3_title: "सीआरएम ऑल-इन-वन (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट + एमटीएफ डिमांड सप्लाय)",
-    indicator_twin_chart_desc: "<strong>ट्विन चार्ट एक शक्तिशाली ट्रेडिंग इंडिकेटर है जो आपको दो प्रतीकों के एक साथ दृश्य के लिए दूसरा प्रतीक प्लॉट करने देता है, साथ ही स्वचालित रूप से प्रवेश, एसएल, टीपी की गणना करता है, VWAP को ओवरले करता है, और गतिशील प्रवृत्ति सिग्नल दिखाता है।</strong>"
+    indicator_twin_chart_desc: "<strong>ट्विन चार्ट एक शक्तिशाली ट्रेडिंग इंडिकेटर है जो आपको दो प्रतीकों के एक साथ दृश्य के लिए दूसरा प्रतीक प्लॉट करने देता है, साथ ही स्वचालित रूप से प्रवेश, एसएल, टीपी की गणना करता है, VWAP को ओवरले करता है, और गतिशील प्रवृत्ति सिग्नल दिखाता है।</strong>",
+    individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
+    combo_indicators: "कॉम्बो प्लान्स – अधिक प्राप्त करें, अधिक बचाएं"
   }
 };
 
