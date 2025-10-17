@@ -410,7 +410,7 @@ const translations = {
     mstock_link: "mStock",
     zerodha_link: "Zerodha",
     // Twin Chart Translations
-    main_heading_twin_chart: "💡 CRM Twin Chart – <span class=\"highlight\">See Two Symbols, Trade Smarter</span> 💡",
+    main_heading_twin_chart: "💡 Twin Chart [CRM] – <span class=\"highlight\">See Two Symbols, Trade Smarter</span> 💡",
     subheading_twin_chart: "Dual-Symbol Analysis | VWAP + Dynamic Trend | Entry–SL–TP Levels",
     twin_chart_dual_symbol_plotting_title: "✅ Dual Symbol Plotting",
     twin_chart_dual_symbol_desc1: "Plot a <span class=\"highlight\">secondary symbol</span> in the lower pane alongside your main chart.",
@@ -841,7 +841,7 @@ const translations = {
     mstock_link: "એમસ્ટોક",
     zerodha_link: "ઝેરોધા",
     // Twin Chart Translations
-    main_heading_twin_chart: "💡 CRM ટ્વિન ચાર્ટ - <span class=\"highlight\">બે પ્રતીકો જુઓ, સ્માર્ટ ટ્રેડ કરો</span> 💡",
+    main_heading_twin_chart: "💡 ટ્વિન ચાર્ટ [CRM] - <span class=\"highlight\">બે પ્રતીકો જુઓ, સ્માર્ટ ટ્રેડ કરો</span> 💡",
     subheading_twin_chart: "દ્વિ-પ્રતીક વિશ્લેષણ | VWAP + ગતિશીલ વલણ | પ્રવેશ–એસએલ–ટીપી સ્તરો",
     twin_chart_dual_symbol_plotting_title: "✅ દ્વિ-પ્રતીક પ્લોટિંગ",
     twin_chart_dual_symbol_desc1: "મુખ્ય ચાર્ટની સાથે નીચેના પેનલમાં <span class=\"highlight\">બીજું પ્રતીક</span> પ્લોટ કરો.",
@@ -1275,7 +1275,7 @@ const translations = {
     mstock_link: "एमस्टॉक",
     zerodha_link: "झेरोधा",
     // Twin Chart Translations
-    main_heading_twin_chart: "💡 CRM ट्विन चार्ट - <span class=\"highlight\">दोन सिम्बॉल्स पहा, स्मार्ट ट्रेड करा</span> 💡",
+    main_heading_twin_chart: "💡 ट्विन चार्ट [CRM] - <span class=\"highlight\">दोन सिम्बॉल्स पहा, स्मार्ट ट्रेड करा</span> 💡",
     subheading_twin_chart: "द्वि-सिम्बॉल विश्लेषण | VWAP + डायनॅमिक ट्रेंड | एंट्री–एसएल–टीपी लेव्हल्स",
     twin_chart_dual_symbol_plotting_title: "✅ द्वि-सिम्बॉल प्लॉटिंग",
     twin_chart_dual_symbol_desc1: "मुख्य चार्टसह खालच्या पॅनलमध्ये <span class=\"highlight\">दुसरे सिम्बॉल</span> प्लॉट करा.",
@@ -1708,7 +1708,7 @@ const translations = {
     mstock_link: "एमस्टॉक",
     zerodha_link: "ज़ेरोधा",
     // Twin Chart Translations
-    main_heading_twin_chart: "💡 CRM ट्विन चार्ट - <span class=\"highlight\">दो प्रतीकों को देखें, स्मार्ट ट्रेड करें</span> 💡",
+    main_heading_twin_chart: "💡 ट्विन चार्ट [CRM] - <span class=\"highlight\">दो प्रतीकों को देखें, स्मार्ट ट्रेड करें</span> 💡",
     subheading_twin_chart: "दोहरी-प्रतीक विश्लेषण | VWAP + गतिशील प्रवृत्ति | प्रवेश–एसएल–टीपी स्तर",
     twin_chart_dual_symbol_plotting_title: "✅ दोहरी प्रतीक प्लॉटिंग",
     twin_chart_dual_symbol_desc1: "मुख्य चार्ट के साथ निचले पैनल में <span class=\"highlight\">दूसरा प्रतीक</span> प्लॉट करें।",
