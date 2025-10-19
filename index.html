@@ -1103,13 +1103,13 @@ document.addEventListener('DOMContentLoaded', () => {
         successMsg.innerHTML = `
           <div style="font-size:48px;margin-bottom:10px;">🎉</div>
           <div style="font-size:20px;font-weight:600;margin-bottom:10px;">Payment Successful!</div>
-          <div style="font-size:14px;opacity:0.9;">Your subscription is now active</div>
-          <div style="font-size:12px;margin-top:15px;opacity:0.7;">Redirecting to dashboard...</div>
+          <div style="font-size:14px;opacity:0.9;">Please fill the form to activate your subscription</div>
+          <div style="font-size:12px;margin-top:15px;opacity:0.7;">Opening Google Form...</div>
         `;
         document.body.appendChild(successMsg);
 
         setTimeout(() => {
-          window.location.href = 'dashboard.html';
+          window.location.href = 'https://forms.gle/z88W2XCf6VPsDy2d9';
         }, 2000);
       } else {
         throw new Error(result.message || 'Payment verification failed');
