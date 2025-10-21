@@ -1640,6 +1640,9 @@ a.indicator-link:hover {
     margin-top: 120px;
     font-size: 8px;
   }
+  .hero-title {
+    font-size: 1.8rem;
+  }
   .indicator-cards {
     flex-direction: column; /* Stack cards vertically */
     gap: 20px; /* Reduced gap for mobile */
