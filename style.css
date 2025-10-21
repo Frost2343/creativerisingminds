@@ -1641,7 +1641,7 @@ a.indicator-link:hover {
     font-size: 8px;
   }
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 0.5rem;
   }
   .indicator-cards {
     flex-direction: column; /* Stack cards vertically */
