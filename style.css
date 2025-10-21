@@ -1473,8 +1473,6 @@ a.indicator-link:hover {
     min-height: 80vh;
     padding-right: 5%;
     padding-left: 5%;
-    justify-content: flex-end;
-    text-align: right;
   }
 
   .hero-video {
@@ -1483,20 +1481,20 @@ a.indicator-link:hover {
 
   .hero-content {
     margin-top: 120px;
-    max-width: 100%;
-    text-align: right;
+    max-width: 90%;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 
   .hero-buttons {
-    justify-content: flex-end;
     flex-wrap: wrap;
     margin-bottom: 60px;
   }
@@ -1671,35 +1669,34 @@ a.indicator-link:hover {
 
   /* Hero section */
   .hero {
-    min-height: 70vh;
-    justify-content: flex-end;
-    text-align: right;
+    min-height: 75vh;
   }
 
   .hero-content {
     margin-top: 100px;
-    text-align: right;
+    max-width: 85%;
   }
 
   .hero-content h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
   }
 
   .hero-content p {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
   }
 
   .hero-buttons {
-    gap: 10px;
-    margin-bottom: 40px;
-    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 50px;
   }
 
   .cta {
-    padding: 8px 16px;
-    font-size: 0.85rem;
+    padding: 10px 22px;
+    font-size: 0.95rem;
   }
 
   /* Cards */
@@ -1886,30 +1883,23 @@ a.indicator-link:hover {
 
 /* Extra small devices */
 @media (max-width: 360px) {
-  .hero {
-    justify-content: flex-end;
-    text-align: right;
-  }
-
   .hero-content {
-    text-align: right;
+    max-width: 90%;
   }
 
   .hero-content h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
 
   .hero-content p {
-    font-size: 0.85rem;
-  }
-
-  .hero-buttons {
-    justify-content: flex-end;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .cta {
-    padding: 7px 14px;
-    font-size: 0.8rem;
+    padding: 9px 18px;
+    font-size: 0.85rem;
   }
 
   .card {
