@@ -124,7 +124,7 @@
 
 <section id="indicators">
     <!-- Free Indicators -->
-    <h2 data-translate="free_indicators_title">Our Free Indicators</h2>
+    <br><br><h2 data-translate="free_indicators_title">Our Free Indicators</h2>
     <div class="indicator-cards">
       <a href="EMARSI.html" class="card-link-wrapper">
         <div class="card ema-rsi">
@@ -190,7 +190,7 @@
       </section>
 
   <section id="pricing">
-     <h2 data-translate="pricing_title">Pricing Plans</h2>
+     <br><br><h2 data-translate="pricing_title">Pricing Plans</h2>
   
   <h2 data-translate="individual_indicators" style="text-align:center; color:#f39c12; text-decoration: underline;">
     Individual Premium Indicators
@@ -539,7 +539,7 @@
 </section>
   
   <section id="contact">
-    <h2 data-translate="contact_title">Contact & Payment</h2>
+    <br><br><h2 data-translate="contact_title">Contact & Payment</h2>
     <p data-translate="contact_subtitle">Reach out for subscriptions, support, or payment queries.</p>
     <p>WhatsApp: <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?" target="_blank">9930752555</a></p>
     <p>Telegram: <a href="https://t.me/u_Nx2Uhk_QQ0MDk9" target="_blank" data-translate="telegram_handle">@CREATIVE RISING MINDS</a></p>
@@ -983,7 +983,7 @@ document.addEventListener('DOMContentLoaded', () => {
         order_id: orderData.order_id,
         
         method: {
-          upi: true,
+          // upi: true,
           card: true,
           netbanking: true,
           wallet: true,
@@ -1137,241 +1137,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     return map[planType] || planType;
   }
-</script>
-  <!-- <script>
-  // Razorpay Configuration
-  const RAZORPAY_KEY_ID = 'rzp_live_RV7hkF6AydCkRW';
-
-  // Initialize payment
-  async function initPayment(productId, planType, amount, productName) {
-    // Check if user is logged in
-    const user = getCurrentUser();
-    
-    if (!user) {
-      alert('Please login or signup to purchase');
-      window.location.href = 'login.html';
-      return;
-    }
-
-    // Disable button during processing
-    event.target.classList.add('processing');
-    event.target.textContent = 'Processing...';
-
-    try {
-      // Create order on your backend
-      const orderData = await createRazorpayOrder(productId, planType, amount, productName);
-      
-      if (!orderData.success) {
-        throw new Error(orderData.message || 'Failed to create order');
-      }
-
-      // Open Razorpay checkout with ALL payment methods enabled
-      const options = {
-        key: RAZORPAY_KEY_ID,
-        amount: amount * 100, // Razorpay expects amount in paise
-        currency: 'INR',
-        name: 'Creative Rising Minds',
-        description: `${productName} - ${formatPlanType(planType)}`,
-        image: 'https://creativerisingminds.vercel.app/images/logo.png', // Optional: Add your logo
-        order_id: orderData.order_id,
-        
-        // ✅ ENABLE ALL PAYMENT METHODS
-        method: {
-          upi: true,           // Enable UPI
-          card: true,          // Enable Cards (Debit/Credit)
-          netbanking: true,    // Enable Net Banking
-          wallet: true,        // Enable Wallets (Paytm, PhonePe, etc.)
-          emi: true,          // Disable EMI for now (optional)
-          paylater: true      // Disable Pay Later for now (optional)
-        },
-        
-        // Payment success handler
-        handler: function(response) {
-          verifyPayment(response, productId, planType, amount, productName);
-        },
-        
-        // Prefill customer details
-        prefill: {
-          name: user.user_metadata?.full_name || '',
-          email: user.email,
-          contact: user.user_metadata?.phone || ''
-        },
-        
-        // Notes (optional - for your reference)
-        notes: {
-          product_id: productId,
-          plan_type: planType,
-          user_id: user.id
-        },
-        
-        // Theme customization
-        theme: {
-          color: '#1f6f73',
-          backdrop_color: 'rgba(0, 0, 0, 0.7)'
-        },
-        
-        // Modal settings
-        modal: {
-          backdropclose: false, // Don't close on clicking outside
-          escape: true,         // Allow ESC key to close
-          handleback: true,     // Handle browser back button
-          confirm_close: true,  // Confirm before closing
-          ondismiss: function() {
-            // Reset button when modal is closed
-            event.target.classList.remove('processing');
-            event.target.textContent = 'Buy Now';
-            console.log('Payment cancelled by user');
-          },
-          animation: true       // Enable smooth animations
-        },
-        
-        // Retry configuration (if payment fails)
-        retry: {
-          enabled: true,
-          max_count: 3          // Allow 3 retry attempts
-        },
-        
-        // Timeout (30 minutes)
-        timeout: 1800,
-        
-        // Remember customer preference
-        remember_customer: true
-      };
-
-      console.log('Opening Razorpay checkout...', options);
-      
-      const razorpay = new Razorpay(options);
-      
-      // Handle payment failure
-      razorpay.on('payment.failed', function(response) {
-        console.error('Payment failed:', response.error);
-        alert(`Payment failed: ${response.error.description}\n\nReason: ${response.error.reason}`);
-        event.target.classList.remove('processing');
-        event.target.textContent = 'Buy Now';
-      });
-      
-      razorpay.open();
-
-    } catch (error) {
-      console.error('Payment error:', error);
-      alert('Payment failed: ' + error.message);
-      event.target.classList.remove('processing');
-      event.target.textContent = 'Buy Now';
-    }
-  }
-
-  // Create Razorpay order (call your serverless function)
-  async function createRazorpayOrder(productId, planType, amount, productName) {
-    const user = getCurrentUser();
-    const token = getAccessToken();
-
-    console.log('Creating Razorpay order...', { productId, planType, amount });
-
-    const response = await fetch('/api/create-order', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        product_id: productId,
-        plan_type: planType,
-        amount: amount,
-        product_name: productName,
-        user_id: user.id,
-        user_email: user.email
-      })
-    });
-
-    const data = await response.json();
-    console.log('Order creation response:', data);
-    
-    return data;
-  }
-
-  // Verify payment (call your serverless function)
-  async function verifyPayment(response, productId, planType, amount, productName) {
-    const user = getCurrentUser();
-    const token = getAccessToken();
-
-    console.log('Verifying payment...', {
-      order_id: response.razorpay_order_id,
-      payment_id: response.razorpay_payment_id
-    });
-
-    // Show loading state
-    const loadingAlert = document.createElement('div');
-    loadingAlert.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:white;padding:20px;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:10000;text-align:center;';
-    loadingAlert.innerHTML = '<div style="font-size:18px;color:#333;">Verifying payment...<br><small>Please wait</small></div>';
-    document.body.appendChild(loadingAlert);
-
-    try {
-      const verifyResponse = await fetch('/api/verify-payment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          razorpay_order_id: response.razorpay_order_id,
-          razorpay_payment_id: response.razorpay_payment_id,
-          razorpay_signature: response.razorpay_signature,
-          product_id: productId,
-          plan_type: planType,
-          amount: amount,
-          product_name: productName,
-          user_id: user.id
-        })
-      });
-
-      const result = await verifyResponse.json();
-      console.log('Verification response:', result);
-
-      // Remove loading
-      document.body.removeChild(loadingAlert);
-
-      if (result.success) {
-        // Success message with animation
-        const successMsg = document.createElement('div');
-        successMsg.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:30px;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.3);z-index:10000;text-align:center;min-width:300px;';
-        successMsg.innerHTML = `
-          <div style="font-size:48px;margin-bottom:10px;">🎉</div>
-          <div style="font-size:20px;font-weight:600;margin-bottom:10px;">Payment Successful!</div>
-          <div style="font-size:14px;opacity:0.9;">Your subscription is now active</div>
-          <div style="font-size:12px;margin-top:15px;opacity:0.7;">Redirecting to dashboard...</div>
-        `;
-        document.body.appendChild(successMsg);
-
-        // Redirect after 2 seconds
-        setTimeout(() => {
-          window.location.href = 'dashboard.html';
-        }, 2000);
-      } else {
-        throw new Error(result.message || 'Payment verification failed');
-      }
-
-    } catch (error) {
-      // Remove loading if still there
-      if (document.body.contains(loadingAlert)) {
-        document.body.removeChild(loadingAlert);
-      }
-      
-      console.error('Verification error:', error);
-      alert('Payment verification failed: ' + error.message + '\n\nPlease contact support with your payment ID: ' + response.razorpay_payment_id);
-    }
-  }
-
-  // Format plan type for display
-  function formatPlanType(planType) {
-    const map = {
-      'monthly': 'Monthly',
-      'quarterly': 'Quarterly',
-      'half_yearly': 'Half-Yearly',
-      'yearly': 'Yearly'
-    };
-    return map[planType] || planType;
-  }
-</script> -->
-  <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
+</script>  
 </body>
 </html>
