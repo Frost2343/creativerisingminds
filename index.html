@@ -816,7 +816,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="upi-id-display">
             <p style="color: #94a3b8; font-size: 14px; margin-bottom: 5px;">Pay to this UPI ID:</p>
             <p class="upi-id-text">${UPI_ID}</p>
-            <button class="copy-upi-btn" onclick="copyUPIId()">📋 Copy UPI ID</button>
+            <button class="copy-upi-btn" onclick="copyUPIId(event)">📋 Copy UPI ID</button>
           </div>
 
           <div style="text-align: center; margin: 20px 0;">
@@ -876,20 +876,45 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // COPY UPI ID
   // ============================================
-  function copyUPIId() {
-    navigator.clipboard.writeText(UPI_ID).then(() => {
-      const btn = event.target;
-      const originalText = btn.textContent;
+  // ✅ FIXED VERSION
+  async function copyUPIId(event) {
+    const btn = event.currentTarget;
+    const originalText = btn.textContent;
+    
+    try {
+      // Attempt to copy
+      await navigator.clipboard.writeText(UPI_ID);
+      
+      // Success feedback
       btn.textContent = '✓ Copied!';
       btn.style.background = 'rgba(74, 222, 128, 0.2)';
+      btn.style.color = '#fff';
       
+      // Reset after 2 seconds
       setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = 'rgba(255, 255, 255, 0.1)';
       }, 2000);
-    }).catch(() => {
-      alert('Please copy manually: ' + UPI_ID);
-    });
+      
+    } catch (error) {
+      // Only runs if clipboard API fails
+      console.error('Copy failed:', error);
+      
+      // Fallback: Select text for manual copy
+      const tempInput = document.createElement('input');
+      tempInput.value = UPI_ID;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      
+      try {
+        document.execCommand('copy'); // Old browser fallback
+        btn.textContent = '✓ Copied!';
+      } catch (fallbackError) {
+        alert('Please copy manually: ' + UPI_ID);
+      }
+      
+      document.body.removeChild(tempInput);
+    }
   }
 
   // ============================================
