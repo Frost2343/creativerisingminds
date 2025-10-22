@@ -1404,7 +1404,7 @@ const translations = {
     feedback_offer: "अपनी प्रतिक्रिया साझा करें और हमारे प्रीमियम इंडिकेटर्स के लिए मुफ्त 1-महीने की पहुंच जीतने का मौका पाएं!",
     contact_title: "संपर्क और भुगतान",
     contact_subtitle: "सदस्यता, समर्थन, या भुगतान प्रश्नों के लिए संपर्क करें।",
-    telegram_handle: "@क्रिएटिव राइजिंग माइंड्स",
+    telegram_handle: "@CREATIVE RISING MINDS",
     upi_title: "UPI भुगतान",
     upi_instruction: "UPI ID का उपयोग करके भुगतान करें:<br><span>riazshaikh005@okicici</span>",
     upi_confirmation: "व्हाट्सएप या टेलीग्राम के माध्यम से पुष्टि साझा करें।",
