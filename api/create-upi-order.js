@@ -74,6 +74,9 @@ function calculateSubscriptionDates(planType) {
   const endDate = new Date();
 
   switch (planType) {
+    case '7-day':
+      endDate.setDate(endDate.getDate() + 7);
+      break;
     case 'monthly':
       endDate.setMonth(endDate.getMonth() + 1);
       break;

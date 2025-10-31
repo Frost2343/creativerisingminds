@@ -719,6 +719,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const RAZORPAY_KEY_ID = 'rzp_live_RV7hkF6AydCkRW';
   const UPI_ID = 'riazshaikh005@okicici';
   const RAZORPAY_FEE_PERCENTAGE = 2.5;
+  const SUBSCRIPTION_FORM_URL = 'https://forms.gle/z88W2XCf6VPsDy2d9';
+  const TRIAL_FORM_URL = 'https://forms.gle/WFeJJGbHPtjQCCPV6'; // 7-day plan form
 
   let currentPaymentDetails = null;
 
@@ -964,7 +966,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
           document.body.removeChild(successMsg);
-          window.open('https://forms.gle/z88W2XCf6VPsDy2d9', '_blank');
+          window.open(getFormUrl(planType), '_blank');
         }, 2000);
 
       } else {
@@ -1137,7 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(successMsg);
 
         setTimeout(() => {
-          window.location.href = 'https://forms.gle/z88W2XCf6VPsDy2d9';
+          window.location.href = getFormUrl(planType);
         }, 2000);
       } else {
         throw new Error(result.message || 'Payment verification failed');
@@ -1161,9 +1163,14 @@ document.addEventListener('DOMContentLoaded', () => {
       'monthly': 'Monthly',
       'quarterly': 'Quarterly',
       'half_yearly': 'Half-Yearly',
-      'yearly': 'Yearly'
+      'yearly': 'Yearly',
+      '7-day': '7-Day'
     };
     return map[planType] || planType;
+  }
+  
+  function getFormUrl(planType) {
+    return planType === '7-day' ? TRIAL_FORM_URL : SUBSCRIPTION_FORM_URL;
   }
 </script>  
 </body>
