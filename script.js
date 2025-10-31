@@ -432,6 +432,13 @@ const translations = {
     indicator_mix3_title: "CRM All-in-One (Includes all Premium Indicators) <span style='color:#00ffcc'>[Best-Seller]</span>",
     indicator_twin_chart_desc: "<strong>Twin Chart is a powerful trading indicator that lets you plot a secondary symbol for a simultaneous view of two instruments, while auto-calculating entry, SL, TP, overlaying VWAP, and showing dynamic trend signals.</strong>",
     individual_indicators: "Individual Premium Indicators",
+    feature_key_title_demand_supply: "Key Features",
+    feature_mtf_demand_supply: "<strong>Multi-Timeframe Demand & Supply Zones:</strong> Automatically detects and plots institutional demand (blue) and supply (red) zones across multiple timeframes for clear visual confluence.",
+    feature_zone_detection: "<strong>Smart Zone Detection:</strong> Filters out weak zones, merges overlaps, and highlights the most relevant areas of buying/selling pressure.",
+    feature_auto_trendlines: "<strong>Automated Trendlines:</strong> Dynamically connects swing highs and lows, adapting as price action evolves to reveal breakout and compression structures.",
+    feature_real_time_update: "<strong>Real-Time Updates:</strong> All zones and trendlines adjust instantly with every new candle, maintaining accurate market structure.",
+    feature_visual_clarity: "<strong>Color-Coded Clarity:</strong> Demand zones are shaded blue to indicate accumulation/support; supply zones in red highlight distribution/resistance.",
+    feature_multi_style_usage: "<strong>Multi-Style Compatibility:</strong> Works seamlessly with both scalping and swing setups — ideal for traders who rely on clean structure-based visuals.",
     combo_indicators: "Combo Plans – Get More, Save More"
   },
   gu: {
@@ -865,7 +872,14 @@ const translations = {
     indicator_mix3_title: "CRM ઓલ-ઇન-વન (તમામ પ્રીમિયમ સૂચકો સમાવેશ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span>",
     indicator_twin_chart_desc: "<strong>ટ્વિન ચાર્ટ એક શક્તિશાળી ટ્રેડિંગ ઇન્ડિકેટર છે જે તમને બે ઇન્સ્ટ્રુમેન્ટ્સના એકસાથે દેખાવ માટે બીજું પ્રતીક પ્લોટ કરવા દે છે, તેમજ સ્વયંચાલિત રીતે પ્રવેશ, એસએલ, ટીપીની ગણતરી કરે છે, VWAP ઓવરલે કરે છે, અને ગતિશીલ વલણ સિગ્નલ બતાવે છે.</strong>",
     individual_indicators: "વ્યક્તિગત પ્રીમિયમ સૂચકો",
-    combo_indicators: "કોમ્બો પ્લાન્સ – વધુ મેળવો, વધુ બચાવો"
+    combo_indicators: "કોમ્બો પ્લાન્સ – વધુ મેળવો, વધુ બચાવો",
+    feature_key_title_demand_supply: "મુખ્ય વિશેષતાઓ",
+    feature_mtf_demand_supply: "<strong>મલ્ટી-ટાઇમફ્રેમ ડિમાન્ડ અને સપ્લાય ઝોન:</strong> બહુવિધ સમયછેલીઓમાં સંસ્થાકીય ડિમાન્ડ (વાદળી) અને સપ્લાય (લાલ) ઝોનને આપોઆપ શોધીને પ્લોટ કરે છે, સ્પષ્ટ દૃશ્ય સંમિલન માટે.",
+    feature_zone_detection: "<strong>સ્માર્ટ ઝોન ડિટેક્શન:</strong> નબળા ઝોનને ફિલ્ટર કરે છે, ઓવરલેપને મર્જ કરે છે અને ખરીદી/વેચાણના દબાણના સૌથી સંબંધિત વિસ્તારોને હાઇલાઇટ કરે છે.",
+    feature_auto_trendlines: "<strong>સ્વચાલિત ટ્રેન્ડલાઇન્સ:</strong> સ્વિંગ હાઇ અને લોને ગતિશીલ રીતે જોડે છે, કિંમત ક્રિયાના વિકાસ સાથે અનુકૂલન કરે છે જેથી બ્રેકઆઉટ અને સંકોચન સંરચનાઓ પ્રગટ થાય.",
+    feature_real_time_update: "<strong>રિયલ-ટાઇમ અપડેટ્સ:</strong> દરેક નવી કેન્ડલ સાથે તમામ ઝોન અને ટ્રેન્ડલાઇન્સ તરત જ સમાયોજિત થાય છે, સચોટ માર્કેટ સ્ટ્રક્ચર જાળવી રાખે છે.",
+    feature_visual_clarity: "<strong>રંગ-કોડેડ સ્પષ્ટતા:</strong> ડિમાન્ડ ઝોન વાદળી રંગમાં શેડ કરવામાં આવે છે જે સંચય/સમર્થન દર્શાવે છે; સપ્લાય ઝોન લાલ રંગમાં વિતરણ/પ્રતિકારને હાઇલાઇટ કરે છે.",
+    feature_multi_style_usage: "<strong>મલ્ટી-સ્ટાઇલ સુસંગતતા:</strong> સ્કેલ્પિંગ અને સ્વિંગ સેટઅપ બંને સાથે સરળતાથી કામ કરે છે — સ્વચ્છ સ્ટ્રક્ચર-આધારિત દૃશ્યો પર આધાર રાખનાર ટ્રેડર્સ માટે આદર્શ."
   },
   mr: {
     // Shared Translations
@@ -1301,7 +1315,14 @@ const translations = {
     indicator_mix3_title: "CRM ऑल-इन-वन (सर्व प्रीमियम इंडिकेटर्स समाविष्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट हे एक शक्तिशाली ट्रेडिंग इंडिकेटर आहे जे तुम्हाला दोन इन्स्ट्रुमेंट्सच्या एकाचवेळी दृश्यासाठी दुसरे सिम्बॉल प्लॉट करण्यास देते, तसेच एंट्री, एसएल, टीपी, VWAP ओव्हरलेइंग आणि डायनॅमिक ट्रेंड सिग्नल्स दाखवते.</strong>",
     individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
-    combo_indicators: "कॉम्बो प्लॅन्स – अधिक मिळवा, अधिक वाचवा"
+    combo_indicators: "कॉम्बो प्लॅन्स – अधिक मिळवा, अधिक वाचवा",
+    feature_key_title_demand_supply: "मुख्य वैशिष्ट्ये",
+    feature_mtf_demand_supply: "<strong>मल्टी-टाइमफ्रेम डिमांड आणि सप्लाय झोन:</strong> अनेक वेळेच्या चौकटींमध्ये संस्थात्मक डिमांड (निळा) आणि सप्लाय (लाल) झोन आपोआप शोधून प्लॉट करते, स्पष्ट दृश्य संमिलनासाठी।",
+    feature_zone_detection: "<strong>स्मार्ट झोन डिटेक्शन:</strong> कमकुवत झोन फिल्टर करते, ओव्हरलॅप मर्ज करते आणि खरेदी/विक्री दबावाच्या सर्वात संबंधित क्षेत्रांना हायलाइट करते.",
+    feature_auto_trendlines: "<strong>स्वयंचलित ट्रेंडलाइन्स:</strong> स्विंग हाय आणि लो यांना गतिशीलपणे जोडते, किंमत कारवाईच्या विकासासह अनुकूलित होते जेणेकरून ब्रेकआउट आणि संकुचित संरचना उघड होतात.",
+    feature_real_time_update: "<strong>रिअल-टाइम अपडेट्स:</strong> प्रत्येक नवीन कॅंडलसह सर्व झोन आणि ट्रेंडलाइन्स त्वरित समायोजित होतात, अचूक बाजार संरचना कायम ठेवतात.",
+    feature_visual_clarity: "<strong>रंग-कोडेड स्पष्टता:</strong> डिमांड झोन निळ्या रंगात छायांकित केले जातात जे संचय/समर्थन दर्शवतात; सप्लाय झोन लाल रंगात वितरण/प्रतिरोध हायलाइट करतात.",
+    feature_multi_style_usage: "<strong>मल्टी-स्टाइल सुसंगतता:</strong> स्कॅल्पिंग आणि स्विंग सेटअप दोन्हीसह सहजतेने काम करते — स्वच्छ संरचना-आधारित दृश्यांवर अवलंबून असलेल्या ट्रेडर्ससाठी आदर्श."
   },
   hi: {
     // Shared Translations (from index.html)
@@ -1736,7 +1757,14 @@ const translations = {
     indicator_mix3_title: "CRM ऑल-इन-वन (सभी प्रीमियम इंडिकेटर्स शामिल) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट एक शक्तिशाली ट्रेडिंग इंडिकेटर है जो आपको दो प्रतीकों के एक साथ दृश्य के लिए दूसरा प्रतीक प्लॉट करने देता है, साथ ही स्वचालित रूप से प्रवेश, एसएल, टीपी की गणना करता है, VWAP को ओवरले करता है, और गतिशील प्रवृत्ति सिग्नल दिखाता है।</strong>",
     individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
-    combo_indicators: "कॉम्बो प्लान्स – अधिक प्राप्त करें, अधिक बचाएं"
+    combo_indicators: "कॉम्बो प्लान्स – अधिक प्राप्त करें, अधिक बचाएं",
+    feature_key_title_demand_supply: "प्रमुख विशेषताएं",
+    feature_mtf_demand_supply: "<strong>मल्टी-टाइमफ्रेम डिमांड और सप्लाई ज़ोन:</strong> स्वचालित रूप से कई समयसीमाओं में संस्थागत डिमांड (नीला) और सप्लाई (लाल) ज़ोन का पता लगाता और प्लॉट करता है, स्पष्ट दृश्य संगति के लिए।",
+    feature_zone_detection: "<strong>स्मार्ट ज़ोन डिटेक्शन:</strong> कमजोर ज़ोन को फ़िल्टर करता है, ओवरलैप को मर्ज करता है, और खरीद/बिक्री दबाव के सबसे प्रासंगिक क्षेत्रों को हाइलाइट करता है।",
+    feature_auto_trendlines: "<strong>स्वचालित ट्रेंडलाइन्स:</strong> स्विंग हाई और लो को गतिशील रूप से जोड़ता है, मूल्य कार्रवाई के विकास के साथ अनुकूलित होता है ताकि ब्रेकआउट और संपीड़न संरचनाएं प्रकट हों।",
+    feature_real_time_update: "<strong>रियल-टाइम अपडेट:</strong> सभी ज़ोन और ट्रेंडलाइन्स हर नई कैंडल के साथ तुरंत समायोजित होते हैं, सटीक बाजार संरचना बनाए रखते हैं।",
+    feature_visual_clarity: "<strong>रंग-कोडेड स्पष्टता:</strong> डिमांड ज़ोन नीले रंग में छायांकित होते हैं जो संचय/समर्थन दर्शाते हैं; सप्लाई ज़ोन लाल रंग में वितरण/प्रतिरोध को हाइलाइट करते हैं।",
+    feature_multi_style_usage: "<strong>मल्टी-स्टाइल संगतता:</strong> स्कैल्पिंग और स्विंग सेटअप दोनों के साथ सहजता से काम करता है — स्वच्छ संरचना-आधारित दृश्यों पर निर्भर ट्रेडर्स के लिए आदर्श।"
   }
 };
 
