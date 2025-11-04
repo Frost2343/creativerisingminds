@@ -1927,3 +1927,121 @@ a.indicator-link:hover {
     z-index: 9999;
   }
 }
+
+/* --- YT Carousel Wrapper --- */
+.yt-carousel-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.yt-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 60px;
+}
+
+.yt-carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform .4s ease;
+}
+
+.yt-item {
+  min-width: 32%;
+}
+
+@media (max-width: 992px) {
+  .yt-item { min-width: 48%; }
+}
+
+@media (max-width: 600px) {
+  .yt-item { min-width: 88%; }
+}
+
+/* --- Thumbnail Box --- */
+.yt-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.25);
+  transition: .3s;
+}
+
+.yt-thumb {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Play Button --- */
+.yt-play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+
+.yt-thumb-wrapper:hover .yt-play-btn {
+  background: rgba(255,0,0,0.85);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* --- Carousel Buttons --- */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: .2s;
+}
+
+.carousel-btn:hover {
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.15);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* --- Dots --- */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.carousel-dot.active {
+  background: white;
+}

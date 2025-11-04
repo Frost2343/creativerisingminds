@@ -188,6 +188,28 @@
       
       <!-- </a> -->
       </section>
+  <!-- ===================== YT Carousel ===================== -->
+    <section id="yt-carousel-section" class="yt-carousel-section">
+      <h2>Our Indicators in Action</h2>
+
+      <div class="yt-carousel-container">
+        
+        <!-- Left Arrow -->
+        <button class="carousel-btn prev-btn">&#10094;</button>
+
+        <!-- Carousel Track -->
+        <div class="yt-carousel">
+          <!-- JS will inject video thumbnails here -->
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-btn next-btn">&#10095;</button>
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="carousel-dots"></div>
+    </section>
+    <!-- ======================================================= -->
 
   <section id="pricing">
      <br><br><h2 data-translate="pricing_title">Pricing Plans</h2>
@@ -1173,5 +1195,101 @@ document.addEventListener('DOMContentLoaded', () => {
     return planType === '7-day' ? TRIAL_FORM_URL : SUBSCRIPTION_FORM_URL;
   }
 </script>  
+<script>
+    /* --- Your video IDs --- */
+    const ytVideos = [
+      "iYzctKiw2PM",
+      "vJoAklQxagI",
+      // "YOUR_3RD_ID",
+      // "YOUR_4TH_ID",
+      // "YOUR_5TH_ID",
+      // "YOUR_6TH_ID",
+      // "YOUR_7RD_ID",
+      // "YOUR_8TH_ID",
+      // "YOUR_9TH_ID"
+    ];
+
+    const carousel = document.querySelector(".yt-carousel");
+    const dotsContainer = document.querySelector(".carousel-dots");
+
+    let ytIndex = 0;
+    let visible = window.innerWidth <= 600 ? 1 : window.innerWidth <= 992 ? 2 : 3;
+
+    /* --- Render thumbnails --- */
+    function renderVideos() {
+      carousel.innerHTML = ytVideos.map(id => `
+        <div class="yt-item">
+          <a href="https://www.youtube.com/watch?v=${id}" target="_blank" class="yt-thumb-link">
+            <div class="yt-thumb-wrapper">
+              <img src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"
+                  onerror="this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'"
+                  class="yt-thumb">
+              <div class="yt-play-btn">▶</div>
+            </div>
+          </a>
+        </div>
+      `).join("");
+    }
+
+    /* --- Move Carousel --- */
+    function updateCarousel() {
+      const width = document.querySelector(".yt-item").offsetWidth + 20;
+      carousel.style.transform = `translateX(-${ytIndex * width}px)`;
+      updateDots();
+    }
+
+    /* --- Dots --- */
+    function createDots() {
+      dotsContainer.innerHTML = "";
+      for (let i = 0; i <= ytVideos.length - visible; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("carousel-dot");
+        dot.onclick = () => { ytIndex = i; updateCarousel(); };
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      document.querySelectorAll(".carousel-dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === ytIndex);
+      });
+    }
+
+    /* --- Arrows --- */
+    document.querySelector(".next-btn").onclick = () => {
+      if (ytIndex < ytVideos.length - visible) ytIndex++;
+      updateCarousel();
+    };
+
+    document.querySelector(".prev-btn").onclick = () => {
+      if (ytIndex > 0) ytIndex--;
+      updateCarousel();
+    };
+
+    /* --- Swipe (Mobile) --- */
+    let startX = 0;
+    const container = document.querySelector(".yt-carousel-container");
+
+    container.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+    container.addEventListener("touchend", e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (dx < -40 && ytIndex < ytVideos.length - visible) ytIndex++;
+      if (dx > 40 && ytIndex > 0) ytIndex--;
+      updateCarousel();
+    });
+
+    /* --- Init --- */
+    renderVideos();
+    createDots();
+    updateCarousel();
+
+    /* --- Adjust carousel on resize --- */
+    window.addEventListener("resize", () => {
+      visible = window.innerWidth <= 600 ? 1 : window.innerWidth <= 992 ? 2 : 3;
+      createDots();
+      updateCarousel();
+    });
+</script>
+
 </body>
 </html>
