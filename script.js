@@ -439,7 +439,8 @@ const translations = {
     feature_mtf_real_time_update: "<strong>Real-Time Updates:</strong> All zones and trendlines adjust instantly with every new candle, maintaining accurate market structure.",
     feature_mtf_visual_clarity: "<strong>Color-Coded Clarity:</strong> Demand zones are shaded blue to indicate accumulation/support; supply zones in red highlight distribution/resistance.",
     feature_mtf_multi_style_usage: "<strong>Multi-Style Compatibility:</strong> Works seamlessly with both scalping and swing setups — ideal for traders who rely on clean structure-based visuals.",
-    combo_indicators: "Combo Plans – Get More, Save More"
+    combo_indicators: "Combo Plans – Get More, Save More",
+    watch_and_learn: "Watch & Learn"
   },
   gu: {
     // Shared Translations
@@ -873,6 +874,7 @@ const translations = {
     indicator_twin_chart_desc: "<strong>ટ્વિન ચાર્ટ એક શક્તિશાળી ટ્રેડિંગ ઇન્ડિકેટર છે જે તમને બે ઇન્સ્ટ્રુમેન્ટ્સના એકસાથે દેખાવ માટે બીજું પ્રતીક પ્લોટ કરવા દે છે, તેમજ સ્વયંચાલિત રીતે પ્રવેશ, એસએલ, ટીપીની ગણતરી કરે છે, VWAP ઓવરલે કરે છે, અને ગતિશીલ વલણ સિગ્નલ બતાવે છે.</strong>",
     individual_indicators: "વ્યક્તિગત પ્રીમિયમ સૂચકો",
     combo_indicators: "કોમ્બો પ્લાન્સ – વધુ મેળવો, વધુ બચાવો",
+    watch_and_learn: "જુઓ અને શીખો",
     feature_key_title_demand_supply: "મુખ્ય વિશેષતાઓ",
     feature_mtf_demand_supply: "<strong>મલ્ટી-ટાઇમફ્રેમ ડિમાન્ડ અને સપ્લાય ઝોન:</strong> બહુવિધ સમયછેલીઓમાં સંસ્થાકીય ડિમાન્ડ (વાદળી) અને સપ્લાય (લાલ) ઝોનને આપોઆપ શોધીને પ્લોટ કરે છે, સ્પષ્ટ દૃશ્ય સંમિલન માટે.",
     feature_mtf_zone_detection: "<strong>સ્માર્ટ ઝોન ડિટેક્શન:</strong> નબળા ઝોનને ફિલ્ટર કરે છે, ઓવરલેપને મર્જ કરે છે અને ખરીદી/વેચાણના દબાણના સૌથી સંબંધિત વિસ્તારોને હાઇલાઇટ કરે છે.",
@@ -1316,6 +1318,7 @@ const translations = {
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट हे एक शक्तिशाली ट्रेडिंग इंडिकेटर आहे जे तुम्हाला दोन इन्स्ट्रुमेंट्सच्या एकाचवेळी दृश्यासाठी दुसरे सिम्बॉल प्लॉट करण्यास देते, तसेच एंट्री, एसएल, टीपी, VWAP ओव्हरलेइंग आणि डायनॅमिक ट्रेंड सिग्नल्स दाखवते.</strong>",
     individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
     combo_indicators: "कॉम्बो प्लॅन्स – अधिक मिळवा, अधिक वाचवा",
+    watch_and_learn: "पाहा आणि शिका",
     feature_key_title_demand_supply: "मुख्य वैशिष्ट्ये",
     feature_mtf_demand_supply: "<strong>मल्टी-टाइमफ्रेम डिमांड आणि सप्लाय झोन:</strong> अनेक वेळेच्या चौकटींमध्ये संस्थात्मक डिमांड (निळा) आणि सप्लाय (लाल) झोन आपोआप शोधून प्लॉट करते, स्पष्ट दृश्य संमिलनासाठी।",
     feature_mtf_zone_detection: "<strong>स्मार्ट झोन डिटेक्शन:</strong> कमकुवत झोन फिल्टर करते, ओव्हरलॅप मर्ज करते आणि खरेदी/विक्री दबावाच्या सर्वात संबंधित क्षेत्रांना हायलाइट करते.",
@@ -1758,6 +1761,7 @@ const translations = {
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट एक शक्तिशाली ट्रेडिंग इंडिकेटर है जो आपको दो प्रतीकों के एक साथ दृश्य के लिए दूसरा प्रतीक प्लॉट करने देता है, साथ ही स्वचालित रूप से प्रवेश, एसएल, टीपी की गणना करता है, VWAP को ओवरले करता है, और गतिशील प्रवृत्ति सिग्नल दिखाता है।</strong>",
     individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
     combo_indicators: "कॉम्बो प्लान्स – अधिक प्राप्त करें, अधिक बचाएं",
+    watch_and_learn: "देखें और सीखें",
     feature_key_title_demand_supply: "प्रमुख विशेषताएं",
     feature_mtf_demand_supply: "<strong>मल्टी-टाइमफ्रेम डिमांड और सप्लाई ज़ोन:</strong> स्वचालित रूप से कई समयसीमाओं में संस्थागत डिमांड (नीला) और सप्लाई (लाल) ज़ोन का पता लगाता और प्लॉट करता है, स्पष्ट दृश्य संगति के लिए।",
     feature_mtf_zone_detection: "<strong>स्मार्ट ज़ोन डिटेक्शन:</strong> कमजोर ज़ोन को फ़िल्टर करता है, ओवरलैप को मर्ज करता है, और खरीद/बिक्री दबाव के सबसे प्रासंगिक क्षेत्रों को हाइलाइट करता है।",
