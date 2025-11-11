@@ -1408,9 +1408,6 @@ a.indicator-link:hover {
 
 /* Large mobile devices and small tablets */
 @media (max-width: 768px) {
-  .trial-badge{
-    top:75px;
-  }
   .navbar {
     flex-direction: column;
     align-items: stretch;
@@ -1642,11 +1639,6 @@ a.indicator-link:hover {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
-  .trial-badge{
-    top:70px;
-    font-size:12px;
-    padding:4px 8px;
-  }
   .navbar {
     padding: 8px;
   }
@@ -2104,3 +2096,40 @@ a.indicator-link:hover {
 }
 
 
+/* ✅ Responsive positioning for Free Trial badge */
+
+/* Tablets / Medium screens */
+@media (max-width: 992px) {
+  .trial-badge {
+    top: 85px;
+    left: 20px;
+    transform: scale(0.95);
+  }
+}
+
+/* Large phones */
+@media (max-width: 768px) {
+  .trial-badge {
+    top: 75px;
+    left: 18px;
+    transform: scale(0.92);
+  }
+}
+
+/* Small phones (OnePlus 7T included) */
+@media (max-width: 480px) {
+  .trial-badge {
+    top: 65px;
+    left: 12px;
+    transform: scale(0.88);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .trial-badge {
+    top: 60px;
+    left: 8px;
+    transform: scale(0.85);
+  }
+}
