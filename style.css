@@ -1642,6 +1642,11 @@ a.indicator-link:hover {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
+  .trial-badge{
+    top:70px;
+    font-size:12px;
+    padding:4px 8px;
+  }
   .navbar {
     padding: 8px;
   }
