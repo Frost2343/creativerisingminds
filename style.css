@@ -1408,6 +1408,9 @@ a.indicator-link:hover {
 
 /* Large mobile devices and small tablets */
 @media (max-width: 768px) {
+  .trial-badge{
+    top:100;
+  }
   .navbar {
     flex-direction: column;
     align-items: stretch;
