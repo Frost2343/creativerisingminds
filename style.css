@@ -2101,7 +2101,7 @@ a.indicator-link:hover {
 /* Tablets / Medium screens */
 @media (max-width: 992px) {
   .trial-badge {
-    top: 85px;
+    top: 145px;
     left: 20px;
     transform: scale(0.95);
   }
@@ -2110,7 +2110,7 @@ a.indicator-link:hover {
 /* Large phones */
 @media (max-width: 768px) {
   .trial-badge {
-    top: 75px;
+    top: 175px;
     left: 18px;
     transform: scale(0.92);
   }
@@ -2119,7 +2119,7 @@ a.indicator-link:hover {
 /* Small phones (OnePlus 7T included) */
 @media (max-width: 480px) {
   .trial-badge {
-    top: 65px;
+    top: 175px;
     left: 12px;
     transform: scale(0.88);
   }
@@ -2128,7 +2128,7 @@ a.indicator-link:hover {
 /* Extra small screens */
 @media (max-width: 360px) {
   .trial-badge {
-    top: 60px;
+    top: 175px;
     left: 8px;
     transform: scale(0.85);
   }
