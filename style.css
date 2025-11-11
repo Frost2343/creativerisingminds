@@ -2045,3 +2045,54 @@ a.indicator-link:hover {
 .carousel-dot.active {
   background: white;
 }
+
+
+.trial-badge {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  animation: switchTheme 3s infinite ease-in-out;
+  transition: 0.3s ease;
+  z-index: 5000;
+  border: 2px solid transparent;
+}
+
+/* Smooth transition between themes */
+@keyframes switchTheme {
+  0% {
+    background: #ffffff;
+    color: #004cff;
+    border-color: #004cff;
+    box-shadow: 
+      0 0 8px rgba(0,76,255,0.35),
+      0 0 20px rgba(0,76,255,0.2);
+  }
+  50% {
+    background: #004cff;
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 
+      0 0 8px rgba(255,255,255,0.4),
+      0 0 20px rgba(255,255,255,0.25);
+  }
+  100% {
+    background: #ffffff;
+    color: #004cff;
+    border-color: #004cff;
+    box-shadow: 
+      0 0 8px rgba(0,76,255,0.35),
+      0 0 20px rgba(0,76,255,0.2);
+  }
+}
+
+/* Hover effect for crisp look */
+.trial-badge:hover {
+  transform: scale(1.08);
+}
+
+
