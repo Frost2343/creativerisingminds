@@ -2065,28 +2065,28 @@ a.indicator-link:hover {
 /* Smooth transition between themes */
 @keyframes switchTheme {
   0% {
-    background: #ffffff;
-    color: #004cff;
-    border-color: #004cff;
+    background: linear-gradient(135deg, #0f172a, #000000);
+    color: #ffffff;
+    border-color: #a98e20;
     box-shadow: 
-      0 0 8px rgba(0,76,255,0.35),
-      0 0 20px rgba(0,76,255,0.2);
+      0 0 8px rgba(255,255,255,0.4),
+      0 0 20px rgba(255,255,255,0.25);
   }
   50% {
-    background: #004cff;
+    background: linear-gradient(135deg, #0f172a, #000000);
     color: #ffffff;
-    border-color: #ffffff;
+    border-color: #a98e20;
     box-shadow: 
       0 0 8px rgba(255,255,255,0.4),
       0 0 20px rgba(255,255,255,0.25);
   }
   100% {
-    background: #ffffff;
-    color: #004cff;
-    border-color: #004cff;
+    background: linear-gradient(135deg, #0f172a, #000000);
+    color: #ffffff;
+    border-color: #a98e20;
     box-shadow: 
-      0 0 8px rgba(0,76,255,0.35),
-      0 0 20px rgba(0,76,255,0.2);
+      0 0 8px rgba(255,255,255,0.4),
+      0 0 20px rgba(255,255,255,0.25);
   }
 }
 
