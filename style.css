@@ -1689,6 +1689,9 @@ a.indicator-link:hover {
     margin-bottom: 25px;
     line-height: 1.5;
   }
+  .hero-buttons{
+    font-size: 1rem;
+  }
 
   .hero-buttons {
     gap: 12px;
