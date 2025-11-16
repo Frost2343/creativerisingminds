@@ -173,8 +173,8 @@ async function login(email, password) {
 // 3. LOGOUT - Clear session
 // ============================================
 function logout() {
-  sessionStorage.removeItem('supabase_session');
-  sessionStorage.removeItem('supabase_user');
+  localStorage.removeItem('supabase_session');
+  localStorage.removeItem('supabase_user');
   window.location.href = 'login.html';
 }
 
@@ -182,8 +182,8 @@ function logout() {
 // 4. GET CURRENT USER - Check if logged in
 // ============================================
 function getCurrentUser() {
-  const sessionData = sessionStorage.getItem('supabase_session');
-  const userData = sessionStorage.getItem('supabase_user');
+  const sessionData = localStorage.getItem('supabase_session');
+  const userData = localStorage.getItem('supabase_user');
   
   if (sessionData && userData) {
     const session = JSON.parse(sessionData);
@@ -202,7 +202,7 @@ function getCurrentUser() {
 // 5. GET ACCESS TOKEN - For authenticated requests
 // ============================================
 function getAccessToken() {
-  const sessionData = sessionStorage.getItem('supabase_session');
+  const sessionData = localStorage.getItem('supabase_session');
   if (sessionData) {
     const session = JSON.parse(sessionData);
     return session.access_token;
@@ -251,7 +251,7 @@ async function requestPasswordReset(email) {
 // ============================================
 function storeSession(data) {
   if (data.access_token) {
-    sessionStorage.setItem('supabase_session', JSON.stringify({
+    localStorage.setItem('supabase_session', JSON.stringify({
       access_token: data.access_token,
       refresh_token: data.refresh_token,
       expires_at: data.expires_at
@@ -259,7 +259,7 @@ function storeSession(data) {
   }
   
   if (data.user) {
-    sessionStorage.setItem('supabase_user', JSON.stringify(data.user));
+    localStorage.setItem('supabase_user', JSON.stringify(data.user));
   }
 }
 
@@ -301,7 +301,7 @@ async function updateUserProfile(updates) {
     });
 
     // Update stored user data
-    sessionStorage.setItem('supabase_user', JSON.stringify(data));
+    localStorage.setItem('supabase_user', JSON.stringify(data));
 
     return {
       success: true,
