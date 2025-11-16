@@ -676,8 +676,8 @@ a.indicator-link:hover {
 }
 
 .brand-name {
-  font-size: 26px;
-  font-family: 'Times New Roman', serif;
+  font-size: 27px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .phone-link {
@@ -1445,6 +1445,7 @@ a.indicator-link:hover {
     justify-content: center;
     padding: 10px 5px;
     font-size: 10px;
+    font-family: 'Poppins', sans-serif;
   }
 
   .nav-right a {
