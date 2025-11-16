@@ -231,271 +231,66 @@
   </div>
 
   <!-- Footer -->
-<footer class="custom-footer">
-  <div class="footer-container">
-    <!-- Social Media -->
-    <div class="footer-section social-media">
-      <h3 data-translate="footer_social_media">Follow us on social media</h3>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/@CREATIVERISINGMINDSOFFICIAL"><i class="fab fa-youtube"></i></a>
-        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
-        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
-          <span class="tv-icon">
-            <img src="images/logo/TVicon.png" alt="TradingView">
-          </span>
-        </a>
-        <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+  <footer class="custom-footer">
+    <div class="footer-container">
+      <!-- Social Media -->
+      <div class="footer-section social-media">
+        <h3 data-translate="footer_social_media">Follow us on social media</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@CREATIVERISINGMINDSOFFICIAL"><i class="fab fa-youtube"></i></a>
+          <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
+          <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+            <span class="tv-icon">
+              <img src="images/logo/TVicon.png" alt="TradingView">
+            </span>
+          </a>
+          <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="contact-info">
+          <h3 data-translate="footer_contact_us">Contact Us</h3>
+          <p class="email-container">
+            <i class="fas fa-envelope"></i> 
+            <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
+          </p>
+          <p class="phone-container">
+            <i class="fas fa-phone-alt"></i> 
+            <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
+          </p>
+        </div>
       </div>
 
-      <div class="contact-info">
-        <h3 data-translate="footer_contact_us">Contact Us</h3>
-        <p class="email-container">
-          <i class="fas fa-envelope"></i> 
-          <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
-        </p>
-        <p class="phone-container">
-          <i class="fas fa-phone-alt"></i> 
-          <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
-        </p>
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3 data-translate="footer_quick_links">Quick Links</h3>
+        <ul>
+          <li><a href="index.html#home" data-translate="footer_home">Home</a></li>
+          <li><a href="disclaimer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
+          <li><a href="index.html#contact" data-translate="footer_contact_us">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Policies -->
+      <div class="footer-section">
+        <h3 data-translate="footer_policies">Policies and Compliance</h3>
+        <ul>
+          <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
+          <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h3 data-translate="footer_quick_links">Quick Links</h3>
-      <ul>
-        <li><a href="index.html#home" data-translate="footer_home">Home</a></li>
-        <li><a href="disclaimer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
-        <li><a href="index.html#contact" data-translate="footer_contact_us">Contact Us</a></li>
-      </ul>
+    <!-- Footer Bottom -->
+    <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
+      © 2025 Creative Rising Minds. All rights reserved.
     </div>
-
-    <!-- Policies -->
-    <div class="footer-section">
-      <h3 data-translate="footer_policies">Policies and Compliance</h3>
-      <ul>
-        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
-        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
-    © 2025 Creative Rising Minds. All rights reserved.
-  </div>
-</footer>
-<script src="script.js"></script>
-  <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
-  <script>
-    const carousel = document.getElementById('carousel');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const images = document.querySelectorAll('.carousel-image');
-    let currentIndex = 0;
-    let overlay = null;
-    let fullscreenLeft, fullscreenRight;
-
-    function updateCarousel() {
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-      prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
-      nextBtn.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
-    }
-
-    function updateFullscreenNav() {
-      if (!fullscreenLeft || !fullscreenRight) return;
-      fullscreenLeft.style.display = currentIndex === 0 ? 'none' : 'block';
-      fullscreenRight.style.display = currentIndex === images.length - 1 ? 'none' : 'block';
-    }
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < images.length - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
-
-    images.forEach((img, index) => {
-      img.addEventListener('click', () => {
-        currentIndex = index;
-
-        overlay = document.createElement('div');
-        overlay.className = 'fullscreen-overlay';
-
-        const fullscreenImg = img.cloneNode();
-        fullscreenImg.className = 'fullscreen-img';
-
-        const closeBtn = document.createElement('button');
-        closeBtn.className = 'close-btn';
-        closeBtn.innerHTML = '&times;';
-        closeBtn.onclick = () => {
-          overlay.remove();
-          overlay = null;
-        };
-
-        fullscreenLeft = document.createElement('button');
-        fullscreenLeft.className = 'fullscreen-nav-button fullscreen-left';
-        fullscreenLeft.innerHTML = '&#x276E;';
-        fullscreenLeft.onclick = () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            fullscreenImg.src = images[currentIndex].src;
-            updateFullscreenNav();
-          }
-        };
-
-        fullscreenRight = document.createElement('button');
-        fullscreenRight.className = 'fullscreen-nav-button fullscreen-right';
-        fullscreenRight.innerHTML = '&#x276F;';
-        fullscreenRight.onclick = () => {
-          if (currentIndex < images.length - 1) {
-            currentIndex++;
-            fullscreenImg.src = images[currentIndex].src;
-            updateFullscreenNav();
-          }
-        };
-
-        overlay.appendChild(closeBtn);
-        overlay.appendChild(fullscreenLeft);
-        overlay.appendChild(fullscreenRight);
-        overlay.appendChild(fullscreenImg);
-        document.body.appendChild(overlay);
-
-        updateFullscreenNav();
-      });
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (overlay) {
-        if (e.key === 'Escape') {
-          overlay.remove();
-          overlay = null;
-        } else if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
-          currentIndex++;
-          document.querySelector('.fullscreen-img').src = images[currentIndex].src;
-          updateFullscreenNav();
-        } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-          currentIndex--;
-          document.querySelector('.fullscreen-img').src = images[currentIndex].src;
-          updateFullscreenNav();
-        }
-        return;
-      }
-
-      if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {
-        currentIndex++;
-        updateCarousel();
-      } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
-
-    updateCarousel();
-  </script>
+  </footer>
   <script src="script.js"></script>
- <script src="auth-helper.js"></script>
-  <script>
-   function updateUserMenu() {
-    const user = getCurrentUser();
-    const loggedOutMenu = document.getElementById('userIconLoggedOut');
-    const loggedInMenu = document.getElementById('userIconLoggedIn');
-    const userNameNav = document.getElementById('userNameNav');
-
-    if (user) {
-        loggedOutMenu.style.display = 'none';
-        loggedInMenu.style.display = 'flex';
-        
-        const displayName = user.user_metadata?.full_name 
-            ? user.user_metadata.full_name.split(' ')[0]
-            : user.email.split('@')[0];
-        
-        userNameNav.textContent = displayName;
-    } else {
-        loggedOutMenu.style.display = 'flex';
-        loggedInMenu.style.display = 'none';
-    }
-}
-
-// Toggle dropdown on click for mobile
-function toggleDropdown(event) {
-    event.stopPropagation(); // Prevent click from bubbling to document
-    const userIcon = event.currentTarget;
-    const dropdown = userIcon.querySelector('.dropdown-menu');
-    const isActive = dropdown.classList.contains('active');
-    
-    // Close all dropdowns and remove overlay
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.classList.remove('active');
-    });
-    document.querySelectorAll('.dropdown-overlay').forEach(overlay => {
-        overlay.remove();
-    });
-    document.body.classList.remove('dropdown-open');
-    
-    // Toggle current dropdown
-    if (!isActive) {
-        dropdown.classList.add('active');
-        // Add overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'dropdown-overlay';
-        userIcon.appendChild(overlay);
-        document.body.classList.add('dropdown-open');
-    }
-}
-
-// Close dropdown when clicking outside
-function closeDropdown(event) {
-    const userMenu = document.querySelector('.user-menu');
-    if (userMenu && !userMenu.contains(event.target)) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.classList.remove('active');
-        });
-        document.querySelectorAll('.dropdown-overlay').forEach(overlay => {
-            overlay.remove();
-        });
-        document.body.classList.remove('dropdown-open');
-    }
-}
-
-// Close dropdown when clicking a dropdown item
-function handleDropdownItemClick(event) {
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.classList.remove('active');
-    });
-    document.querySelectorAll('.dropdown-overlay').forEach(overlay => {
-        overlay.remove();
-    });
-    document.body.classList.remove('dropdown-open');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateUserMenu();
-    
-    // Add click event listeners for user icons
-    const userIcons = document.querySelectorAll('.user-icon');
-    userIcons.forEach(icon => {
-        icon.addEventListener('click', toggleDropdown);
-    });
-    
-    // Add click event listeners for dropdown items
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', handleDropdownItemClick);
-    });
-    
-    // Close dropdown on outside click
-    document.addEventListener('click', closeDropdown);
-});
-  </script>
+    <!-- <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script> -->
+  <script src="imageCarousel.js"></script>
+  <script src="auth-helper.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

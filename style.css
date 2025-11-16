@@ -1444,7 +1444,7 @@ a.indicator-link:hover {
     backdrop-filter: blur(10px);
     justify-content: center;
     padding: 10px 5px;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .nav-right a {
@@ -1653,7 +1653,7 @@ a.indicator-link:hover {
   }
 
   .nav-right {
-    font-size: 12px;
+    font-size: 10px;
     padding: 8px 5px;
   }
 
