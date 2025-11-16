@@ -46,7 +46,6 @@ async function signup(email, password, fullName = '') {
     });
 
     if (data.user) {
-      // Store session
       storeSession(data);
       return {
         success: true,
@@ -69,10 +68,7 @@ async function signInWithGoogle() {
   try {
     const redirectTo = window.location.origin + '/dashboard.html';
     const authUrl = `${SUPABASE_URL}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
-    
-    // Redirect to Google OAuth
     window.location.href = authUrl;
-    
     return {
       success: true,
       message: 'Redirecting to Google...'
@@ -89,41 +85,32 @@ async function signInWithGoogle() {
 // 1C. HANDLE OAUTH CALLBACK
 // ============================================
 function handleOAuthCallback() {
-  // Check if we have OAuth tokens in URL hash
   const hash = window.location.hash;
   
   if (hash && hash.includes('access_token')) {
-    // Parse hash parameters
     const params = new URLSearchParams(hash.substring(1));
     const accessToken = params.get('access_token');
     const refreshToken = params.get('refresh_token');
     const expiresIn = params.get('expires_in');
     
     if (accessToken) {
-      // Store session
       storeSession({
         access_token: accessToken,
         refresh_token: refreshToken,
         expires_at: Math.floor(Date.now() / 1000) + parseInt(expiresIn)
       });
-      
-      // Fetch user data
       fetchCurrentUser(accessToken).then(user => {
         if (user) {
           storeSession({ user });
-          // Clean URL and redirect
           window.location.href = '/dashboard.html';
         }
       });
-      
       return true;
     }
   }
-  
   return false;
 }
 
-// Fetch current user data with access token
 async function fetchCurrentUser(token) {
   try {
     const data = await supabaseFetch('/auth/v1/user', {
@@ -153,7 +140,6 @@ async function login(email, password) {
     });
 
     if (data.access_token) {
-      // Store session
       storeSession(data);
       return {
         success: true,
@@ -179,7 +165,7 @@ function logout() {
 }
 
 // ============================================
-// 4. GET CURRENT USER - Check if logged in
+// 4. GET CURRENT USER - Check if logged in (UPDATED)
 // ============================================
 function getCurrentUser() {
   const sessionData = localStorage.getItem('supabase_session');
@@ -188,18 +174,21 @@ function getCurrentUser() {
   if (sessionData && userData) {
     const session = JSON.parse(sessionData);
     const user = JSON.parse(userData);
-    
-    // Check if session is expired
-    if (session.expires_at && new Date(session.expires_at * 1000) > new Date()) {
+
+    // Check token expiry
+    if (!session.expires_at || Date.now() < session.expires_at * 1000) {
       return user;
     }
+
+    // If expired, logout
+    logout();
+    return null;
   }
-  
   return null;
 }
 
 // ============================================
-// 5. GET ACCESS TOKEN - For authenticated requests
+// 5. GET ACCESS TOKEN
 // ============================================
 function getAccessToken() {
   const sessionData = localStorage.getItem('supabase_session');
@@ -211,7 +200,7 @@ function getAccessToken() {
 }
 
 // ============================================
-// 6. REQUIRE AUTH - Protect pages (redirect if not logged in)
+// 6. REQUIRE AUTH - redirect if not logged in
 // ============================================
 function requireAuth() {
   const user = getCurrentUser();
@@ -223,7 +212,7 @@ function requireAuth() {
 }
 
 // ============================================
-// 7. PASSWORD RESET - Request password reset email
+// 7. PASSWORD RESET - Request reset email
 // ============================================
 async function requestPasswordReset(email) {
   try {
@@ -247,7 +236,7 @@ async function requestPasswordReset(email) {
 }
 
 // ============================================
-// 8. STORE SESSION - Save user session data
+// 8. STORE SESSION - Save user session data (UPDATED)
 // ============================================
 function storeSession(data) {
   if (data.access_token) {
@@ -264,14 +253,13 @@ function storeSession(data) {
 }
 
 // ============================================
-// 9. FETCH USER DATA - Get user info with auth
+// 9. FETCH USER DATA - requires auth
 // ============================================
 async function fetchUserData(endpoint) {
   const token = getAccessToken();
   if (!token) {
     throw new Error('Not authenticated');
   }
-
   return await supabaseFetch(endpoint, {
     method: 'GET',
     headers: {
@@ -281,14 +269,13 @@ async function fetchUserData(endpoint) {
 }
 
 // ============================================
-// 10. UPDATE USER PROFILE - Update user metadata
+// 10. UPDATE USER PROFILE
 // ============================================
 async function updateUserProfile(updates) {
   const token = getAccessToken();
   if (!token) {
     return { success: false, message: 'Not authenticated' };
   }
-
   try {
     const data = await supabaseFetch('/auth/v1/user', {
       method: 'PUT',
@@ -300,7 +287,6 @@ async function updateUserProfile(updates) {
       })
     });
 
-    // Update stored user data
     localStorage.setItem('supabase_user', JSON.stringify(data));
 
     return {
