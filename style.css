@@ -1636,6 +1636,7 @@ a.indicator-link:hover {
   .qr-img {
     max-width: 220px;
   }
+  
 }
 
 /* Small mobile devices */
@@ -1689,9 +1690,6 @@ a.indicator-link:hover {
     margin-bottom: 25px;
     line-height: 1.5;
   }
-  .hero-buttons{
-    font-size: 0.5rem;
-  }
 
   .hero-buttons {
     gap: 12px;
@@ -1700,7 +1698,7 @@ a.indicator-link:hover {
 
   .cta {
     padding: 10px 22px;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
   }
 
   /* Cards */
