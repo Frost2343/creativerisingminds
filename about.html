@@ -234,228 +234,34 @@
    MOBILE & TABLET RESPONSIVE STYLES
    Add this to your existing CSS or style section
    ============================================ */
-
-    /* Tablet View (768px - 1024px) */
-    @media (max-width: 1024px) {
-    .about-hero {
-        max-width: 90%;
-        margin: 30px auto 50px auto;
-        padding: 50px 30px;
-    }
-
-    .about-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-hero p {
-        font-size: 1.1rem;
-    }
-
-    .about-container {
-        max-width: 90%;
-        gap: 50px;
-        padding: 15px;
-    }
-
-    .about-section h2 {
-        font-size: 2rem;
-    }
-
-    .about-section p {
-        font-size: 1rem;
-    }
-
-    .values-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .value-card {
-        padding: 25px;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .about-cta h2 {
-        font-size: 1.8rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 12px 25px;
-    }
-    }
+    /* ============================================
+   MOBILE FONT SIZE ADJUSTMENTS ONLY
+   ============================================ */
 
     /* Mobile View (up to 767px) */
     @media (max-width: 767px) {
-    body {
-        font-size: 14px;
-    }
-
-    /* Hero Section Mobile */
-    .about-hero {
-        max-width: 95%;
-        margin: 20px auto 40px auto;
-        padding: 40px 20px;
-        border-radius: 8px;
-    }
-
     .about-hero h1 {
-        font-size: 1.8rem;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        line-height: 1.3;
+        font-size: 2rem;
     }
 
     .about-hero p {
         font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    /* Main Container Mobile */
-    .about-container {
-        max-width: 95%;
-        gap: 40px;
-        padding: 10px;
-        margin-bottom: 30px;
-    }
-
-    /* Section Styling Mobile */
-    .about-section {
-        padding: 15px 10px;
     }
 
     .about-section h2 {
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        padding-bottom: 8px;
+        font-size: 1.8rem;
     }
 
     .about-section p {
         font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-
-    /* Values Grid Mobile - Single Column */
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .value-card {
-        padding: 25px 20px;
-    }
-
-    .value-card .value-icon {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
     }
 
     .value-card h3 {
         font-size: 1.3rem;
-        margin-bottom: 8px;
     }
 
     .value-card p {
         font-size: 0.9rem;
-    }
-
-    /* Team Grid Mobile - Single Column */
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .team-card {
-        padding: 25px 15px;
-    }
-
-    .team-card img {
-        width: 100px;
-        height: 100px;
-        border: 2px solid #f39c12;
-        margin-bottom: 15px;
-    }
-
-    .team-card h3 {
-        font-size: 1.3rem;
-        margin-bottom: 5px;
-    }
-
-    .team-card .team-role {
-        font-size: 0.95rem;
-        margin-bottom: 12px;
-    }
-
-    .team-card .team-bio {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    /* CTA Section Mobile */
-    .about-cta {
-        padding: 35px 20px;
-        border-radius: 8px;
-    }
-
-    .about-cta h2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        line-height: 1.3;
-    }
-
-    .about-cta p {
-        font-size: 0.95rem !important;
-        margin-bottom: 20px !important;
-    }
-
-    .cta-button {
-        font-size: 0.95rem;
-        padding: 12px 25px;
-        width: 100%;
-        max-width: 300px;
-    }
-    }
-
-    /* Small Mobile View (up to 480px) */
-    @media (max-width: 480px) {
-    .about-hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .about-hero p {
-        font-size: 0.9rem;
-    }
-
-    .about-section h2 {
-        font-size: 1.4rem;
-    }
-
-    .about-section p {
-        font-size: 0.9rem;
-    }
-
-    .value-card {
-        padding: 20px 15px;
-    }
-
-    .value-card .value-icon {
-        font-size: 2rem;
-    }
-
-    .value-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .team-card img {
-        width: 90px;
-        height: 90px;
     }
 
     .team-card h3 {
@@ -471,77 +277,18 @@
     }
 
     .about-cta h2 {
-        font-size: 1.3rem;
-    }
-
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-    }
-
-    /* Landscape Mobile View */
-    @media (max-width: 767px) and (orientation: landscape) {
-    .about-hero {
-        padding: 30px 20px;
-    }
-
-    .about-hero h1 {
         font-size: 1.6rem;
     }
 
-    .about-container {
-        gap: 30px;
+    .about-cta p {
+        font-size: 0.95rem;
     }
 
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .cta-button {
+        font-size: 1rem;
     }
     }
-
-    /* Animation adjustments for mobile */
-    @media (max-width: 767px) {
-    .slide-in {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .from-left,
-    .from-right {
-        transform: translateX(0);
-    }
-
-    /* Optional: Keep animations but make them subtle */
-    .slide-in.from-left {
-        transform: translateX(-30px);
-    }
-
-    .slide-in.from-right {
-        transform: translateX(30px);
-    }
-    }
-
-    /* Touch-friendly hover states for mobile */
-    @media (hover: none) and (pointer: coarse) {
-    .value-card:hover,
-    .team-card:hover {
-        transform: none;
-    }
-
-    .value-card:active,
-    .team-card:active {
-        transform: scale(0.98);
-        opacity: 0.9;
-    }
-
-    .cta-button:hover {
-        transform: none;
-    }
-
-    .cta-button:active {
-        transform: scale(0.95);
-    }
-    }
+   
   </style>
 </head>
 <body>
