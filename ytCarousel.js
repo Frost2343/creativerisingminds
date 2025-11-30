@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "DybtxopA5mI",
     "zIKRGYjonB8",
     "-_FiHkegyIk",
+    "mD3k-XRPyDA",
   ];
 
   const carousel = document.querySelector(".yt-carousel");
