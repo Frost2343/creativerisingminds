@@ -185,6 +185,9 @@ const translations = {
     indicator_momentum_title: "CRM Momentum Finder",
     indicator_volatility_title : "CRM Volatility Tracker",
     indicator_scalp_desc : "<strong>Ultimate Scalp PRO is a versatile indicator crafted for scalping, delivering precise entry and exit signals tailored for quick intraday moves, boosting efficiency and accuracy in fast-paced trading environments.</strong>",
+    indicator_ultimate_scalp_pro_max_title: "Ultimate Scalp PRO Max [<span class='crm-tag'>CRM</span>]",
+    indicator_ultimate_scalp_pro_max_price_title: "Ultimate Scalp PRO Max <span style='color:#00ffcc'>[Best-Seller]</span>",
+    indicator_ultimate_scalp_pro_max_desc: "<strong>Ultimate Scalp PRO Max is a powerful all-in-one scalping indicator that combines precision intraday entry-exit signals with multi-timeframe trend tracking and automated demand-supply zones, helping traders identify high-probability setups quickly without switching charts.</strong>",
     indicator_scalp_price_title : "Ultimate Scalp PRO",
     indicator_trend_price_title: "CRM Trend Analyser",
     //demand supply translations
@@ -673,6 +676,9 @@ const translations = {
     indicator_volatility_title: "CRM વોલેટિલિટી ટ્રેકર",
     //scalp
     indicator_scalp_desc: "<strong>અલ્ટિમેટ સ્કૅલ્પ પ્રો એ સ્કૅલ્પિંગ માટે બનાવવામાં આવેલ એક વર્સાટાઇલ ઇન્ડિકેટર છે, જે ઝડપી ઇન્ટ્રાડે મુવ્સ માટે સટીક પ્રવેશ અને નીકળવાના સંકેત આપે છે, કાર્યક્ષમતા અને ચોકસાઇ વધારે છે.</strong>",
+    indicator_ultimate_scalp_pro_max_title: "અલ્ટિમેટ સ્કૅલ્પ પ્રો મેક્સ [<span class='crm-tag'>CRM</span>]",
+    indicator_ultimate_scalp_pro_max_price_title: "અલ્ટિમેટ સ્કૅલ્પ પ્રો મેક્સ <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span>",
+    indicator_ultimate_scalp_pro_max_desc: "<strong>અલ્ટિમેટ સ્કૅલ્પ પ્રો મેક્સ એક શક્તિશાળી ઑલ-ઇન-વન સ્કૅલ્પિંગ ઇન્ડિકેટર છે જે સટીક ઇન્ટ્રાડે પ્રવેશ-નીકળવાના સંકેતોને મલ્ટી-ટાઇમફ્રેમ ટ્રેન્ડ ટ્રૅકિંગ અને સ્વચાલિત ડિમાન્ડ-સપ્લાય ઝોન સાથે જોડે છે, જે ટ્રેડર્સને ચાર્ટ બદલ્યા વિના ઝડપથી ઉચ્ચ-સંભાવના સેટઅપ્સ ઓળખવામાં મદદ કરે છે.</strong>",
     indicator_scalp_price_title: "અલ્ટિમેટ સ્કૅલ્પ પ્રો",
     //demandsupply
     page_title_demandsupply: "ડિમાન્ડ સપ્લાઇ MTF સૂચકો",
@@ -1157,6 +1163,9 @@ const translations = {
     indicator_momentum_title: "CRM मॉमेंटम शोधक",
     indicator_volatility_title: "CRM व्होलॅटिलिटी ट्रॅकर",
     indicator_scalp_desc: "<strong>अल्टीमेट स्कॅल्प प्रो हे स्कॅल्पिंगसाठी बनवलेले बहुमुखी इंडिकेटर आहे, जे जलद इंट्राडे मूव्ह्ससाठी अचूक प्रवेश आणि बाहेर पडण्याचे संकेत देते, कार्यक्षमता आणि अचूकता वाढवते.</strong>",
+    indicator_ultimate_scalp_pro_max_title: "अल्टीमेट स्कॅल्प प्रो मॅक्स [<span class='crm-tag'>CRM</span>]",
+    indicator_ultimate_scalp_pro_max_price_title: "अल्टीमेट स्कॅल्प प्रो मॅक्स <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
+    indicator_ultimate_scalp_pro_max_desc: "<strong>अल्टीमेट स्कॅल्प प्रो मॅक्स हे एक शक्तिशाली ऑल-इन-वन स्कॅल्पिंग इंडिकेटर आहे जे अचूक इंट्राडे प्रवेश-बाहेर पडण्याचे संकेत मल्टी-टाइमफ्रेम ट्रेंड ट्रॅकिंग आणि स्वयंचलित डिमांड-सप्लाय झोनसोबत जोडते, ज्यामुळे ट्रेडर्सना चार्ट बदलण्याशिवाय जलद उच्च-संभाव्य सेटअप्स ओळखण्यास मदत होते.</strong>",
     indicator_scalp_price_title: "अल्टीमेट स्कॅल्प प्रो",
 
     //demandsupply
@@ -1643,6 +1652,9 @@ const translations = {
     indicator_momentum_title: "CRM मोमेंटम फाइंडर",
     indicator_volatility_title: "CRM वोलैटिलिटी ट्रैकर",
     indicator_scalp_desc: "<strong>अल्टीमेट स्कैल्प प्रो एक बहुमुखी इंडिकेटर है जो स्कैल्पिंग के लिए बनाया गया है, जो तेज इंट्राडे मूव्स के लिए सटीक प्रवेश और निकास संकेत प्रदान करता है, दक्षता और सटीकता बढ़ाता है।</strong>",
+    indicator_ultimate_scalp_pro_max_title: "अल्टीमेट स्कैल्प प्रो मैक्स [<span class='crm-tag'>CRM</span>]",
+    indicator_ultimate_scalp_pro_max_price_title: "अल्टीमेट स्कैल्प प्रो मैक्स <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
+    indicator_ultimate_scalp_pro_max_desc: "<strong>अल्टीमेट स्कैल्प प्रो मैक्स एक शक्तिशाली ऑल-इन-वन स्कैल्पिंग इंडिकेटर है जो सटीक इंट्राडे प्रवेश-निकास संकेतों को मल्टी-टाइमफ्रेम ट्रेंड ट्रैकिंग और स्वचालित डिमांड-सप्लाई ज़ोन के साथ जोड़ता है, जिससे ट्रेडर्स को चार्ट बदलने के बिना तेज़ी से उच्च-संभावना सेटअप्स पहचानने में मदद मिलती है।</strong>",
     indicator_scalp_price_title: "अल्टीमेट स्कैल्प प्रो",
     indicator_trend_price_title: "CRM ट्रेंड एनालाइज़र",
     //demand supply translations
