@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="page_title_scalp_ultra_supreme">Scalp Ultra Supreme [CRM]</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="indicator1.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logo/CRM-LOGO.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html#home" class="brand-container">
+        <img src="images/logo/CRM-LOGO.png" alt="Logo" class="logo">
+        <span class="brand-name" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+          Creative Rising Minds
+        </span>
+      </a>
+    </div>
+
+    <!-- Navigation Links and Language Switcher -->
+    <div class="nav-right" id="nav-right">
+      <a href="index.html#home" data-translate="nav_home">Home</a>
+      <a href="index.html#indicators" data-translate="nav_indicators">Indicators</a>
+      <a href="index.html#pricing" data-translate="nav_pricing">Pricing</a>
+      <a href="index.html#contact" data-translate="nav_contact">Contact</a>
+      <!-- ===================== -->
+      <div class="language-switcher">
+        <select id="language-select" onchange="changeLanguage()" class="brand-container">
+          <option value="en">English</option>
+          <option value="mr">मराठी</option>
+          <option value="gu">ગુજરાતી</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+      <!-- usermenu -->
+     <div class="user-menu">
+    <!-- When NOT logged in -->
+    <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
+        <!-- <span class="user-icon-avatar">👤</span> -->
+        <i class="fa fa-user" style="color: #fff;"></i>
+
+        <div class="dropdown-menu" id="dropdownLoggedOut">
+            <a href="signup.html" class="dropdown-item">
+                <span class="dropdown-icon">📝</span>
+                <span>Sign Up</span>
+            </a>
+            <a href="login.html" class="dropdown-item">
+                <span class="dropdown-icon">🔐</span>
+                <span>Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- When logged in (hidden by default) -->
+    <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
+        <!-- <span class="user-icon-avatar">👤</span> -->
+         <i class="fa fa-user" style="color: #fff;"></i>
+        <span class="user-icon-name" id="userNameNav">User</span>
+        
+        <div class="dropdown-menu" id="dropdownLoggedIn">
+            <a href="dashboard.html" class="dropdown-item">
+                <span class="dropdown-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="dashboard.html#subscriptions" class="dropdown-item">
+                <span class="dropdown-icon">🎯</span>
+                <span>My Subscriptions</span>
+            </a>
+            <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
+                <span class="dropdown-icon">🚪</span>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+      
+    </div>
+    <!-- Scrolling Message -->
+  <div class="scroll-container">
+  <div class="scroll-text">
+    🚀 <span data-translate="free_trial_text">If you want to avail <b>FREE Trial</b>, fill this</span> 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaFvg8PUavKxtlCPnVYeJYdOfoD-UcUzNs4Zrh5L1QuFTyLg/viewform" target="_blank" data-translate="google_form_text">Google Form</a> ✅ 
+    &nbsp; | &nbsp; 
+    🎯 <span data-translate="try_indicators_text">Try our free indicators</span> → 
+    <a href="https://in.tradingview.com/script/rudH9vEq-EMA-Supertrend-CRM/" target="_blank" data-translate="ema_supertrend_text">EMA Supertrend [CRM]</a>, 
+    <a href="https://in.tradingview.com/script/wW98ES3s-EMA-Cross-RSI-CRM/" target="_blank" data-translate="ema_cross_rsi_text">EMA Cross RSI [CRM]</a>
+    &nbsp; | &nbsp;
+    🎯 <span data-translate="indicators_title">Try our premium indicators</span> → 
+    <a href="https://in.tradingview.com/script/liWlYTbi-Ultimate-Scalp-PRO-CRM/" target="_blank" data-translate="indicator_scalp_swing">EMA Supertrend [CRM]</a>, 
+    <a href="https://in.tradingview.com/script/odeb66KT-Twin-Chart-CRM/" target="_blank" data-translate="indicator_twin_chart">EMA Cross RSI [CRM]</a>,
+    <a href="https://in.tradingview.com/script/jQhpPd4o-MTF-Demand-Supply-CRM/" target="_blank" data-translate="indicator_mtf_pivot_matrix">EMA Cross RSI [CRM]</a>
+  </div>
+</div>
+  </nav>
+
+<br>
+
+<div class="container">
+  <a href="https://in.tradingview.com/script/77UlxkIm-Scalp-Ultra-Supreme-CRM/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>
+
+  <h1 data-translate="main_heading_scalp_ultra_supreme">
+    💡Scalp Ultra Supreme [CRM] – <span class="highlight">Ultimate Scalp+MTF Confluence Engine</span>💡
+  </h1>
+
+  <p class="subheading" data-translate="subheading_scalp_ultra_supreme">
+    Precision Scalping | Multi-Timeframe Structure | Automated Trade Mapping
+  </p>
+
+  <div class="carousel-wrapper">
+    <button class="nav-button nav-btn-left" id="prevBtn" style="display: none;background-color: black;">❮</button>
+    <div class="carousel-track" id="carousel">
+      <img src="images/scalp_ultra_supreme_crm.png" class="carousel-image">
+    </div>
+    <button class="nav-button nav-btn-right" id="nextBtn" style="display: none;background-color: black;">❯</button>
+
+  </div>
+
+  <section class="feature-card">
+    <h3 data-translate="feature_description_title_sus">📌 Description</h3>
+    <p data-translate="feature_description_sus_1">
+      Scalp Ultra Supreme is the most advanced CRM trading suite, combining the speed of breakout-based scalping with
+      multi-timeframe demand-supply and pivot confluence — engineered for traders who demand precision entries,
+      controlled risk, and structured decision-making in fast markets.
+    </p>
+  </section>
+
+  <section class="feature-card">
+    <h3 data-translate="feature_key_title_sus">✅ Core Capabilities</h3>
+    <ul>
+      <li data-translate="feature_sus_1">Breakout-based scalping system with automatic Entry, SL, TP1-TP4 mapping</li>
+      <li data-translate="feature_sus_2">Integrated multi-timeframe demand & supply zones for structural confluence</li>
+      <li data-translate="feature_sus_3">Integrated order blocks with dynamic trendline engine</li>
+      <li data-translate="feature_sus_4">Smart Buy/Sell markers with risk-reward optimized trade projection</li>
+      <li data-translate="feature_sus_5">Real-time momentum & structure alignment for trade validation</li>
+    </ul>
+  </section>
+
+  <section class="feature-card">
+    <h3 data-translate="feature_usage_title_sus">🎯 Ideal For</h3>
+    <ul>
+      <li data-translate="feature_usage_1"><span class="highlight">Scalp Traders:</span> Lightning-fast entries with disciplined risk control</li>
+      <li data-translate="feature_usage_2"><span class="highlight">Structure Traders:</span> High-probability reversals at institutional zones</li>
+    </ul>
+  </section>
+
+  <section class="feature-card">
+    <h3 data-translate="feature_timeframes_title_sus">🕒 Recommended Timeframes</h3>
+    <ul>
+      <li data-translate="feature_timeframes_sus_1"><span class="highlight">3min / 5min → Intraday Scalping</span></li>
+    </ul>
+  </section>
+
+  <section class="feature-card disclaimer">
+    <h3 data-translate="feature_disclaimer_title">⚠️ Disclaimer</h3>
+    <p data-translate="feature_disclaimer_1">This indicator is strictly for educational purposes and does not constitute financial advice.</p>
+    <p data-translate="feature_disclaimer_2">Consult a SEBI-registered advisor before making trading decisions.</p>
+    <p data-translate="feature_disclaimer_3">Use Scalp Ultra Supreme as a decision-support tool, not a standalone trading system.</p>
+  </section>
+
+</div>
+
+<footer class="custom-footer">
+  <div class="footer-container">
+    <!-- Social Media -->
+    <div class="footer-section social-media">
+      <h3 data-translate="footer_social_media">Follow us on social media</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@CREATIVERISINGMINDSOFFICIAL"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
+        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+          <span class="tv-icon">
+            <img src="images/logo/TVicon.png" alt="TradingView">
+          </span>
+        </a>
+        <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <div class="contact-info">
+        <h3 data-translate="footer_contact_us">Contact Us</h3>
+        <p class="email-container">
+          <i class="fas fa-envelope"></i> 
+          <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
+        </p>
+        <p class="phone-container">
+          <i class="fas fa-phone-alt"></i> 
+          <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3 data-translate="footer_quick_links">Quick Links</h3>
+      <ul>
+        <li><a href="#home" data-translate="footer_home">Home</a></li>
+        <li><a href="disclaimer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
+        <li><a href="#contact" data-translate="footer_contact_us">Contact Us</a></li>
+        <li><a href="about.html" data-translate="footer_about_us">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section">
+      <h3 data-translate="footer_policies">Policies and Compliance</h3>
+      <ul>
+        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
+        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
+    © 2025 Creative Rising Minds. All rights reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="imageCarousel.js"></script>
+<script src="auth-helper.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
