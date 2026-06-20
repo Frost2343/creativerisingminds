@@ -290,7 +290,7 @@ const translations = {
     //scalp swing translations
     main_heading_scalp : "💡 Ultimate Scalp PRO– <span class=highlight'>Seamless Scalps. Strategic Swings</span> 💡",
     feature_breakout_4: "Plots a <span class='highlight'>momentum oscillator</span> for additional confluence and trade confidence",
-    indicator_mix_title: "CRM Combo 2 (Supreme Scalp PRO + Twin Chart) <span style='color:#00ffcc'>[Best-Seller]</span> ❤️",
+    indicator_mix_title: "CRM Combo 1 (Supreme Scalp PRO + Twin Chart) <span style='color:#00ffcc'>[Best-Seller]</span> ❤️",
     indicator_ema_cross_rsi: "EMA Cross RSI [<span class='crm-tag'>CRM</span>]",
     indicator_ema_supertrend: "EMA Supertrend [<span class='crm-tag'>CRM</span>]",
     free_indicator_message: "Free indicator available for our genuine followers!",
@@ -431,7 +431,7 @@ const translations = {
     twin_chart_risk_signal_desc2: "Clean or full-signal modes for backtesting or live trading.",
     indicator_twin_chart_title: "Twin Chart<br>[<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart: "Twin Chart [<span class='crm-tag'>CRM</span>]",
-    indicator_mix2_title: "CRM Combo 1 (Ultimate Scalp PRO + Twin Chart) <span style='color:#00ffcc'>[Best-Seller]</span>",
+    indicator_mix2_title: "CRM Combo 2 (Ultimate Scalp PRO + Twin Chart) <span style='color:#00ffcc'>[Best-Seller]</span>",
     indicator_mix3_title: "CRM All-in-One (Includes all Premium Indicators) <span style='color:#00ffcc'>[Best-Seller]</span>",
     indicator_twin_chart_desc: "<strong>Twin Chart is a powerful trading indicator that lets you plot a secondary symbol for a simultaneous view of two instruments, while auto-calculating entry, SL, TP, overlaying VWAP, and showing dynamic trend signals.</strong>",
     individual_indicators: "Individual Premium Indicators",
@@ -511,7 +511,9 @@ const translations = {
     feature_disclaimer_title: "⚠️ Disclaimer",
     feature_disclaimer_1: "This indicator is strictly for educational purposes and does not constitute financial advice.",
     feature_disclaimer_2: "Consult a SEBI-registered advisor before making trading decisions.",
-    feature_disclaimer_3: "Use Scalp Ultra Supreme as a decision-support tool, not a standalone trading system."
+    feature_disclaimer_3: "Use Scalp Ultra Supreme as a decision-support tool, not a standalone trading system.",
+    sahi_link: "Sahi",
+    fyers_link: "Mstock"
   },
   gu: {
     // Shared Translations
@@ -586,6 +588,8 @@ const translations = {
     feature_disclaimer_2: "રોકાણના નિર્ણયો લેતા પહેલા હંમેશા SEBI-નોંધાયેલ સલાહકાર અથવા પ્રમાણિત નાણીય આયોજકની સલાહ લો. સર્જક દર્શકો દ્વારા લેવાયેલ કોઈ નાણીય નુકસાન કે નિર્ણય માટે જવાબદાર નથી.",
     feature_disclaimer_3: "આ ટૂલ તમારી પોતાની વ્યૂહરચનાના સમર્થન માટે વાપરો — એકલા ટ્રેડિંગ સિસ્ટમ તરીકે નહી.",
     feature_disclaimer_4: "<strong>આનંદી ટ્રેડિંગ, ચીય! </strong>",
+    sahi_link: "સહી",
+    fyers_link: "એમસ્ટોક",
     // Existing translations...
     video_fallback: "તમારું બ્રાઉઝર વિડિઓ ટેગને સપોર્ટ કરતું નથી.",
     hero_title: "ટ્રેડર્સ માટે બનાવેલ જેઓ<br>તર્કને અનુસરે છે,<br>નસીબને નહીં.",
@@ -804,7 +808,7 @@ const translations = {
     feature_breakout_4: "એક <span class='highlight'>મોમેન્ટમ ઓસિલેટર</span> પ્લોટ કરે છે જે ઉમેરાની કન્ફલ્યુએન્સ અને ટ્રેડ આત્મવિશ્વાસ માટે છે",
     //screener
     indicator_stock_screener_desc: "<strong>CRM સ્ટોક સ્ક્રીનર એક મોમેન્ટમ-ફોકસ્ડ ટૂલ છે જે સ્ટોક્સને સ્કેન કરે છે અને મજબૂત કિંમતી કાર્યવાહી, વોલ્યુમ સર્જ અને ટ્રેન્ડ સંરેખણ દર્શાવે છે—જે ટ્રેડર્સને ઝડપથી ઉચ્ચ-સંભાવના બ્રેકઆઉટ તકો શોધવામાં મદદ કરે છે.</strong>",
-    indicator_mix_title: "CRM કોમ્બો 2 (સુપ્રીમ સ્કૅલ્પ પ્રો + ટ્વિન ચાર્ટ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span> ❤️ ",
+    indicator_mix_title: "CRM કોમ્બો 1 (સુપ્રીમ સ્કૅલ્પ પ્રો + ટ્વિન ચાર્ટ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span> ❤️ ",
     indicator_ema_cross_rsi: "EMA ક્રોસ RSI [<span class='crm-tag'>CRM</span>]",
     indicator_ema_supertrend: "EMA સુપરટ્રેન્ડ [<span class='crm-tag'>CRM</span>]",
     free_indicator_message: "અમારા નિષ્ઠાવાન અનુયાયીઓ માટે ફ્રી ઇન્ડિકેટર ઉપલબ્ધ!",
@@ -943,7 +947,7 @@ const translations = {
     twin_chart_risk_signal_desc2: "બેકટેસ્ટિંગ અથવા લાઇવ ટ્રેડિંગ માટે સ્વચ્છ અથવા સંપૂર્ણ-સિગ્નલ મોડ્સ.",
     indicator_twin_chart_title: "ટ્વિન ચાર્ટ<br>[<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart: "ટ્વિન ચાર્ટ [<span class='crm-tag'>CRM</span>]",
-    indicator_mix2_title: "CRM કોમ્બો 1 (અલ્ટિમેટ સ્કેલ્પ પ્રો + ટ્વિન ચાર્ટ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span>",
+    indicator_mix2_title: "CRM કોમ્બો 2 (અલ્ટિમેટ સ્કેલ્પ પ્રો + ટ્વિન ચાર્ટ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span>",
     indicator_mix3_title: "CRM ઓલ-ઇન-વન (તમામ પ્રીમિયમ સૂચકો સમાવેશ) <span style='color:#00ffcc'>[બેસ્ટ-સેલર]</span>",
     indicator_twin_chart_desc: "<strong>ટ્વિન ચાર્ટ એક શક્તિશાળી ટ્રેડિંગ ઇન્ડિકેટર છે જે તમને બે ઇન્સ્ટ્રુમેન્ટ્સના એકસાથે દેખાવ માટે બીજું પ્રતીક પ્લોટ કરવા દે છે, તેમજ સ્વયંચાલિત રીતે પ્રવેશ, એસએલ, ટીપીની ગણતરી કરે છે, VWAP ઓવરલે કરે છે, અને ગતિશીલ વલણ સિગ્નલ બતાવે છે.</strong>",
     individual_indicators: "વ્યક્તિગત પ્રીમિયમ સૂચકો",
@@ -1316,7 +1320,7 @@ const translations = {
     feature_breakout_4: "एक <span class='highlight'>मोमेंटम ऑसिलेटर</span> प्लॉट करतो जो अतिरिक्त कॉन्फ्लुएन्स आणि ट्रेड आत्मविश्वासासाठी आहे",
     //screener
     indicator_stock_screener_desc: "<strong>CRM स्टॉक स्क्रीनर हे गती-केंद्रित टूल आहे जे स्टॉक्स स्कॅन करून आणि मजबूत किंमत हालचाल, व्हॉल्यूम वाढ आणि ट्रेंड संरेखन दर्शवून ट्रेडर्सना उच्च-संभाव्य ब्रेकआउट संधी लवकर ओळखण्यास मदत करते.</strong>",
-    indicator_mix_title: "CRM कॉम्बो 2 (सुप्रीम स्कॅल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span> ❤️",
+    indicator_mix_title: "CRM कॉम्बो 1 (सुप्रीम स्कॅल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span> ❤️",
     indicator_ema_cross_rsi: "EMA क्रॉस RSI [<span class='crm-tag'>CRM</span>]",
     indicator_ema_supertrend: "EMA सुपरट्रेंड [<span class='crm-tag'>CRM</span>]",
     free_indicator_message: "आमच्या प्रामाणिक अनुयायांसाठी विनामूल्य इंडिकेटर उपलब्ध!",
@@ -1457,7 +1461,7 @@ const translations = {
     twin_chart_risk_signal_desc2: "बॅकटेस्टिंग किंवा लाइव्ह ट्रेडिंगसाठी स्वच्छ किंवा पूर्ण-सिग्नल मोड्स.",
     indicator_twin_chart_title: "ट्विन चार्ट<br>[<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart : "ट्विन चार्ट [<span class='crm-tag'>CRM</span>]",
-    indicator_mix2_title: "CRM कॉम्बो 1 (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
+    indicator_mix2_title: "CRM कॉम्बो 2 (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_mix3_title: "CRM ऑल-इन-वन (सर्व प्रीमियम इंडिकेटर्स समाविष्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट हे एक शक्तिशाली ट्रेडिंग इंडिकेटर आहे जे तुम्हाला दोन इन्स्ट्रुमेंट्सच्या एकाचवेळी दृश्यासाठी दुसरे सिम्बॉल प्लॉट करण्यास देते, तसेच एंट्री, एसएल, टीपी, VWAP ओव्हरलेइंग आणि डायनॅमिक ट्रेंड सिग्नल्स दाखवते.</strong>",
     individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
@@ -1536,7 +1540,9 @@ const translations = {
     feature_disclaimer_title: "⚠️ डिस्क्लेमर",
     feature_disclaimer_1: "हे इंडिकेटर फक्त शैक्षणिक उद्देशांसाठी आहे आणि आर्थिक सल्ला नाही.",
     feature_disclaimer_2: "ट्रेडिंग निर्णय घेण्यापूर्वी SEBI-रजिस्टर्ड सल्लागाराचा सल्ला घ्या.",
-    feature_disclaimer_3: "स्कॅल्प अल्ट्रा सुप्रीमला निर्णय-समर्थन टूल म्हणून वापरा, स्टँडअलोन ट्रेडिंग सिस्टम म्हणून नाही."
+    feature_disclaimer_3: "स्कॅल्प अल्ट्रा सुप्रीमला निर्णय-समर्थन टूल म्हणून वापरा, स्टँडअलोन ट्रेडिंग सिस्टम म्हणून नाही.",
+    sahi_link: "सही",
+    fyers_link: "एमस्टॉक"
   },
   hi: {
     // Shared Translations (from index.html)
@@ -1829,7 +1835,7 @@ const translations = {
     //scalp swing translations
     main_heading_scalp: "💡 अल्टीमेट स्कैल्प प्रो– <span class='highlight'>सीमलेस स्कैल्प्स। रणनीतिक स्विंग्स</span> 💡",
     feature_breakout_4: "<span class='highlight'>मोमेंटम ऑसिलेटर</span> को प्लॉट करता है जो अतिरिक्त कॉन्फ्लुएंस और ट्रेड आत्मविश्वास के लिए",
-    indicator_mix_title: "CRM कॉम्बो 2 (सुप्रीम स्कॅल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span> ❤️",
+    indicator_mix_title: "CRM कॉम्बो 1 (सुप्रीम स्कॅल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span> ❤️",
     indicator_ema_cross_rsi: "EMA क्रॉस RSI [<span class='crm-tag'>CRM</span>]",
     indicator_ema_supertrend: "EMA सुपरट्रेंड [<span class='crm-tag'>CRM</span>]",
     free_indicator_message: "हमारे वास्तविक फॉलोअर्स के लिए मुफ्त इंडिकेटर उपलब्ध!",
@@ -1970,7 +1976,7 @@ const translations = {
     twin_chart_risk_signal_desc2: "बैकटेस्टिंग या लाइव ट्रेडिंग के लिए स्वच्छ या पूर्ण-सिग्नल मोड।",
     indicator_twin_chart_title: "ट्विन चार्ट<br>[<span class='crm-tag'>CRM</span>]",
     indicator_twin_chart: "ट्विन चार्ट [<span class='crm-tag'>CRM</span>]",
-    indicator_mix2_title: "CRM कॉम्बो 1 (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
+    indicator_mix2_title: "CRM कॉम्बो 2 (अल्टिमेट स्कैल्प प्रो + ट्विन चार्ट) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_mix3_title: "CRM ऑल-इन-वन (सभी प्रीमियम इंडिकेटर्स शामिल) <span style='color:#00ffcc'>[बेस्ट-सेलर]</span>",
     indicator_twin_chart_desc: "<strong>ट्विन चार्ट एक शक्तिशाली ट्रेडिंग इंडिकेटर है जो आपको दो प्रतीकों के एक साथ दृश्य के लिए दूसरा प्रतीक प्लॉट करने देता है, साथ ही स्वचालित रूप से प्रवेश, एसएल, टीपी की गणना करता है, VWAP को ओवरले करता है, और गतिशील प्रवृत्ति सिग्नल दिखाता है।</strong>",
     individual_indicators: "वैयक्तिक प्रीमियम इंडिकेटर्स",
@@ -2049,7 +2055,9 @@ const translations = {
     feature_disclaimer_title: "⚠️ अस्वीकरण",
     feature_disclaimer_1: "यह इंडिकेटर केवल शैक्षिक उद्देश्यों के लिए है और वित्तीय सलाह नहीं है।",
     feature_disclaimer_2: "ट्रेडिंग निर्णय लेने से पहले SEBI-रजिस्टर्ड सलाहकार से परामर्श करें।",
-    feature_disclaimer_3: "स्कैल्प अल्ट्रा सुप्रीम को निर्णय-समर्थन टूल के रूप में उपयोग करें, स्टैंडअलोन ट्रेडिंग सिस्टम के रूप में नहीं।"
+    feature_disclaimer_3: "स्कैल्प अल्ट्रा सुप्रीम को निर्णय-समर्थन टूल के रूप में उपयोग करें, स्टैंडअलोन ट्रेडिंग सिस्टम के रूप में नहीं।",
+    sahi_link: "सही",
+    fyers_link: "एमस्टॉक"
   }
 };
 
