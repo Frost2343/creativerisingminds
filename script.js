@@ -513,7 +513,7 @@ const translations = {
     feature_disclaimer_2: "Consult a SEBI-registered advisor before making trading decisions.",
     feature_disclaimer_3: "Use Scalp Ultra Supreme as a decision-support tool, not a standalone trading system.",
     sahi_link: "Sahi",
-    fyers_link: "Mstock"
+    mstock_link: "Mstock"
   },
   gu: {
     // Shared Translations
@@ -589,7 +589,7 @@ const translations = {
     feature_disclaimer_3: "આ ટૂલ તમારી પોતાની વ્યૂહરચનાના સમર્થન માટે વાપરો — એકલા ટ્રેડિંગ સિસ્ટમ તરીકે નહી.",
     feature_disclaimer_4: "<strong>આનંદી ટ્રેડિંગ, ચીય! </strong>",
     sahi_link: "સહી",
-    fyers_link: "એમસ્ટોક",
+    mstock_link: "એમસ્ટોક",
     // Existing translations...
     video_fallback: "તમારું બ્રાઉઝર વિડિઓ ટેગને સપોર્ટ કરતું નથી.",
     hero_title: "ટ્રેડર્સ માટે બનાવેલ જેઓ<br>તર્કને અનુસરે છે,<br>નસીબને નહીં.",
@@ -1542,7 +1542,7 @@ const translations = {
     feature_disclaimer_2: "ट्रेडिंग निर्णय घेण्यापूर्वी SEBI-रजिस्टर्ड सल्लागाराचा सल्ला घ्या.",
     feature_disclaimer_3: "स्कॅल्प अल्ट्रा सुप्रीमला निर्णय-समर्थन टूल म्हणून वापरा, स्टँडअलोन ट्रेडिंग सिस्टम म्हणून नाही.",
     sahi_link: "सही",
-    fyers_link: "एमस्टॉक"
+    mstock_link: "एमस्टॉक"
   },
   hi: {
     // Shared Translations (from index.html)
@@ -2057,7 +2057,7 @@ const translations = {
     feature_disclaimer_2: "ट्रेडिंग निर्णय लेने से पहले SEBI-रजिस्टर्ड सलाहकार से परामर्श करें।",
     feature_disclaimer_3: "स्कैल्प अल्ट्रा सुप्रीम को निर्णय-समर्थन टूल के रूप में उपयोग करें, स्टैंडअलोन ट्रेडिंग सिस्टम के रूप में नहीं।",
     sahi_link: "सही",
-    fyers_link: "एमस्टॉक"
+    mstock_link: "एमस्टॉक"
   }
 };
 
