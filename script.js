@@ -620,6 +620,8 @@ const translations = {
     footer_terms_conditions: "Terms and Conditions",
     footer_copyright: "© 2025 Creative Rising Minds. All rights reserved.",
     watch_and_learn: "Watch & Learn",
+    fyers_link: "Fyers",
+    delta_link: "Delta",
     indicator_scalp_ultra_supreme: "Supreme Scalp PRO [CRM] ❤️ ",
     indicator_scalp_ultra_supreme_title: "Supreme Scalp PRO [CRM]",
     indicator_scalp_ultra_supreme_desc: "<strong>Supreme Scalp PRO is an all-in-one scalping indicator that blends precise intraday signals with multi-timeframe trends and auto demand-supply zones for high-probability setups, without switching timeframes.</strong>",

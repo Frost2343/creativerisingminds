@@ -2198,6 +2198,11 @@ a.indicator-link:hover {
 .premium-grid {
   align-items: stretch;
 }
+.indicator-cards.premium-grid {
+  max-width: calc(3 * 300px + 2 * 28px); /* = 956px — exactly 3 cards + 2 gaps */
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .premium-card-link {
   text-decoration: none;
