@@ -504,7 +504,7 @@ const translations = {
     emast_feature_try_now_2: "Enhances decision-making speed",
     emast_feature_try_now_quote: "<span class='highlight'>“Trade with momentum, not just hope.”</span>",
     google_form_revert: "Once the payment for the selected package is completed, please fill up the Google form below,<br>this allows us to fetch your TradingView ID and enable your access at the earliest!",
-    referralMessage: "Refer our indicator to fellow traders, and once they subscribe to a yearly plan, you'll earn 1 month of free Premium access for every successful referral. Just share your TradingView ID with the person you're referring so they can enter it in the Google Form during signup!",
+    referralMessage: "Refer fellow traders and earn 1 month of FREE Premium for every successful Yearly Plan referral. Simply ask them to enter your TradingView ID in the Google Form while subscribing.",
     google_form_free_revert: "<br>Sign up for your 3 Trading-days free trial by completing the Google form below — valid only once per user!",
     subscription_form: "Google form to be filled after taking subscription <a href=\"https://forms.gle/z88W2XCf6VPsDy2d9\"> LINK</a>",
     trial_form: "Google form to be filled to avail Free Trial <a href=\"https://forms.gle/vkGYegENq9Lb9nD4A\">LINK</a>",
