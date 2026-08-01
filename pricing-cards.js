@@ -223,6 +223,15 @@ function formatINR(amount) {
   return '₹' + Math.round(amount).toLocaleString('en-IN');
 }
 
+function escapeAttr(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -279,7 +288,11 @@ function buildCard(plan, isAnnual) {
       '</div>' +
       '<p class="billed-text">' + billedText + '</p>' +
       savingsHtml +
-      '<button type="button" class="pricing-buy-btn" onclick="initPayment(\'' + plan.productId + '\', \'' + cycle + '\', ' + chargeAmount + ', \'' + escapeHtml(fullName) + '\')">' + buyNow + '</button>' +
+      '<button type="button" class="pricing-buy-btn"' +
+        ' data-product-id="' + escapeAttr(plan.productId) + '"' +
+        ' data-plan-type="' + cycle + '"' +
+        ' data-amount="' + chargeAmount + '"' +
+        ' data-product-name="' + escapeAttr(fullName) + '">' + buyNow + '</button>' +
       '<ul class="pricing-features">' +
         plan.featureKeys.map(function (key) {
           return '<li>' + t(key, key) + '</li>';
@@ -347,12 +360,46 @@ function initBillingRadios() {
   });
 }
 
+function attachBuyNowHandlers() {
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.pricing-buy-btn[data-product-id]');
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const productId = btn.dataset.productId;
+    const planType = btn.dataset.planType;
+    const baseAmount = parseFloat(btn.dataset.amount, 10);
+    const productName = btn.dataset.productName;
+
+    if (typeof window.initPayment === 'function') {
+      window.initPayment(productId, planType, baseAmount, productName);
+    } else {
+      console.error('initPayment is not loaded');
+      alert('Payment system is still loading. Please try again in a moment.');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   applyPricingTheme();
   initBillingRadios();
   renderPricing();
+  attachBuyNowHandlers();
 
-  if (typeof resumePendingPurchase === 'function') {
-    resumePendingPurchase();
+  // Resume purchase after login — slight delay ensures auth session is readable
+  setTimeout(function () {
+    if (typeof resumePendingPurchase === 'function') {
+      resumePendingPurchase();
+    }
+  }, 100);
+
+  // Scroll to pricing when returning from auth with hash
+  if (window.location.hash === '#pricing') {
+    setTimeout(function () {
+      const el = document.getElementById('pricing');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
   }
 });

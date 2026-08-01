@@ -304,6 +304,12 @@
             if (signupLink && returnUrl) {
                 signupLink.href = 'signup.html?returnUrl=' + encodeURIComponent(returnUrl);
             }
+
+            // Update header when returning from Buy Now flow
+            if (returnUrl && returnUrl.includes('pricing')) {
+                const headerP = document.querySelector('.login-header p');
+                if (headerP) headerP.textContent = 'Login to complete your purchase';
+            }
         });
 
         // Handle Google Sign In

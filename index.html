@@ -310,7 +310,11 @@
         <h3 data-translate="sevenday">Get 7-day access to all our premium indicators for just ₹1000 — valid only once per user!</h3>
         <!-- <p data-translate="google_form_free_revert">Sign up for your 7-day free trial by completing this Google Form.</p> -->
         <div class="promo-card-actions">
-          <button class="pricing-buy-btn promo-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', '7-day', 1000, 'CRM All-in-One (Includes all Premium Indicators)')">
+          <button type="button" class="pricing-buy-btn promo-btn"
+            data-product-id="077f892d-52cc-490a-b501-34f2db17aecf"
+            data-plan-type="7-day"
+            data-amount="1000"
+            data-product-name="CRM All-in-One (Includes all Premium Indicators)">
             <i class="fas fa-bolt"></i> Buy 7-Day Pass — ₹1,000
           </button>
           <!-- <a href="https://forms.gle/vkGYegENq9Lb9nD4A" target="_blank" rel="noopener" class="promo-link-btn" data-translate="trial_form">
@@ -504,12 +508,13 @@
  <script src="script.js"></script>
  <script src="auth-helper.js"></script>
  <script>
+   // Handle OAuth tokens landing on homepage (fallback if Supabase Site URL is misconfigured)
    if (window.location.hash && window.location.hash.includes('access_token')) {
      handleOAuthCallback();
    }
  </script>
  <script src="main.js"></script>
- <script src="payments.js"></script> 
+ <script src="payments.js"></script>
  <script src="ytCarousel.js"></script>
  <script src="pricing-cards.js"></script>
 

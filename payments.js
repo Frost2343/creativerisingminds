@@ -29,7 +29,17 @@
     }
   }
 
+  function scrollToPricingSection() {
+    const el = document.getElementById('pricing');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   function resumePendingPurchase() {
+    // OAuth callback in progress on this page — redirect will happen shortly
+    if (window.location.hash && window.location.hash.includes('access_token')) return;
+
     const raw = localStorage.getItem(PENDING_PURCHASE_KEY);
     if (!raw || typeof getCurrentUser !== 'function' || !getCurrentUser()) return;
 
@@ -37,9 +47,10 @@
       const pending = JSON.parse(raw);
       localStorage.removeItem(PENDING_PURCHASE_KEY);
       restoreBillingCycle(pending.planType);
+      scrollToPricingSection();
       setTimeout(function () {
         initPayment(pending.productId, pending.planType, pending.baseAmount, pending.productName);
-      }, 150);
+      }, 200);
     } catch (err) {
       localStorage.removeItem(PENDING_PURCHASE_KEY);
     }
@@ -49,8 +60,13 @@
   // MAIN PAYMENT FUNCTION - Shows modal first
   // ============================================
   async function initPayment(productId, planType, baseAmount, productName) {
-    const user = getCurrentUser();
-    
+    if (!productId || productId.includes('PRODUCT_ID')) {
+      alert('This indicator is not yet available for purchase. Please contact support.');
+      return;
+    }
+
+    const user = typeof getCurrentUser === 'function' ? getCurrentUser() : null;
+
     if (!user) {
       storePendingPurchase(productId, planType, baseAmount, productName);
       if (typeof storeAuthReturnUrl === 'function') {
@@ -492,3 +508,12 @@
   function getFormUrl(planType) {
     return planType === '7-day' ? TRIAL_FORM_URL : SUBSCRIPTION_FORM_URL;
   }
+
+  // Expose payment functions globally for onclick handlers and pricing-cards.js
+  window.initPayment = initPayment;
+  window.closePaymentModal = closePaymentModal;
+  window.selectUPIPayment = selectUPIPayment;
+  window.selectRazorpayPayment = selectRazorpayPayment;
+  window.copyUPIId = copyUPIId;
+  window.confirmUPIPayment = confirmUPIPayment;
+  window.resumePendingPurchase = resumePendingPurchase;

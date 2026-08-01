@@ -16,11 +16,34 @@ function getAppUrl() {
   if (hostname === 'localhost' || hostname === '127.0.0.1') {
     return window.location.origin;
   }
+  // Use canonical production URL on deployed hosts so OAuth never falls back to localhost
+  if (hostname.includes('vercel.app') || hostname.includes('creativerisingminds')) {
+    return PRODUCTION_APP_URL;
+  }
   return window.location.origin || PRODUCTION_APP_URL;
 }
 
 function getOAuthCallbackUrl() {
   return getAppUrl() + '/auth-callback.html';
+}
+
+function parseJwtPayload(token) {
+  try {
+    const base64 = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+    return JSON.parse(atob(base64));
+  } catch (e) {
+    return null;
+  }
+}
+
+function buildUserFromToken(accessToken) {
+  const payload = parseJwtPayload(accessToken);
+  if (!payload || !payload.sub) return null;
+  return {
+    id: payload.sub,
+    email: payload.email || '',
+    user_metadata: payload.user_metadata || {}
+  };
 }
 
 function storeAuthReturnUrl(url) {
@@ -116,8 +139,9 @@ function getSafeReturnUrl(defaultUrl) {
 // ============================================
 async function signInWithGoogle() {
   try {
-    const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
-    if (returnUrl) {
+    const returnUrl = new URLSearchParams(window.location.search).get('returnUrl')
+      || sessionStorage.getItem(AUTH_RETURN_URL_KEY);
+    if (returnUrl && !returnUrl.includes('://') && !returnUrl.startsWith('//')) {
       storeAuthReturnUrl(returnUrl);
     } else if (localStorage.getItem(PENDING_PURCHASE_KEY)) {
       storeAuthReturnUrl('index.html#pricing');
@@ -158,11 +182,16 @@ function handleOAuthCallback() {
     const expiresIn = params.get('expires_in');
 
     if (accessToken) {
+      const tokenUser = buildUserFromToken(accessToken);
       storeSession({
         access_token: accessToken,
         refresh_token: refreshToken,
-        expires_at: Math.floor(Date.now() / 1000) + parseInt(expiresIn || 3600)
+        expires_at: Math.floor(Date.now() / 1000) + parseInt(expiresIn || 3600, 10),
+        user: tokenUser
       });
+
+      // Clear hash so token is not re-processed or leaked in history
+      history.replaceState(null, '', window.location.pathname + window.location.search);
 
       fetchCurrentUser(accessToken).then(user => {
         if (user) {
@@ -237,21 +266,20 @@ function logout() {
 function getCurrentUser() {
   const sessionData = localStorage.getItem('supabase_session');
   const userData = localStorage.getItem('supabase_user');
-  
-  if (sessionData && userData) {
-    const session = JSON.parse(sessionData);
-    const user = JSON.parse(userData);
 
-    // Check token expiry
-    if (!session.expires_at || Date.now() < session.expires_at * 1000) {
-      return user;
-    }
+  if (!sessionData || !userData) return null;
 
-    // If expired, logout
-    logout();
+  const session = JSON.parse(sessionData);
+  const user = JSON.parse(userData);
+
+  // Silently clear expired sessions — do not redirect (that breaks Buy Now / pricing flow)
+  if (session.expires_at && Date.now() >= session.expires_at * 1000) {
+    localStorage.removeItem('supabase_session');
+    localStorage.removeItem('supabase_user');
     return null;
   }
-  return null;
+
+  return user;
 }
 
 // ============================================

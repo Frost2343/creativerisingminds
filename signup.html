@@ -323,6 +323,11 @@
                 storeAuthReturnUrl(returnUrl);
             }
 
+            const loginLink = document.querySelector('.form-footer a[href="login.html"]');
+            if (loginLink && returnUrl) {
+                loginLink.href = 'login.html?returnUrl=' + encodeURIComponent(returnUrl);
+            }
+
             const user = getCurrentUser?.();
             if (user) window.location.href = getSafeReturnUrl('dashboard.html');
         });
