@@ -249,15 +249,6 @@
         <span><i class="fas fa-chart-line"></i> TradingView Access</span>
       </div>
 
-      <div class="billing-toggle-wrap">
-        <span class="toggle-label active" id="labelMonthly" data-translate="monthly">Monthly</span>
-        <label class="billing-switch">
-          <input type="checkbox" id="billingToggle">
-          <span class="switch-track"><span class="switch-thumb"></span></span>
-        </label>
-        <span class="toggle-label" id="labelAnnual" data-translate="yearly">Annually</span>
-        <span class="save-badge"><i class="fas fa-fire"></i> Save up to 60%</span>
-      </div>
     </div>
 
     <div class="pricing-group">
@@ -267,6 +258,17 @@
           <h3 class="pricing-group-title" data-translate="individual_indicators">Individual Premium Indicators</h3>
           <p class="pricing-group-desc">Subscribe to a single indicator that fits your trading style.</p>
         </div>
+      </div>
+      <div class="billing-radio-wrap" id="billingIndividual">
+        <label class="billing-radio">
+          <input type="radio" name="billing-individual" value="yearly" checked>
+          <span class="billing-radio-label" data-translate="yearly">Yearly</span>
+        </label>
+        <label class="billing-radio">
+          <input type="radio" name="billing-individual" value="monthly">
+          <span class="billing-radio-label" data-translate="monthly">Monthly</span>
+        </label>
+        <span class="save-badge"><i class="fas fa-fire"></i> Save up to 60%</span>
       </div>
       <div class="pricing-grid" id="pricingGrid">
         <!-- Individual indicator cards are rendered here by pricing-cards.js -->
@@ -280,6 +282,17 @@
           <h3 class="pricing-group-title" data-translate="combo_indicators">Combo Plans — Get More, Save More</h3>
           <p class="pricing-group-desc">Bundle multiple indicators and unlock the best value.</p>
         </div>
+      </div>
+      <div class="billing-radio-wrap" id="billingCombo">
+        <label class="billing-radio">
+          <input type="radio" name="billing-combo" value="yearly" checked>
+          <span class="billing-radio-label" data-translate="yearly">Yearly</span>
+        </label>
+        <label class="billing-radio">
+          <input type="radio" name="billing-combo" value="monthly">
+          <span class="billing-radio-label" data-translate="monthly">Monthly</span>
+        </label>
+        <span class="save-badge"><i class="fas fa-fire"></i> Save up to 60%</span>
       </div>
       <div class="pricing-grid pricing-grid-combo" id="pricingGridCombo">
         <!-- Combo plan cards are rendered here by pricing-cards.js -->
@@ -295,14 +308,14 @@
         <div class="promo-card-badge">Limited Offer</div>
         <div class="promo-card-icon"><i class="fas fa-star"></i></div>
         <h3 data-translate="sevenday">Get 7-day access to all our premium indicators for just ₹1000 — valid only once per user!</h3>
-        <p data-translate="google_form_free_revert">Sign up for your 7-day free trial by completing this Google Form.</p>
+        <!-- <p data-translate="google_form_free_revert">Sign up for your 7-day free trial by completing this Google Form.</p> -->
         <div class="promo-card-actions">
           <button class="pricing-buy-btn promo-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', '7-day', 1000, 'CRM All-in-One (Includes all Premium Indicators)')">
             <i class="fas fa-bolt"></i> Buy 7-Day Pass — ₹1,000
           </button>
-          <a href="https://forms.gle/vkGYegENq9Lb9nD4A" target="_blank" rel="noopener" class="promo-link-btn" data-translate="trial_form">
+          <!-- <a href="https://forms.gle/vkGYegENq9Lb9nD4A" target="_blank" rel="noopener" class="promo-link-btn" data-translate="trial_form">
             Free Trial Form <i class="fas fa-external-link-alt"></i>
-          </a>
+          </a> -->
         </div>
       </div>
 

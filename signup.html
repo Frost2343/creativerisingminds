@@ -320,7 +320,7 @@
             }
 
             const user = getCurrentUser?.();
-            if (user) window.location.href = 'dashboard.html';
+            if (user) window.location.href = getSafeReturnUrl('dashboard.html');
         });
 
         // Google Sign-In
@@ -375,7 +375,7 @@
                 const result = await signup(email, password, fullName);
                 if (result.success) {
                     showAlert(result.message, 'success');
-                    setTimeout(() => window.location.href = 'dashboard.html', 2000);
+                    setTimeout(() => window.location.href = getSafeReturnUrl('dashboard.html'), 2000);
                 } else {
                     showAlert(result.message, 'error');
                     signupBtn.disabled = false;

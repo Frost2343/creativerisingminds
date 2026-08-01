@@ -62,12 +62,27 @@ async function signup(email, password, fullName = '') {
 }
 
 // ============================================
+// POST-LOGIN REDIRECT
+// ============================================
+function getSafeReturnUrl(defaultUrl) {
+  const fallback = defaultUrl || 'dashboard.html';
+  const params = new URLSearchParams(window.location.search);
+  const returnUrl = params.get('returnUrl');
+  if (!returnUrl) return fallback;
+  if (returnUrl.includes('://') || returnUrl.startsWith('//')) return fallback;
+  return returnUrl;
+}
+
+// ============================================
 // 1B. GOOGLE SIGN IN - OAuth
 // ============================================
 async function signInWithGoogle() {
   try {
-    const redirectTo = window.location.origin + '/dashboard.html';
-    const authUrl = `${SUPABASE_URL}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
+    const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
+    const callbackUrl = returnUrl
+      ? window.location.origin + '/login.html?returnUrl=' + encodeURIComponent(returnUrl)
+      : window.location.origin + '/login.html';
+    const authUrl = `${SUPABASE_URL}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(callbackUrl)}`;
     window.location.href = authUrl;
     return {
       success: true,
@@ -102,7 +117,7 @@ function handleOAuthCallback() {
       fetchCurrentUser(accessToken).then(user => {
         if (user) {
           storeSession({ user });
-          window.location.href = '/dashboard.html';
+          window.location.href = getSafeReturnUrl('dashboard.html');
         }
       });
       return true;

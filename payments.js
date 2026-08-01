@@ -9,6 +9,29 @@
   const TRIAL_FORM_URL = 'https://forms.gle/WFeJJGbHPtjQCCPV6'; // 7-day plan form
 
   let currentPaymentDetails = null;
+  const PENDING_PURCHASE_KEY = 'pending_purchase';
+
+  function storePendingPurchase(productId, planType, baseAmount, productName) {
+    localStorage.setItem(PENDING_PURCHASE_KEY, JSON.stringify({
+      productId: productId,
+      planType: planType,
+      baseAmount: baseAmount,
+      productName: productName
+    }));
+  }
+
+  function resumePendingPurchase() {
+    const raw = localStorage.getItem(PENDING_PURCHASE_KEY);
+    if (!raw || typeof getCurrentUser !== 'function' || !getCurrentUser()) return;
+
+    try {
+      const pending = JSON.parse(raw);
+      localStorage.removeItem(PENDING_PURCHASE_KEY);
+      initPayment(pending.productId, pending.planType, pending.baseAmount, pending.productName);
+    } catch (err) {
+      localStorage.removeItem(PENDING_PURCHASE_KEY);
+    }
+  }
 
   // ============================================
   // MAIN PAYMENT FUNCTION - Shows modal first
@@ -17,8 +40,8 @@
     const user = getCurrentUser();
     
     if (!user) {
-      alert('Please login or signup to purchase');
-      window.location.href = 'login.html';
+      storePendingPurchase(productId, planType, baseAmount, productName);
+      window.location.href = 'login.html?returnUrl=' + encodeURIComponent('index.html#pricing');
       return;
     }
 

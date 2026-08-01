@@ -5,6 +5,14 @@
    Buy Now → initPayment() in payments.js (auth check + payment modal).
    ============================================================ */
 
+/** Section title colors — change these to customize heading appearance */
+const PRICING_THEME = {
+  individualTitleColor: '#ffffff',
+  comboTitleColor: '#00ffcc'
+};
+
+let billingCycle = 'yearly';
+
 const INDIVIDUAL_PLANS = [
   {
     id: 'supreme',
@@ -288,57 +296,63 @@ function renderGrid(gridId, plans, isAnnual) {
 }
 
 function renderPricing() {
-  const toggle = document.getElementById('billingToggle');
-  if (!toggle) return;
-  const isAnnual = toggle.checked;
+  const isAnnual = billingCycle === 'yearly';
   renderGrid('pricingGrid', INDIVIDUAL_PLANS, isAnnual);
   renderGrid('pricingGridCombo', COMBO_PLANS, isAnnual);
 }
 
-function initPricingToggle() {
-  const toggle = document.getElementById('billingToggle');
-  const labelMonthly = document.getElementById('labelMonthly');
-  const labelAnnual = document.getElementById('labelAnnual');
+function syncBillingRadios(cycle) {
+  document.querySelectorAll('.billing-radio-wrap input[type="radio"]').forEach(function (radio) {
+    radio.checked = radio.value === cycle;
+  });
+}
+
+function applyPricingTheme() {
+  const section = document.getElementById('pricing');
+  if (!section) return;
+  section.style.setProperty('--pricing-individual-title-color', PRICING_THEME.individualTitleColor);
+  section.style.setProperty('--pricing-combo-title-color', PRICING_THEME.comboTitleColor);
+}
+
+function initBillingRadios() {
+  const wraps = document.querySelectorAll('.billing-radio-wrap');
   const grids = [document.getElementById('pricingGrid'), document.getElementById('pricingGridCombo')];
-  if (!toggle) return;
+  if (!wraps.length) return;
 
-  function updateLabels() {
-    const isAnnual = toggle.checked;
-    if (labelMonthly) labelMonthly.classList.toggle('active', !isAnnual);
-    if (labelAnnual) labelAnnual.classList.toggle('active', isAnnual);
-  }
+  syncBillingRadios(billingCycle);
 
-  toggle.addEventListener('change', function () {
-    updateLabels();
-    grids.forEach(function (grid) {
-      if (!grid) return;
-      grid.style.opacity = '0';
-      grid.style.transform = 'translateY(6px)';
-      grid.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
-    });
-    setTimeout(function () {
-      renderPricing();
+  wraps.forEach(function (wrap) {
+    wrap.addEventListener('change', function (e) {
+      const radio = e.target;
+      if (radio.type !== 'radio' || !radio.checked) return;
+
+      billingCycle = radio.value;
+      syncBillingRadios(billingCycle);
+
       grids.forEach(function (grid) {
         if (!grid) return;
-        grid.style.opacity = '1';
-        grid.style.transform = 'translateY(0)';
+        grid.style.opacity = '0';
+        grid.style.transform = 'translateY(6px)';
+        grid.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
       });
-    }, 140);
+      setTimeout(function () {
+        renderPricing();
+        grids.forEach(function (grid) {
+          if (!grid) return;
+          grid.style.opacity = '1';
+          grid.style.transform = 'translateY(0)';
+        });
+      }, 140);
+    });
   });
-
-  if (labelMonthly) labelMonthly.addEventListener('click', function () {
-    toggle.checked = false;
-    toggle.dispatchEvent(new Event('change'));
-  });
-  if (labelAnnual) labelAnnual.addEventListener('click', function () {
-    toggle.checked = true;
-    toggle.dispatchEvent(new Event('change'));
-  });
-
-  updateLabels();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  initPricingToggle();
+  applyPricingTheme();
+  initBillingRadios();
   renderPricing();
+
+  if (typeof resumePendingPurchase === 'function') {
+    resumePendingPurchase();
+  }
 });

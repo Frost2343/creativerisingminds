@@ -292,7 +292,13 @@
 
             const user = getCurrentUser();
             if (user) {
-                window.location.href = 'dashboard.html';
+                window.location.href = getSafeReturnUrl('dashboard.html');
+            }
+
+            const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
+            const signupLink = document.querySelector('.form-footer a[href="signup.html"]');
+            if (signupLink && returnUrl) {
+                signupLink.href = 'signup.html?returnUrl=' + encodeURIComponent(returnUrl);
             }
         });
 
@@ -326,7 +332,7 @@
                 if (result.success) {
                     showAlert(result.message, 'success');
                     setTimeout(() => {
-                        window.location.href = 'dashboard.html';
+                        window.location.href = getSafeReturnUrl('dashboard.html');
                     }, 1000);
                 } else {
                     showAlert(result.message, 'error');

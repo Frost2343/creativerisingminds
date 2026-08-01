@@ -2413,9 +2413,16 @@ a.indicator-link:hover {
 .pricing-group-title {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #ffffff;
   margin-bottom: 4px;
   text-align: center;
+}
+
+.pricing-group:not(.pricing-group-combo) .pricing-group-title {
+  color: var(--pricing-individual-title-color, #ffffff);
+}
+
+.pricing-group-combo .pricing-group-title {
+  color: var(--pricing-combo-title-color, #ffffff);
 }
 
 .pricing-group-desc {
@@ -2602,6 +2609,65 @@ a.indicator-link:hover {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 30px;
+}
+
+.billing-radio-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.billing-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #7a8494;
+  transition: color 0.25s ease;
+}
+
+.billing-radio input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(79, 172, 254, 0.5);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.billing-radio input[type="radio"]:checked {
+  border-color: #00ffcc;
+  background: rgba(0, 255, 204, 0.15);
+}
+
+.billing-radio input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ffcc, #1e88e5);
+}
+
+.billing-radio:has(input:checked) {
+  color: #ffffff;
+}
+
+.billing-radio-label {
+  user-select: none;
 }
 
 .billing-toggle-wrap {
