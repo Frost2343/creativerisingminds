@@ -1,0 +1,344 @@
+/* ============================================================
+   pricing-cards.js
+   Data-driven pricing cards for Creative Rising Minds.
+   Text uses translation keys from script.js (data-translate pattern).
+   Buy Now → initPayment() in payments.js (auth check + payment modal).
+   ============================================================ */
+
+const INDIVIDUAL_PLANS = [
+  {
+    id: 'supreme',
+    nameKey: 'pricing_card_supreme_name',
+    fullNameKey: 'pricing_full_supreme',
+    categoryKey: 'pricing_cat_scalping_confluence',
+    icon: 'fa-bolt',
+    accent: '#ff9800',
+    productId: '95fc5173-6cf9-4476-864c-2aaa8ff952ab',
+    annualMonthlyEff: 1250,
+    annualTotal: 15000,
+    monthlyPrice: 3125,
+    page: 'ScalpUltraSupreme.html',
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_supreme_1',
+      'pricing_feat_supreme_2',
+      'pricing_feat_supreme_3',
+      'pricing_feat_supreme_4'
+    ]
+  },
+  {
+    id: 'flash',
+    nameKey: 'pricing_card_flash_name',
+    fullNameKey: 'pricing_full_flash',
+    categoryKey: 'pricing_cat_options_live',
+    icon: 'fa-bolt-lightning',
+    accent: '#f472b6',
+    productId: 'FLASH_OPTION_CHAIN_PRODUCT_ID',
+    annualMonthlyEff: 1250,
+    annualTotal: 15000,
+    monthlyPrice: 3125,
+    page: 'FlashOptionChain.html',
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_flash_1',
+      'pricing_feat_flash_2',
+      'pricing_feat_flash_3',
+      'pricing_feat_flash_4',
+      'pricing_feat_flash_5'
+    ]
+  },
+  {
+    id: 'ultimate',
+    nameKey: 'pricing_card_ultimate_name',
+    fullNameKey: 'pricing_full_ultimate',
+    categoryKey: 'pricing_cat_scalping_swing',
+    icon: 'fa-chart-line',
+    accent: '#1e88e5',
+    productId: 'd436086c-bf62-4a36-8faa-caed8e6da444',
+    annualMonthlyEff: 950,
+    annualTotal: 11400,
+    monthlyPrice: 2375,
+    page: 'UltimateScalpPRO.html',
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_ultimate_1',
+      'pricing_feat_ultimate_2',
+      'pricing_feat_ultimate_3',
+      'pricing_feat_ultimate_4'
+    ]
+  },
+  {
+    id: 'twin',
+    nameKey: 'pricing_card_twin_name',
+    fullNameKey: 'pricing_full_twin',
+    categoryKey: 'pricing_cat_multi_symbol',
+    icon: 'fa-columns',
+    accent: '#00ffcc',
+    productId: '2486be6f-94ee-4c68-80ae-32cab4ba851f',
+    annualMonthlyEff: 600,
+    annualTotal: 7200,
+    monthlyPrice: 1500,
+    page: 'TwinChart.html',
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_twin_1',
+      'pricing_feat_twin_2',
+      'pricing_feat_twin_3',
+      'pricing_feat_twin_4'
+    ]
+  },
+  {
+    id: 'stocks-watch',
+    nameKey: 'pricing_card_stocks_name',
+    fullNameKey: 'pricing_full_stocks',
+    categoryKey: 'pricing_cat_screener',
+    icon: 'fa-eye',
+    accent: '#a78bfa',
+    productId: 'STOCKS_WATCH_PRODUCT_ID',
+    annualMonthlyEff: 500,
+    annualTotal: 6000,
+    monthlyPrice: 1250,
+    page: 'StocksWatch.html',
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_stocks_1',
+      'pricing_feat_stocks_2',
+      'pricing_feat_stocks_3',
+      'pricing_feat_stocks_4'
+    ]
+  },
+  {
+    id: 'mtf',
+    nameKey: 'pricing_card_mtf_name',
+    fullNameKey: 'pricing_full_mtf',
+    categoryKey: 'pricing_cat_mtf',
+    icon: 'fa-layer-group',
+    accent: '#4facfe',
+    productId: '976241cf-0723-4f71-bb02-94055eac2de5',
+    annualMonthlyEff: 400,
+    annualTotal: 4800,
+    monthlyPrice: 1000,
+    page: 'MTFDemandSupply.html',
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_mtf_1',
+      'pricing_feat_mtf_2',
+      'pricing_feat_mtf_3',
+      'pricing_feat_mtf_4'
+    ]
+  }
+];
+
+const COMBO_PLANS = [
+  {
+    id: 'combo1',
+    nameKey: 'pricing_card_combo1_name',
+    fullNameKey: 'pricing_full_combo1',
+    categoryKey: 'pricing_cat_combo1',
+    icon: 'fa-fire',
+    accent: '#ff9800',
+    productId: '24b054f5-48c7-40cb-b56e-f83f6e0a1f45',
+    annualMonthlyEff: 1500,
+    annualTotal: 18000,
+    monthlyPrice: 3750,
+    page: null,
+    popular: false,
+    badgeKey: 'pricing_badge_most_popular',
+    featureKeys: [
+      'pricing_feat_combo1_1',
+      'pricing_feat_combo1_2',
+      'pricing_feat_combo1_3',
+      'pricing_feat_combo1_4',
+      'pricing_feat_combo1_5'
+    ]
+  },
+  {
+    id: 'combo2',
+    nameKey: 'pricing_card_combo2_name',
+    fullNameKey: 'pricing_full_combo2',
+    categoryKey: 'pricing_cat_combo2',
+    icon: 'fa-fire',
+    accent: '#4facfe',
+    productId: 'a4e2d335-ec7e-4080-9c12-2b58399eadb6',
+    annualMonthlyEff: 1300,
+    annualTotal: 15600,
+    monthlyPrice: 3250,
+    page: null,
+    popular: false,
+    badgeKey: null,
+    featureKeys: [
+      'pricing_feat_combo2_1',
+      'pricing_feat_combo2_2',
+      'pricing_feat_combo2_3',
+      'pricing_feat_combo2_4',
+      'pricing_feat_combo2_5'
+    ]
+  },
+  {
+    id: 'all-in-one',
+    nameKey: 'pricing_card_allinone_name',
+    fullNameKey: 'pricing_full_allinone',
+    categoryKey: 'pricing_cat_allinone',
+    icon: 'fa-crown',
+    accent: '#00ffcc',
+    productId: '077f892d-52cc-490a-b501-34f2db17aecf',
+    annualMonthlyEff: 1700,
+    annualTotal: 20400,
+    monthlyPrice: 4250,
+    page: null,
+    popular: true,
+    badgeKey: 'pricing_badge_premium_choice',
+    featureKeys: [
+      'pricing_feat_allinone_1',
+      'pricing_feat_allinone_2',
+      'pricing_feat_allinone_3',
+      'pricing_feat_allinone_4',
+      'pricing_feat_allinone_5'
+    ]
+  }
+];
+
+function t(key, fallback) {
+  if (typeof getTranslation === 'function') {
+    return getTranslation(key, fallback);
+  }
+  return fallback || key;
+}
+
+function formatINR(amount) {
+  return '₹' + Math.round(amount).toLocaleString('en-IN');
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/'/g, "\\'")
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function buildCard(plan, isAnnual) {
+  const name = t(plan.nameKey, plan.nameKey);
+  const category = t(plan.categoryKey, plan.categoryKey);
+  const fullName = t(plan.fullNameKey, name);
+  const displayPrice = isAnnual ? plan.annualMonthlyEff : plan.monthlyPrice;
+  const billedText = isAnnual
+    ? t('pricing_billed_annually', 'billed annually at') + ' ' + formatINR(plan.annualTotal)
+    : t('pricing_billed_monthly', 'billed monthly');
+  const yearlySavings = (plan.monthlyPrice * 12) - plan.annualTotal;
+  const cycle = isAnnual ? 'yearly' : 'monthly';
+  const chargeAmount = isAnnual ? plan.annualTotal : plan.monthlyPrice;
+  const accent = plan.accent || '#00ffcc';
+  const icon = plan.icon || 'fa-chart-bar';
+  const learnMoreLabel = t('pricing_learn_more', 'Learn more');
+  const learnMore = plan.page
+    ? '<a href="' + plan.page + '" class="pricing-card-learn">' + learnMoreLabel + ' <i class="fas fa-arrow-right"></i></a>'
+    : '';
+  const badgeLabel = plan.badgeKey ? t(plan.badgeKey, '') : '';
+  const badgeIcon = plan.badgeKey === 'pricing_badge_premium_choice' ? '👑' : '⭐';
+  const badgeHtml = plan.badgeKey
+    ? '<div class="popular-badge">' + badgeIcon + ' ' + badgeLabel + '</div>'
+    : '';
+  const cardClasses = 'pricing-card' +
+    (plan.popular ? ' popular' : '') +
+    (plan.badgeKey ? ' has-badge' : '');
+  const perMonth = t('pricing_per_month', '/mo');
+  const savingsHtml = isAnnual
+    ? '<p class="savings-text">' + t('pricing_save_year', 'Save {amount}/year').replace('{amount}', formatINR(yearlySavings)) + '</p>'
+    : '<p class="savings-text savings-placeholder">&nbsp;</p>';
+  const buyNow = t('buy_now', 'Buy Now');
+
+  return (
+    '<div class="' + cardClasses + '" style="--card-accent:' + accent + '">' +
+      badgeHtml +
+      '<div class="pricing-card-icon"><i class="fas ' + icon + '"></i></div>' +
+      '<div class="pricing-card-head">' +
+        '<h3>' + name + ' <span class="crm-chip">CRM</span></h3>' +
+        '<p class="pricing-card-desc">' + category + '</p>' +
+      '</div>' +
+      learnMore +
+      '<div class="pricing-price-row">' +
+        '<span class="price-currency">₹</span>' +
+        '<span class="price-value">' + displayPrice.toLocaleString('en-IN') + '</span>' +
+        '<span class="price-period">' + perMonth + '</span>' +
+      '</div>' +
+      '<p class="billed-text">' + billedText + '</p>' +
+      savingsHtml +
+      '<button type="button" class="pricing-buy-btn" onclick="initPayment(\'' + plan.productId + '\', \'' + cycle + '\', ' + chargeAmount + ', \'' + escapeHtml(fullName) + '\')">' + buyNow + '</button>' +
+      '<ul class="pricing-features">' +
+        plan.featureKeys.map(function (key) {
+          return '<li>' + t(key, key) + '</li>';
+        }).join('') +
+      '</ul>' +
+    '</div>'
+  );
+}
+
+function renderGrid(gridId, plans, isAnnual) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  grid.innerHTML = plans.map(function (plan) { return buildCard(plan, isAnnual); }).join('');
+}
+
+function renderPricing() {
+  const toggle = document.getElementById('billingToggle');
+  if (!toggle) return;
+  const isAnnual = toggle.checked;
+  renderGrid('pricingGrid', INDIVIDUAL_PLANS, isAnnual);
+  renderGrid('pricingGridCombo', COMBO_PLANS, isAnnual);
+}
+
+function initPricingToggle() {
+  const toggle = document.getElementById('billingToggle');
+  const labelMonthly = document.getElementById('labelMonthly');
+  const labelAnnual = document.getElementById('labelAnnual');
+  const grids = [document.getElementById('pricingGrid'), document.getElementById('pricingGridCombo')];
+  if (!toggle) return;
+
+  function updateLabels() {
+    const isAnnual = toggle.checked;
+    if (labelMonthly) labelMonthly.classList.toggle('active', !isAnnual);
+    if (labelAnnual) labelAnnual.classList.toggle('active', isAnnual);
+  }
+
+  toggle.addEventListener('change', function () {
+    updateLabels();
+    grids.forEach(function (grid) {
+      if (!grid) return;
+      grid.style.opacity = '0';
+      grid.style.transform = 'translateY(6px)';
+      grid.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
+    });
+    setTimeout(function () {
+      renderPricing();
+      grids.forEach(function (grid) {
+        if (!grid) return;
+        grid.style.opacity = '1';
+        grid.style.transform = 'translateY(0)';
+      });
+    }, 140);
+  });
+
+  if (labelMonthly) labelMonthly.addEventListener('click', function () {
+    toggle.checked = false;
+    toggle.dispatchEvent(new Event('change'));
+  });
+  if (labelAnnual) labelAnnual.addEventListener('click', function () {
+    toggle.checked = true;
+    toggle.dispatchEvent(new Event('change'));
+  });
+
+  updateLabels();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initPricingToggle();
+  renderPricing();
+});

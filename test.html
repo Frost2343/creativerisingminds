@@ -4,123 +4,625 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-translate="title">Creative Rising Minds</title>  
-  <link rel="stylesheet" href="test.css">
-  <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.jpeg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo/CRM-LOGO.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-left">
-      <a href="https://creativerisingminds.vercel.app" class="brand-container">
-        <img src="images/logo/CRM-LOGO.jpeg" alt="Logo" class="logo">
-        <span class="brand-name" data-translate="brand_name">Creative Rising Minds</span>
+      <a href="#home" class="brand-container">
+        <img src="images/logo/CRM-LOGO.png" alt="Logo" class="logo">
+        <span class="brand-name" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+          Creative Rising Minds
+        </span>
       </a>
     </div>
 
     <!-- Navigation Links and Language Switcher -->
     <div class="nav-right" id="nav-right">
-      <a href="https://creativerisingminds.vercel.app" data-translate="nav_home">Home</a>
+      <a href="#home" data-translate="nav_home">Home</a>
       <a href="#indicators" data-translate="nav_indicators">Indicators</a>
       <a href="#pricing" data-translate="nav_pricing">Pricing</a>
       <a href="#contact" data-translate="nav_contact">Contact</a>
+      <!-- ===================== -->
       <div class="language-switcher">
-        <select id="language-select" onchange="changeLanguage()">
+        <select id="language-select" onchange="changeLanguage()" class="brand-container">
           <option value="en">English</option>
-          <option value="gu">ગુજરાતી</option>
           <option value="mr">मराठी</option>
+          <option value="gu">ગુજરાતી</option>
           <option value="hi">हिन्दी</option>
         </select>
       </div>
+      <!-- usermenu -->
+     <div class="user-menu">
+    <!-- When NOT logged in -->
+    <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
+        <!-- <span class="user-icon-avatar">👤</span> -->
+        <i class="fa fa-user" style="color: #fff;"></i>
+
+        <div class="dropdown-menu" id="dropdownLoggedOut">
+            <a href="signup.html" class="dropdown-item">
+                <span class="dropdown-icon">📝</span>
+                <span>Sign Up</span>
+            </a>
+            <a href="login.html" class="dropdown-item">
+                <span class="dropdown-icon">🔐</span>
+                <span>Login</span>
+            </a>
+        </div>
     </div>
+
+    <!-- When logged in (hidden by default) -->
+    <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
+        <!-- <span class="user-icon-avatar">👤</span> -->
+         <i class="fa fa-user" style="color: #fff;"></i>
+        <span class="user-icon-name" id="userNameNav">User</span>
+        
+        <div class="dropdown-menu" id="dropdownLoggedIn">
+            <a href="dashboard.html" class="dropdown-item">
+                <span class="dropdown-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="dashboard.html#subscriptions" class="dropdown-item">
+                <span class="dropdown-icon">🎯</span>
+                <span>My Subscriptions</span>
+            </a>
+            <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
+                <span class="dropdown-icon">🚪</span>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+      
+    </div>
+    <!-- Scrolling Message -->
+  <div class="scroll-container">
+  <div class="scroll-text">
+    🚀 <span data-translate="free_trial_text">If you want to avail <b>FREE Trial</b>, fill this</span> 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaFvg8PUavKxtlCPnVYeJYdOfoD-UcUzNs4Zrh5L1QuFTyLg/viewform" target="_blank" data-translate="google_form_text">Google Form</a> ✅ 
+    &nbsp; | &nbsp; 
+    🎯 <span data-translate="try_indicators_text">Try our free indicators</span> → 
+    <a href="https://in.tradingview.com/script/rudH9vEq-EMA-Supertrend-CRM/" target="_blank" data-translate="ema_supertrend_text">EMA Supertrend [CRM]</a>, 
+    <a href="https://in.tradingview.com/script/wW98ES3s-EMA-Cross-RSI-CRM/" target="_blank" data-translate="ema_cross_rsi_text">EMA Cross RSI [CRM]</a>
+    &nbsp; | &nbsp;
+    🎯 <span data-translate="indicators_title">Try our premium indicators</span> → 
+    <a href="https://in.tradingview.com/script/i2BqZRd9-Supreme-Scalp-PRO-CRM/" target="_blank" data-translate="indicator_scalp_ultra_supreme">EMA Supertrend [CRM]</a>, 
+    <a href="https://in.tradingview.com/script/liWlYTbi-Ultimate-Scalp-PRO-CRM/" target="_blank" data-translate="indicator_scalp_swing">EMA Supertrend [CRM]</a>, 
+    <a href="https://in.tradingview.com/script/odeb66KT-Twin-Chart-CRM/" target="_blank" data-translate="indicator_twin_chart">EMA Cross RSI [CRM]</a>,
+    <a href="https://in.tradingview.com/script/jQhpPd4o-MTF-Demand-Supply-CRM/" target="_blank" data-translate="indicator_mtf_pivot_matrix">EMA Cross RSI [CRM]</a>
+  </div>
+</div>
   </nav>
 
   <section class="hero" id="home">
+    
     <!-- Background Video -->
     <video autoplay muted loop class="hero-video">
       <source src="videos/herovideotrimmed.mp4" type="video/mp4">
       <span data-translate="video_fallback">Your browser does not support the video tag.</span>
     </video>
-
     <!-- Hero Content -->
     <div class="hero-content">
-      <h1 data-translate="hero_title">Built for Traders Who<br>Follow Logic,<br>Not Luck.</h1>
+      
+      <h1 class="hero_title" data-translate="hero_title">Built for Traders Who<br>Follow Logic,<br>Not Luck.</h1>
       <p data-translate="hero_subtitle">Spot the Signal. Skip the Noise. Dominate the Trend.</p>
       <div class="hero-buttons">
         <a href="#pricing" class="cta primary" data-translate="hero_btn_explore">Explore Plans</a>
-        <a href="#contact" class="cta secondary" data-translate="hero_btn_contact">Contact Us</a>
+        <a href="https://forms.gle/vkGYegENq9Lb9nD4A" class="cta secondary" data-translate="hero_btn_free_trial">⭐ Free Trial ⭐</a>
       </div>
+      <!-- Disclaimer Scroller (inside hero section) -->
+    <div class="disclaimer-container">
+      <div class="disclaimer-text" data-translate="section_not_financial_advice">
+        ⚠️ Disclaimer - We are not SEBI registered advisors. Any information shared on this platform, including our tools, indicators, tutorials, or opinions, should not be considered as financial advice or recommendations to buy, sell or hold any securities.
+      </div>
+    </div>
     </div>
   </section>
 
-  <section id="indicators">
-    <h2 data-translate="indicators_title">Our Creative Indicators</h2>
+<section id="indicators">
+    <!-- Free Indicators -->
+    <br><br><h2 data-translate="free_indicators_title">Our Free Indicators</h2>
     <div class="indicator-cards">
-      <div class="card trend-analyser">
-        <h3 data-translate="indicator_trend_title">CRM Trend Analyser PRO</h3>
-        <div class="content-box">
-          <p data-translate="indicator_trend_desc"><strong>CRM Trend Analyser PRO is a precision-crafted trading indicator that combines dynamic moving averages, trend-based oscillators, volatility-powered targets, and built-in supply-demand zones to help you confidently time entries and exits. Whether you're a scalper or swing trader.</strong></p>
-          <a href="indicator1.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+      <a href="EMARSI.html" class="card-link-wrapper">
+        <div class="card ema-rsi">
+          <h4 data-translate="page_title_emarsi">CRM EMA Cross/ RSI</h4>
+          <div class="content-box">
+            <p data-translate="indicator_ema_rsi_desc"><strong>CRM EMA Cross-over with RSI is a momentum-based trading tool that combines EMA crossovers, RSI strength, and VWAP confluence to deliver precise intraday entry signals, ideal for scalpers and options traders.</strong></p>
+            <a href="EMARSI.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>          
         </div>
-      </div>
-
-      <div class="card demand-supply">
-        <h3 data-translate="indicator_demand_title">CRM MTF/Demand Supply</h3>
-        <img src="images/comingsoon.jpeg" alt="CRM Demand Supply Placeholder">
-      </div>
-
-      <div class="card stock-screener">
-        <h3 data-translate="indicator_screener_title">CRM Stock Screener</h3>
-        <img src="images/comingsoon.jpeg" alt="CRM Stock Screener Placeholder">
-      </div>
+      </a>
+      <a href="EMASupertrend.html" class="card-link-wrapper">
+        <div class="card ema-st">
+          <h4 data-translate="page_title_emasupertrend">CRM EMA Supertrend</h4>
+          <div class="content-box">
+            <p data-translate="indicator_ema_st_desc"><strong>CRM EMA Supertrend combines EMAs (20, 50, 200) with institutional-grade Supertrend logic to generate high-probability signals, offering a clean, customizable interface for all trading styles.</strong></p>
+            <a href="EMASupertrend.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>          
+        </div>
+      </a>
+      
     </div>
-  </section>
+
+    <!-- Paid Indicators -->
+    <h2 data-translate="indicators_title">Our Creative Indicators (Premium)</h2>
+    <div class="indicator-cards">
+      <a href="ScalpUltraSupreme.html" class="card-link-wrapper">
+        <div class="card trend-analyser">
+          <h4 data-translate="indicator_scalp_ultra_supreme_title">Supreme Scalp PRO [CRM]</h4>
+          <div class="content-box">
+            <p data-translate="indicator_scalp_ultra_supreme_desc"><strong>CRM Scalp/Swing is a versatile indicator built for both scalping and swing trading, delivering accurate entry and exit signals tailored for quick intraday moves and sustained multi-day trade setups.</strong></p>
+            <a href="ScalpUltraSupreme.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>
+        </div>
+      </a>
+      <a href="UltimateScalpPRO.html" class="card-link-wrapper">
+        <div class="card trend-analyser">
+          <h4 data-translate="indicator_scalp_title">CRM Scalp Swing</h4>
+          <div class="content-box">
+            <p data-translate="indicator_scalp_desc"><strong>CRM Scalp/Swing is a versatile indicator built for both scalping and swing trading, delivering accurate entry and exit signals tailored for quick intraday moves and sustained multi-day trade setups.</strong></p>
+            <a href="UltimateScalpPRO.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>
+        </div>
+      </a>
+      
+      <a href="TwinChart.html" class="card-link-wrapper">
+      <div class="card twin-chart">
+        <h4 data-translate="indicator_twin_chart_title">Twin Chart<br>[<span class='crm-tag'>CRM</span>]</h4>
+        <div class="content-box">
+            <p data-translate="indicator_twin_chart_desc"><strong>Twin Chart is a powerful trading indicator that lets you plot a secondary symbol for a simultaneous view of two instruments, while auto-calculating entry, SL, TP, overlaying VWAP, and showing dynamic trend signals.</strong></p>
+            <a href="TwinChart.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>
+      </div>
+      </a>
+      <a href="MTFDemandSupply.html" class="card-link-wrapper">
+      <div class="card demand-supply">
+        <h4 data-translate="indicator_demand_title">CRM MTF / Demand Supply</h4>
+        <div class="content-box">
+            <p data-translate="indicator_demand_desc"><strong>CRM MTF/Demand Supply is a smart trend-tracking tool that shows a multi-timeframe trend table and auto-plots demand/supply zones—so you can spot market direction and key levels without switching charts.</strong></p>
+            <a href="MTFDemandSupply.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>
+      </div>
+      </a>
+      
+      <!-- <div class="card stock-screener">
+        <h4 data-translate="indicator_screener_title">CRM Stock Screener</h4>
+        <div class="content-box">
+          <img src="images/comingsoon.jpeg" alt="CRM Stock Screener Placeholder">
+            <p data-translate="indicator_stock_screener_desc"><strong>CRM Stock Screener is a momentum-focused tool that scans and highlights stocks showing strong price action, volume surge, and trend alignment—helping traders quickly spot high-potential breakout opportunities.</strong></p>
+            <a href="indicator4.html" class="card-link" data-translate="indicator_learn_more">Learn More</a>
+          </div>
+      </div> -->
+      
+      <!-- </a> -->
+      </section>
+  <!-- ===================== YT Carousel ===================== -->
+    <section id="yt-carousel-section" class="yt-carousel-section">
+      <h2 data-translate="watch_and_learn">Watch & Learn</h2>
+
+      <div class="yt-carousel-container">
+        
+        <!-- Left Arrow -->
+        <button class="carousel-btn prev-btn">&#10094;</button>
+
+        <!-- Carousel Track -->
+        <div class="yt-carousel">
+          <!-- JS will inject video thumbnails here -->
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-btn next-btn">&#10095;</button>
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="carousel-dots"></div>
+    </section>
+    <!-- ======================================================= -->
 
   <section id="pricing">
-    <h2 data-translate="pricing_title">Pricing Plans</h2>
-    <div class="table-wrapper">
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th data-translate="pricing_table_indicator">Indicator</th>
-            <th data-translate="pricing_table_monthly">Monthly</th>
-            <th data-translate="pricing_table_quarterly">Quarterly</th>
-            <th data-translate="pricing_table_half_yearly">Half-Yearly</th>
-            <th data-translate="pricing_table_yearly">Yearly</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="indicator1.html" class="indicator-link" data-translate="indicator_trend_title">CRM Trend Analyser PRO</a></td>
-            <td colspan="4" style="text-align: center;" data-translate="pricing_trend_status">Free to use for a limited time – don’t miss out!</td>
-          </tr>
-          <tr>
-            <td data-translate="indicator_demand_title">CRM MTF/Demand Supply</td>
-            <td colspan="4" style="text-align: center;" data-translate="pricing_coming_soon">Coming soon! Our team is crafting something powerful just for you.</td>
-          </tr>
-          <tr>
-            <td data-translate="indicator_screener_title">CRM Stock Screener</td>
-            <td colspan="4" style="text-align: center;" data-translate="pricing_coming_soon">Coming soon! Our team is crafting something powerful just for you.</td>
-          </tr>
-          <tr>
-            <td data-translate="indicator_option_title">CRM Option Chain Decoder</td>
-            <td colspan="4" style="text-align: center;" data-translate="pricing_coming_soon">Coming soon! Our team is crafting something powerful just for you.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+     <br><br><h2 data-translate="pricing_title">Pricing Plans</h2>
+  
+  <h2 data-translate="individual_indicators" style="text-align:center; color:#f39c12; text-decoration: underline;">
+    Individual Premium Indicators
+  </h2>
+  
+  <div class="table-wrapper">
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th data-translate="pricing_table_indicator">Indicator</th>
+          <th data-translate="monthly">Monthly</th>
+          <th>
+            <span data-translate="quarterly">Quarterly</span><br>
+            <span style="color:#00ffcc; font-size:12px;" data-translate-key="saveUpTo30Percent">Save up to 30%</span>
+          </th>
+          <th>
+            <span data-translate="halfYearly">Half-Yearly</span><br>
+            <span style="color:#ffcc00; font-size:12px;" data-translate-key="saveUpTo50Percent">Save up to 50%</span>
+          </th>
+          <th>
+            <span data-translate="yearly">Yearly</span><br>
+            <span style="color:#ff4444; font-size:12px; font-weight:bold;" data-translate-key="bestValueSaveUpTo60Percent">🔥 Best Value – Save up to 60%</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a href="ScalpUltraSupreme.html" class="indicator-link" data-translate="indicator_scalp_ultra_supreme">
+              Supreme Scalp PRO [CRM]
+            </a>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹2500</span>
+              <button class="buy-now-btn" onclick="initPayment('95fc5173-6cf9-4476-864c-2aaa8ff952ab', 'monthly', 2500, 'Supreme Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹5200</span>
+              <button class="buy-now-btn" onclick="initPayment('95fc5173-6cf9-4476-864c-2aaa8ff952ab', 'quarterly', 5200, 'Supreme Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹7500</span>
+              <button class="buy-now-btn" onclick="initPayment('95fc5173-6cf9-4476-864c-2aaa8ff952ab', 'half_yearly', 7500, 'Supreme Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹11999</span>
+              <small style="color:#999;">(₹999/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('95fc5173-6cf9-4476-864c-2aaa8ff952ab', 'yearly', 11999, 'Supreme Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+        <!-- Ultimate Scalp PRO -->
+        <tr>
+          <td><a href="UltimateScalpPRO.html" class="indicator-link" data-translate="indicator_scalp_swing">Ultimate Scalp PRO</a></td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹2000</span>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'monthly', 2000, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹4200</span>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'quarterly', 4200, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6000</span>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'half_yearly', 6000, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹9999</span>
+              <small style="color:#999;">(₹833/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('d436086c-bf62-4a36-8faa-caed8e6da444', 'yearly', 9999, 'Ultimate Scalp PRO [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+        
+        <!-- Twin Chart -->
+        <tr>
+          <td><a href="TwinChart.html" class="indicator-link" data-translate="indicator_twin_chart">Twin Chart [CRM]</a></td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹1750</span>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'monthly', 1750, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3700</span>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'quarterly', 3700, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹5500</span>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'half_yearly', 5500, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹7999</span>
+              <small style="color:#999;">(₹666/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('2486be6f-94ee-4c68-80ae-32cab4ba851f', 'yearly', 7999, 'Twin Chart [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
 
+        <!-- MTF Demand Supply -->
+        <tr>
+          <td><a href="MTFDemandSupply.html" class="indicator-link" data-translate="indicator_mtf_pivot_matrix">MTF Demand Supply [CRM]</a></td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹1500</span>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'monthly', 1500, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3200</span>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'quarterly', 3200, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹4500</span>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'half_yearly', 4500, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6999</span>
+              <small style="color:#999;">(₹583/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('976241cf-0723-4f71-bb02-94055eac2de5', 'yearly', 6999, 'MTF Demand Supply [CRM]')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+        
+        <!-- Free Indicators -->
+        <tr>
+          <td><a href="EMARSI.html" class="indicator-link" data-translate="indicator_ema_cross_rsi">EMA Cross RSI [CRM]</a></td>
+          <td colspan="4" style="text-align: center; font-weight: bold; color:#00ffcc;" data-translate="free_indicator_message">
+            🎁 Free indicator available for our genuine followers!
+          </td>
+        </tr>
+        <tr>
+          <td><a href="EMASupertrend.html" class="indicator-link" data-translate="indicator_ema_supertrend">EMA Supertrend [CRM]</a></td>
+          <td colspan="4" style="text-align: center; font-weight: bold; color:#00ffcc;" data-translate="free_indicator_message">
+            🎁 Free indicator available for our genuine followers!
+          </td>
+        </tr>
+        <!-- Add this at the bottom of pricing table -->
+      </tbody>
+    </table>
+    
+    <p style="text-align:center; font-style:italic; font-size:14px; color:#c2c2c2;" data-translate="pricing_note">
+      *Payment terms and prices are subject to change
+    </p>
+    </div>
+    <!-- Combo Plans -->
+    <h2 data-translate="combo_indicators" style="text-align:center; color:#f39c12; font-weight:700; text-decoration: underline; margin-top: 40px;">
+      Combo Plans – Get More, Save More
+    </h2>
+    <div class="table-wrapper">
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th data-translate="pricing_table_indicator">Indicator</th>
+          <th>
+            <span data-translate="monthly">Monthly</span><br>
+            <span style="color:#27b5d8; font-size:12px;">Save up to 45%</span>
+          </th>
+          <th>
+            <span data-translate="quarterly">Quarterly</span><br>
+            <span style="color:#00ffcc; font-size:12px;">Save up to 60%</span>
+          </th>
+          <th>
+            <span data-translate="halfYearly">Half-Yearly</span><br>
+            <span style="color:#ffcc00; font-size:12px;">Save up to 70%</span>
+          </th>
+          <th>
+            <span data-translate="yearly">Yearly</span><br>
+            <span style="color:#ff4444; font-size:12px; font-weight:bold;">🔥 Best Value – Save up to 80%</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        
+        <!-- Combo 1 -->
+        
+
+       
+        <tr>
+          <td data-translate="indicator_mix_title">CRM Combo 1 (Supreme Scalp PRO + Twin Chart) [Best-Seller]</td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹2800</span>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'monthly', 2800, 'CRM Combo 1 (Supreme Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6000</span>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'quarterly', 6000, 'CRM Combo 1 (Supreme Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹8800</span>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'half_yearly', 8800, 'CRM Combo 1 (Supreme Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹14499</span>
+              <small style="color:#999;">(₹1208/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('24b054f5-48c7-40cb-b56e-f83f6e0a1f45', 'yearly', 14499, 'CRM Combo 1 (Supreme Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+         <!-- Combo 2 -->
+        <tr>
+          <td data-translate="indicator_mix2_title">CRM Combo 2 (Ultimate Scalp PRO + Twin Chart) [Best-Seller]</td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹2500</span>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'monthly', 2500, 'CRM Combo 2 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹5200</span>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'quarterly', 5200, 'CRM Combo 2 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹7500</span>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'half_yearly', 7500, 'CRM Combo 2 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹11999</span>
+              <small style="color:#999;">(₹999/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('a4e2d335-ec7e-4080-9c12-2b58399eadb6', 'yearly', 11999, 'CRM Combo 2 (Ultimate Scalp PRO + Twin Chart)')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+        
+        <!-- All-in-One -->
+        <tr>
+          <td data-translate="indicator_mix3_title">CRM All-in-One (Includes all Premium Indicators) [Best-Seller]</td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹3200</span>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'monthly', 3200, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹6700</span>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'quarterly', 6700, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹9600</span>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'half_yearly', 9600, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <span class="price-amount">₹15499</span>
+              <small style="color:#999;">(₹1291/Month)</small>
+              <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', 'yearly', 15499, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align:center; font-style:italic; font-size:14px; color:#c2c2c2;" data-translate="pricing_note">
+      *Payment terms and prices are subject to change
+    </p>
+  </div>
     <div class="group-discount">
-      <p><span class="green" data-translate="feedback_text">We’d love to hear your valuable feedback on our indicators! Feel free to share your thoughts with us via WhatsApp, email, or Telegram.</span></p>
-      <p><em data-translate="feedback_offer">"Share your feedback and stand a chance to win a free 1-month access to our premium indicator!"</em></p>
+      <p data-translate="google_form_free_revert">Sign up for your 7-day free trial by completing this Google Form.</p>
+      <p data-translate="trial_form">Google form to be filled to avail Free Trial<a href="https://forms.gle/vkGYegENq9Lb9nD4A">LINK</a></p>
+      <p data-translate="sevenday" >Get 7-day access to all our premium indicators for just ₹1000 — valid only once per user!</p>
+      <button class="buy-now-btn" onclick="initPayment('077f892d-52cc-490a-b501-34f2db17aecf', '7-day', 1000, 'CRM All-in-One (Includes all Premium Indicators)')">Buy Now</button>
+      <br><br><span style="color: #f39c12; font-weight: bold;" data-translate="referralMessage">Refer our indicator to fellow traders and win 1 month of premium access — just share your TradingView ID so they can enter it in the Google form!</span>
+      <br><br><p data-translate="google_form_revert" >After Payment please fill the google form to get access at the earliest.</p>
+      <p data-translate="subscription_form">Google form to be filled after taking subscription<a href="https://forms.gle/z88W2XCf6VPsDy2d9">LINK</a></p>
+      <br>
+    </div>
+    <div class="special-offer" >
+        <h2 data-translate="offer_title">🎁 Special Offer:</h2>
+        <p data-translate="offer_description">Open a trading account using our referral link below and get additional beenfits</p>
+        <a href="https://kneo.onelink.me/MRGO/oxmmm5fh?s=rne_profile" data-translate="kotak_link">Kotak</a>
+        <a href="https://join.dhan.co/?invite=YWNXL78593" data-translate="dhan_link">Dhan</a>
+        <a href="https://sahi.onelink.me/lsr5/7gav3stt" data-translate="sahi_link">Sahi</a>
+        <a href="https://mstock.onelink.me/CX05/orbbg2ss" data-translate="mstock_link">Mstock</a>
+        <a href="https://indmoney.onelink.me/RmHC/7d7fb018" data-translate="indmoney_link">INDmoney</a>
+        <a href="https://www.xmglobal.com/referral?token=dLTf6QX1yjON-k2p7a_dgQ" data-translate="xmglobal_link">XM</a>
+        <!-- <a href="https://join.dhan.co/?invite=YWNXL78593" data-translate="zerodha_link">Zerodha</a> -->
+
     </div>
   </section>
+  
+<!-- FAQ Section -->
+<section class="faq-section" id="faq">
+  <div class="faq-container">
+    <h2 class="faq-title" data-translate="faq_title">Frequently Asked Questions</h2>
 
+    <!-- Q1 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q1">
+      <label for="q1" class="faq-question" data-translate="faq_q1">What are CRM Indicators and how do they work?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a1">CRM Indicators are custom-built TradingView tools designed to simplify market analysis. They provide high-accuracy signals for entries and exits, helping traders follow logic, not luck.</p>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q2">
+      <label for="q2" class="faq-question" data-translate="faq_q2">Do I need a TradingView subscription to use your indicators?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a2">Our indicators work on both free and paid TradingView accounts. However, for the best experience and advanced charting features, TradingView Pro is recommended.</p>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q3">
+      <label for="q3" class="faq-question" data-translate="faq_q3">How do I use the Free Indicators?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a3">To use our Free Indicators, you need a TradingView account. Simply go to the <strong>Learn More</strong> section of the respective Free Indicator card on our website. At the top, click the <strong>"View on TradingView"</strong> button — the indicator will open in TradingView. From there, click ⭐ <strong>Add to Favorites</strong> and it will appear in your TradingView Indicators list. <br><br>👉 If you loved our indicators, please follow us on TradingView for more updates!</p>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q4">
+      <label for="q4" class="faq-question" data-translate="faq_q4">How do I use the Paid Indicators?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a4">Paid Indicators also require a TradingView account. Unlike Free Indicators, they cannot be directly added. You can start with a <strong>Free Trial</strong> by filling the Google Form linked below the pricing table or in the scrolling banner at the top of our site. <br><br>To continue long-term access, choose a subscription plan from our Pricing Table and complete the payment. After payment, fill out the Google Form (under the pricing table) with your TradingView ID. Our team will then grant you access to the selected indicator(s).</p>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q5">
+      <label for="q5" class="faq-question" data-translate="faq_q5">Which markets can I use these indicators on?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a5">You can use them on Equity, Futures, Options, Crypto and Forex — across all timeframes from scalping to swing trading.</p>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q6">
+      <label for="q6" class="faq-question" data-translate="faq_q6">What is included in Free Indicators vs Premium Plans?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a6">Free indicators include EMA Cross RSI and EMA Supertrend. Premium plans unlock advanced tools like Ultimate Scalp PRO, MTF Demand Supply, and exclusive CRM combos.</p>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="faq-item">
+      <input type="checkbox" id="q8">
+      <label for="q8" class="faq-question" data-translate="faq_q8">Do you provide refunds?</label>
+      <div class="faq-answer">
+        <p data-translate="faq_a8">Since these are digital products, refunds are not provided. We recommend using the Free Trial to test before purchasing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
   <section id="contact">
-    <h2 data-translate="contact_title">Contact & Payment</h2>
+    <br><br><h2 data-translate="contact_title">Contact & Payment</h2>
     <p data-translate="contact_subtitle">Reach out for subscriptions, support, or payment queries.</p>
-    <p>WhatsApp: <a href="https://wa.me/9930752555" target="_blank">9930752555</a></p>
+    <p>WhatsApp: <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?" target="_blank">9930752555</a></p>
     <p>Telegram: <a href="https://t.me/u_Nx2Uhk_QQ0MDk9" target="_blank" data-translate="telegram_handle">@CREATIVE RISING MINDS</a></p>
-    <p>Email: <a href="mailto:thecreativeminds005@gmail.com">thecreativeminds005@gmail.com</a></p>
+    <p>Email: <a href="mailto:creativerisingminds@gmail.com">creativerisingminds@gmail.com</a></p>
 
     <div class="upi-section" style="padding: 0 15%;">
       <div class="upi-text">
@@ -133,34 +635,69 @@
   </section>
 
   <!-- Footer -->
-  <footer style="text-align: center; padding: 20px; background-color: #000000;">
-    <div style="margin-bottom: 10px;">
-      <a href="https://t.me/u_Nx2Uhk_QQ0MDk9" target="_blank" style="margin: 0 15px; color: #0088cc; font-size: 30px;">
-        <i class="fab fa-telegram"></i>
-      </a>
-      <a href="https://www.instagram.com/creativerisingmindsofficial" target="_blank" style="margin: 0 15px; color: #e4405f; font-size: 30px;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/yourusername" target="_blank" style="margin: 0 15px; color: #3b5998; font-size: 30px;">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://x.com/crmofficial005" target="_blank" style="margin: 0 15px; color: #1da1f2; font-size: 30px;">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.youtube.com/@creativerisingminds" target="_blank" style="margin: 0 15px; color: #ff0000; font-size: 30px;">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?" target="_blank" style="margin: 0 15px; color: #25d366; font-size: 30px;">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts" target="_blank" style="margin: 0 15px;">
-        <img src="images/logo/TVicon.png" alt="TradingView" style="width: 50px; height: 60px; vertical-align: middle; margin-bottom: 15px; border-radius: 6px;">
-      </a>
-    </div>
-    <span data-translate="footer_copyright">© 2025 Creative Rising Minds. All rights reserved.</span>
-  </footer>
+<footer class="custom-footer">
+  <div class="footer-container">
+    <!-- Social Media -->
+    <div class="footer-section social-media">
+      <h3 data-translate="footer_social_media">Follow us on social media</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@CREATIVERISINGMINDSOFFICIAL"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9"><i class="fab fa-telegram"></i></a>
+        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+          <span class="tv-icon">
+            <img src="images/logo/TVicon.png" alt="TradingView">
+          </span>
+        </a>
+        <a href="https://x.com/crmofficial005"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/creativerisingmindsofficial"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?"><i class="fab fa-whatsapp"></i></a>
+      </div>
 
-  <script src="test.js"></script>
-  <script src='https://www.noupe.com/embed/019827531fa67db28948f0c6d7d1c748c1c8.js'></script>
+      <div class="contact-info">
+        <h3 data-translate="footer_contact_us">Contact Us</h3>
+        <p class="email-container">
+          <i class="fas fa-envelope"></i> 
+          <a class="email-link" href="mailto:creativerisingminds@gmail.com" data-translate="footer_email_label">creativerisingminds@gmail.com</a>
+        </p>
+        <p class="phone-container">
+          <i class="fas fa-phone-alt"></i> 
+          <a class="phone-link" href="tel:+919930752555" data-translate="footer_phone_label">+91 9930752555 (Enquiries)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3 data-translate="footer_quick_links">Quick Links</h3>
+      <ul>
+        <li><a href="#home" data-translate="footer_home">Home</a></li>
+        <li><a href="disclaimer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
+        <li><a href="#contact" data-translate="footer_contact_us">Contact Us</a></li>
+        <li><a href="about.html" data-translate="footer_about_us">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Policies -->
+    <div class="footer-section">
+      <h3 data-translate="footer_policies">Policies and Compliance</h3>
+      <ul>
+        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
+        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;" data-translate="footer_copyright">
+    © 2025 Creative Rising Minds. All rights reserved.
+  </div>
+</footer>
+
+ <script src="script.js"></script>
+ <script src="auth-helper.js"></script>
+ <script src="main.js"></script>
+ <script src="payments.js"></script> 
+ <script src="ytCarousel.js"></script>
+
 </body>
 </html>
