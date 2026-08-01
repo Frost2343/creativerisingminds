@@ -1,4 +1,4 @@
-  // ============================================
+  // ================= PAYMENTS.JS ===========================
   // PAYMENT SYSTEM - DUAL PAYMENT (UPI + RAZORPAY)
   // ============================================
 
@@ -9,7 +9,7 @@
   const TRIAL_FORM_URL = 'https://forms.gle/WFeJJGbHPtjQCCPV6'; // 7-day plan form
 
   let currentPaymentDetails = null;
-  const PENDING_PURCHASE_KEY = 'pending_purchase';
+  // const PENDING_PURCHASE_KEY = 'pending_purchase';
 
   function storePendingPurchase(productId, planType, baseAmount, productName) {
     localStorage.setItem(PENDING_PURCHASE_KEY, JSON.stringify({
