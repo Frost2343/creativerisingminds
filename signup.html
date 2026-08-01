@@ -313,10 +313,14 @@
 
         // Check if already logged in
         window.addEventListener('DOMContentLoaded', () => {
-            // Handle OAuth callback if applicable
             if (typeof handleOAuthCallback === 'function' && handleOAuthCallback()) {
                 showAlert('Setting up your account...', 'success');
                 return;
+            }
+
+            const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
+            if (returnUrl && typeof storeAuthReturnUrl === 'function') {
+                storeAuthReturnUrl(returnUrl);
             }
 
             const user = getCurrentUser?.();

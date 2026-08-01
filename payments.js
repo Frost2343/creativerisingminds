@@ -20,6 +20,15 @@
     }));
   }
 
+  function restoreBillingCycle(planType) {
+    if (planType !== 'monthly' && planType !== 'yearly') return;
+    if (typeof syncBillingRadios === 'function') {
+      billingCycle = planType;
+      syncBillingRadios(planType);
+      if (typeof renderPricing === 'function') renderPricing();
+    }
+  }
+
   function resumePendingPurchase() {
     const raw = localStorage.getItem(PENDING_PURCHASE_KEY);
     if (!raw || typeof getCurrentUser !== 'function' || !getCurrentUser()) return;
@@ -27,7 +36,10 @@
     try {
       const pending = JSON.parse(raw);
       localStorage.removeItem(PENDING_PURCHASE_KEY);
-      initPayment(pending.productId, pending.planType, pending.baseAmount, pending.productName);
+      restoreBillingCycle(pending.planType);
+      setTimeout(function () {
+        initPayment(pending.productId, pending.planType, pending.baseAmount, pending.productName);
+      }, 150);
     } catch (err) {
       localStorage.removeItem(PENDING_PURCHASE_KEY);
     }
@@ -41,6 +53,9 @@
     
     if (!user) {
       storePendingPurchase(productId, planType, baseAmount, productName);
+      if (typeof storeAuthReturnUrl === 'function') {
+        storeAuthReturnUrl('index.html#pricing');
+      }
       window.location.href = 'login.html?returnUrl=' + encodeURIComponent('index.html#pricing');
       return;
     }

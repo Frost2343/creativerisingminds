@@ -503,6 +503,11 @@
 
  <script src="script.js"></script>
  <script src="auth-helper.js"></script>
+ <script>
+   if (window.location.hash && window.location.hash.includes('access_token')) {
+     handleOAuthCallback();
+   }
+ </script>
  <script src="main.js"></script>
  <script src="payments.js"></script> 
  <script src="ytCarousel.js"></script>

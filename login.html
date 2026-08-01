@@ -284,10 +284,15 @@
 
         // Check if already logged in
         window.addEventListener('DOMContentLoaded', () => {
-            // Handle OAuth callback
+            // Handle OAuth callback (fallback if redirected here instead of auth-callback.html)
             if (handleOAuthCallback()) {
                 showAlert('Logging you in...', 'success');
                 return;
+            }
+
+            const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
+            if (returnUrl) {
+                storeAuthReturnUrl(returnUrl);
             }
 
             const user = getCurrentUser();
@@ -295,7 +300,6 @@
                 window.location.href = getSafeReturnUrl('dashboard.html');
             }
 
-            const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
             const signupLink = document.querySelector('.form-footer a[href="signup.html"]');
             if (signupLink && returnUrl) {
                 signupLink.href = 'signup.html?returnUrl=' + encodeURIComponent(returnUrl);

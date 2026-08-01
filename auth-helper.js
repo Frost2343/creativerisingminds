@@ -6,6 +6,29 @@
 const SUPABASE_URL = 'https://hzjrxjhelpapvdmfidnu.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6anJ4amhlbHBhcHZkbWZpZG51Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA0MjIwOTEsImV4cCI6MjA3NTk5ODA5MX0.doszHhsbhUc6FCqZHav_Bny8UDy5ZTRUpKTRR1h_Z_o';
 
+// Production app URL — used for OAuth callbacks so redirects never fall back to localhost
+const PRODUCTION_APP_URL = 'https://creativerisingminds.vercel.app';
+const AUTH_RETURN_URL_KEY = 'auth_return_url';
+const PENDING_PURCHASE_KEY = 'pending_purchase';
+
+function getAppUrl() {
+  const hostname = window.location.hostname;
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return window.location.origin;
+  }
+  return window.location.origin || PRODUCTION_APP_URL;
+}
+
+function getOAuthCallbackUrl() {
+  return getAppUrl() + '/auth-callback.html';
+}
+
+function storeAuthReturnUrl(url) {
+  if (url && !url.includes('://') && !url.startsWith('//')) {
+    sessionStorage.setItem(AUTH_RETURN_URL_KEY, url);
+  }
+}
+
 // Helper function to make API calls
 async function supabaseFetch(endpoint, options = {}) {
   const url = `${SUPABASE_URL}${endpoint}`;
@@ -66,11 +89,26 @@ async function signup(email, password, fullName = '') {
 // ============================================
 function getSafeReturnUrl(defaultUrl) {
   const fallback = defaultUrl || 'dashboard.html';
+
+  const stored = sessionStorage.getItem(AUTH_RETURN_URL_KEY);
+  if (stored) {
+    sessionStorage.removeItem(AUTH_RETURN_URL_KEY);
+    if (!stored.includes('://') && !stored.startsWith('//')) {
+      return stored;
+    }
+  }
+
   const params = new URLSearchParams(window.location.search);
   const returnUrl = params.get('returnUrl');
-  if (!returnUrl) return fallback;
-  if (returnUrl.includes('://') || returnUrl.startsWith('//')) return fallback;
-  return returnUrl;
+  if (returnUrl && !returnUrl.includes('://') && !returnUrl.startsWith('//')) {
+    return returnUrl;
+  }
+
+  if (localStorage.getItem(PENDING_PURCHASE_KEY)) {
+    return 'index.html#pricing';
+  }
+
+  return fallback;
 }
 
 // ============================================
@@ -79,9 +117,13 @@ function getSafeReturnUrl(defaultUrl) {
 async function signInWithGoogle() {
   try {
     const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
-    const callbackUrl = returnUrl
-      ? window.location.origin + '/login.html?returnUrl=' + encodeURIComponent(returnUrl)
-      : window.location.origin + '/login.html';
+    if (returnUrl) {
+      storeAuthReturnUrl(returnUrl);
+    } else if (localStorage.getItem(PENDING_PURCHASE_KEY)) {
+      storeAuthReturnUrl('index.html#pricing');
+    }
+
+    const callbackUrl = getOAuthCallbackUrl();
     const authUrl = `${SUPABASE_URL}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(callbackUrl)}`;
     window.location.href = authUrl;
     return {
@@ -101,24 +143,34 @@ async function signInWithGoogle() {
 // ============================================
 function handleOAuthCallback() {
   const hash = window.location.hash;
-  
+
+  if (hash && hash.includes('error=')) {
+    const params = new URLSearchParams(hash.substring(1));
+    console.error('OAuth error:', params.get('error_description') || params.get('error'));
+    window.location.href = 'login.html';
+    return true;
+  }
+
   if (hash && hash.includes('access_token')) {
     const params = new URLSearchParams(hash.substring(1));
     const accessToken = params.get('access_token');
     const refreshToken = params.get('refresh_token');
     const expiresIn = params.get('expires_in');
-    
+
     if (accessToken) {
       storeSession({
         access_token: accessToken,
         refresh_token: refreshToken,
-        expires_at: Math.floor(Date.now() / 1000) + parseInt(expiresIn)
+        expires_at: Math.floor(Date.now() / 1000) + parseInt(expiresIn || 3600)
       });
+
       fetchCurrentUser(accessToken).then(user => {
         if (user) {
           storeSession({ user });
-          window.location.href = getSafeReturnUrl('dashboard.html');
         }
+        window.location.replace(getSafeReturnUrl('dashboard.html'));
+      }).catch(() => {
+        window.location.replace(getSafeReturnUrl('dashboard.html'));
       });
       return true;
     }
