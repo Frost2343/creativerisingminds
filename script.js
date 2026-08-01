@@ -90,7 +90,7 @@ const translations = {
     indicator_option_desc: "CRM Option Chain Decoder",
     pricing_title: "Simple, Transparent Pricing",
     pricing_eyebrow: "Pricing",
-    pricing_subtitle: "Pick your edge. Every plan includes lifetime updates and TradingView access — cancel anytime.",
+    pricing_subtitle: "Pick your edge. Every plan includes regular updates and TradingView access — cancel anytime.",
     pricing_trust_secure: "Secure Payments",
     pricing_trust_updates: "Lifetime Updates",
     pricing_trust_tradingview: "TradingView Access",

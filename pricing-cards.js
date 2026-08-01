@@ -7,7 +7,7 @@
 
 /** Section title colors — change these to customize heading appearance */
 const PRICING_THEME = {
-  individualTitleColor: '#ffffff',
+  individualTitleColor: '#00ffcc',
   comboTitleColor: '#00ffcc'
 };
 
@@ -267,9 +267,22 @@ function buildCard(plan, isAnnual) {
     (plan.popular ? ' popular' : '') +
     (plan.badgeKey ? ' has-badge' : '');
   const perMonth = t('pricing_per_month', '/mo');
+//   const savingsHtml = isAnnual
+//     ? '<p class="savings-text">' + t('pricing_save_year', 'Save {amount}/year').replace('{amount}', formatINR(yearlySavings)) + '</p>'
+//     : '<p class="savings-text savings-placeholder">&nbsp;</p>';
   const savingsHtml = isAnnual
-    ? '<p class="savings-text">' + t('pricing_save_year', 'Save {amount}/year').replace('{amount}', formatINR(yearlySavings)) + '</p>'
-    : '<p class="savings-text savings-placeholder">&nbsp;</p>';
+  ? '<p class="savings-text">' +
+      t('pricing_save_year', 'Save {amount}/year').replace('{amount}', formatINR(yearlySavings)) +
+      ' <span class="savings-tooltip-wrap">' +
+        '<i class="fas fa-info-circle savings-info-icon"></i>' +
+        '<span class="savings-tooltip-box">' +
+          t('pricing_save_tooltip', 'Compared to paying monthly. Your full annual price is ₹{annual} against ₹{monthlyTotal} with regular monthly payments.')
+            .replace('{annual}', Math.round(plan.annualTotal).toLocaleString('en-IN'))
+            .replace('{monthlyTotal}', Math.round(plan.monthlyPrice * 12).toLocaleString('en-IN')) +
+        '</span>' +
+      '</span>' +
+    '</p>'
+  : '<p class="savings-text savings-placeholder">&nbsp;</p>';
   const buyNow = t('buy_now', 'Buy Now');
 
   return (
@@ -382,11 +395,26 @@ function attachBuyNowHandlers() {
   });
 }
 
+// New — separate function for the savings tooltip
+function attachSavingsTooltipHandlers() {
+  document.addEventListener('click', function (e) {
+    const wrap = e.target.closest('.savings-tooltip-wrap');
+    document.querySelectorAll('.savings-tooltip-wrap.active').forEach(function (el) {
+      if (el !== wrap) el.classList.remove('active');
+    });
+    if (wrap) {
+      e.stopPropagation();
+      wrap.classList.toggle('active');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   applyPricingTheme();
   initBillingRadios();
   renderPricing();
   attachBuyNowHandlers();
+  attachSavingsTooltipHandlers();
 
   // Resume purchase after login — slight delay ensures auth session is readable
   setTimeout(function () {
