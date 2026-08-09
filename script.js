@@ -77,7 +77,7 @@ const translations = {
     hero_subtitle: "Spot the Signal. Skip the Noise. Dominate the Trend.",
     hero_btn_explore: "Explore Plans",
     hero_btn_contact: "Contact Us",
-    indicators_title: "Our Creative Indicators (Premium)",
+    indicators_title: "Our Premium Indicators",
     indicator_trend_title: 'CRM<br>Trend Analyser<br>(FREE)',
     indicator_trend_desc: "<strong>CRM Trend Analyser combines moving averages, oscillators, volatility-based targets, and supply-demand zones to deliver precise entry and exit signals, enhancing decision-making for scalpers, swing traders, and investors.</strong>",
     indicator_learn_more: "Learn More",
@@ -96,7 +96,7 @@ const translations = {
     pricing_trust_tradingview: "TradingView Access",
     pricing_save_up_to_60: "Save up to 60%",
     pricing_group_individual_desc: "Subscribe to a single indicator that fits your trading style.",
-    pricing_group_combo_desc: "Bundle multiple indicators and unlock the best value.",
+    pricing_group_combo_desc: "Bundle multiple indicators at the best price.",
     pricing_billed_annually: "billed annually at",
     pricing_billed_monthly: "billed monthly",
     pricing_save_year: "Save {amount} a year",
@@ -135,13 +135,13 @@ const translations = {
     pricing_full_allinone: "CRM All-in-One (Includes all Premium Indicators)",
     pricing_cat_scalping_confluence: "Scalping · Confluence",
     pricing_cat_options_live: "Options · Live Data",
-    pricing_cat_scalping_swing: "Scalping · Swing",
-    pricing_cat_multi_symbol: "Multi-Symbol",
+    pricing_cat_scalping_swing: "Scalping · Momentum",
+    pricing_cat_multi_symbol: "Multi-Chart",
     pricing_cat_screener: "Screener · Watchlist",
     pricing_cat_mtf: "Multi-Timeframe",
-    pricing_cat_combo1: "Supreme + Flash · Best-Seller",
-    pricing_cat_combo2: "Ultimate + Twin · Best-Seller",
-    pricing_cat_allinone: "Everything, Bundled",
+    pricing_cat_combo1: "Supreme + Flash",
+    pricing_cat_combo2: "Ultimate + Twin",
+    pricing_cat_allinone: "All Indicators, Bundled",
     pricing_feat_supreme_1: "High-Probability Scalping Signals",
     pricing_feat_supreme_2: "Dynamic Entry, SL & Target Levels",
     pricing_feat_supreme_3: "Trend Confirmation Filters",
@@ -2627,3 +2627,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   changeLanguage();
 });
+
+

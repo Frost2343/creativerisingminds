@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="foc_title">Flash Option Chain [CRM]</title>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="indicator1.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logo/CRM-LOGO.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="index.html#home" class="brand-container">
+      <img src="images/logo/CRM-LOGO.png" alt="Logo" class="logo">
+      <span class="brand-name" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+        Creative Rising Minds
+      </span>
+    </a>
+  </div>
+
+
+  <div class="nav-right" id="nav-right">
+    <a href="index.html#home" data-translate="nav_home">Home</a>
+    <a href="index.html#indicators" data-translate="nav_indicators">Indicators</a>
+    <a href="index.html#pricing" data-translate="nav_pricing">Pricing</a>
+    <a href="index.html#contact" data-translate="nav_contact">Contact</a>
+
+
+    <div class="language-switcher">
+      <select id="language-select" onchange="changeLanguage()" class="brand-container">
+        <option value="en">English</option>
+        <option value="mr">मराठी</option>
+        <option value="gu">ગુજરાતી</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+
+
+    <div class="user-menu">
+      <div id="userIconLoggedOut" class="user-icon" title="Login / Sign Up">
+        <i class="fa fa-user" style="color: #fff;"></i>
+        <div class="dropdown-menu" id="dropdownLoggedOut">
+          <a href="signup.html" class="dropdown-item">
+            <span class="dropdown-icon">📝</span>
+            <span data-translate="nav_signup">Sign Up</span>
+          </a>
+          <a href="login.html" class="dropdown-item">
+            <span class="dropdown-icon">🔐</span>
+            <span data-translate="nav_login">Login</span>
+          </a>
+        </div>
+      </div>
+
+
+      <div id="userIconLoggedIn" class="user-icon" style="display: none;" title="My Account">
+        <i class="fa fa-user" style="color: #fff;"></i>
+        <span class="user-icon-name" id="userNameNav">User</span>
+
+
+        <div class="dropdown-menu" id="dropdownLoggedIn">
+          <a href="dashboard.html" class="dropdown-item">
+            <span class="dropdown-icon">📊</span>
+            <span data-translate="nav_dashboard">Dashboard</span>
+          </a>
+          <a href="dashboard.html#subscriptions" class="dropdown-item">
+            <span class="dropdown-icon">🎯</span>
+            <span data-translate="nav_subscriptions">My Subscriptions</span>
+          </a>
+          <a href="#" onclick="event.preventDefault(); logout();" class="dropdown-item logout-item">
+            <span class="dropdown-icon">🚪</span>
+            <span data-translate="nav_logout">Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="scroll-container">
+    <div class="scroll-text">
+      🚀 <span data-translate="free_trial_text">If you want to avail <b>FREE Trial</b>, fill this</span>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaFvg8PUavKxtlCPnVYeJdOfoD-UcUzNs4Zrh5L1QuFTyLg/viewform"
+         target="_blank" data-translate="google_form_text">Google Form</a> ✅
+      &nbsp; | &nbsp;
+      🎯 <span data-translate="try_indicators_text">Try our free indicators</span> →
+      <a href="https://in.tradingview.com/" target="_blank" data-translate="marquee_free_indicator_1">EMA Supertrend [CRM]</a>,
+      <a href="https://in.tradingview.com/" target="_blank" data-translate="marquee_free_indicator_2">EMA Cross RSI [CRM]</a>
+      &nbsp; | &nbsp;
+      🎯 <span data-translate="indicators_title">Try our premium indicators</span> →
+      <a href="https://in.tradingview.com/" target="_blank" data-translate="marquee_premium_indicator_1">Flash Option Chain [CRM]</a>,
+      <a href="https://in.tradingview.com/" target="_blank" data-translate="marquee_premium_indicator_2">Supreme Scalp PRO [CRM]</a>,
+      <a href="https://in.tradingview.com/" target="_blank" data-translate="marquee_premium_indicator_3">Twin Chart [CRM]</a>
+    </div>
+  </div>
+</nav>
+
+
+<br>
+
+
+<div class="container">
+
+
+  <!-- <a href="https://www.tradingview.com/" class="btn" target="_blank" data-translate="view_tradingview">
+    📈 View on TradingView
+  </a> -->
+
+
+  <h1 data-translate="foc_main_heading">
+    💡Flash Option Chain [CRM] – <span class="highlight">Advanced Multi-Timeframe Option Chain & Confluence Engine</span>💡
+  </h1>
+
+
+  <p class="subheading" data-translate="foc_subheading">
+    Live Option Chain Analysis | Multi-Timeframe Signals | Premium, Volatility & Market Structure
+  </p>
+
+
+  <div class="carousel-wrapper">
+    <button class="nav-button nav-btn-left" id="prevBtn"
+            style="display: none;background-color: black;">❮</button>
+    <div class="carousel-track" id="carousel">
+        <img src="images/flashoptionchain.png" alt="Slide 1" data-translate="foc_image_alt" class="carousel-image" />
+      </div>
+    <button class="nav-button nav-btn-right" id="nextBtn"
+            style="display: none;background-color: black;">❯</button>
+  </div>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_description_title">📌 Description</h3>
+    <p data-translate="foc_feature_description_1">
+      Flash Option Chain [CRM] is an advanced live option-chain analysis tool that combines option pricing, multi-timeframe signals, volatility insights and market-structure analysis in one compact TradingView dashboard. It helps traders evaluate Calls and Puts together for a broader market view.
+    </p>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_key_title">✅ Core Capabilities</h3>
+    <ul>
+      <li data-translate="foc_feature_key_1">Live Call and Put option-chain display with configurable strike rows</li>
+      <li data-translate="foc_feature_key_2">Automatic symbol selection with support for NIFTY, BANKNIFTY, FINNIFTY and MIDCPNIFTY</li>
+      <li data-translate="foc_feature_key_3">MCX support for GOLDM, SILVERM, CRUDEOIL and NATURALGAS</li>
+      <li data-translate="foc_feature_key_4">Broad F&O stock support with automated strike and contract selection.</li>
+      <li data-translate="foc_feature_key_5">Fully configurable option chain table, with customizable LTP, Intrinsic Value, Time Value, and all other columns.</li>
+      <li data-translate="foc_feature_key_6">Independent View, 5-Min, 15-Min and 1-Hour signal columns</li>
+      <li data-translate="foc_feature_key_7">Delta, Implied Volatility and Volume analysis</li>
+      <li data-translate="foc_feature_key_8">Dynamic Max Pain analysis across the selected strike range.</li>
+      <li data-translate="foc_feature_key_10">India VIX value and daily percentage-change display</li>
+      <li data-translate="foc_feature_key_11">Volatility-based Probable Range for market context.</li>
+      <li data-translate="foc_feature_key_12">Optional Current, Next and Cumulative Futures OI section with OI percentage changes</li>
+      <li data-translate="foc_feature_key_13">Automated expiry selection across supported contract cycles.</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_confluence_title">🎯 Multi-Timeframe Confluence</h3>
+    <ul>
+      <li data-translate="foc_feature_confluence_1"><span class="highlight">5-Min:</span> Short-term option-flow and buildup classification</li>
+      <li data-translate="foc_feature_confluence_2"><span class="highlight">15-Min:</span> Intermediate momentum and structure confirmation</li>
+      <li data-translate="foc_feature_confluence_3"><span class="highlight">1-Hour:</span> Higher-timeframe confirmation for Intraday/Crypto mode</li>
+      <li data-translate="foc_feature_confluence_4"><span class="highlight">View:</span> Combines timeframe signals into directional Call/Put confluence</li>
+      <li data-translate="foc_feature_confluence_5">Signals include RC / RC+, Buy / Buy+, PB / PB+, Sell / Sell+</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_pricing_title">📊 Option Analytics</h3>
+    <ul>
+      <li data-translate="foc_feature_pricing_1"><span class="highlight">LTP:</span> Current option price</li>
+      <li data-translate="foc_feature_pricing_2"><span class="highlight">Intrinsic Value:</span> Calculated Call/Put intrinsic component</li>
+      <li data-translate="foc_feature_pricing_3"><span class="highlight">Time Value:</span> Option premium remaining after intrinsic value</li>
+      <li data-translate="foc_feature_pricing_4"><span class="highlight">IV:</span> Implied volatility estimated from the option price</li>
+      <li data-translate="foc_feature_pricing_5"><span class="highlight">Delta:</span> Option sensitivity calculated from the estimated volatility</li>
+      <li data-translate="foc_feature_pricing_6"><span class="highlight">Volume:</span> Session option volume displayed in compact format</li>
+      <li data-translate="foc_feature_pricing_7"><span class="highlight">PCR:</span> Premium-weighted Call/Put ratio across the displayed band</li>
+      <li data-translate="foc_feature_pricing_8"><span class="highlight">Max Pain:</span> Strike with the lowest calculated aggregate option pain</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_underlying_title">📈 Lower Chart CRM Engine</h3>
+    <ul>
+      <li data-translate="foc_feature_underlying_1">Quick-Scalp and Intraday/Crypto trading styles</li>
+      <li data-translate="foc_feature_underlying_3">Trend & SL Trailing Ribbon</li>
+      <li data-translate="foc_feature_underlying_5">Probable Trend Box with Bullish, Bearish and Sideways states</li>
+      <li data-translate="foc_feature_underlying_6">Automatic Entry, Stop-Loss and TP1/TP2/TP3 mapping</li>
+      <li data-translate="foc_feature_underlying_7">Configurable Entry/SL/TP labels and levels</li>
+      <li data-translate="foc_feature_underlying_8">VWAP and live price reference</li>
+      <li data-translate="foc_feature_underlying_9">Magnetic Reversal Zones with optional additional markers</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_assets_title">🧭 Supported Assets</h3>
+    <p data-translate="foc_feature_assets_1">
+    The indicator offers quick selection of major indices, commodities, and a wide range of Indian F&O stocks.
+    </p>
+    <p data-translate="foc_feature_assets_2">
+     Supports NIFTY, BANKNIFTY, FINNIFTY, MIDCPNIFTY, GOLDM, SILVERM, CRUDEOIL, NATURALGAS, plus a broad range of Indian F&O stocks for flexible market analysis.
+    </p>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_usage_title">🎯 Ideal For</h3>
+    <ul>
+      <li data-translate="foc_feature_usage_1"><span class="highlight">Option Buyers:</span> Compare premium movement, IV, Delta, Time Value and multi-timeframe signals.</li>
+      <li data-translate="foc_feature_usage_2"><span class="highlight">Intraday Traders:</span> Use the option chain with underlying trend, VIX and market-structure information.</li>
+      <li data-translate="foc_feature_usage_3"><span class="highlight">Scalpers:</span> Focus on 3-Min and 5-Min option-flow signals and the View confluence.</li>
+      <li data-translate="foc_feature_usage_4"><span class="highlight">Option-Selling Traders:</span> Evaluate Max Pain, PCR, IV, Volume, Straddle and broader market direction.</li>
+      <li data-translate="foc_feature_usage_5"><span class="highlight">Multi-Timeframe Traders:</span> Combine short-term and higher-timeframe confirmation in one dashboard.</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_timeframes_title">🕒 Recommended Timeframes</h3>
+    <ul>
+      <li data-translate="foc_feature_timeframes_1"><span class="highlight">1min / 3min / 5min →</span> Fast option-chain and scalping analysis with focused risk-management levels.</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card">
+    <h3 data-translate="foc_feature_settings_title">⚙️ Customizable Settings</h3>
+    <ul>
+      <li data-translate="foc_feature_settings_1">Independent visibility controls for each option-chain data column</li>
+      <li data-translate="foc_feature_settings_2">Selectable number of strikes: 2 + ATM + 2, 3 + ATM + 3, 4 + ATM + 4 or 5 + ATM + 5</li>
+      <li data-translate="foc_feature_settings_3">Bottom-left or bottom-right option-chain placement</li>
+      <li data-translate="foc_feature_settings_4">Adjustable option-chain text size</li>
+      <li data-translate="foc_feature_settings_5">Auto Fetch Expiry with manual expiry override</li>
+      <li data-translate="foc_feature_settings_7">Lower-chart trading style, ribbons, trend box and trade-level controls</li>
+    </ul>
+  </section>
+
+
+  <section class="feature-card disclaimer">
+    <h3 data-translate="feature_disclaimer_title">⚠️ Disclaimer</h3>
+    <p data-translate="feature_disclaimer_1">
+      This indicator is strictly for educational and informational purposes and does not constitute financial advice.
+    </p>
+    <p data-translate="feature_disclaimer_2">
+      Creative Rising Minds (CRM) and its team are not SEBI-registered investment advisors.
+    </p>
+    <p data-translate="feature_disclaimer_3">
+      Trading and investing in financial markets involve substantial risk. Past performance is not indicative of future results.
+    </p>
+    <p data-translate="feature_disclaimer_4">
+      Please consult a qualified financial advisor before making investment or trading decisions. You are solely responsible
+      for your trading and investment decisions and any resulting profits or losses.
+    </p>
+  </section>
+
+
+</div>
+
+
+<footer class="custom-footer">
+  <div class="footer-container">
+
+
+    <div class="footer-section social-media">
+      <h3 data-translate="footer_social_media">Follow us on social media</h3>
+
+
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@CREATIVERISINGMINDSOFFICIAL">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+
+        <a href="https://t.me/u_Nx2Uhk_QQ0MDk9">
+          <i class="fab fa-telegram"></i>
+        </a>
+
+
+        <a href="https://in.tradingview.com/u/CreativeRisingMinds/#published-scripts">
+          <span class="tv-icon">
+            <img src="images/logo/TVicon.png" alt="TradingView">
+          </span>
+        </a>
+
+
+        <a href="https://x.com/crmofficial005">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+
+        <a href="https://www.instagram.com/creativerisingmindsofficial">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+
+        <a href="https://wa.me/919930752555/?text=Hi, I’m interested in buying your trading indicators. Can you please share the details?">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+
+      <div class="contact-info">
+        <h3 data-translate="footer_contact_us">Contact Us</h3>
+
+
+        <p class="email-container">
+          <i class="fas fa-envelope"></i>
+          <a class="email-link"
+             href="mailto:creativerisingminds@gmail.com"
+             data-translate="footer_email_label">
+            creativerisingminds@gmail.com
+          </a>
+        </p>
+
+
+        <p class="phone-container">
+          <i class="fas fa-phone-alt"></i>
+          <a class="phone-link"
+             href="tel:+919930752555"
+             data-translate="footer_phone_label">
+            +91 9930752555 (Enquiries)
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="footer-section">
+      <h3 data-translate="footer_quick_links">Quick Links</h3>
+      <ul>
+        <li><a href="index.html#home" data-translate="footer_home">Home</a></li>
+        <li><a href="disclaimer.html" data-translate="footer_disclaimer">Disclaimer</a></li>
+        <li><a href="index.html#contact" data-translate="footer_contact_us">Contact Us</a></li>
+        <li><a href="about.html" data-translate="footer_about_us">About Us</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-section">
+      <h3 data-translate="footer_policies">Policies and Compliance</h3>
+      <ul>
+        <li><a href="privacypolicy.html" data-translate="footer_privacy_policy">Privacy Policy</a></li>
+        <li><a href="T&C.html" data-translate="footer_terms_conditions">Terms and Conditions</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+
+  <div style="text-align: center; padding: 15px 0; font-size: 14px; color: #ccc;"
+       data-translate="footer_copyright">
+    © 2025 Creative Rising Minds. All rights reserved.
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+<script src="imageCarousel.js"></script>
+<script src="auth-helper.js"></script>
+<script src="main.js"></script>
+
+
+</body>
+</html>
+
