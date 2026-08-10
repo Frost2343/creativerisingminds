@@ -149,7 +149,7 @@ const COMBO_PLANS = [
     nameKey: 'pricing_card_combo1_name',
     fullNameKey: 'pricing_full_combo1',
     categoryKey: 'pricing_cat_combo1',
-    icon: 'fa-fire',
+    icon: 'fa-star',
     accent: '#ff9800',
     productId: '24b054f5-48c7-40cb-b56e-f83f6e0a1f45',
     annualMonthlyEff: 1500,
