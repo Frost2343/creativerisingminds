@@ -500,13 +500,13 @@
       'quarterly': 'Quarterly',
       'half_yearly': 'Half-Yearly',
       'yearly': 'Yearly',
-      '7-day': '7-Day'
+      '10-day': '10-Day'
     };
     return map[planType] || planType;
   }
   
   function getFormUrl(planType) {
-    return planType === '7-day' ? TRIAL_FORM_URL : SUBSCRIPTION_FORM_URL;
+    return planType === '10-day' ? TRIAL_FORM_URL : SUBSCRIPTION_FORM_URL;
   }
 
   // Expose payment functions globally for onclick handlers and pricing-cards.js
