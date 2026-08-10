@@ -5,8 +5,8 @@
   const RAZORPAY_KEY_ID = 'rzp_live_RV7hkF6AydCkRW';
   const UPI_ID = 'riazshaikh005@okicici';
   const RAZORPAY_FEE_PERCENTAGE = 2.5;
-  const SUBSCRIPTION_FORM_URL = 'https://forms.gle/z88W2XCf6VPsDy2d9';
-  const TRIAL_FORM_URL = 'https://forms.gle/WFeJJGbHPtjQCCPV6'; // 7-day plan form
+  const SUBSCRIPTION_FORM_URL = 'https://forms.gle/b7rRZh4wgtkrRMeH6'; // Subscription form URL
+  const TRIAL_FORM_URL = 'https://forms.gle/AEP3WBx26qUyWLww5'; // 10-day plan form
 
   let currentPaymentDetails = null;
   // const PENDING_PURCHASE_KEY = 'pending_purchase';
