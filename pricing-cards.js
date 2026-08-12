@@ -145,6 +145,28 @@ const INDIVIDUAL_PLANS = [
 
 const COMBO_PLANS = [
   {
+    id: 'all-in-one',
+    nameKey: 'pricing_card_allinone_name',
+    fullNameKey: 'pricing_full_allinone',
+    categoryKey: 'pricing_cat_allinone',
+    icon: 'fa-crown',
+    accent: '#00ffcc',
+    productId: '077f892d-52cc-490a-b501-34f2db17aecf',
+    annualMonthlyEff: 1500,
+    annualTotal: 18000,
+    monthlyPrice: 3750,
+    page: null,
+    popular: true,
+    badgeKey: 'pricing_badge_premium_choice',
+    featureKeys: [
+      'pricing_feat_allinone_1',
+      'pricing_feat_allinone_2',
+      'pricing_feat_allinone_3',
+      'pricing_feat_allinone_4',
+      'pricing_feat_allinone_5'
+    ]
+  },
+  {
     id: 'combo1',
     nameKey: 'pricing_card_combo1_name',
     fullNameKey: 'pricing_full_combo1',
@@ -186,28 +208,6 @@ const COMBO_PLANS = [
       'pricing_feat_combo2_3',
       'pricing_feat_combo2_4',
       'pricing_feat_combo2_5'
-    ]
-  },
-  {
-    id: 'all-in-one',
-    nameKey: 'pricing_card_allinone_name',
-    fullNameKey: 'pricing_full_allinone',
-    categoryKey: 'pricing_cat_allinone',
-    icon: 'fa-crown',
-    accent: '#00ffcc',
-    productId: '077f892d-52cc-490a-b501-34f2db17aecf',
-    annualMonthlyEff: 1500,
-    annualTotal: 18000,
-    monthlyPrice: 3750,
-    page: null,
-    popular: true,
-    badgeKey: 'pricing_badge_premium_choice',
-    featureKeys: [
-      'pricing_feat_allinone_1',
-      'pricing_feat_allinone_2',
-      'pricing_feat_allinone_3',
-      'pricing_feat_allinone_4',
-      'pricing_feat_allinone_5'
     ]
   }
 ];
