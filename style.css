@@ -2792,7 +2792,7 @@ a.indicator-link:hover {
   right: 14px;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, var(--card-accent, #00ffcc), transparent);
+  /* background: linear-gradient(90deg, transparent, var(--card-accent, #00ffcc), transparent); */
   opacity: 0.6;
 }
 
@@ -2837,7 +2837,7 @@ a.indicator-link:hover {
   left: 14px;
   right: 14px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #00ffcc, #1e88e5, #ff9800);
+  /* background: linear-gradient(90deg, #00ffcc, #1e88e5, #ff9800); */
 }
 
 .pricing-card.popular:hover {
@@ -3209,8 +3209,8 @@ a.indicator-link:hover {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.14);
-  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(-135deg, #173148 0%, #1f6f73 100%);
+  /* border-left: 1px solid rgba(255, 255, 255, 0.25); */
   white-space: nowrap;
   transition: background 0.25s ease;
 }
