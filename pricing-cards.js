@@ -67,7 +67,7 @@ const INDIVIDUAL_PLANS = [
     productId: 'd436086c-bf62-4a36-8faa-caed8e6da444',
     annualMonthlyEff: 900,
     annualTotal: 10800,
-    monthlyPrice: 1,
+    monthlyPrice: 2250,
     page: 'UltimateScalpPRO.html',
     popular: false,
     badgeKey: null,
