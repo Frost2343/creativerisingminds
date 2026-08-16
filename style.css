@@ -2489,7 +2489,7 @@ a.indicator-link:hover {
 /* Off-screen slide-in for the trial ("10-day access") and steps ("After Payment") cards. */
 .pricing-promo-card.reveal-card.reveal-from-left { transform: translate3d(-70vw, 0, 0) scale(0.985); }
 .pricing-promo-card.reveal-card.reveal-from-right { transform: translate3d(70vw, 0, 0) scale(0.985); }
-.pricing-promo-card.reveal-card.is-revealed { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+.pricing-promo-card.reveal-card.is-revealed { opacity: 1 !important; transform: translate3d(0, 0, 0) scale(1) !important; }
 
 /* Slower, gentler timing than the small pricing cards — smooth ease-in-out glide. */
 .pricing-promo-card.reveal-card {
