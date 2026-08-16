@@ -4,7 +4,7 @@
 
   const RAZORPAY_KEY_ID = 'rzp_live_RV7hkF6AydCkRW';
   const UPI_ID = 'riazshaikh005@okicici';
-  const RAZORPAY_FEE_PERCENTAGE = 2.5;
+  const RAZORPAY_FEE_PERCENTAGE = 0.0;
   const SUBSCRIPTION_FORM_URL = 'https://forms.gle/b7rRZh4wgtkrRMeH6'; // Subscription form URL
   const TRIAL_FORM_URL = 'https://forms.gle/AEP3WBx26qUyWLww5'; // 10-day plan form
 
@@ -103,54 +103,37 @@
     modal.className = 'payment-modal-overlay';
     modal.id = 'paymentModalOverlay';
     modal.innerHTML = `
-      <div class="payment-modal">
+      <div class="payment-modal" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
         <button class="payment-modal-close" onclick="closePaymentModal()">×</button>
         
         <div class="payment-modal-header">
-          <h2>Choose Payment Method</h2>
+          <h2 id="paymentModalTitle">Choose Payment Method</h2>
           <p>Select how you'd like to pay</p>
           <div class="payment-product-info">
             <p><strong>${productName}</strong></p>
-            <p>${formatPlanType(planType)} Plan</p>
+            <p class="payment-plan-info">${formatPlanType(planType)} Plan <span aria-hidden="true">&mdash;</span> <strong class="payment-plan-price">₹${baseAmount.toLocaleString('en-IN')}</strong></p>
           </div>
         </div>
 
-        <div class="payment-options">
+        <div class="payment-options" aria-label="Payment methods">
           <!-- UPI Payment Option -->
           <div class="payment-option upi-option" onclick="selectUPIPayment()">
-            <span class="payment-option-badge">💰 Best Price</span>
-            <span class="payment-icon">📱</span>
-            <h3 class="payment-method-title">UPI Payment</h3>
-            <div class="payment-pricing">
-              <span class="original-price">₹${baseAmount.toLocaleString()}</span>
-              <p class="price-breakdown">Original Price</p>
+            <span class="payment-logo payment-logo-upi" aria-label="UPI">UPI<span class="payment-logo-mark">›</span></span>
+            <div class="payment-option-content">
+              <h3 class="payment-method-title">UPI QR <span>(Preferred)</span></h3>
+              <p class="payment-method-description">Pay via GPay, PhonePe, Paytm or any other UPI-enabled banking app.</p>
             </div>
-            <ul class="payment-features">
-              <li>No extra charges</li>
-              <li>Direct bank transfer</li>
-              <li>GPay, PhonePe, Paytm</li>
-            </ul>
-            <button class="payment-action-btn">Pay via UPI</button>
+            <button class="payment-action-btn" type="button">Pay Now</button>
           </div>
 
           <!-- Razorpay Payment Option -->
           <div class="payment-option razorpay-option" onclick="selectRazorpayPayment()">
-            <span class="payment-option-badge">💳 All Methods</span>
-            <span class="payment-icon">💳</span>
-            <h3 class="payment-method-title">Razorpay</h3>
-            <div class="payment-pricing">
-              <span class="original-price">₹${razorpayAmount.toLocaleString()}</span>
-              <p class="price-breakdown">
-                Base: ₹${baseAmount.toLocaleString()} + 
-                <span class="payment-fee">₹${(razorpayAmount - baseAmount)} (2.5% platform fee)</span>
-              </p>
+            <span class="payment-logo payment-logo-razorpay" aria-label="Razorpay"><span>Razor</span>pay</span>
+            <div class="payment-option-content">
+              <h3 class="payment-method-title">Razorpay Gateway</h3>
+              <p class="payment-method-description">Credit/Debit Cards, net banking, wallets &amp; EMI options available.</p>
             </div>
-            <ul class="payment-features">
-              <li>Credit/Debit Cards</li>
-              <li>Net Banking & Wallets</li>
-              <li>EMI Options</li>
-            </ul>
-            <button class="payment-action-btn">Pay via Razorpay</button>
+            <button class="payment-action-btn" type="button">Pay Now</button>
           </div>
         </div>
 
@@ -174,20 +157,21 @@
             <ol style="color: #cbd5e1; font-size: 14px; padding-left: 20px;">
               <li style="margin-bottom: 8px;">Pay exactly <strong style="color: #00ffcc;">₹${baseAmount}</strong></li>
               <li style="margin-bottom: 8px;">Take screenshot of payment</li>
-              <li style="margin-bottom: 8px;">To receive access, please complete the Google Form with your details. This allows us to fetch your TradingView ID and enable your access</li>
-              <li>Activation within 24 hours</li>
+              <li>Activation within 24 hours of payment confirmation</li>
             </ol>
           </div>
 
           <button class="payment-action-btn" onclick="confirmUPIPayment(event)" style="background: linear-gradient(135deg, #4ade80, #22c55e); margin-top: 20px;">
-            ✓ I've Paid - Open Form
+            Click to Submit Payment Confirmation
           </button>
         </div>
       </div>
     `;
 
     document.body.appendChild(modal);
+    requestAnimationFrame(function () { modal.classList.add('is-visible'); });
     document.body.style.overflow = 'hidden';
+    modal.querySelector('.payment-modal-close').focus();
   }
   // ============================================
   // CLOSE MODAL
@@ -195,15 +179,25 @@
   function closePaymentModal() {
     const modal = document.getElementById('paymentModalOverlay');
     if (modal) {
-      modal.remove();
-      document.body.style.overflow = 'auto';
-      currentPaymentDetails = null;
+      modal.classList.remove('is-visible');
+      modal.classList.add('is-closing');
+      window.setTimeout(function () {
+        modal.remove();
+        document.body.style.overflow = '';
+        currentPaymentDetails = null;
+      }, 220);
     }
   }
 
   // Close on overlay click
   document.addEventListener('click', function(e) {
     if (e.target && e.target.className === 'payment-modal-overlay') {
+      closePaymentModal();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && document.getElementById('paymentModalOverlay')) {
       closePaymentModal();
     }
   });

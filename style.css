@@ -2199,7 +2199,7 @@ a.indicator-link:hover {
   align-items: stretch;
 }
 .indicator-cards.premium-grid {
-  max-width: calc(3 * 300px + 2 * 28px); /* = 956px — exactly 3 cards + 2 gaps */
+  max-width: calc(3 * 340px + 2 * 28px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -2208,14 +2208,14 @@ a.indicator-link:hover {
   text-decoration: none;
   color: inherit;
   display: block;
-  width: 300px;
+  width: 340px;
   max-width: 100%;
 }
 
 .premium-card {
   position: relative;
   height: 100%;
-  padding: 32px 26px 28px;
+  padding: 26px 24px 22px;
   border-radius: 18px;
   background: linear-gradient(160deg, rgba(31, 111, 115, 0.18), rgba(15, 23, 42, 0.9));
   border: 1px solid rgba(79, 172, 254, 0.22);
@@ -2260,7 +2260,7 @@ a.indicator-link:hover {
   color: #00ffcc;
   background: linear-gradient(135deg, rgba(0, 255, 204, 0.16), rgba(30, 136, 229, 0.16));
   border: 1px solid rgba(0, 255, 204, 0.3);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   z-index: 1;
 }
 
@@ -2285,12 +2285,26 @@ a.indicator-link:hover {
 }
 
 .premium-card p {
-  font-size: 14px;
-  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.45;
   color: #b7c2d0;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   flex-grow: 1;
   z-index: 1;
+}
+
+.indicator-clarity-callout {
+  max-width: 900px;
+  margin: -4px auto 34px;
+  color: #f4f7fb;
+  font-size: clamp(1.8rem, 4vw, 3.3rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
 }
 
 .premium-card-cta {
@@ -2449,7 +2463,7 @@ a.indicator-link:hover {
 
 .pricing-extras {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   max-width: 1180px;
   margin: 0 auto;
@@ -3231,4 +3245,210 @@ a.indicator-link:hover {
   .promo-action-row .btn-link-badge {
     padding: 12px 14px;
   }
+}
+
+/* Compact payment method rows */
+.payment-modal-overlay {
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.payment-modal-overlay.is-visible { opacity: 1; }
+.payment-modal-overlay.is-closing { opacity: 0; }
+
+.payment-modal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.975);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.payment-modal-overlay.is-visible .payment-modal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.payment-product-info .payment-plan-info { margin-top: 5px; }
+.payment-product-info .payment-plan-price { color: #00ffcc; }
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.payment-option {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  min-height: 116px;
+  padding: 22px 26px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  overflow: visible;
+  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.payment-option + .payment-option { border-top: 1px solid rgba(255, 255, 255, 0.12); }
+
+.payment-option:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 255, 204, 0.055);
+  box-shadow: inset 3px 0 0 rgba(0, 255, 204, 0.65);
+}
+
+.payment-logo {
+  display: inline-flex;
+  align-items: center;
+  min-width: 88px;
+  color: #f7fafc;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.payment-logo-upi { color: #b7bbc3; }
+.payment-logo-mark { color: #f79520; font-size: 34px; line-height: 0; transform: skewX(-20deg); }
+.payment-logo-razorpay { color: #dbeafe; font-size: 17px; letter-spacing: -1px; }
+.payment-logo-razorpay span { color: #1585db; }
+.payment-option-content { min-width: 0; }
+
+.payment-method-title {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 7px;
+  line-height: 1.35;
+}
+
+.payment-method-title span { color: #d8dee9; font-weight: 500; }
+.payment-method-description { color: #9fa9bb; font-size: 14px; line-height: 1.45; margin: 0; }
+
+.payment-option .payment-action-btn {
+  width: auto;
+  min-width: 132px;
+  margin: 0;
+  padding: 14px 25px;
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+/* Viewport reveal animations for indicator and dynamically rendered pricing cards. */
+.reveal-card {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.985);
+  transition: opacity 1s ease-out, transform 1s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity;
+}
+
+.reveal-card.reveal-from-left { transform: translate3d(-36px, 8px, 0) scale(0.985); }
+.reveal-card.reveal-from-right { transform: translate3d(36px, 8px, 0) scale(0.985); }
+.reveal-card.is-revealed { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+.reveal-card.is-interactive { transition-delay: 0ms; will-change: auto; }
+
+/* Pricing cards animate themselves, so preserve their raised featured-card scale and hover feedback. */
+.pricing-card.reveal-card { animation: none; }
+.pricing-card.popular.reveal-card { transform: translate3d(0, 18px, 0) scale(1.02); }
+.pricing-card.popular.reveal-card.reveal-from-left { transform: translate3d(-36px, 8px, 0) scale(1.02); }
+.pricing-card.popular.reveal-card.reveal-from-right { transform: translate3d(36px, 8px, 0) scale(1.02); }
+.pricing-card.popular.reveal-card.is-revealed { transform: scale(1.04); }
+.pricing-card.reveal-card.is-revealed:hover { transform: translateY(-4px) scale(1); }
+.pricing-card.popular.reveal-card.is-revealed:hover { transform: translateY(-4px) scale(1.04); }
+
+.premium-card-link.reveal-card.is-revealed:hover .premium-card {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.42), 0 0 18px rgba(30, 136, 229, 0.24);
+}
+
+@media (max-width: 640px) {
+  .payment-modal { padding: 28px 18px; }
+  .payment-option { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; min-height: 0; padding: 18px; }
+  .payment-logo { min-width: 0; font-size: 16px; }
+  .payment-logo-mark { font-size: 28px; }
+  .payment-logo-razorpay { font-size: 14px; }
+  .payment-method-title { font-size: 15px; }
+  .payment-method-description { font-size: 12.5px; }
+  .payment-option .payment-action-btn { grid-column: 2; justify-self: start; min-width: 108px; padding: 10px 18px; font-size: 13px; }
+  .reveal-card.reveal-from-left,
+  .reveal-card.reveal-from-right { transform: translate3d(0, 20px, 0) scale(0.985); }
+  .pricing-card.popular.reveal-card.is-revealed { transform: none; }
+  .pricing-card.popular.reveal-card.is-revealed:hover { transform: translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .payment-modal-overlay, .payment-modal, .payment-option, .payment-option .payment-action-btn, .reveal-card {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal-card { opacity: 1; transform: none; }
+}
+
+/* Page-level motion: staged, editorial pacing without blocking interaction. */
+html { scroll-behavior: smooth; }
+
+.motion-enabled .motion-reveal {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--motion-delay, 0ms);
+}
+
+.motion-enabled .motion-reveal.is-inview {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.motion-enabled .hero-content.motion-reveal {
+  transform: translate3d(-24px, 18px, 0);
+  transition-duration: 0.85s;
+}
+
+.motion-enabled .hero-content.motion-reveal.is-inview { transform: translate3d(0, 0, 0); }
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 28%, rgba(255, 255, 255, 0.2) 48%, transparent 68%);
+  transform: translateX(-125%);
+  transition: transform 0.58s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 255, 204, 0.75);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25), 0 0 18px rgba(0, 255, 204, 0.14);
+}
+
+.cta:hover::after { transform: translateX(125%); }
+
+.pricing-bg-glow {
+  animation: pricing-aura 10s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+@keyframes pricing-aura {
+  from { transform: translateX(-52%) translateY(-12px) scale(0.94); opacity: 0.65; }
+  to { transform: translateX(-48%) translateY(16px) scale(1.08); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .motion-enabled .motion-reveal { opacity: 1; transform: none; transition: none; }
+  .cta, .cta::after, .pricing-bg-glow { animation: none !important; transition: none !important; }
 }
