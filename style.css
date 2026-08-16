@@ -2799,7 +2799,9 @@ a.indicator-link:hover {
   position: relative;
   padding: 30px 26px 26px;
   border-radius: 20px;
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  background:
+    linear-gradient(rgba(12, 20, 35, 0.97), rgba(12, 20, 35, 0.97)) padding-box,
+    linear-gradient(135deg, #00ffcc, #1e88e5, #ff9800) border-box;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
