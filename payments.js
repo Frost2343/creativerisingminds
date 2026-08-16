@@ -155,7 +155,7 @@
           <div style="background: rgba(251, 191, 36, 0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #fbbf24;">
             <p style="color: #fbbf24; font-weight: 600; margin-bottom: 10px;">📝 Important Steps:</p>
             <ol style="color: #cbd5e1; font-size: 14px; padding-left: 20px;">
-              <li style="margin-bottom: 8px;">Pay exactly <strong style="color: #00ffcc;">₹${baseAmount}</strong></li>
+              <li style="margin-bottom: 8px;">Pay exactly <strong style="color: #00ffcc;"class="payment-plan-price">₹${baseAmount.toLocaleString('en-IN')}</strong></li>
               <li style="margin-bottom: 8px;">Take screenshot of payment</li>
               <li>Activation within 24 hours of payment confirmation</li>
             </ol>

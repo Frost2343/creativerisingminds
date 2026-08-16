@@ -67,7 +67,7 @@ const INDIVIDUAL_PLANS = [
     productId: 'd436086c-bf62-4a36-8faa-caed8e6da444',
     annualMonthlyEff: 900,
     annualTotal: 10800,
-    monthlyPrice: 2250,
+    monthlyPrice: 1,
     page: 'UltimateScalpPRO.html',
     popular: false,
     badgeKey: null,
@@ -328,6 +328,61 @@ function renderPricing() {
   setupViewportReveals(document.querySelectorAll('.pricing-card'));
 }
 
+let promoRevealObserver;
+
+function setupPromoCardReveals(container) {
+  if (!container || container.dataset.revealReady) return;
+  const cards = Array.from(container.querySelectorAll('.pricing-promo-card'));
+  if (!cards.length) return;
+
+  cards.forEach(function (card, index) {
+    const direction = index % 2 === 0 ? 'reveal-from-left' : 'reveal-from-right';
+    card.classList.add('reveal-card');
+    card.classList.add(direction);
+    // Both cards must start sliding at the exact same instant, not staggered.
+    card.style.setProperty('--reveal-delay', '0ms');
+  });
+
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    cards.forEach(function (card) { card.classList.add('is-revealed'); });
+    container.dataset.revealReady = 'true';
+    return;
+  }
+
+  container.dataset.revealReady = 'true';
+
+  function toggleCards(revealed) {
+    cards.forEach(function (card) {
+      if (card._revealTimer) {
+        clearTimeout(card._revealTimer);
+        card._revealTimer = null;
+      }
+      if (revealed) {
+        card.classList.add('is-revealed');
+        card._revealTimer = window.setTimeout(function () {
+          card.classList.add('is-interactive');
+        }, 3600);
+      } else {
+        card.classList.remove('is-revealed');
+        card.classList.remove('is-interactive');
+      }
+    });
+  }
+
+  // Watching the (untransformed) container instead of the cards themselves —
+  // the cards slide in from 70-100vw off-screen, and a browser's intersection
+  // check on a heavily-transformed element is unreliable across viewport
+  // sizes. The container never moves, so this always sees it correctly.
+  promoRevealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      toggleCards(entry.isIntersecting);
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -6% 0px' });
+
+  promoRevealObserver.observe(container);
+}
+
 let revealObserver;
 
 function setupViewportReveals(elements) {
@@ -345,13 +400,26 @@ function setupViewportReveals(elements) {
   if (!revealObserver) {
     revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-revealed');
-        const delay = parseFloat(entry.target.style.getPropertyValue('--reveal-delay')) || 0;
-        window.setTimeout(function () {
-          entry.target.classList.add('is-interactive');
-        }, delay + 1000);
-        revealObserver.unobserve(entry.target);
+        const target = entry.target;
+
+        // Cancel any pending "is-interactive" timer from a previous reveal
+        // so it can't fire late after the card has been hidden again.
+        if (target._revealTimer) {
+          clearTimeout(target._revealTimer);
+          target._revealTimer = null;
+        }
+
+        if (entry.isIntersecting) {
+          target.classList.add('is-revealed');
+          const delay = parseFloat(target.style.getPropertyValue('--reveal-delay')) || 0;
+          target._revealTimer = window.setTimeout(function () {
+            target.classList.add('is-interactive');
+          }, delay + 2800);
+        } else {
+          // Reset so the slide-in plays again next time it scrolls into view.
+          target.classList.remove('is-revealed');
+          target.classList.remove('is-interactive');
+        }
       });
     }, { threshold: 0.16, rootMargin: '0px 0px -6% 0px' });
   }
@@ -467,6 +535,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initBillingRadios();
   renderPricing();
   setupViewportReveals(document.querySelectorAll('#indicators .premium-card-link'));
+  setupPromoCardReveals(document.querySelector('.pricing-extras'));
   attachBuyNowHandlers();
   attachSavingsTooltipHandlers();
 
