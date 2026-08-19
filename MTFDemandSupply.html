@@ -99,6 +99,30 @@
   </div>
 </div>
   </nav>
+
+  <script>
+  (function () {
+    var userMenu = document.querySelector('.user-menu');
+    var navLeft = document.querySelector('.nav-left');
+    var navRight = document.getElementById('nav-right');
+    if (!userMenu || !navLeft || !navRight) return;
+
+    var mq = window.matchMedia('(max-width: 768px)');
+
+    function placeUserMenu(isMobile) {
+      if (isMobile && userMenu.parentElement !== navLeft) {
+        navLeft.appendChild(userMenu);
+      } else if (!isMobile && userMenu.parentElement !== navRight) {
+        navRight.appendChild(userMenu);
+      }
+    }
+
+    placeUserMenu(mq.matches);
+    (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(
+      function (e) { placeUserMenu(e.matches); }
+    );
+  })();
+</script>
   <br>
   <div class="container">
     <a href="https://in.tradingview.com/script/jQhpPd4o-MTF-Demand-Supply-CRM/" class="btn" data-translate="view_tradingview">📈 View on TradingView</a>

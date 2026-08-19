@@ -1475,7 +1475,7 @@ a.indicator-link:hover {
   }
 
   .brand-name {
-    font-size: 25px;
+    font-size: 31px;
   }
 
   .logo {
@@ -1495,7 +1495,7 @@ a.indicator-link:hover {
     backdrop-filter: blur(10px);
     justify-content: center;
     padding: 10px 5px;
-    font-size: 10px;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
   }
 
@@ -1697,7 +1697,7 @@ a.indicator-link:hover {
   }
 
   .brand-name {
-    font-size: 27px;
+    font-size: 32px;
   }
 
   .logo {
@@ -1972,7 +1972,7 @@ a.indicator-link:hover {
   }
 
   .brand-name {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .disclaimer-container {

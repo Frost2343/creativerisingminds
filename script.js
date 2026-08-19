@@ -645,7 +645,7 @@ const translations = {
     feature_disclaimer_title: "⚠️ Disclaimer",
     feature_disclaimer_1: "This indicator is strictly for educational purposes and does not constitute financial advice.",
     feature_disclaimer_2: "Consult a SEBI-registered advisor before making trading decisions.",
-    feature_disclaimer_3: "Use Scalp Ultra Supreme as a decision-support tool, not a standalone trading system.",
+    feature_disclaimer_3: "Use the indicator as a decision-support tool, not a standalone trading system.",
     sahi_link: "Sahi",
     mstock_link: "Mstock"
   },
